@@ -18,11 +18,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: sourcemeta/jsonschema@v7.1.2
+      - uses: actions/setup-node@v4
 
       - name: Bundle schemas
         run: |-
           mkdir -p build/json
           jsonschema bundle src/json/event/web-event.json --resolve src/json/event/ --without-id > build/json/web-event.json
+          node post-json-bundler.js build/json/web-event.json
 
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v2
