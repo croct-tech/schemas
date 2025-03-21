@@ -1,0 +1,46 @@
+name: Deploy schemas
+
+on:
+  workflow_dispatch:
+  release:
+    types:
+      - published
+
+jobs:
+  deploy-schemas:
+    permissions:
+      id-token: write
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Cache dependencies
+        id: cache-dependencies
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: node_modules-${{ hashFiles('package-lock.json') }}
+
+      - id: auth
+        name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ secrets.GCLOUD_WORKLOAD_IDENTITY }}
+          service_account: ${{ secrets.GCLOUD_SERVICE_ACCOUNT }}
+
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v2
+
+      - name: Deploy pre-release to GCS
+        if: ${{ github.event.release.prerelease || !github.ref }}
+        run: |-
+          gsutil -m rsync -r -d build "gs://${GCLOUD_BUCKET}/json/next"
+          gsutil -m setmeta -h "Cache-Control: public, max-age=3600" "gs://${GCLOUD_BUCKET}/json/next/**"
+
+      - name: Deploy release to GCS
+        if: ${{ !github.event.release.prerelease && github.ref }}
+        run: |-
+          MAJOR_VERSION=$(echo "${GITHUB_REF##*/}" | cut -d. -f1)
+          gsutil -m rsync -r -d src/json "gs://${GCLOUD_BUCKET}/json/${MAJOR_VERSION}"
+          gsutil -m setmeta -h "Cache-Control: public, max-age=3600" "gs://${GCLOUD_BUCKET}/json/${MAJOR_VERSION}/**"
