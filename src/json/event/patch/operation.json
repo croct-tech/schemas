@@ -34,7 +34,7 @@
           }
         },
         "then": {
-          "$ref": "operation/unset.json"
+           "$ref": "./operation/unset.json"
         }
       },
       {
@@ -46,7 +46,7 @@
           }
         },
         "then": {
-          "$ref": "operation/set.json"
+           "$ref": "./operation/set.json"
         }
       },
       {
@@ -58,7 +58,7 @@
           }
         },
         "then": {
-          "$ref": "operation/merge.json"
+           "$ref": "./operation/merge.json"
         }
       },
       {
@@ -70,7 +70,7 @@
           }
         },
         "then": {
-          "$ref": "operation/clear.json"
+           "$ref": "./operation/clear.json"
         }
       },
       {
@@ -82,7 +82,7 @@
           }
         },
         "then": {
-          "$ref": "operation/decrement.json"
+           "$ref": "./operation/decrement.json"
         }
       },
       {
@@ -94,7 +94,7 @@
           }
         },
         "then": {
-          "$ref": "operation/increment.json"
+           "$ref": "./operation/increment.json"
         }
       },
       {
@@ -106,7 +106,7 @@
           }
         },
         "then": {
-          "$ref": "operation/add.json"
+           "$ref": "./operation/add.json"
         }
       },
       {
@@ -118,7 +118,7 @@
           }
         },
         "then": {
-          "$ref": "operation/remove.json"
+           "$ref": "./operation/remove.json"
         }
       },
       {
@@ -130,7 +130,7 @@
           }
         },
         "then": {
-          "$ref": "operation/combine.json"
+           "$ref": "./operation/combine.json"
         }
       }
     ]

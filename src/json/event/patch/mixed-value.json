@@ -4,10 +4,10 @@
   "description": "A mixed value.",
   "anyOf": [
     {
-      "$ref": "primitive-value.json"
+       "$ref": "./primitive-value.json"
     },
     {
-      "$ref": "collection-value.json"
+       "$ref": "./collection-value.json"
     }
   ]
 }

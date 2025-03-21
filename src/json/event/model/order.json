@@ -31,7 +31,7 @@
       "description": "The list of items in the order.",
       "type": "array",
       "items": {
-        "$ref": "order-item.json"
+         "$ref": "./order-item.json"
       },
       "minItems": 1
     },

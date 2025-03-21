@@ -19,7 +19,7 @@
       "description": "The timestamp when the beacon was sent by the client, in milliseconds since epoch."
     },
     "context": {
-      "$ref": "web-context.json",
+       "$ref": "./web-context.json",
       "type": "object",
       "description": "The context of the client when the event was tracked."
     },
@@ -72,7 +72,7 @@
               }
             },
             "then": {
-              "$ref": "payload/nothing-changed.json"
+               "$ref": "./payload/nothing-changed.json"
             }
           },
           {
@@ -84,7 +84,7 @@
               }
             },
             "then": {
-              "$ref": "payload/session-attributes-changed.json"
+               "$ref": "./payload/session-attributes-changed.json"
             }
           },
           {
@@ -96,7 +96,7 @@
               }
             },
             "then": {
-              "$ref": "payload/user-profile-changed.json"
+               "$ref": "./payload/user-profile-changed.json"
             }
           },
           {
@@ -109,7 +109,7 @@
               }
             },
             "then": {
-              "$ref": "payload/user-signed-in.json"
+               "$ref": "./payload/user-signed-in.json"
             }
           },
           {
@@ -121,7 +121,7 @@
               }
             },
             "then": {
-              "$ref": "payload/user-signed-out.json"
+               "$ref": "./payload/user-signed-out.json"
             }
           },
           {
@@ -133,7 +133,7 @@
               }
             },
             "then": {
-              "$ref": "payload/user-signed-up.json"
+               "$ref": "./payload/user-signed-up.json"
             }
           },
           {
@@ -145,7 +145,7 @@
               }
             },
             "then": {
-              "$ref": "payload/product-viewed.json"
+               "$ref": "./payload/product-viewed.json"
             }
           },
           {
@@ -157,7 +157,7 @@
               }
             },
             "then": {
-              "$ref": "payload/cart-viewed.json"
+               "$ref": "./payload/cart-viewed.json"
             }
           },
           {
@@ -169,7 +169,7 @@
               }
             },
             "then": {
-              "$ref": "payload/cart-modified.json"
+               "$ref": "./payload/cart-modified.json"
             }
           },
           {
@@ -181,7 +181,7 @@
               }
             },
             "then": {
-              "$ref": "payload/checkout-started.json"
+               "$ref": "./payload/checkout-started.json"
             }
           },
           {
@@ -193,7 +193,7 @@
               }
             },
             "then": {
-              "$ref": "payload/order-placed.json"
+               "$ref": "./payload/order-placed.json"
             }
           },
           {
@@ -205,7 +205,7 @@
               }
             },
             "then": {
-              "$ref": "payload/page-loaded.json"
+               "$ref": "./payload/page-loaded.json"
             }
           },
           {
@@ -217,7 +217,7 @@
               }
             },
             "then": {
-              "$ref": "payload/page-opened.json"
+               "$ref": "./payload/page-opened.json"
             }
           },
           {
@@ -229,7 +229,7 @@
               }
             },
             "then": {
-              "$ref": "payload/tab-opened.json"
+               "$ref": "./payload/tab-opened.json"
             }
           },
           {
@@ -241,7 +241,7 @@
               }
             },
             "then": {
-              "$ref": "payload/tab-url-changed.json"
+               "$ref": "./payload/tab-url-changed.json"
             }
           },
           {
@@ -253,7 +253,7 @@
               }
             },
             "then": {
-              "$ref": "payload/tab-visibility-changed.json"
+               "$ref": "./payload/tab-visibility-changed.json"
             }
           },
           {
@@ -265,7 +265,7 @@
               }
             },
             "then": {
-              "$ref": "payload/goal-completed.json"
+               "$ref": "./payload/goal-completed.json"
             }
           },
           {
@@ -277,7 +277,7 @@
               }
             },
             "then": {
-              "$ref": "payload/link-opened.json"
+               "$ref": "./payload/link-opened.json"
             }
           },
           {
@@ -289,7 +289,7 @@
               }
             },
             "then": {
-              "$ref": "payload/post-viewed.json"
+               "$ref": "./payload/post-viewed.json"
             }
           },
           {
@@ -301,7 +301,7 @@
               }
             },
             "then": {
-              "$ref": "payload/interest-shown.json"
+               "$ref": "./payload/interest-shown.json"
             }
           },
           {
@@ -313,7 +313,7 @@
               }
             },
             "then": {
-              "$ref": "payload/event-occurred.json"
+               "$ref": "./payload/event-occurred.json"
             }
           }
         ]

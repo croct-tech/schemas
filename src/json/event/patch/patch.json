@@ -12,7 +12,7 @@
       "type": "array",
       "description": "The list of operations to be applied atomically.",
       "items": {
-        "$ref": "operation.json"
+         "$ref": "./operation.json"
       }
     }
   }

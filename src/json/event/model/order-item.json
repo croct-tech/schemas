@@ -18,7 +18,7 @@
     },
     "product": {
       "description": "The details of the product that the item represents.",
-      "$ref": "product-details.json"
+       "$ref": "./product-details.json"
     },
     "quantity": {
       "description": "The number of units of the item ordered.",

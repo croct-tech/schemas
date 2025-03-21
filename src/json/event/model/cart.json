@@ -25,7 +25,7 @@
       "description": "The list of items in the shopping cart.",
       "type": "array",
       "items": {
-        "$ref": "cart-item.json"
+         "$ref": "./cart-item.json"
       }
     },
     "subtotal": {
