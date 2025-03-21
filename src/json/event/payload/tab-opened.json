@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Tab opened event",
+  "description": "An event recording that a new tab was opened.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "tabId"
+  ],
+  "properties": {
+    "type": {
+      "description": "The event type identifier.",
+      "const": "tabOpened"
+    },
+    "tabId": {
+      "description": "The ID that uniquely identifies the tab across the session.",
+      "type": "string",
+      "format": "uuid"
+    }
+  }
+}

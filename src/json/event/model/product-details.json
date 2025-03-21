@@ -1,0 +1,104 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Product details",
+  "description": "The detailed information of a product.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "productId",
+    "name",
+    "displayPrice"
+  ],
+  "properties": {
+    "productId": {
+      "description": "The ID that uniquely identifies the product across the store, non-empty.",
+      "examples": [
+        "3108",
+        "CD4371"
+      ],
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 50
+    },
+    "sku": {
+      "description": "The code that uniquely identifies the product variant across the store, non-empty.",
+      "examples": [
+        "IPH-GRE-64",
+        "153-169-172-182887"
+      ],
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 50
+    },
+    "name": {
+      "description": "The name of the product, non-empty.",
+      "examples": [
+        "iPhone",
+        "Nike Air Max"
+      ],
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "category": {
+      "description": "The category of the product, non-empty.",
+      "examples": [
+        "Phone",
+        "Running"
+      ],
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "brand": {
+      "description": "The brand associated with the product.",
+      "examples": [
+        "Apple",
+        "Nike"
+      ],
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "variant": {
+      "description": "The variant of the product, such as size, color and style.",
+      "examples": [
+        "64GB Green",
+        "White 270"
+      ],
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 50
+    },
+    "displayPrice": {
+      "description": "The price of the product displayed in the store.",
+      "type": "number",
+      "minimum": 0
+    },
+    "originalPrice": {
+      "description": "The original price of the product.",
+      "type": "number",
+      "minimum": 0
+    },
+    "url": {
+      "description": "The URL of the product page.",
+      "examples": [
+        "https://apple.com/iphone",
+        "https://nike.com/t/air-max"
+      ],
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https?://"
+    },
+    "imageUrl": {
+      "description": "The URL of the main product image.",
+      "examples": [
+        "https://img.apple.com/iphone.png",
+        "https://nike.com/img/air-max.jpg"
+      ],
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https?://"
+    }
+  }
+}

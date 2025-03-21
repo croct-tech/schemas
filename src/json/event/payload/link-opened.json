@@ -1,0 +1,21 @@
+{
+  "title": "Link opened event",
+  "description": "An event recording that a link was opened.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "link"
+  ],
+  "properties": {
+    "type": {
+      "description": "The event type identifier.",
+      "const": "linkOpened"
+    },
+    "link": {
+      "description": "The URI of the link.",
+      "type": "string",
+      "format": "uri"
+    }
+  }
+}

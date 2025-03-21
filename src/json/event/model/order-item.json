@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Order item",
+  "description": "An item of an order.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "index",
+    "quantity",
+    "product",
+    "total"
+  ],
+  "properties": {
+    "index": {
+      "description": "The index, starting from zero, representing the order in which the item was added to the shopping cart.",
+      "type": "integer",
+      "minimum": 0
+    },
+    "product": {
+      "description": "The details of the product that the item represents.",
+      "$ref": "product-details.json"
+    },
+    "quantity": {
+      "description": "The number of units of the item ordered.",
+      "type": "integer",
+      "minimum": 1
+    },
+    "total": {
+      "description": "The total for the item. It includes discounts and any other adjustment.",
+      "type": "number",
+      "minimum": 0
+    },
+    "discount": {
+      "description": "The amount of the discount applied to the item.",
+      "type": "number",
+      "minimum": 0
+    },
+    "coupon": {
+      "description": "The coupon applied to the item.",
+      "examples": [
+        "SUPER_DEALS"
+      ],
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 50
+    }
+  }
+}

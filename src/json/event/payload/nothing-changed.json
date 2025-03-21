@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Nothing changed event",
+  "description": "An event recording a period of inactivity.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "sinceTime"
+  ],
+  "properties": {
+    "type": {
+      "description": "The event type identifier.",
+      "const": "nothingChanged"
+    },
+    "sinceTime": {
+      "description": "The timestamp when an activity was last observed, in milliseconds since epoch.",
+      "type": "integer"
+    }
+  }
+}

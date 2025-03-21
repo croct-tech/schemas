@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Set operation",
+  "description": "An operation to set a value.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "path",
+    "value"
+  ],
+  "properties": {
+    "type": {
+      "description": "The operation type identifier.",
+      "const": "set"
+    },
+    "path": {
+      "description": "The path where to set the value.",
+      "$ref": "../pointer.json"
+    },
+    "value": {
+      "description": "The value to set.",
+      "$ref": "../mixed-value.json"
+    }
+  }
+}

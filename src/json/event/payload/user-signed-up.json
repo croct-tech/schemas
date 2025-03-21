@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "User signed up event",
+  "description": "An event recording that a user has signed up.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "externalUserId"
+  ],
+  "properties": {
+    "type": {
+      "description": "The event type identifier.",
+      "const": "userSignedUp"
+    },
+    "externalUserId": {
+      "description": "The external ID of the user.",
+      "examples": [
+        "erick-doe",
+        "carol.duran"
+      ],
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "patch": {
+      "description": "The patch to initialize the user profile.",
+      "$ref": "../patch/patch.json"
+    }
+  }
+}

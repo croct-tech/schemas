@@ -1,0 +1,324 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Web event",
+  "description": "An event tracked by the web client.",
+  "required": [
+    "originalTime",
+    "departureTime",
+    "context",
+    "payload"
+  ],
+  "type": "object",
+  "properties": {
+    "originalTime": {
+      "type": "integer",
+      "description": "The timestamp when the event was tracked, in milliseconds since epoch."
+    },
+    "departureTime": {
+      "type": "integer",
+      "description": "The timestamp when the beacon was sent by the client, in milliseconds since epoch."
+    },
+    "context": {
+      "$ref": "web-context.json",
+      "type": "object",
+      "description": "The context of the client when the event was tracked."
+    },
+    "payload": {
+      "type": "object",
+      "description": "The event details, specific to the type of event.",
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "description": "The event type identifier.",
+          "enum": [
+            "nothingChanged",
+            "sessionAttributesChanged",
+            "userProfileChanged",
+            "userSignedIn",
+            "userSignedOut",
+            "userSignedUp",
+            "productViewed",
+            "cartViewed",
+            "cartModified",
+            "checkoutStarted",
+            "orderPlaced",
+            "pageLoaded",
+            "pageOpened",
+            "tabOpened",
+            "tabUrlChanged",
+            "tabVisibilityChanged",
+            "goalCompleted",
+            "linkOpened",
+            "postViewed",
+            "interestShown",
+            "eventOccurred"
+          ]
+        }
+      },
+      "if": {
+        "type": "object",
+        "required": ["type"]
+      },
+      "then": {
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "nothingChanged"
+                }
+              }
+            },
+            "then": {
+              "$ref": "payload/nothing-changed.json"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "sessionAttributesChanged"
+                }
+              }
+            },
+            "then": {
+              "$ref": "payload/session-attributes-changed.json"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "userProfileChanged"
+                }
+              }
+            },
+            "then": {
+              "$ref": "payload/user-profile-changed.json"
+            }
+          },
+          {
+
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "userSignedIn"
+                }
+              }
+            },
+            "then": {
+              "$ref": "payload/user-signed-in.json"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "userSignedOut"
+                }
+              }
+            },
+            "then": {
+              "$ref": "payload/user-signed-out.json"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "userSignedUp"
+                }
+              }
+            },
+            "then": {
+              "$ref": "payload/user-signed-up.json"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "productViewed"
+                }
+              }
+            },
+            "then": {
+              "$ref": "payload/product-viewed.json"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "cartViewed"
+                }
+              }
+            },
+            "then": {
+              "$ref": "payload/cart-viewed.json"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "cartModified"
+                }
+              }
+            },
+            "then": {
+              "$ref": "payload/cart-modified.json"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "checkoutStarted"
+                }
+              }
+            },
+            "then": {
+              "$ref": "payload/checkout-started.json"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "orderPlaced"
+                }
+              }
+            },
+            "then": {
+              "$ref": "payload/order-placed.json"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "pageLoaded"
+                }
+              }
+            },
+            "then": {
+              "$ref": "payload/page-loaded.json"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "pageOpened"
+                }
+              }
+            },
+            "then": {
+              "$ref": "payload/page-opened.json"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "tabOpened"
+                }
+              }
+            },
+            "then": {
+              "$ref": "payload/tab-opened.json"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "tabUrlChanged"
+                }
+              }
+            },
+            "then": {
+              "$ref": "payload/tab-url-changed.json"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "tabVisibilityChanged"
+                }
+              }
+            },
+            "then": {
+              "$ref": "payload/tab-visibility-changed.json"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "goalCompleted"
+                }
+              }
+            },
+            "then": {
+              "$ref": "payload/goal-completed.json"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "linkOpened"
+                }
+              }
+            },
+            "then": {
+              "$ref": "payload/link-opened.json"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "postViewed"
+                }
+              }
+            },
+            "then": {
+              "$ref": "payload/post-viewed.json"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "interestShown"
+                }
+              }
+            },
+            "then": {
+              "$ref": "payload/interest-shown.json"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "eventOccurred"
+                }
+              }
+            },
+            "then": {
+              "$ref": "payload/event-occurred.json"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Post viewed event",
+  "description": "An event recording that a post was viewed.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "post"
+  ],
+  "properties": {
+    "type": {
+      "description": "The event type identifier.",
+      "const": "postViewed"
+    },
+    "post": {
+      "description": "The detected information about the post.",
+      "$ref": "../model/post-details.json"
+    }
+  }
+}

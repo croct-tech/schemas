@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Page Loaded Event",
+  "description": "An event recording that a page was loaded.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "url",
+    "title",
+    "lastModifiedTime"
+  ],
+  "properties": {
+    "type": {
+      "description": "The event type identifier.",
+      "const": "pageLoaded"
+    },
+    "url": {
+      "description": "The URL of the page.",
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https?://"
+    },
+    "title": {
+      "description": "The title of the page.",
+      "examples": [
+        "Apple",
+        "Nike. Just Do It."
+      ],
+      "type": "string"
+    },
+    "lastModifiedTime": {
+      "description": "The last time the page was modified.",
+      "type": "integer"
+    }
+  }
+}
