@@ -1,4 +1,5 @@
 {
+  "$id": "https://schema.croct.com/json/event/payload/user-signed-in.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "User signed-in event",
   "description": "An event recording that a user has signed in.",

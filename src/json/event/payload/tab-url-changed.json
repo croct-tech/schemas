@@ -1,4 +1,5 @@
 {
+  "$id": "https://schema.croct.com/json/event/payload/tab-url-changed.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Tab URL changed event",
   "description": "An event recording that the URL of a tab has changed.",

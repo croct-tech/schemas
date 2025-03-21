@@ -1,4 +1,5 @@
 {
+  "$id": "https://schema.croct.com/json/event/payload/tab-opened.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Tab opened event",
   "description": "An event recording that a new tab was opened.",

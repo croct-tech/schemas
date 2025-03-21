@@ -1,4 +1,5 @@
 {
+  "$id": "https://schema.croct.com/json/event/model/patch/patch.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Patch",
   "description": "A sequence of operations to apply atomically to a target value.",
@@ -12,7 +13,7 @@
       "type": "array",
       "description": "The list of operations to be applied atomically.",
       "items": {
-         "$ref": "./operation.json"
+        "$ref": "operation.json"
       }
     }
   }

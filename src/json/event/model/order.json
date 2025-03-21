@@ -1,4 +1,5 @@
 {
+  "$id": "https://schema.croct.com/json/event/model/order.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Order",
   "description": "An order placed in an online store.",
@@ -31,7 +32,7 @@
       "description": "The list of items in the order.",
       "type": "array",
       "items": {
-         "$ref": "./order-item.json"
+        "$ref": "./order-item.json"
       },
       "minItems": 1
     },

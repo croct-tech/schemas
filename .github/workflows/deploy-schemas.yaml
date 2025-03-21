@@ -18,8 +18,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - id: auth
-        name: Authenticate to Google Cloud
+      - name: Bundle schemas
+        uses: sourcemeta/jsonschema@v7.1.2
+        run: |-
+          mkdir -p build/json
+          jsonschema src/json/event/web-event.json --resolve src/json/event/ --without-id > build/json/web-event.json
+
+      - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v2
         with:
           workload_identity_provider: ${{ secrets.GCLOUD_WORKLOAD_IDENTITY }}
@@ -31,7 +36,7 @@ jobs:
       - name: Deploy pre-release to GCS
         if: ${{ github.event.release.prerelease || !github.ref || github.ref == 'refs/heads/master' }}
         run: |-
-          gsutil -m rsync -r -d src/json "gs://${GCLOUD_BUCKET}/json/next"
+          gsutil -m rsync -r -d build/json "gs://${GCLOUD_BUCKET}/json/next"
           gsutil -m setmeta -h "Cache-Control: public, max-age=3600" "gs://${GCLOUD_BUCKET}/json/next/**"
         env:
           GCLOUD_BUCKET: ${{ secrets.STORAGE_BUCKET_SCHEMAS }}
@@ -40,7 +45,7 @@ jobs:
         if: ${{ github.event.release && !github.event.release.prerelease && github.ref }}
         run: |-
           MAJOR_VERSION=$(echo "${GITHUB_REF##*/}" | cut -d. -f1)
-          gsutil -m rsync -r -d src/json "gs://${GCLOUD_BUCKET}/json/${MAJOR_VERSION}"
+          gsutil -m rsync -r -d build/json "gs://${GCLOUD_BUCKET}/json/${MAJOR_VERSION}"
           gsutil -m setmeta -h "Cache-Control: public, max-age=3600" "gs://${GCLOUD_BUCKET}/json/${MAJOR_VERSION}/**"
         env:
           GCLOUD_BUCKET: ${{ secrets.STORAGE_BUCKET_SCHEMAS }}

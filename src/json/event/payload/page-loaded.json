@@ -1,4 +1,5 @@
 {
+  "$id": "https://schema.croct.com/json/event/payload/page-loaded.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Page Loaded Event",
   "description": "An event recording that a page was loaded.",

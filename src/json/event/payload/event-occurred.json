@@ -1,4 +1,5 @@
 {
+  "$id": "https://schema.croct.com/json/event/payload/event-occurred.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Event occurred",
   "description": "An event recording a domain-specific occurrence.",

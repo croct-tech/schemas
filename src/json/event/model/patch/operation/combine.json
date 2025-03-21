@@ -1,7 +1,8 @@
 {
+  "$id": "https://schema.croct.com/json/event/model/patch/operation/combine.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Set operation",
-  "description": "An operation to set a value.",
+  "title": "Combine operation",
+  "description": "An operation to combine arrays or maps.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -12,14 +13,14 @@
   "properties": {
     "type": {
       "description": "The operation type identifier.",
-      "const": "set"
+      "const": "combine"
     },
     "path": {
-      "description": "The path where to set the value.",
+      "description": "The path where to combine the values.",
       "$ref": "../pointer.json"
     },
     "value": {
-      "description": "The value to set.",
+      "description": "The array or map to combine.",
       "$ref": "../mixed-value.json"
     }
   }

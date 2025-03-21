@@ -1,4 +1,6 @@
 {
+  "$id": "https://schema.croct.com/json/event/payload/link-opened.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Link opened event",
   "description": "An event recording that a link was opened.",
   "type": "object",

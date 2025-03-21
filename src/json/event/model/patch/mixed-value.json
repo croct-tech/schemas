@@ -1,13 +1,14 @@
 {
+  "$id": "https://schema.croct.com/json/event/model/patch/mixed-value.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Value",
   "description": "A mixed value.",
   "anyOf": [
     {
-       "$ref": "./primitive-value.json"
+      "$ref": "primitive-value.json"
     },
     {
-       "$ref": "./collection-value.json"
+      "$ref": "collection-value.json"
     }
   ]
 }

@@ -1,4 +1,5 @@
 {
+  "$id": "https://schema.croct.com/json/event/model/cart-item.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Cart item",
   "description": "An item in a shopping cart.",
@@ -18,7 +19,7 @@
     },
     "product": {
       "description": "The details of the product that the item represents.",
-       "$ref": "./product-details.json"
+      "$ref": "./product-details.json"
     },
     "quantity": {
       "description": "The number of units of the item in the shopping cart.",

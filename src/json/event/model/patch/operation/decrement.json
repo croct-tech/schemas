@@ -1,7 +1,8 @@
 {
+  "$id": "https://schema.croct.com/json/event/model/patch/operation/decrement.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Merge operation",
-  "description": "An operation to merge arrays or maps.",
+  "title": "Increment operation",
+  "description": "An operation to decrement a number.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -12,15 +13,15 @@
   "properties": {
     "type": {
       "description": "The operation type identifier.",
-      "const": "merge"
+      "const": "decrement"
     },
     "path": {
-      "description": "The path where to merge the values.",
+      "description": "The path where to decrement the value.",
       "$ref": "../pointer.json"
     },
     "value": {
-      "description": "The array or map to merge.",
-      "$ref": "../collection-value.json"
+      "description": "The amount to decrement.",
+      "type": "integer"
     }
   }
 }

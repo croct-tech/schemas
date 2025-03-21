@@ -1,4 +1,5 @@
 {
+  "$id": "https://schema.croct.com/json/event/payload/order-placed.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Order placed event",
   "description": "An event recording that an order was placed.",

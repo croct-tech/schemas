@@ -1,4 +1,5 @@
 {
+  "$id": "https://schema.croct.com/json/event/model/product-details.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Product details",
   "description": "The detailed information of a product.",

@@ -1,4 +1,5 @@
 {
+  "$id": "https://schema.croct.com/json/event/payload/tab-visibility-changed.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Tab visibility changed event",
   "description": "An event recording that the visibility of a tab has changed.",

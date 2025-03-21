@@ -1,4 +1,5 @@
 {
+  "$id": "https://schema.croct.com/json/event/model/patch/pointer.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Pointer",
   "description": "The string representation of a pointer.",

@@ -1,4 +1,5 @@
 {
+  "$id": "https://schema.croct.com/json/event/model/cart.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Cart",
   "description": "A shopping cart in an online store.",
@@ -25,7 +26,7 @@
       "description": "The list of items in the shopping cart.",
       "type": "array",
       "items": {
-         "$ref": "./cart-item.json"
+        "$ref": "./cart-item.json"
       }
     },
     "subtotal": {
