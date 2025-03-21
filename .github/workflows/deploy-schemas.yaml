@@ -17,9 +17,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: sourcemeta/jsonschema@v7.1.2
 
       - name: Bundle schemas
-        uses: sourcemeta/jsonschema@v7.1.2
         run: |-
           mkdir -p build/json
           jsonschema src/json/event/web-event.json --resolve src/json/event/ --without-id > build/json/web-event.json
