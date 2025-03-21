@@ -36,9 +36,9 @@ To use a JSON schema in your JSON configuration, include the `$schema` keyword r
 
 Below is a list of available JSON schemas:
 
-| Schema    | URL                                                                                                    |
-|-----------|--------------------------------------------------------------------------------------------------------|
-| Web event | [`https://schema.croct.com/v1/event/web-event.json`](https://schema.croct.com/v1/event/web-event.json) |
+| Schema    | URL                                                                                                  |
+|-----------|------------------------------------------------------------------------------------------------------|
+| Web event | [`https://schema.croct.com/json/v1/web-event.json`](https://schema.croct.com/json/v1/web-event.json) |
 
 ## Documentation
 
