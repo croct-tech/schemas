@@ -28,7 +28,7 @@ jobs:
       - name: Deploy pre-release to GCS
         if: ${{ github.event.release.prerelease || !github.ref }}
         run: |-
-          gsutil -m rsync -r -d build "gs://${GCLOUD_BUCKET}/json/next"
+          gsutil -m rsync -r -d src/json "gs://${GCLOUD_BUCKET}/json/next"
           gsutil -m setmeta -h "Cache-Control: public, max-age=3600" "gs://${GCLOUD_BUCKET}/json/next/**"
         env:
           GCLOUD_BUCKET: ${{ secrets.GCLOUD_BUCKET }}
