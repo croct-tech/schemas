@@ -24,11 +24,9 @@
     },
     "context": {
       "$ref": "./web-context.json",
-      "type": "object",
       "description": "The context of the client when the event was tracked."
     },
     "payload": {
-      "type": "object",
       "description": "The event details, specific to the type of event.",
       "oneOf": [
         {"$ref": "./payload/nothing-changed.json"},
