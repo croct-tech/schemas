@@ -22,7 +22,7 @@ jobs:
       - name: Bundle schemas
         run: |-
           mkdir -p build/json
-          jsonschema src/json/event/web-event.json --resolve src/json/event/ --without-id > build/json/web-event.json
+          jsonschema bundle src/json/event/web-event.json --resolve src/json/event/ --without-id > build/json/web-event.json
 
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v2
