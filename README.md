@@ -46,7 +46,7 @@ Below is a list of available JSON schemas:
 
 ## Documentation
 
-Visit our [official documentation](https://docs.croct.com/reference/sdk/javascript/installation).
+Visit our [official documentation](https://docs.croct.com).
 
 ## Support
 
