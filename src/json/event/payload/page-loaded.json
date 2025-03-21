@@ -1,9 +1,9 @@
 {
   "$id": "https://schema.croct.com/json/event/payload/page-loaded.json",
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Page Loaded Event",
   "description": "An event recording that a page was loaded.",
-  "type": "object",
+  "type": ["object"],
   "additionalProperties": false,
   "required": [
     "type",
@@ -18,7 +18,7 @@
     },
     "url": {
       "description": "The URL of the page.",
-      "type": "string",
+      "type": ["string"],
       "format": "uri",
       "pattern": "^https?://"
     },
@@ -28,11 +28,11 @@
         "Apple",
         "Nike. Just Do It."
       ],
-      "type": "string"
+      "type": ["string"]
     },
     "lastModifiedTime": {
       "description": "The last time the page was modified.",
-      "type": "integer"
+      "type": ["integer"]
     }
   }
 }

@@ -1,9 +1,9 @@
 {
   "$id": "https://schema.croct.com/json/event/payload/goal-completed.json",
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Goal completed event",
   "description": "An event recording a completed activity, such as a purchase.",
-  "type": "object",
+  "type": ["object"],
   "additionalProperties": false,
   "required": [
     "type",
@@ -20,7 +20,7 @@
         "product-page",
         "purchase"
       ],
-      "type": "string",
+      "type": ["string"],
       "minLength": 1,
       "maxLength": 100,
       "pattern": "^[a-zA-Z0-9][a-zA-Z0-9:_-]+[a-zA-Z0-9]$"
@@ -31,7 +31,7 @@
         0,
         99.9
       ],
-      "type": "number",
+      "type": ["number"],
       "minimum": 0
     },
     "currency": {
@@ -40,7 +40,7 @@
         "BRL",
         "BTC"
       ],
-      "type": "string",
+      "type": ["string"],
       "minLength": 1,
       "maxLength": 10
     }

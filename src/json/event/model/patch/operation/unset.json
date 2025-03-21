@@ -1,9 +1,9 @@
 {
   "$id": "https://schema.croct.com/json/event/model/patch/operation/unset.json",
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Unset operation",
   "description": "An operation to unset a value.",
-  "type": "object",
+  "type": ["object"],
   "additionalProperties": false,
   "required": [
     "type",

@@ -1,9 +1,9 @@
 {
   "$id": "https://schema.croct.com/json/event/model/product-details.json",
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Product details",
   "description": "The detailed information of a product.",
-  "type": "object",
+  "type": ["object"],
   "additionalProperties": false,
   "required": [
     "productId",
@@ -17,7 +17,7 @@
         "3108",
         "CD4371"
       ],
-      "type": "string",
+      "type": ["string"],
       "minLength": 1,
       "maxLength": 50
     },
@@ -27,7 +27,7 @@
         "IPH-GRE-64",
         "153-169-172-182887"
       ],
-      "type": "string",
+      "type": ["string"],
       "minLength": 1,
       "maxLength": 50
     },
@@ -37,7 +37,7 @@
         "iPhone",
         "Nike Air Max"
       ],
-      "type": "string",
+      "type": ["string"],
       "minLength": 1,
       "maxLength": 200
     },
@@ -47,7 +47,7 @@
         "Phone",
         "Running"
       ],
-      "type": "string",
+      "type": ["string"],
       "minLength": 1,
       "maxLength": 100
     },
@@ -57,7 +57,7 @@
         "Apple",
         "Nike"
       ],
-      "type": "string",
+      "type": ["string"],
       "minLength": 1,
       "maxLength": 100
     },
@@ -67,18 +67,18 @@
         "64GB Green",
         "White 270"
       ],
-      "type": "string",
+      "type": ["string"],
       "minLength": 1,
       "maxLength": 50
     },
     "displayPrice": {
       "description": "The price of the product displayed in the store.",
-      "type": "number",
+      "type": ["number"],
       "minimum": 0
     },
     "originalPrice": {
       "description": "The original price of the product.",
-      "type": "number",
+      "type": ["number"],
       "minimum": 0
     },
     "url": {
@@ -87,7 +87,7 @@
         "https://apple.com/iphone",
         "https://nike.com/t/air-max"
       ],
-      "type": "string",
+      "type": ["string"],
       "format": "uri",
       "pattern": "^https?://"
     },
@@ -97,7 +97,7 @@
         "https://img.apple.com/iphone.png",
         "https://nike.com/img/air-max.jpg"
       ],
-      "type": "string",
+      "type": ["string"],
       "format": "uri",
       "pattern": "^https?://"
     }

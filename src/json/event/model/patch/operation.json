@@ -1,141 +1,19 @@
 {
   "$id": "https://schema.croct.com/json/event/model/patch/operation.json",
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Patch operation",
   "description": "The union of all supported patch operations.",
-  "type": "object",
-  "properties": {
-    "type": {
-      "description": "The operation type identifier.",
-      "enum": [
-        "unset",
-        "set",
-        "merge",
-        "clear",
-        "decrement",
-        "add",
-        "remove",
-        "increment",
-        "combine"
-      ]
-    }
-  },
-  "if": {
-    "type": "object",
-    "required": [
-      "type"
-    ]
-  },
-  "then": {
-    "allOf": [
-      {
-        "if": {
-          "properties": {
-            "type": {
-              "const": "unset"
-            }
-          }
-        },
-        "then": {
-          "$ref": "operation/unset.json"
-        }
-      },
-      {
-        "if": {
-          "properties": {
-            "type": {
-              "const": "set"
-            }
-          }
-        },
-        "then": {
-          "$ref": "operation/set.json"
-        }
-      },
-      {
-        "if": {
-          "properties": {
-            "type": {
-              "const": "merge"
-            }
-          }
-        },
-        "then": {
-          "$ref": "operation/merge.json"
-        }
-      },
-      {
-        "if": {
-          "properties": {
-            "type": {
-              "const": "clear"
-            }
-          }
-        },
-        "then": {
-          "$ref": "operation/clear.json"
-        }
-      },
-      {
-        "if": {
-          "properties": {
-            "type": {
-              "const": "decrement"
-            }
-          }
-        },
-        "then": {
-          "$ref": "operation/decrement.json"
-        }
-      },
-      {
-        "if": {
-          "properties": {
-            "type": {
-              "const": "increment"
-            }
-          }
-        },
-        "then": {
-          "$ref": "operation/increment.json"
-        }
-      },
-      {
-        "if": {
-          "properties": {
-            "type": {
-              "const": "add"
-            }
-          }
-        },
-        "then": {
-          "$ref": "operation/add.json"
-        }
-      },
-      {
-        "if": {
-          "properties": {
-            "type": {
-              "const": "remove"
-            }
-          }
-        },
-        "then": {
-          "$ref": "operation/remove.json"
-        }
-      },
-      {
-        "if": {
-          "properties": {
-            "type": {
-              "const": "combine"
-            }
-          }
-        },
-        "then": {
-          "$ref": "operation/combine.json"
-        }
-      }
-    ]
-  }
+  "type": ["object"],
+  "oneOf": [
+    {"$ref": "./operation/unset.json"},
+    {"$ref": "./operation/set.json"},
+    {"$ref": "./operation/merge.json"},
+    {"$ref": "./operation/clear.json"},
+    {"$ref": "./operation/decrement.json"},
+    {"$ref": "./operation/increment.json"},
+    {"$ref": "./operation/add.json"},
+    {"$ref": "./operation/remove.json"},
+    {"$ref": "./operation/combine.json"}
+  ],
+  "unevaluatedProperties": false
 }

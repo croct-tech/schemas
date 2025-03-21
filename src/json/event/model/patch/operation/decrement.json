@@ -1,9 +1,9 @@
 {
   "$id": "https://schema.croct.com/json/event/model/patch/operation/decrement.json",
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Increment operation",
   "description": "An operation to decrement a number.",
-  "type": "object",
+  "type": ["object"],
   "additionalProperties": false,
   "required": [
     "type",
@@ -21,7 +21,7 @@
     },
     "value": {
       "description": "The amount to decrement.",
-      "type": "integer"
+      "type": ["integer"]
     }
   }
 }

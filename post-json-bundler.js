@@ -4,8 +4,8 @@ const file = process.argv[2];
 
 const content = fs.readFileSync(file, 'utf-8')
     .replace(
-        /"#\/definitions\/https%3A~1~1schema\.croct\.com~1json~1(.+?)\.json"/g,
-        (_, match) => `"#/definitions/${match.replace(/~1/g, '-')}"`,
+        /"#\/\$defs\/https%3A~1~1schema\.croct\.com~1json~1(.+?)\.json"/g,
+        (_, match) => `"#/$defs/${match.replace(/~1/g, '-')}"`,
     )
     .replace(
         /"https:\/\/schema.croct.com\/json\/(.+?)\.json"/g,

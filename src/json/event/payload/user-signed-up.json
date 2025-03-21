@@ -1,9 +1,9 @@
 {
   "$id": "https://schema.croct.com/json/event/payload/user-signed-up.json",
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "User signed up event",
   "description": "An event recording that a user has signed up.",
-  "type": "object",
+  "type": ["object"],
   "additionalProperties": false,
   "required": [
     "type",
@@ -20,7 +20,7 @@
         "erick-doe",
         "carol.duran"
       ],
-      "type": "string",
+      "type": ["string"],
       "minLength": 1,
       "maxLength": 100
     },

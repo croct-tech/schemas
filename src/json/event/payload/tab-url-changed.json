@@ -1,9 +1,9 @@
 {
   "$id": "https://schema.croct.com/json/event/payload/tab-url-changed.json",
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Tab URL changed event",
   "description": "An event recording that the URL of a tab has changed.",
-  "type": "object",
+  "type": ["object"],
   "additionalProperties": false,
   "required": [
     "type",
@@ -17,12 +17,12 @@
     },
     "tabId": {
       "description": "The ID that uniquely identifies the tab across the session.",
-      "type": "string",
+      "type": ["string"],
       "format": "uuid"
     },
     "url": {
       "description": "The URL the page that the tab is on.",
-      "type": "string",
+      "type": ["string"],
       "format": "uri",
       "pattern": "^https?://"
     }

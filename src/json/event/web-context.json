@@ -1,9 +1,9 @@
 {
   "$id": "https://schema.croct.com/json/event/web-context.json",
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Web context",
   "description": "The context of a web client at the time an event is tracked.",
-  "type": "object",
+  "type": ["object"],
   "additionalProperties": false,
   "required": [
     "tabId",
@@ -11,18 +11,18 @@
   ],
   "properties": {
     "tabId": {
-      "type": "string",
+      "type": ["string"],
       "format": "uuid",
       "description": "The ID that uniquely identifies the tab across the session."
     },
     "url": {
-      "type": "string",
+      "type": ["string"],
       "format": "uri",
       "pattern": "^https?://",
       "description": "The URL of the page that the client was on."
     },
     "metadata": {
-      "type": "object",
+      "type": ["object"],
       "description": "Additional information about the application that tracked the event.",
       "examples": [
         {
@@ -32,11 +32,11 @@
       ],
       "maxProperties": 5,
       "additionalProperties": {
-        "type": "string",
+        "type": ["string"],
         "maxLength": 300
       },
       "propertyNames": {
-        "type": "string",
+        "type": ["string"],
         "minLength": 1,
         "maxLength": 20,
         "pattern": "^[a-zA-Z_][a-zA-Z0-9_]*$"

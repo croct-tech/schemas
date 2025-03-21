@@ -1,9 +1,9 @@
 {
   "$id": "https://schema.croct.com/json/event/payload/nothing-changed.json",
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Nothing changed event",
   "description": "An event recording a period of inactivity.",
-  "type": "object",
+  "type": ["object"],
   "additionalProperties": false,
   "required": [
     "type",
@@ -16,7 +16,7 @@
     },
     "sinceTime": {
       "description": "The timestamp when an activity was last observed, in milliseconds since epoch.",
-      "type": "integer"
+      "type": ["integer"]
     }
   }
 }

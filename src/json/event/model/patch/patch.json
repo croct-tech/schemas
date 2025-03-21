@@ -1,16 +1,16 @@
 {
   "$id": "https://schema.croct.com/json/event/model/patch/patch.json",
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Patch",
   "description": "A sequence of operations to apply atomically to a target value.",
-  "type": "object",
+  "type": ["object"],
   "additionalProperties": false,
   "required": [
     "operations"
   ],
   "properties": {
     "operations": {
-      "type": "array",
+      "type": ["array"],
       "description": "The list of operations to be applied atomically.",
       "items": {
         "$ref": "operation.json"
