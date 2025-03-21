@@ -15,13 +15,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Cache dependencies
-        id: cache-dependencies
-        uses: actions/cache@v4
-        with:
-          path: node_modules
-          key: node_modules-${{ hashFiles('package-lock.json') }}
-
       - id: auth
         name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v2
