@@ -37,6 +37,8 @@ jobs:
         run: |-
           gsutil -m rsync -r -d build "gs://${GCLOUD_BUCKET}/json/next"
           gsutil -m setmeta -h "Cache-Control: public, max-age=3600" "gs://${GCLOUD_BUCKET}/json/next/**"
+        env:
+          GCLOUD_BUCKET: ${{ secrets.GCLOUD_BUCKET }}
 
       - name: Deploy release to GCS
         if: ${{ !github.event.release.prerelease && github.ref }}
@@ -44,3 +46,5 @@ jobs:
           MAJOR_VERSION=$(echo "${GITHUB_REF##*/}" | cut -d. -f1)
           gsutil -m rsync -r -d src/json "gs://${GCLOUD_BUCKET}/json/${MAJOR_VERSION}"
           gsutil -m setmeta -h "Cache-Control: public, max-age=3600" "gs://${GCLOUD_BUCKET}/json/${MAJOR_VERSION}/**"
+        env:
+          GCLOUD_BUCKET: ${{ secrets.GCLOUD_BUCKET }}
