@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Unset operation",
+  "description": "An operation to unset a value.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "path"
+  ],
+  "properties": {
+    "type": {
+      "description": "The operation type identifier.",
+      "const": "unset"
+    },
+    "path": {
+      "description": "The path where to unset the value.",
+      "$ref": "../pointer.json"
+    }
+  }
+}

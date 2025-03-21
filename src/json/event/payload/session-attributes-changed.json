@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Session attributes changed event",
+  "description": "An event recording that the attributes of a session have changed.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "patch"
+  ],
+  "properties": {
+    "type": {
+      "description": "The event type identifier.",
+      "const": "sessionAttributesChanged"
+    },
+    "patch": {
+      "description": "The patch to apply the changes to the session.",
+      "$ref": "../patch/patch.json"
+    }
+  }
+}

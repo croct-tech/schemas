@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Checkout started event",
+  "description": "An event recording that a shopping cart started the checkout process.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "cart"
+  ],
+  "properties": {
+    "type": {
+      "description": "The event type identifier.",
+      "const": "checkoutStarted"
+    },
+    "cart": {
+      "description": "The shopping cart that started the checkout process.",
+      "$ref": "../model/cart.json"
+    },
+    "orderId": {
+      "description": "The ID that uniquely identifies the order across the store.",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 50
+    }
+  }
+}

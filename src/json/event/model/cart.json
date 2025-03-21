@@ -1,0 +1,107 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Cart",
+  "description": "A shopping cart in an online store.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "currency",
+    "items",
+    "total",
+    "lastUpdateTime"
+  ],
+  "properties": {
+    "currency": {
+      "description": "The currency in which the monetary values are expressed in the shopping cart. The currency should be specified using the 3-letter currency codes defined by the ISO 4217 standard. For currencies having no official recognition in ISO 4217, as is the case with cryptocurrencies, it is allowed the use of non-ISO codes adopted locally or commercially.",
+      "examples": [
+        "BRL",
+        "BTC"
+      ],
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 10
+    },
+    "items": {
+      "description": "The list of items in the shopping cart.",
+      "type": "array",
+      "items": {
+        "$ref": "cart-item.json"
+      }
+    },
+    "subtotal": {
+      "description": "The total of all items and quantities in the shopping cart including applied item promotions. Applied order discounts, estimated shipping, and applied shipping discounts should be excluded from the subtotal amount.",
+      "type": "number",
+      "minimum": 0
+    },
+    "shippingPrice": {
+      "description": "The total shipping price for the items in the shopping cart, including any handling charges.",
+      "type": "number",
+      "minimum": 0
+    },
+    "taxes": {
+      "description": "The taxes associated with the transaction.",
+      "examples": [
+        {
+          "state": 3.1,
+          "local": 1.5
+        }
+      ],
+      "type": "object",
+      "additionalProperties": {
+        "type": "number",
+        "minimum": 0
+      },
+      "propertyNames": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 50,
+        "pattern": "^[a-zA-Z_][a-zA-Z0-9_]*$"
+      },
+      "minProperties": 1
+    },
+    "costs": {
+      "description": "The costs associated with the transaction, such as manufacturing costs, shipping expenses not borne by the customer, or any other costs.",
+      "examples": [
+        {
+          "manufacturing": 31.8,
+          "cos": 15.8
+        }
+      ],
+      "type": "object",
+      "additionalProperties": {
+        "type": "number",
+        "minimum": 0
+      },
+      "propertyNames": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 50,
+        "pattern": "^[a-zA-Z_][a-zA-Z0-9_]*$"
+      },
+      "minProperties": 1
+    },
+    "discount": {
+      "description": "The amount of the discount applied to the shopping cart.",
+      "type": "number",
+      "minimum": 0
+    },
+    "total": {
+      "description": "The total revenue or grand total associated with the transaction. It includes shipping, tax, and any other adjustment.",
+      "type": "number",
+      "minimum": 0
+    },
+    "coupon": {
+      "description": "The coupon applied to the shopping cart.",
+      "examples": [
+        "SUPER_DEALS"
+      ],
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 50
+    },
+    "lastUpdateTime": {
+      "description": "The timestamp when the shopping cart was last updated, in milliseconds since epoch.",
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Patch",
+  "description": "A sequence of operations to apply atomically to a target value.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "operations"
+  ],
+  "properties": {
+    "operations": {
+      "type": "array",
+      "description": "The list of operations to be applied atomically.",
+      "items": {
+        "$ref": "operation.json"
+      }
+    }
+  }
+}

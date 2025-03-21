@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Goal completed event",
+  "description": "An event recording a completed activity, such as a purchase.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "goalId"
+  ],
+  "properties": {
+    "type": {
+      "description": "The event type identifier.",
+      "const": "goalCompleted"
+    },
+    "goalId": {
+      "description": "The ID of the goal.",
+      "examples": [
+        "product-page",
+        "purchase"
+      ],
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100,
+      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9:_-]+[a-zA-Z0-9]$"
+    },
+    "value": {
+      "description": "The monetary value associated to the completion of the goal. This can represent an estimated value or a symbolic value. For example, if the sales team can close 10% of people who sign up for a newsletter, and the average transaction is $500, then a possible value for newsletter sign-ups can be $50 (i.e., 10% of $500).",
+      "examples": [
+        0,
+        99.9
+      ],
+      "type": "number",
+      "minimum": 0
+    },
+    "currency": {
+      "description": "The currency in which the monetary value is expressed. The currency should be specified using the 3-letter currency codes defined by the ISO 4217 standard. For currencies having no official recognition in ISO 4217, as is the case with cryptocurrencies, it is allowed the use of non-ISO codes adopted locally or commercially.",
+      "examples": [
+        "BRL",
+        "BTC"
+      ],
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 10
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "User signed-in event",
+  "description": "An event recording that a user has signed in.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "externalUserId"
+  ],
+  "properties": {
+    "type": {
+      "description": "The event type identifier.",
+      "const": "userSignedIn"
+    },
+    "externalUserId": {
+      "description": "The external ID of the user.",
+      "examples": [
+        "erick-doe",
+        "carol.duran"
+      ],
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100
+    }
+  }
+}

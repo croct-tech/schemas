@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Interest shown event",
+  "description": "An event recording that a user has shown interest in something.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "interests"
+  ],
+  "properties": {
+    "type": {
+      "description": "The event type identifier.",
+      "const": "interestShown"
+    },
+    "interests": {
+      "description": "The set of interests.",
+      "examples": [
+        ["music"],
+        ["music", "movies"]
+      ],
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 10,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 50
+      }
+    }
+  }
+}

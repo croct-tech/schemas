@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Tab URL changed event",
+  "description": "An event recording that the URL of a tab has changed.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "tabId",
+    "url"
+  ],
+  "properties": {
+    "type": {
+      "description": "The event type identifier.",
+      "const": "tabUrlChanged"
+    },
+    "tabId": {
+      "description": "The ID that uniquely identifies the tab across the session.",
+      "type": "string",
+      "format": "uuid"
+    },
+    "url": {
+      "description": "The URL the page that the tab is on.",
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https?://"
+    }
+  }
+}

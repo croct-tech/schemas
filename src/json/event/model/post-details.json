@@ -1,0 +1,99 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Post details",
+  "description": "The detailed information of a post.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "postId",
+    "title",
+    "publishTime"
+  ],
+  "properties": {
+    "postId": {
+      "description": "The ID that uniquely identifies the post across the website, non-empty.",
+      "examples": [
+        "announcing-our-seed-round",
+        "3108",
+        "CD4371"
+      ],
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "url": {
+      "description": "The URL of the post page.",
+      "examples": [
+        "https://croct.com/blog/announcing-our-seed-round",
+        "https://croct.com/blog/3108",
+        "https://croct.com/blog/CD4371"
+      ],
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https?://"
+    },
+    "title": {
+      "description": "The title of the post, non-empty.",
+      "examples": [
+        "Announcing our $1.3M seed round",
+        "What is progressive profiling?"
+      ],
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "tags": {
+      "description": "The set of post tags.",
+      "examples": [
+        ["seed-round", "croct-news"],
+        ["marketing", "progressive-profile"]
+      ],
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 10,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 50
+      }
+    },
+    "categories": {
+      "description": "The categories the post belongs to.",
+      "examples": [
+        ["croct-news"],
+        ["marketing"]
+      ],
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 10,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 50
+      }
+    },
+    "authors": {
+      "description": "The authors of the post.",
+      "examples": [
+        ["John Doe"],
+        ["John Doe", "Carol Duran"]
+      ],
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 10,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 50
+      }
+    },
+    "publishTime": {
+      "description": "The timestamp of the post publication, in milliseconds since epoch.",
+      "type": "integer"
+    },
+    "updateTime": {
+      "description": "The timestamp of the post's last update, in milliseconds since epoch.",
+      "type": "integer"
+    }
+  }
+}

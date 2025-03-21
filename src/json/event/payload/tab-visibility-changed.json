@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Tab visibility changed event",
+  "description": "An event recording that the visibility of a tab has changed.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "tabId",
+    "visibility"
+  ],
+  "properties": {
+    "type": {
+      "description": "The event type identifier.",
+      "const": "tabVisibilityChanged"
+    },
+    "tabId": {
+      "description": "The ID that uniquely identifies the tab across the session.",
+      "type": "string",
+      "format": "uuid"
+    },
+    "visibility": {
+      "description": "The visibility of the tab.",
+      "type": "string",
+      "enum": [
+        "visible",
+        "hidden"
+      ]
+    }
+  }
+}
