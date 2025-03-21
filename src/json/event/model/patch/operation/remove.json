@@ -3,7 +3,7 @@
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Remove operation",
   "description": "An operation to remove a value from an array.",
-  "type": ["object"],
+  "type": "object",
   "additionalProperties": false,
   "required": [
     "type",

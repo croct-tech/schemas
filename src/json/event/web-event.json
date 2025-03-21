@@ -9,26 +9,26 @@
     "context",
     "payload"
   ],
-  "type": ["object"],
+  "type": "object",
   "properties": {
     "$schema": {
-      "type": ["string"]
+      "type": "string"
     },
     "originalTime": {
-      "type": ["integer"],
+      "type": "integer",
       "description": "The timestamp when the event was tracked, in milliseconds since epoch."
     },
     "departureTime": {
-      "type": ["integer"],
+      "type": "integer",
       "description": "The timestamp when the beacon was sent by the client, in milliseconds since epoch."
     },
     "context": {
       "$ref": "./web-context.json",
-      "type": ["object"],
+      "type": "object",
       "description": "The context of the client when the event was tracked."
     },
     "payload": {
-      "type": ["object"],
+      "type": "object",
       "description": "The event details, specific to the type of event.",
       "oneOf": [
         {"$ref": "./payload/nothing-changed.json"},

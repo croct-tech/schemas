@@ -3,7 +3,7 @@
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Cart",
   "description": "A shopping cart in an online store.",
-  "type": ["object"],
+  "type": "object",
   "additionalProperties": false,
   "required": [
     "currency",
@@ -18,25 +18,25 @@
         "BRL",
         "BTC"
       ],
-      "type": ["string"],
+      "type": "string",
       "minLength": 1,
       "maxLength": 10
     },
     "items": {
       "description": "The list of items in the shopping cart.",
-      "type": ["array"],
+      "type": "array",
       "items": {
         "$ref": "./cart-item.json"
       }
     },
     "subtotal": {
       "description": "The total of all items and quantities in the shopping cart including applied item promotions. Applied order discounts, estimated shipping, and applied shipping discounts should be excluded from the subtotal amount.",
-      "type": ["number"],
+      "type": "number",
       "minimum": 0
     },
     "shippingPrice": {
       "description": "The total shipping price for the items in the shopping cart, including any handling charges.",
-      "type": ["number"],
+      "type": "number",
       "minimum": 0
     },
     "taxes": {
@@ -47,13 +47,13 @@
           "local": 1.5
         }
       ],
-      "type": ["object"],
+      "type": "object",
       "additionalProperties": {
-        "type": ["number"],
+        "type": "number",
         "minimum": 0
       },
       "propertyNames": {
-        "type": ["string"],
+        "type": "string",
         "minLength": 1,
         "maxLength": 50,
         "pattern": "^[a-zA-Z_][a-zA-Z0-9_]*$"
@@ -68,13 +68,13 @@
           "cos": 15.8
         }
       ],
-      "type": ["object"],
+      "type": "object",
       "additionalProperties": {
-        "type": ["number"],
+        "type": "number",
         "minimum": 0
       },
       "propertyNames": {
-        "type": ["string"],
+        "type": "string",
         "minLength": 1,
         "maxLength": 50,
         "pattern": "^[a-zA-Z_][a-zA-Z0-9_]*$"
@@ -83,12 +83,12 @@
     },
     "discount": {
       "description": "The amount of the discount applied to the shopping cart.",
-      "type": ["number"],
+      "type": "number",
       "minimum": 0
     },
     "total": {
       "description": "The total revenue or grand total associated with the transaction. It includes shipping, tax, and any other adjustment.",
-      "type": ["number"],
+      "type": "number",
       "minimum": 0
     },
     "coupon": {
@@ -96,13 +96,13 @@
       "examples": [
         "SUPER_DEALS"
       ],
-      "type": ["string"],
+      "type": "string",
       "minLength": 1,
       "maxLength": 50
     },
     "lastUpdateTime": {
       "description": "The timestamp when the shopping cart was last updated, in milliseconds since epoch.",
-      "type": ["integer"]
+      "type": "integer"
     }
   }
 }

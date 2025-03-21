@@ -5,16 +5,16 @@
   "description": "A primitive value.",
   "anyOf": [
     {
-      "type": ["string"]
+      "type": "string"
     },
     {
-      "type": ["number"]
+      "type": "number"
     },
     {
-      "type": ["boolean"]
+      "type": "boolean"
     },
     {
-      "type": ["null"]
+      "type": "null"
     }
   ]
 }

@@ -3,7 +3,7 @@
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "User profile changed event",
   "description": "An event recording that a user profile has changed.",
-  "type": ["object"],
+  "type": "object",
   "additionalProperties": false,
   "required": [
     "type",

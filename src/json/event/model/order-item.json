@@ -3,7 +3,7 @@
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Order item",
   "description": "An item of an order.",
-  "type": ["object"],
+  "type": "object",
   "additionalProperties": false,
   "required": [
     "index",
@@ -14,7 +14,7 @@
   "properties": {
     "index": {
       "description": "The index, starting from zero, representing the order in which the item was added to the shopping cart.",
-      "type": ["integer"],
+      "type": "integer",
       "minimum": 0
     },
     "product": {
@@ -23,17 +23,17 @@
     },
     "quantity": {
       "description": "The number of units of the item ordered.",
-      "type": ["integer"],
+      "type": "integer",
       "minimum": 1
     },
     "total": {
       "description": "The total for the item. It includes discounts and any other adjustment.",
-      "type": ["number"],
+      "type": "number",
       "minimum": 0
     },
     "discount": {
       "description": "The amount of the discount applied to the item.",
-      "type": ["number"],
+      "type": "number",
       "minimum": 0
     },
     "coupon": {
@@ -41,7 +41,7 @@
       "examples": [
         "SUPER_DEALS"
       ],
-      "type": ["string"],
+      "type": "string",
       "minLength": 1,
       "maxLength": 50
     }

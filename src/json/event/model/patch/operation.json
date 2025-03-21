@@ -3,7 +3,7 @@
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Patch operation",
   "description": "The union of all supported patch operations.",
-  "type": ["object"],
+  "type": "object",
   "oneOf": [
     {"$ref": "./operation/unset.json"},
     {"$ref": "./operation/set.json"},

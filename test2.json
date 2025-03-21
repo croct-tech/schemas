@@ -1,0 +1,12 @@
+{
+  "$schema": "web-event.json",
+  "payload": {
+    "type": "interestShown",
+    "interests": ["a"]
+  },
+  "originalTime": 0,
+  "departureTime": 0,
+  "context": {
+    "tabId": "",
+  }
+}

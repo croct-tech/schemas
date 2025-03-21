@@ -3,7 +3,7 @@
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Post details",
   "description": "The detailed information of a post.",
-  "type": ["object"],
+  "type": "object",
   "additionalProperties": false,
   "required": [
     "postId",
@@ -18,7 +18,7 @@
         "3108",
         "CD4371"
       ],
-      "type": ["string"],
+      "type": "string",
       "minLength": 1,
       "maxLength": 200
     },
@@ -29,7 +29,7 @@
         "https://croct.com/blog/3108",
         "https://croct.com/blog/CD4371"
       ],
-      "type": ["string"],
+      "type": "string",
       "format": "uri",
       "pattern": "^https?://"
     },
@@ -39,7 +39,7 @@
         "Announcing our $1.3M seed round",
         "What is progressive profiling?"
       ],
-      "type": ["string"],
+      "type": "string",
       "minLength": 1,
       "maxLength": 200
     },
@@ -55,11 +55,11 @@
           "progressive-profile"
         ]
       ],
-      "type": ["array"],
+      "type": "array",
       "minItems": 1,
       "maxItems": 10,
       "items": {
-        "type": ["string"],
+        "type": "string",
         "minLength": 1,
         "maxLength": 50
       }
@@ -74,11 +74,11 @@
           "marketing"
         ]
       ],
-      "type": ["array"],
+      "type": "array",
       "minItems": 1,
       "maxItems": 10,
       "items": {
-        "type": ["string"],
+        "type": "string",
         "minLength": 1,
         "maxLength": 50
       }
@@ -94,22 +94,22 @@
           "Carol Duran"
         ]
       ],
-      "type": ["array"],
+      "type": "array",
       "minItems": 1,
       "maxItems": 10,
       "items": {
-        "type": ["string"],
+        "type": "string",
         "minLength": 1,
         "maxLength": 50
       }
     },
     "publishTime": {
       "description": "The timestamp of the post publication, in milliseconds since epoch.",
-      "type": ["integer"]
+      "type": "integer"
     },
     "updateTime": {
       "description": "The timestamp of the post's last update, in milliseconds since epoch.",
-      "type": ["integer"]
+      "type": "integer"
     }
   }
 }

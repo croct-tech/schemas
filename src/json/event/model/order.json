@@ -3,7 +3,7 @@
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Order",
   "description": "An order placed in an online store.",
-  "type": ["object"],
+  "type": "object",
   "additionalProperties": false,
   "required": [
     "orderId",
@@ -14,7 +14,7 @@
   "properties": {
     "orderId": {
       "description": "The ID that uniquely identifies the order across the store.",
-      "type": ["string"],
+      "type": "string",
       "minLength": 1,
       "maxLength": 50
     },
@@ -24,13 +24,13 @@
         "BRL",
         "BTC"
       ],
-      "type": ["string"],
+      "type": "string",
       "minLength": 1,
       "maxLength": 10
     },
     "items": {
       "description": "The list of items in the order.",
-      "type": ["array"],
+      "type": "array",
       "items": {
         "$ref": "./order-item.json"
       },
@@ -38,12 +38,12 @@
     },
     "subtotal": {
       "description": "The total of all items and quantities in the order including applied item promotions. Applied order discounts, estimated shipping, and applied shipping discounts should be excluded from the subtotal amount.",
-      "type": ["number"],
+      "type": "number",
       "minimum": 0
     },
     "shippingPrice": {
       "description": "The total shipping price for the order, including any handling charges.",
-      "type": ["number"],
+      "type": "number",
       "minimum": 0
     },
     "taxes": {
@@ -54,12 +54,12 @@
           "local": 1.5
         }
       ],
-      "type": ["object"],
+      "type": "object",
       "additionalProperties": {
-        "type": ["number"]
+        "type": "number"
       },
       "propertyNames": {
-        "type": ["string"],
+        "type": "string",
         "minLength": 1,
         "maxLength": 50,
         "pattern": "^[a-zA-Z_][a-zA-Z0-9_]*$"
@@ -74,12 +74,12 @@
           "cos": 15.8
         }
       ],
-      "type": ["object"],
+      "type": "object",
       "additionalProperties": {
-        "type": ["number"]
+        "type": "number"
       },
       "propertyNames": {
-        "type": ["string"],
+        "type": "string",
         "minLength": 1,
         "maxLength": 50,
         "pattern": "^[a-zA-Z_][a-zA-Z0-9_]*$"
@@ -88,12 +88,12 @@
     },
     "discount": {
       "description": "The amount of the discount applied to the order.",
-      "type": ["number"],
+      "type": "number",
       "minimum": 0
     },
     "total": {
       "description": "The total revenue or grand total associated with the transaction. It includes shipping, tax, and any other adjustment.",
-      "type": ["number"],
+      "type": "number",
       "minimum": 0
     },
     "coupon": {
@@ -101,7 +101,7 @@
       "examples": [
         "SUPER_DEALS"
       ],
-      "type": ["string"],
+      "type": "string",
       "minLength": 1,
       "maxLength": 50
     },
@@ -110,18 +110,18 @@
       "examples": [
         "Credit Card"
       ],
-      "type": ["string"],
+      "type": "string",
       "minLength": 1,
       "maxLength": 50
     },
     "installments": {
       "description": "The number of installments of the transaction, non-negative.",
-      "type": ["integer"],
+      "type": "integer",
       "minimum": 1
     },
     "status": {
       "description": "The current status of the order.",
-      "type": ["string"],
+      "type": "string",
       "enum": [
         "placed",
         "paid",

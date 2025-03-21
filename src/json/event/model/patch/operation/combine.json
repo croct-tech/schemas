@@ -3,7 +3,7 @@
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Combine operation",
   "description": "An operation to combine arrays or maps.",
-  "type": ["object"],
+  "type": "object",
   "additionalProperties": false,
   "required": [
     "type",
