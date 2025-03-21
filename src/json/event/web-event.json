@@ -11,6 +11,9 @@
   ],
   "type": "object",
   "properties": {
+    "$schema": {
+      "type": "string"
+    },
     "originalTime": {
       "type": "integer",
       "description": "The timestamp when the event was tracked, in milliseconds since epoch."
