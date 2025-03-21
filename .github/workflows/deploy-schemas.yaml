@@ -34,7 +34,7 @@ jobs:
           gsutil -m rsync -r -d src/json "gs://${GCLOUD_BUCKET}/json/next"
           gsutil -m setmeta -h "Cache-Control: public, max-age=3600" "gs://${GCLOUD_BUCKET}/json/next/**"
         env:
-          GCLOUD_BUCKET: ${{ secrets.STORAGE_BUCKET_SCHEMA }}
+          GCLOUD_BUCKET: ${{ secrets.STORAGE_BUCKET_SCHEMAS }}
 
       - name: Deploy release to GCS
         if: ${{ github.event.release && !github.event.release.prerelease && github.ref }}
@@ -43,4 +43,4 @@ jobs:
           gsutil -m rsync -r -d src/json "gs://${GCLOUD_BUCKET}/json/${MAJOR_VERSION}"
           gsutil -m setmeta -h "Cache-Control: public, max-age=3600" "gs://${GCLOUD_BUCKET}/json/${MAJOR_VERSION}/**"
         env:
-          GCLOUD_BUCKET: ${{ secrets.STORAGE_BUCKET_SCHEMA }}
+          GCLOUD_BUCKET: ${{ secrets.STORAGE_BUCKET_SCHEMAS }}
