@@ -1,0 +1,19 @@
+{
+  "schema": "event/web-event.json",
+  "input": {
+    "context": {
+      "tabId": "27b7f785-137e-4bbd-a52d-065baf5885cc",
+      "url": "https://www.acme.com"
+    },
+    "payload": {
+      "type": "nothingChanged",
+      "sinceTime": 9
+    },
+    "originalTime": 1,
+    "departureTime": 2,
+    "extraProperty": "extra"
+  },
+  "errors": [
+    "[/extraProperty] The object must not have a property whose name is \"extraProperty\"."
+  ]
+}

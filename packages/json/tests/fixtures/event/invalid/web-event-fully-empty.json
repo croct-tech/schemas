@@ -1,0 +1,10 @@
+{
+  "schema": "event/web-event.json",
+  "input": {},
+  "errors": [
+    "The object must have a property whose name is \"originalTime\".",
+    "The object must have a property whose name is \"departureTime\".",
+    "The object must have a property whose name is \"context\".",
+    "The object must have a property whose name is \"payload\"."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "event/web-event.json",
+  "input": {
+    "context": {
+      "tabId": "27b7f785-137e-4bbd-a52d-065baf5885cc",
+      "url": "https://www.acme.com"
+    },
+    "payload": {},
+    "originalTime": 1,
+    "departureTime": 2
+  },
+  "errors": [
+    "[/payload] The object must have a property whose name is \"type\"."
+  ]
+}

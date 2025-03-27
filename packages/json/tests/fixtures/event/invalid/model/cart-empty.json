@@ -1,0 +1,10 @@
+{
+  "schema": "event/model/cart.json",
+  "input": {},
+  "errors": [
+    "The object must have a property whose name is \"currency\".",
+    "The object must have a property whose name is \"items\".",
+    "The object must have a property whose name is \"total\".",
+    "The object must have a property whose name is \"lastUpdateTime\"."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "schema": "event/model/cart.json",
+  "input": {
+    "currency": "brl",
+    "items": [],
+    "taxes": {
+      "loooooooooooooooooooooooooooooooooooooooooooooooong": 1,
+      "negative_value": -1,
+      "": 1,
+      "key-with-invalid-character": 1,
+      "key_ending_with_invalid_character!": 1,
+      "!key_starting_with_invalid_character": 1
+    },
+    "total": 815.49,
+    "lastUpdateTime": 123456789
+  },
+  "errors": [
+    "[/taxes] The key name must be at most 50 character(s), but actual length is 51.",
+    "[/taxes/negative_value] The numeric value must be greater than or equal to 0.",
+    "[/taxes] The key name must be at least 1 character(s), but actual length is 0.",
+    "[/taxes] The key name must match the pattern \"^[a-zA-Z_][a-zA-Z0-9_]*\\z\".",
+    "[/taxes] The key name must match the pattern \"^[a-zA-Z_][a-zA-Z0-9_]*\\z\".",
+    "[/taxes] The key name must match the pattern \"^[a-zA-Z_][a-zA-Z0-9_]*\\z\".",
+    "[/taxes] The key name must match the pattern \"^[a-zA-Z_][a-zA-Z0-9_]*\\z\"."
+  ]
+}

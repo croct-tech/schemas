@@ -1,0 +1,9 @@
+{
+  "schema": "event/model/patch/operation/decrement.json",
+  "input": {},
+  "errors": [
+    "The object must have a property whose name is \"type\".",
+    "The object must have a property whose name is \"path\".",
+    "The object must have a property whose name is \"value\"."
+  ]
+}

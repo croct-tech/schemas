@@ -1,0 +1,13 @@
+{
+  "schema": "event/model/patch/operation/merge.json",
+  "input": {
+    "type": "merge",
+    "path": "foo",
+    "value": [
+      1,
+      2,
+      3
+    ]
+  },
+  "errors": []
+}

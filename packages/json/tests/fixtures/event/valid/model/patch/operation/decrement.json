@@ -1,0 +1,9 @@
+{
+  "schema": "event/model/patch/operation/decrement.json",
+  "input": {
+    "type": "decrement",
+    "path": "foo",
+    "value": 1
+  },
+  "errors": []
+}

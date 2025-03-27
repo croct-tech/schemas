@@ -1,0 +1,11 @@
+{
+  "schema": "event/model/patch/operation/remove.json",
+  "input": {
+    "type": "remove",
+    "path": "foo",
+    "value": {
+      "bar": "baz"
+    }
+  },
+  "errors": []
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "event/web-event.json",
+  "input": {
+    "context": 0,
+    "payload": 0,
+    "originalTime": "1",
+    "departureTime": "2",
+    "additionalProperty": "foo"
+  },
+  "errors": [
+    "[/context] The value must be of object type, but actual type is integer.",
+    "[/payload] The value must be of object type, but actual type is integer.",
+    "[/originalTime] The value must be of integer type, but actual type is string.",
+    "[/departureTime] The value must be of integer type, but actual type is string.",
+    "[/additionalProperty] The object must not have a property whose name is \"additionalProperty\"."
+  ]
+}
