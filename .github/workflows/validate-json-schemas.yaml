@@ -22,6 +22,11 @@ jobs:
           sparse-checkout-cone-mode: false
           node-version: 23
 
+      - name: Move files
+        run: |-
+          mv packages/json-schemas/schemas/* .
+          rm -rf packages/json-schemas
+
       - name: Cache dependencies
         id: cache-dependencies
         uses: actions/cache@v4
