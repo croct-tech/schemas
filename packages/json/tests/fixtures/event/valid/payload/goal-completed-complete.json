@@ -1,0 +1,10 @@
+{
+  "schema": "event/payload/goal-completed.json",
+  "input": {
+    "type": "goalCompleted",
+    "goalId": "foo--BAR::baz__123",
+    "value": 1,
+    "currency": "BRL"
+  },
+  "errors": []
+}

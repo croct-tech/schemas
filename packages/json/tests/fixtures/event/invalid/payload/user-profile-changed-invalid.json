@@ -1,0 +1,12 @@
+{
+  "schema": "event/payload/user-profile-changed.json",
+  "input": {
+    "type": "userProfileChanged",
+    "patch": 0,
+    "additionalProperty": "foo"
+  },
+  "errors": [
+    "[/patch] The value must be of object type, but actual type is integer.",
+    "[/additionalProperty] The object must not have a property whose name is \"additionalProperty\"."
+  ]
+}

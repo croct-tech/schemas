@@ -1,0 +1,12 @@
+{
+  "schema": "event/payload/link-opened.json",
+  "input": {
+    "type": "linkOpened",
+    "link": "https://www.acme.com?%00",
+    "additionalProperty": "foo"
+  },
+  "errors": [
+    "[/link] The value must be a valid strict-url-encoded-string.",
+    "[/additionalProperty] The object must not have a property whose name is \"additionalProperty\"."
+  ]
+}

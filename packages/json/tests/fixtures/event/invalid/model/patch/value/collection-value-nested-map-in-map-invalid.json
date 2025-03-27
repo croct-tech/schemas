@@ -1,0 +1,41 @@
+{
+  "schema": "event/model/patch/collection-value.json",
+  "input": {
+    "foo": {
+      "bar": {
+        "baz": {
+          "qux": {
+            "quux": null
+          }
+        }
+      }
+    }
+  },
+  "errors": [
+    "At least one of the following sets of problems must be resolved.",
+    "1) The value must be of array type, but actual type is object.",
+    "2) At least one of the following sets of problems must be resolved.",
+    "   1) [/foo] The value must be of number type, but actual type is object.",
+    "   2) [/foo] The value must be of boolean type, but actual type is object.",
+    "   3) [/foo] The value must be of null type, but actual type is object.",
+    "   4) [/foo] The value must be of string type, but actual type is object.",
+    "   5) [/foo] The value must be of array type, but actual type is object.",
+    "   6) At least one of the following sets of problems must be resolved.",
+    "      1) [/foo/bar] The value must be of number type, but actual type is object.",
+    "      2) [/foo/bar] The value must be of boolean type, but actual type is object.",
+    "      3) [/foo/bar] The value must be of null type, but actual type is object.",
+    "      4) [/foo/bar] The value must be of string type, but actual type is object.",
+    "      5) [/foo/bar] The value must be of array type, but actual type is object.",
+    "      6) At least one of the following sets of problems must be resolved.",
+    "         1) [/foo/bar/baz] The value must be of number type, but actual type is object.",
+    "         2) [/foo/bar/baz] The value must be of boolean type, but actual type is object.",
+    "         3) [/foo/bar/baz] The value must be of null type, but actual type is object.",
+    "         4) [/foo/bar/baz] The value must be of string type, but actual type is object.",
+    "         5) [/foo/bar/baz] The value must be of array type, but actual type is object.",
+    "         6) At least one of the following sets of problems must be resolved.",
+    "            1) [/foo/bar/baz/qux] The value must be of number type, but actual type is object.",
+    "            2) [/foo/bar/baz/qux] The value must be of boolean type, but actual type is object.",
+    "            3) [/foo/bar/baz/qux] The value must be of null type, but actual type is object.",
+    "            4) [/foo/bar/baz/qux] The value must be of string type, but actual type is object."
+  ]
+}

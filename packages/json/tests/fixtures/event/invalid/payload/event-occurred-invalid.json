@@ -1,0 +1,12 @@
+{
+  "schema": "event/payload/event-occurred.json",
+  "input": {
+    "type": "eventOccurred",
+    "name": 0,
+    "additionalProperty": "foo"
+  },
+  "errors": [
+    "[/name] The value must be of string type, but actual type is integer.",
+    "[/additionalProperty] The object must not have a property whose name is \"additionalProperty\"."
+  ]
+}

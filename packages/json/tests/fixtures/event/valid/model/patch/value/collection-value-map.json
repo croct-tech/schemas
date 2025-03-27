@@ -1,0 +1,109 @@
+{
+  "schema": "event/model/patch/collection-value.json",
+  "input": {
+    "integer": 1,
+    "number": 1.2,
+    "boolean": true,
+    "null": null,
+    "string": "foo",
+    "array": [
+      1,
+      1.2,
+      true,
+      null,
+      "foo",
+      [
+        1,
+        1.2,
+        true,
+        null,
+        "foo",
+        {
+          "integer": 1,
+          "number": 1.2,
+          "boolean": true,
+          "null": null,
+          "string": "foo"
+        },
+        [
+          1,
+          1.2,
+          true,
+          null,
+          "foo"
+        ]
+      ],
+      {
+        "integer": 1,
+        "number": 1.2,
+        "boolean": true,
+        "null": null,
+        "string": "foo",
+        "map": {
+          "integer": 1,
+          "number": 1.2,
+          "boolean": true,
+          "null": null,
+          "string": "foo"
+        },
+        "array": [
+          1,
+          1.2,
+          true,
+          null,
+          "foo"
+        ]
+      }
+    ],
+    "map": {
+      "integer": 1,
+      "number": 1.2,
+      "boolean": true,
+      "null": null,
+      "string": "foo",
+      "array": [
+        1,
+        1.2,
+        true,
+        null,
+        "foo",
+        {
+          "integer": 1,
+          "number": 1.2,
+          "boolean": true,
+          "null": null,
+          "string": "foo"
+        },
+        [
+          1,
+          1.2,
+          true,
+          null,
+          "foo"
+        ]
+      ],
+      "map": {
+        "integer": 1,
+        "number": 1.2,
+        "boolean": true,
+        "null": null,
+        "string": "foo",
+        "map": {
+          "integer": 1,
+          "number": 1.2,
+          "boolean": true,
+          "null": null,
+          "string": "foo"
+        },
+        "array": [
+          1,
+          1.2,
+          true,
+          null,
+          "foo"
+        ]
+      }
+    }
+  },
+  "errors": []
+}

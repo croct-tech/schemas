@@ -1,0 +1,12 @@
+{
+  "schema": "event/payload/page-loaded.json",
+  "input": {
+    "type": "pageLoaded",
+    "url": "https://www.acme.com?%00",
+    "title": "This is a title.",
+    "lastModifiedTime": 0
+  },
+  "errors": [
+    "[/url] The value must be a valid strict-url-encoded-string."
+  ]
+}

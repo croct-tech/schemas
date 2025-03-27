@@ -1,0 +1,9 @@
+{
+  "schema": "event/payload/tab-visibility-changed.json",
+  "input": {},
+  "errors": [
+    "The object must have a property whose name is \"type\".",
+    "The object must have a property whose name is \"tabId\".",
+    "The object must have a property whose name is \"visibility\"."
+  ]
+}

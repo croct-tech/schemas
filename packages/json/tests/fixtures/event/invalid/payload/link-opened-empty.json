@@ -1,0 +1,8 @@
+{
+  "schema": "event/payload/link-opened.json",
+  "input": {},
+  "errors": [
+    "The object must have a property whose name is \"type\".",
+    "The object must have a property whose name is \"link\"."
+  ]
+}

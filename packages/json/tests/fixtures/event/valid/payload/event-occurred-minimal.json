@@ -1,0 +1,8 @@
+{
+  "schema": "event/payload/event-occurred.json",
+  "input": {
+    "type": "eventOccurred",
+    "name": "event-name"
+  },
+  "errors": []
+}

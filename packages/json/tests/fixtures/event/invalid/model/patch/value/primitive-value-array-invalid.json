@@ -1,0 +1,15 @@
+{
+  "schema": "event/model/patch/primitive-value.json",
+  "input": [
+    1,
+    2,
+    3
+  ],
+  "errors": [
+    "At least one of the following sets of problems must be resolved.",
+    "1) The value must be of number type, but actual type is array.",
+    "2) The value must be of boolean type, but actual type is array.",
+    "3) The value must be of null type, but actual type is array.",
+    "4) The value must be of string type, but actual type is array."
+  ]
+}

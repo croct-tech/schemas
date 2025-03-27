@@ -1,0 +1,12 @@
+{
+  "schema": "event/payload/product-viewed.json",
+  "input": {
+    "type": "productViewed",
+    "product": 0,
+    "additionalProperty": "foo"
+  },
+  "errors": [
+    "[/product] The value must be of object type, but actual type is integer.",
+    "[/additionalProperty] The object must not have a property whose name is \"additionalProperty\"."
+  ]
+}

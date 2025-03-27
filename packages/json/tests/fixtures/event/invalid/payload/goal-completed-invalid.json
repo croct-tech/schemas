@@ -1,0 +1,16 @@
+{
+  "schema": "event/payload/goal-completed.json",
+  "input": {
+    "type": "goalCompleted",
+    "goalId": 1,
+    "value": "1",
+    "currency": 2,
+    "additionalProperty": "foo"
+  },
+  "errors": [
+    "[/goalId] The value must be of string type, but actual type is integer.",
+    "[/value] The value must be of number type, but actual type is string.",
+    "[/currency] The value must be of string type, but actual type is integer.",
+    "[/additionalProperty] The object must not have a property whose name is \"additionalProperty\"."
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "schema": "event/payload/order-placed.json",
+  "input": {
+    "type": "orderPlaced",
+    "order": 0,
+    "additionalProperty": "foo"
+  },
+  "errors": [
+    "[/order] The value must be of object type, but actual type is integer.",
+    "[/additionalProperty] The object must not have a property whose name is \"additionalProperty\"."
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "event/payload/user-signed-up.json",
+  "input": {
+    "type": "userSignedUp",
+    "externalUserId": 0,
+    "patch": 0,
+    "additionalProperty": "foo"
+  },
+  "errors": [
+    "[/externalUserId] The value must be of string type, but actual type is integer.",
+    "[/patch] The value must be of object type, but actual type is integer.",
+    "[/additionalProperty] The object must not have a property whose name is \"additionalProperty\"."
+  ]
+}

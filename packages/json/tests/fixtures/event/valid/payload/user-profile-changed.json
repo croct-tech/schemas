@@ -1,0 +1,16 @@
+{
+  "schema": "event/payload/user-profile-changed.json",
+  "input": {
+    "type": "userProfileChanged",
+    "patch": {
+      "operations": [
+        {
+          "type": "add",
+          "path": "[1]",
+          "value": 1
+        }
+      ]
+    }
+  },
+  "errors": []
+}

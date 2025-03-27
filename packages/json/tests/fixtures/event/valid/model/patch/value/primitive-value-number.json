@@ -1,0 +1,5 @@
+{
+  "schema": "event/model/patch/primitive-value.json",
+  "input": 1.2,
+  "errors": []
+}

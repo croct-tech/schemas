@@ -1,0 +1,12 @@
+{
+  "schema": "event/payload/product-viewed.json",
+  "input": {
+    "type": "productViewed",
+    "product": {
+      "productId": "12345",
+      "name": "Smartphone 9",
+      "displayPrice": 599
+    }
+  },
+  "errors": []
+}

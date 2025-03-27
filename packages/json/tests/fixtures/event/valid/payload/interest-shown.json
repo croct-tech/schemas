@@ -1,0 +1,10 @@
+{
+  "schema": "event/payload/interest-shown.json",
+  "input": {
+    "type": "interestShown",
+    "interests": [
+      "foo"
+    ]
+  },
+  "errors": []
+}

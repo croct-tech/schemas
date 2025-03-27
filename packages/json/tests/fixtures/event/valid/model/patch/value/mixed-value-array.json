@@ -1,0 +1,11 @@
+{
+  "schema": "event/model/patch/mixed-value.json",
+  "input": [
+    1,
+    1.2,
+    true,
+    null,
+    "foo"
+  ],
+  "errors": []
+}

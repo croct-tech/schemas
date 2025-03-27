@@ -1,0 +1,9 @@
+{
+  "schema": "event/model/patch/collection-value.json",
+  "input": 1.2,
+  "errors": [
+    "At least one of the following sets of problems must be resolved.",
+    "1) The value must be of array type, but actual type is number.",
+    "2) The value must be of object type, but actual type is number."
+  ]
+}
