@@ -1,0 +1,19 @@
+{
+  "schema": "event/payload/page-opened.json",
+  "input": {
+    "type": "pageOpened",
+    "url": 1,
+    "referrer": 2
+  },
+  "errors": [
+    {
+      "instancePath": "/url",
+      "schemaPath": "#/properties/url/type",
+      "keyword": "type",
+      "params": {
+        "type": "string"
+      },
+      "message": "must be string"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "schema": "event/payload/user-signed-up.json",
+  "input": {
+    "type": "userSignedUp",
+    "externalUserId": 0,
+    "patch": 0,
+    "additionalProperty": "foo"
+  },
+  "errors": [
+    {
+      "instancePath": "",
+      "schemaPath": "#/additionalProperties",
+      "keyword": "additionalProperties",
+      "params": {
+        "additionalProperty": "additionalProperty"
+      },
+      "message": "must NOT have additional properties"
+    }
+  ]
+}

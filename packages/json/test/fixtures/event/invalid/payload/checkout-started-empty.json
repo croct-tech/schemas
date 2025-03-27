@@ -1,0 +1,15 @@
+{
+  "schema": "event/payload/checkout-started.json",
+  "input": {},
+  "errors": [
+    {
+      "instancePath": "",
+      "schemaPath": "#/required",
+      "keyword": "required",
+      "params": {
+        "missingProperty": "type"
+      },
+      "message": "must have required property 'type'"
+    }
+  ]
+}

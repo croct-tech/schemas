@@ -1,0 +1,21 @@
+{
+  "schema": "event/payload/page-loaded.json",
+  "input": {
+    "type": "pageLoaded",
+    "url": 2,
+    "title": 3,
+    "lastModifiedTime": "0",
+    "additionalProperty": "foo"
+  },
+  "errors": [
+    {
+      "instancePath": "",
+      "schemaPath": "#/additionalProperties",
+      "keyword": "additionalProperties",
+      "params": {
+        "additionalProperty": "additionalProperty"
+      },
+      "message": "must NOT have additional properties"
+    }
+  ]
+}

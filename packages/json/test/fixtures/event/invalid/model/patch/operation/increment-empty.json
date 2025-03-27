@@ -1,0 +1,15 @@
+{
+  "schema": "event/model/patch/operation/increment.json",
+  "input": {},
+  "errors": [
+    {
+      "instancePath": "",
+      "schemaPath": "#/required",
+      "keyword": "required",
+      "params": {
+        "missingProperty": "type"
+      },
+      "message": "must have required property 'type'"
+    }
+  ]
+}

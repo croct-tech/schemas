@@ -1,0 +1,214 @@
+{
+  "schema": "event/web-event.json",
+  "input": {
+    "context": {
+      "tabId": "27b7f785-137e-4bbd-a52d-065baf5885cc",
+      "url": "https://www.acme.com"
+    },
+    "payload": {
+      "type": "invalid"
+    },
+    "originalTime": 1,
+    "departureTime": 2
+  },
+  "errors": [
+    {
+      "instancePath": "/payload",
+      "schemaPath": "payload/nothing-changed.json/required",
+      "keyword": "required",
+      "params": {
+        "missingProperty": "sinceTime"
+      },
+      "message": "must have required property 'sinceTime'"
+    },
+    {
+      "instancePath": "/payload",
+      "schemaPath": "#/required",
+      "keyword": "required",
+      "params": {
+        "missingProperty": "patch"
+      },
+      "message": "must have required property 'patch'"
+    },
+    {
+      "instancePath": "/payload",
+      "schemaPath": "#/required",
+      "keyword": "required",
+      "params": {
+        "missingProperty": "patch"
+      },
+      "message": "must have required property 'patch'"
+    },
+    {
+      "instancePath": "/payload",
+      "schemaPath": "payload/user-signed-in.json/required",
+      "keyword": "required",
+      "params": {
+        "missingProperty": "externalUserId"
+      },
+      "message": "must have required property 'externalUserId'"
+    },
+    {
+      "instancePath": "/payload",
+      "schemaPath": "payload/user-signed-out.json/required",
+      "keyword": "required",
+      "params": {
+        "missingProperty": "externalUserId"
+      },
+      "message": "must have required property 'externalUserId'"
+    },
+    {
+      "instancePath": "/payload",
+      "schemaPath": "#/required",
+      "keyword": "required",
+      "params": {
+        "missingProperty": "externalUserId"
+      },
+      "message": "must have required property 'externalUserId'"
+    },
+    {
+      "instancePath": "/payload",
+      "schemaPath": "#/required",
+      "keyword": "required",
+      "params": {
+        "missingProperty": "product"
+      },
+      "message": "must have required property 'product'"
+    },
+    {
+      "instancePath": "/payload",
+      "schemaPath": "#/required",
+      "keyword": "required",
+      "params": {
+        "missingProperty": "cart"
+      },
+      "message": "must have required property 'cart'"
+    },
+    {
+      "instancePath": "/payload",
+      "schemaPath": "#/required",
+      "keyword": "required",
+      "params": {
+        "missingProperty": "cart"
+      },
+      "message": "must have required property 'cart'"
+    },
+    {
+      "instancePath": "/payload",
+      "schemaPath": "#/required",
+      "keyword": "required",
+      "params": {
+        "missingProperty": "cart"
+      },
+      "message": "must have required property 'cart'"
+    },
+    {
+      "instancePath": "/payload",
+      "schemaPath": "#/required",
+      "keyword": "required",
+      "params": {
+        "missingProperty": "order"
+      },
+      "message": "must have required property 'order'"
+    },
+    {
+      "instancePath": "/payload",
+      "schemaPath": "payload/page-loaded.json/required",
+      "keyword": "required",
+      "params": {
+        "missingProperty": "url"
+      },
+      "message": "must have required property 'url'"
+    },
+    {
+      "instancePath": "/payload",
+      "schemaPath": "payload/page-opened.json/required",
+      "keyword": "required",
+      "params": {
+        "missingProperty": "url"
+      },
+      "message": "must have required property 'url'"
+    },
+    {
+      "instancePath": "/payload",
+      "schemaPath": "payload/tab-opened.json/required",
+      "keyword": "required",
+      "params": {
+        "missingProperty": "tabId"
+      },
+      "message": "must have required property 'tabId'"
+    },
+    {
+      "instancePath": "/payload",
+      "schemaPath": "payload/tab-url-changed.json/required",
+      "keyword": "required",
+      "params": {
+        "missingProperty": "tabId"
+      },
+      "message": "must have required property 'tabId'"
+    },
+    {
+      "instancePath": "/payload",
+      "schemaPath": "payload/tab-visibility-changed.json/required",
+      "keyword": "required",
+      "params": {
+        "missingProperty": "tabId"
+      },
+      "message": "must have required property 'tabId'"
+    },
+    {
+      "instancePath": "/payload",
+      "schemaPath": "payload/goal-completed.json/required",
+      "keyword": "required",
+      "params": {
+        "missingProperty": "goalId"
+      },
+      "message": "must have required property 'goalId'"
+    },
+    {
+      "instancePath": "/payload",
+      "schemaPath": "payload/link-opened.json/required",
+      "keyword": "required",
+      "params": {
+        "missingProperty": "link"
+      },
+      "message": "must have required property 'link'"
+    },
+    {
+      "instancePath": "/payload",
+      "schemaPath": "#/required",
+      "keyword": "required",
+      "params": {
+        "missingProperty": "post"
+      },
+      "message": "must have required property 'post'"
+    },
+    {
+      "instancePath": "/payload",
+      "schemaPath": "payload/interest-shown.json/required",
+      "keyword": "required",
+      "params": {
+        "missingProperty": "interests"
+      },
+      "message": "must have required property 'interests'"
+    },
+    {
+      "instancePath": "/payload",
+      "schemaPath": "payload/event-occurred.json/required",
+      "keyword": "required",
+      "params": {
+        "missingProperty": "name"
+      },
+      "message": "must have required property 'name'"
+    },
+    {
+      "instancePath": "/payload",
+      "schemaPath": "#/properties/payload/oneOf",
+      "keyword": "oneOf",
+      "params": {
+        "passingSchemas": null
+      },
+      "message": "must match exactly one schema in oneOf"
+    }
+  ]
+}

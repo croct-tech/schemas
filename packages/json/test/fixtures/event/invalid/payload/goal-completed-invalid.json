@@ -1,0 +1,21 @@
+{
+  "schema": "event/payload/goal-completed.json",
+  "input": {
+    "type": "goalCompleted",
+    "goalId": 1,
+    "value": "1",
+    "currency": 2,
+    "additionalProperty": "foo"
+  },
+  "errors": [
+    {
+      "instancePath": "",
+      "schemaPath": "#/additionalProperties",
+      "keyword": "additionalProperties",
+      "params": {
+        "additionalProperty": "additionalProperty"
+      },
+      "message": "must NOT have additional properties"
+    }
+  ]
+}

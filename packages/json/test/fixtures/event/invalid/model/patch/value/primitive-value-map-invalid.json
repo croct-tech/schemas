@@ -1,0 +1,51 @@
+{
+  "schema": "event/model/patch/primitive-value.json",
+  "input": {
+    "foo": "bar"
+  },
+  "errors": [
+    {
+      "instancePath": "",
+      "schemaPath": "#/anyOf/0/type",
+      "keyword": "type",
+      "params": {
+        "type": "string"
+      },
+      "message": "must be string"
+    },
+    {
+      "instancePath": "",
+      "schemaPath": "#/anyOf/1/type",
+      "keyword": "type",
+      "params": {
+        "type": "number"
+      },
+      "message": "must be number"
+    },
+    {
+      "instancePath": "",
+      "schemaPath": "#/anyOf/2/type",
+      "keyword": "type",
+      "params": {
+        "type": "boolean"
+      },
+      "message": "must be boolean"
+    },
+    {
+      "instancePath": "",
+      "schemaPath": "#/anyOf/3/type",
+      "keyword": "type",
+      "params": {
+        "type": "null"
+      },
+      "message": "must be null"
+    },
+    {
+      "instancePath": "",
+      "schemaPath": "#/anyOf",
+      "keyword": "anyOf",
+      "params": {},
+      "message": "must match a schema in anyOf"
+    }
+  ]
+}

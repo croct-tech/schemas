@@ -1,0 +1,35 @@
+{
+  "schema": "event/payload/event-occurred.json",
+  "input": {
+    "type": "eventOccurred",
+    "name": "event-name",
+    "details": {
+      "loooooooooooooooooong": 1,
+      "": 1,
+      "key-with-invalid-character": 1,
+      "end_invalid_char!": 1,
+      "!start_invalid_char": 1
+    }
+  },
+  "errors": [
+    {
+      "instancePath": "/details",
+      "schemaPath": "#/properties/details/propertyNames/maxLength",
+      "keyword": "maxLength",
+      "params": {
+        "limit": 20
+      },
+      "message": "must NOT have more than 20 characters",
+      "propertyName": "loooooooooooooooooong"
+    },
+    {
+      "instancePath": "/details",
+      "schemaPath": "#/properties/details/propertyNames",
+      "keyword": "propertyNames",
+      "params": {
+        "propertyName": "loooooooooooooooooong"
+      },
+      "message": "property name must be valid"
+    }
+  ]
+}

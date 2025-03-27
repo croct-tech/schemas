@@ -1,0 +1,22 @@
+{
+  "schema": "event/payload/interest-shown.json",
+  "input": {
+    "type": "interestShown",
+    "interests": [
+      1,
+      2
+    ],
+    "additionalProperty": "foo"
+  },
+  "errors": [
+    {
+      "instancePath": "",
+      "schemaPath": "#/additionalProperties",
+      "keyword": "additionalProperties",
+      "params": {
+        "additionalProperty": "additionalProperty"
+      },
+      "message": "must NOT have additional properties"
+    }
+  ]
+}

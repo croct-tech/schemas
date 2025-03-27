@@ -1,0 +1,15 @@
+{
+  "schema": "event/model/order.json",
+  "input": {},
+  "errors": [
+    {
+      "instancePath": "",
+      "schemaPath": "#/required",
+      "keyword": "required",
+      "params": {
+        "missingProperty": "orderId"
+      },
+      "message": "must have required property 'orderId'"
+    }
+  ]
+}

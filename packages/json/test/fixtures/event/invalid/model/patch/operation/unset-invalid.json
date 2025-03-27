@@ -1,0 +1,19 @@
+{
+  "schema": "event/model/patch/operation/unset.json",
+  "input": {
+    "type": "unset",
+    "path": [],
+    "additionalProperty": "foo"
+  },
+  "errors": [
+    {
+      "instancePath": "",
+      "schemaPath": "#/additionalProperties",
+      "keyword": "additionalProperties",
+      "params": {
+        "additionalProperty": "additionalProperty"
+      },
+      "message": "must NOT have additional properties"
+    }
+  ]
+}

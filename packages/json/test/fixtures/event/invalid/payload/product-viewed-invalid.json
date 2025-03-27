@@ -1,0 +1,19 @@
+{
+  "schema": "event/payload/product-viewed.json",
+  "input": {
+    "type": "productViewed",
+    "product": 0,
+    "additionalProperty": "foo"
+  },
+  "errors": [
+    {
+      "instancePath": "",
+      "schemaPath": "#/additionalProperties",
+      "keyword": "additionalProperties",
+      "params": {
+        "additionalProperty": "additionalProperty"
+      },
+      "message": "must NOT have additional properties"
+    }
+  ]
+}

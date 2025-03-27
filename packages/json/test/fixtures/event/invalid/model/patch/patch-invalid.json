@@ -1,0 +1,17 @@
+{
+  "schema": "event/model/patch/patch.json",
+  "input": {
+    "operations": 0
+  },
+  "errors": [
+    {
+      "instancePath": "/operations",
+      "schemaPath": "#/properties/operations/type",
+      "keyword": "type",
+      "params": {
+        "type": "array"
+      },
+      "message": "must be array"
+    }
+  ]
+}

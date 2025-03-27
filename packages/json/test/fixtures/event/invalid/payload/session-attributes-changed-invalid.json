@@ -1,0 +1,19 @@
+{
+  "schema": "event/payload/session-attributes-changed.json",
+  "input": {
+    "type": "sessionAttributesChanged",
+    "patch": 0,
+    "additionalProperty": "foo"
+  },
+  "errors": [
+    {
+      "instancePath": "",
+      "schemaPath": "#/additionalProperties",
+      "keyword": "additionalProperties",
+      "params": {
+        "additionalProperty": "additionalProperty"
+      },
+      "message": "must NOT have additional properties"
+    }
+  ]
+}

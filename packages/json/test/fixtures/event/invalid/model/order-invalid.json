@@ -1,0 +1,50 @@
+{
+  "schema": "event/model/order.json",
+  "input": {
+    "orderId": 0,
+    "currency": 1,
+    "items": [
+      0
+    ],
+    "taxes": {
+      "state": "53.51",
+      "local": "23.98",
+      "loooooooooooooooooooooooooooooooooooooooooooooooong": 1,
+      "negative_value": -1,
+      "": 1,
+      "key-with-invalid-character": 1,
+      "key_ending_with_invalid_character!": 1,
+      "!key_starting_with_invalid_character": 1
+    },
+    "costs": {
+      "manufacturing": "275.81",
+      "cos": "85.37",
+      "loooooooooooooooooooooooooooooooooooooooooooooooong": 1,
+      "negative_value": -1,
+      "": 1,
+      "key-with-invalid-character": 1,
+      "key_ending_with_invalid_character!": 1,
+      "!key_starting_with_invalid_character": 1
+    },
+    "subtotal": "848.00",
+    "shippingPrice": "59.99",
+    "discount": "169.99",
+    "total": "815.49",
+    "coupon": 20,
+    "paymentMethod": 21,
+    "installments": "1",
+    "status": 22,
+    "additionalProperty": "foo"
+  },
+  "errors": [
+    {
+      "instancePath": "",
+      "schemaPath": "#/additionalProperties",
+      "keyword": "additionalProperties",
+      "params": {
+        "additionalProperty": "additionalProperty"
+      },
+      "message": "must NOT have additional properties"
+    }
+  ]
+}

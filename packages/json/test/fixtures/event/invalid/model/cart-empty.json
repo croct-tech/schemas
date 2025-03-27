@@ -1,0 +1,15 @@
+{
+  "schema": "event/model/cart.json",
+  "input": {},
+  "errors": [
+    {
+      "instancePath": "",
+      "schemaPath": "#/required",
+      "keyword": "required",
+      "params": {
+        "missingProperty": "currency"
+      },
+      "message": "must have required property 'currency'"
+    }
+  ]
+}

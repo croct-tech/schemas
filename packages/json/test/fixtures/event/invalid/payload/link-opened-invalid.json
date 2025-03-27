@@ -1,0 +1,19 @@
+{
+  "schema": "event/payload/link-opened.json",
+  "input": {
+    "type": "linkOpened",
+    "link": "https://www.acme.com?%00",
+    "additionalProperty": "foo"
+  },
+  "errors": [
+    {
+      "instancePath": "",
+      "schemaPath": "#/additionalProperties",
+      "keyword": "additionalProperties",
+      "params": {
+        "additionalProperty": "additionalProperty"
+      },
+      "message": "must NOT have additional properties"
+    }
+  ]
+}

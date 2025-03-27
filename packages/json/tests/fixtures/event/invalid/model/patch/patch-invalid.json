@@ -1,9 +1,0 @@
-{
-  "schema": "event/model/patch/patch.json",
-  "input": {
-    "operations": 0
-  },
-  "errors": [
-    "[/operations] The value must be of array type, but actual type is integer."
-  ]
-}

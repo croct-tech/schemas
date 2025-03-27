@@ -1,0 +1,9 @@
+{
+  "schema": "event/payload/tab-url-changed.json",
+  "input": {
+    "type": "tabUrlChanged",
+    "tabId": "27b7f785-137e-4bbd-a52d-065baf5885cc",
+    "url": "https://www.acme.com?%00"
+  },
+  "errors": []
+}
