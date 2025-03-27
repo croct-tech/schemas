@@ -25,7 +25,7 @@ jobs:
       - name: Move files
         run: |-
           mv packages/json-schemas/* .
-          rm -rf packages/json-schemas
+          rm -rf packages
 
       - name: Cache dependencies
         id: cache-dependencies
@@ -52,7 +52,7 @@ jobs:
       - name: Move files
         run: |-
           mv packages/json-schemas/* .
-          rm -rf packages/json-schemas
+          rm -rf packages
 
       - name: Cache dependencies
         id: cache-dependencies
@@ -79,7 +79,7 @@ jobs:
       - name: Move files
         run: |-
           mv packages/json-schemas/* .
-          rm -rf packages/json-schemas
+          rm -rf packages
 
       - name: Cache dependencies
         id: cache-dependencies
@@ -106,7 +106,7 @@ jobs:
       - name: Move files
         run: |-
           mv packages/json-schemas/* .
-          rm -rf packages/json-schemas
+          rm -rf packages
 
       - name: Cache dependencies
         id: cache-dependencies
