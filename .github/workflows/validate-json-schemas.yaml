@@ -24,7 +24,7 @@ jobs:
 
       - name: Move files
         run: |-
-          mv packages/json-schemas/schemas/* .
+          mv packages/json-schemas/* .
           rm -rf packages/json-schemas
 
       - name: Cache dependencies
@@ -49,6 +49,11 @@ jobs:
         with:
           node-version: 23
 
+      - name: Move files
+        run: |-
+          mv packages/json-schemas/* .
+          rm -rf packages/json-schemas
+
       - name: Cache dependencies
         id: cache-dependencies
         uses: actions/cache@v4
@@ -71,6 +76,11 @@ jobs:
         with:
           node-version: 23
 
+      - name: Move files
+        run: |-
+          mv packages/json-schemas/* .
+          rm -rf packages/json-schemas
+
       - name: Cache dependencies
         id: cache-dependencies
         uses: actions/cache@v4
@@ -92,6 +102,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 23
+
+      - name: Move files
+        run: |-
+          mv packages/json-schemas/* .
+          rm -rf packages/json-schemas
 
       - name: Cache dependencies
         id: cache-dependencies
