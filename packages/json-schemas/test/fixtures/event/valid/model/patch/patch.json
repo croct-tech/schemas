@@ -1,0 +1,53 @@
+{
+  "schema": "event/model/patch/patch.json",
+  "input": {
+    "operations": [
+      {
+        "type": "add",
+        "path": "[1]",
+        "value": 1
+      },
+      {
+        "type": "remove",
+        "path": "[1]",
+        "value": 1
+      },
+      {
+        "type": "clear",
+        "path": "[2]"
+      },
+      {
+        "type": "combine",
+        "path": "[2]",
+        "value": 3
+      },
+      {
+        "type": "merge",
+        "path": "[3]",
+        "value": [
+          4
+        ]
+      },
+      {
+        "type": "increment",
+        "path": "[4]",
+        "value": 5
+      },
+      {
+        "type": "decrement",
+        "path": "[5]",
+        "value": 6
+      },
+      {
+        "type": "set",
+        "path": "[6]",
+        "value": 7
+      },
+      {
+        "type": "unset",
+        "path": "[7]"
+      }
+    ]
+  },
+  "errors": []
+}

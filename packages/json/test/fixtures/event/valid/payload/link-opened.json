@@ -1,8 +1,0 @@
-{
-  "schema": "event/payload/link-opened.json",
-  "input": {
-    "type": "linkOpened",
-    "link": "android-app://339f9e8a-0871-47cc-ac00-8f81ac31be05"
-  },
-  "errors": []
-}

@@ -1,0 +1,10 @@
+{
+  "schema": "event/payload/page-loaded.json",
+  "input": {
+    "type": "pageLoaded",
+    "url": "https://www.acme.com",
+    "title": "This is a title.",
+    "lastModifiedTime": 0
+  },
+  "errors": []
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "event/payload/post-viewed.json",
+  "input": {
+    "type": "postViewed",
+    "post": {
+      "postId": "post-id",
+      "url": "http://www.foo.com",
+      "title": "post-title",
+      "tags": [
+        "tag-1"
+      ],
+      "categories": [
+        "category-1"
+      ],
+      "authors": [
+        "author-1"
+      ],
+      "publishTime": 0,
+      "updateTime": 1
+    }
+  },
+  "errors": []
+}

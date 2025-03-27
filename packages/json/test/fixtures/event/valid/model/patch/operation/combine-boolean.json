@@ -1,9 +1,0 @@
-{
-  "schema": "event/model/patch/operation/combine.json",
-  "input": {
-    "type": "combine",
-    "path": "foo",
-    "value": true
-  },
-  "errors": []
-}

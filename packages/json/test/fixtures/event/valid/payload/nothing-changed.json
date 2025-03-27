@@ -1,8 +1,0 @@
-{
-  "schema": "event/payload/nothing-changed.json",
-  "input": {
-    "type": "nothingChanged",
-    "sinceTime": 9
-  },
-  "errors": []
-}

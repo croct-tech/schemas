@@ -1,8 +1,0 @@
-{
-  "schema": "event/model/patch/operation/unset.json",
-  "input": {
-    "type": "unset",
-    "path": "[8]"
-  },
-  "errors": []
-}

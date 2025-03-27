@@ -1,5 +1,0 @@
-{
-  "schema": "event/model/patch/mixed-value.json",
-  "input": "foo",
-  "errors": []
-}

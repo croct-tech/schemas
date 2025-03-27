@@ -1,0 +1,36 @@
+{
+  "schema": "event/model/order.json",
+  "input": {
+    "orderId": "b76c0ef6-9520-4107-9de3-11110829588e",
+    "currency": "brl",
+    "items": [
+      {
+        "index": 0,
+        "quantity": 1,
+        "total": 699,
+        "product": {
+          "productId": "12345",
+          "name": "Smartphone 9",
+          "displayPrice": 699
+        }
+      }
+    ],
+    "taxes": {
+      "state": 53.51,
+      "local": 23.98
+    },
+    "costs": {
+      "manufacturing": 275.81,
+      "cos": 85.37
+    },
+    "subtotal": 848,
+    "shippingPrice": 59.99,
+    "discount": 169.99,
+    "total": 815.49,
+    "coupon": "FREE-SHIPPING",
+    "paymentMethod": "credit-card",
+    "installments": 1,
+    "status": "paid"
+  },
+  "errors": []
+}

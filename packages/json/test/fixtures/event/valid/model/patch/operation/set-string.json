@@ -1,9 +1,0 @@
-{
-  "schema": "event/model/patch/operation/set.json",
-  "input": {
-    "type": "set",
-    "path": "foo",
-    "value": "bar"
-  },
-  "errors": []
-}

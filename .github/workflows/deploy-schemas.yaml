@@ -20,11 +20,14 @@ jobs:
       - uses: sourcemeta/jsonschema@v7.1.2
       - uses: actions/setup-node@v4
 
+      - name: Install dependencies
+        run: npm -g install tsx
+
       - name: Bundle schemas
         run: |-
-          mkdir -p build/json
-          jsonschema bundle src/json/event/web-event.json --resolve src/json/event/ --without-id > build/json/web-event.json
-          node post-json-bundler.js build/json/web-event.json
+          mkdir -p build/json-schemas
+          jsonschema bundle packages/json-schemas/schemas/event/web-event.json --resolve packages/json-schemas/schemas/event/ --without-id > build/json-schemas/web-event.json
+          tsx packages/json-schemas/scripts/simplify-bundler-defs.ts build/json-schemas/web-event.json
 
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v2
@@ -38,7 +41,7 @@ jobs:
       - name: Deploy pre-release to GCS
         if: ${{ github.event.release.prerelease || !github.ref || github.ref == 'refs/heads/master' }}
         run: |-
-          gsutil -m rsync -r -d build/json "gs://${GCLOUD_BUCKET}/json/next"
+          gsutil -m rsync -r -d build/json-schemas "gs://${GCLOUD_BUCKET}/json/next"
           gsutil -m setmeta -h "Cache-Control: public, max-age=3600" "gs://${GCLOUD_BUCKET}/json/next/**"
         env:
           GCLOUD_BUCKET: ${{ secrets.STORAGE_BUCKET_SCHEMAS }}
@@ -47,7 +50,7 @@ jobs:
         if: ${{ github.event.release && !github.event.release.prerelease && github.ref }}
         run: |-
           MAJOR_VERSION=$(echo "${GITHUB_REF##*/}" | cut -d. -f1)
-          gsutil -m rsync -r -d build/json "gs://${GCLOUD_BUCKET}/json/${MAJOR_VERSION}"
+          gsutil -m rsync -r -d build/json-schemas "gs://${GCLOUD_BUCKET}/json/${MAJOR_VERSION}"
           gsutil -m setmeta -h "Cache-Control: public, max-age=3600" "gs://${GCLOUD_BUCKET}/json/${MAJOR_VERSION}/**"
         env:
           GCLOUD_BUCKET: ${{ secrets.STORAGE_BUCKET_SCHEMAS }}

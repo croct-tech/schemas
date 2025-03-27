@@ -1,9 +1,0 @@
-{
-  "schema": "event/model/patch/operation/add.json",
-  "input": {
-    "type": "add",
-    "path": "foo",
-    "value": null
-  },
-  "errors": []
-}

@@ -1,9 +1,0 @@
-{
-  "schema": "event/payload/tab-visibility-changed.json",
-  "input": {
-    "type": "tabVisibilityChanged",
-    "tabId": "27b7f785-137e-4bbd-a52d-065baf5885cc",
-    "visibility": "hidden"
-  },
-  "errors": []
-}

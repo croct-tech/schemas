@@ -1,5 +1,0 @@
-{
-  "schema": "event/model/patch/pointer.json",
-  "input": "ab12_[0].cd34_",
-  "errors": []
-}

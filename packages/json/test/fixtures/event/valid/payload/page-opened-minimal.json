@@ -1,8 +1,0 @@
-{
-  "schema": "event/payload/page-opened.json",
-  "input": {
-    "type": "pageOpened",
-    "url": "https://www.acme.com"
-  },
-  "errors": []
-}
