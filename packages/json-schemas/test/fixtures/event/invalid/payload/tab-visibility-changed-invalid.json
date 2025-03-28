@@ -1,0 +1,20 @@
+{
+  "schema": "event/payload/tab-visibility-changed.json",
+  "input": {
+    "type": "tabVisibilityChanged",
+    "tabId": 1,
+    "visibility": 3,
+    "additionalProperty": "foo"
+  },
+  "errors": [
+    {
+      "instancePath": "",
+      "schemaPath": "#/additionalProperties",
+      "keyword": "additionalProperties",
+      "params": {
+        "additionalProperty": "additionalProperty"
+      },
+      "message": "must NOT have additional properties"
+    }
+  ]
+}

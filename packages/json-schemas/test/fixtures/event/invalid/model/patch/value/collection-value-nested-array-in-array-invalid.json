@@ -1,0 +1,231 @@
+{
+  "schema": "event/model/patch/collection-value.json",
+  "input": [
+    [
+      [
+        [
+          [
+            "foo"
+          ]
+        ]
+      ]
+    ]
+  ],
+  "errors": [
+    {
+      "instancePath": "/0",
+      "schemaPath": "#/anyOf/0/items/anyOf/0/type",
+      "keyword": "type",
+      "params": {
+        "type": "string"
+      },
+      "message": "must be string"
+    },
+    {
+      "instancePath": "/0",
+      "schemaPath": "#/anyOf/0/items/anyOf/1/type",
+      "keyword": "type",
+      "params": {
+        "type": "number"
+      },
+      "message": "must be number"
+    },
+    {
+      "instancePath": "/0",
+      "schemaPath": "#/anyOf/0/items/anyOf/2/type",
+      "keyword": "type",
+      "params": {
+        "type": "boolean"
+      },
+      "message": "must be boolean"
+    },
+    {
+      "instancePath": "/0",
+      "schemaPath": "#/anyOf/0/items/anyOf/3/type",
+      "keyword": "type",
+      "params": {
+        "type": "null"
+      },
+      "message": "must be null"
+    },
+    {
+      "instancePath": "/0/0",
+      "schemaPath": "#/anyOf/0/items/anyOf/4/items/anyOf/0/type",
+      "keyword": "type",
+      "params": {
+        "type": "string"
+      },
+      "message": "must be string"
+    },
+    {
+      "instancePath": "/0/0",
+      "schemaPath": "#/anyOf/0/items/anyOf/4/items/anyOf/1/type",
+      "keyword": "type",
+      "params": {
+        "type": "number"
+      },
+      "message": "must be number"
+    },
+    {
+      "instancePath": "/0/0",
+      "schemaPath": "#/anyOf/0/items/anyOf/4/items/anyOf/2/type",
+      "keyword": "type",
+      "params": {
+        "type": "boolean"
+      },
+      "message": "must be boolean"
+    },
+    {
+      "instancePath": "/0/0",
+      "schemaPath": "#/anyOf/0/items/anyOf/4/items/anyOf/3/type",
+      "keyword": "type",
+      "params": {
+        "type": "null"
+      },
+      "message": "must be null"
+    },
+    {
+      "instancePath": "/0/0/0",
+      "schemaPath": "#/anyOf/0/items/anyOf/4/items/anyOf/4/items/anyOf/0/type",
+      "keyword": "type",
+      "params": {
+        "type": "string"
+      },
+      "message": "must be string"
+    },
+    {
+      "instancePath": "/0/0/0",
+      "schemaPath": "#/anyOf/0/items/anyOf/4/items/anyOf/4/items/anyOf/1/type",
+      "keyword": "type",
+      "params": {
+        "type": "number"
+      },
+      "message": "must be number"
+    },
+    {
+      "instancePath": "/0/0/0",
+      "schemaPath": "#/anyOf/0/items/anyOf/4/items/anyOf/4/items/anyOf/2/type",
+      "keyword": "type",
+      "params": {
+        "type": "boolean"
+      },
+      "message": "must be boolean"
+    },
+    {
+      "instancePath": "/0/0/0",
+      "schemaPath": "#/anyOf/0/items/anyOf/4/items/anyOf/4/items/anyOf/3/type",
+      "keyword": "type",
+      "params": {
+        "type": "null"
+      },
+      "message": "must be null"
+    },
+    {
+      "instancePath": "/0/0/0/0",
+      "schemaPath": "#/anyOf/0/items/anyOf/4/items/anyOf/4/items/anyOf/4/items/anyOf/0/type",
+      "keyword": "type",
+      "params": {
+        "type": "string"
+      },
+      "message": "must be string"
+    },
+    {
+      "instancePath": "/0/0/0/0",
+      "schemaPath": "#/anyOf/0/items/anyOf/4/items/anyOf/4/items/anyOf/4/items/anyOf/1/type",
+      "keyword": "type",
+      "params": {
+        "type": "number"
+      },
+      "message": "must be number"
+    },
+    {
+      "instancePath": "/0/0/0/0",
+      "schemaPath": "#/anyOf/0/items/anyOf/4/items/anyOf/4/items/anyOf/4/items/anyOf/2/type",
+      "keyword": "type",
+      "params": {
+        "type": "boolean"
+      },
+      "message": "must be boolean"
+    },
+    {
+      "instancePath": "/0/0/0/0",
+      "schemaPath": "#/anyOf/0/items/anyOf/4/items/anyOf/4/items/anyOf/4/items/anyOf/3/type",
+      "keyword": "type",
+      "params": {
+        "type": "null"
+      },
+      "message": "must be null"
+    },
+    {
+      "instancePath": "/0/0/0/0",
+      "schemaPath": "#/anyOf/0/items/anyOf/4/items/anyOf/4/items/anyOf/4/items/anyOf",
+      "keyword": "anyOf",
+      "params": {},
+      "message": "must match a schema in anyOf"
+    },
+    {
+      "instancePath": "/0/0/0",
+      "schemaPath": "#/anyOf/0/items/anyOf/4/items/anyOf/4/items/anyOf/5/type",
+      "keyword": "type",
+      "params": {
+        "type": "object"
+      },
+      "message": "must be object"
+    },
+    {
+      "instancePath": "/0/0/0",
+      "schemaPath": "#/anyOf/0/items/anyOf/4/items/anyOf/4/items/anyOf",
+      "keyword": "anyOf",
+      "params": {},
+      "message": "must match a schema in anyOf"
+    },
+    {
+      "instancePath": "/0/0",
+      "schemaPath": "#/anyOf/0/items/anyOf/4/items/anyOf/5/type",
+      "keyword": "type",
+      "params": {
+        "type": "object"
+      },
+      "message": "must be object"
+    },
+    {
+      "instancePath": "/0/0",
+      "schemaPath": "#/anyOf/0/items/anyOf/4/items/anyOf",
+      "keyword": "anyOf",
+      "params": {},
+      "message": "must match a schema in anyOf"
+    },
+    {
+      "instancePath": "/0",
+      "schemaPath": "#/anyOf/0/items/anyOf/5/type",
+      "keyword": "type",
+      "params": {
+        "type": "object"
+      },
+      "message": "must be object"
+    },
+    {
+      "instancePath": "/0",
+      "schemaPath": "#/anyOf/0/items/anyOf",
+      "keyword": "anyOf",
+      "params": {},
+      "message": "must match a schema in anyOf"
+    },
+    {
+      "instancePath": "",
+      "schemaPath": "#/anyOf/1/type",
+      "keyword": "type",
+      "params": {
+        "type": "object"
+      },
+      "message": "must be object"
+    },
+    {
+      "instancePath": "",
+      "schemaPath": "#/anyOf",
+      "keyword": "anyOf",
+      "params": {},
+      "message": "must match a schema in anyOf"
+    }
+  ]
+}

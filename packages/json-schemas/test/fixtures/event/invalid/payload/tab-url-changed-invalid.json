@@ -1,0 +1,20 @@
+{
+  "schema": "event/payload/tab-url-changed.json",
+  "input": {
+    "type": "tabUrlChanged",
+    "tabId": 1,
+    "url": 2,
+    "additionalProperty": "foo"
+  },
+  "errors": [
+    {
+      "instancePath": "",
+      "schemaPath": "#/additionalProperties",
+      "keyword": "additionalProperties",
+      "params": {
+        "additionalProperty": "additionalProperty"
+      },
+      "message": "must NOT have additional properties"
+    }
+  ]
+}

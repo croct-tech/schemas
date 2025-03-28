@@ -1,0 +1,19 @@
+{
+  "schema": "event/payload/tab-opened.json",
+  "input": {
+    "type": "tabOpened",
+    "tabId": 1,
+    "additionalProperty": "foo"
+  },
+  "errors": [
+    {
+      "instancePath": "",
+      "schemaPath": "#/additionalProperties",
+      "keyword": "additionalProperties",
+      "params": {
+        "additionalProperty": "additionalProperty"
+      },
+      "message": "must NOT have additional properties"
+    }
+  ]
+}

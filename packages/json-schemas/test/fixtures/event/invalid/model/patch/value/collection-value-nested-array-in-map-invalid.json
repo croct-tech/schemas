@@ -1,0 +1,231 @@
+{
+  "schema": "event/model/patch/collection-value.json",
+  "input": {
+    "foo": {
+      "bar": {
+        "baz": {
+          "qux": [
+            "quux"
+          ]
+        }
+      }
+    }
+  },
+  "errors": [
+    {
+      "instancePath": "",
+      "schemaPath": "#/anyOf/0/type",
+      "keyword": "type",
+      "params": {
+        "type": "array"
+      },
+      "message": "must be array"
+    },
+    {
+      "instancePath": "/foo",
+      "schemaPath": "#/anyOf/1/additionalProperties/anyOf/0/type",
+      "keyword": "type",
+      "params": {
+        "type": "string"
+      },
+      "message": "must be string"
+    },
+    {
+      "instancePath": "/foo",
+      "schemaPath": "#/anyOf/1/additionalProperties/anyOf/1/type",
+      "keyword": "type",
+      "params": {
+        "type": "number"
+      },
+      "message": "must be number"
+    },
+    {
+      "instancePath": "/foo",
+      "schemaPath": "#/anyOf/1/additionalProperties/anyOf/2/type",
+      "keyword": "type",
+      "params": {
+        "type": "boolean"
+      },
+      "message": "must be boolean"
+    },
+    {
+      "instancePath": "/foo",
+      "schemaPath": "#/anyOf/1/additionalProperties/anyOf/3/type",
+      "keyword": "type",
+      "params": {
+        "type": "null"
+      },
+      "message": "must be null"
+    },
+    {
+      "instancePath": "/foo",
+      "schemaPath": "#/anyOf/1/additionalProperties/anyOf/4/type",
+      "keyword": "type",
+      "params": {
+        "type": "array"
+      },
+      "message": "must be array"
+    },
+    {
+      "instancePath": "/foo/bar",
+      "schemaPath": "#/anyOf/1/additionalProperties/anyOf/5/additionalProperties/anyOf/0/type",
+      "keyword": "type",
+      "params": {
+        "type": "string"
+      },
+      "message": "must be string"
+    },
+    {
+      "instancePath": "/foo/bar",
+      "schemaPath": "#/anyOf/1/additionalProperties/anyOf/5/additionalProperties/anyOf/1/type",
+      "keyword": "type",
+      "params": {
+        "type": "number"
+      },
+      "message": "must be number"
+    },
+    {
+      "instancePath": "/foo/bar",
+      "schemaPath": "#/anyOf/1/additionalProperties/anyOf/5/additionalProperties/anyOf/2/type",
+      "keyword": "type",
+      "params": {
+        "type": "boolean"
+      },
+      "message": "must be boolean"
+    },
+    {
+      "instancePath": "/foo/bar",
+      "schemaPath": "#/anyOf/1/additionalProperties/anyOf/5/additionalProperties/anyOf/3/type",
+      "keyword": "type",
+      "params": {
+        "type": "null"
+      },
+      "message": "must be null"
+    },
+    {
+      "instancePath": "/foo/bar",
+      "schemaPath": "#/anyOf/1/additionalProperties/anyOf/5/additionalProperties/anyOf/4/type",
+      "keyword": "type",
+      "params": {
+        "type": "array"
+      },
+      "message": "must be array"
+    },
+    {
+      "instancePath": "/foo/bar/baz",
+      "schemaPath": "#/anyOf/1/additionalProperties/anyOf/5/additionalProperties/anyOf/5/additionalProperties/anyOf/0/type",
+      "keyword": "type",
+      "params": {
+        "type": "string"
+      },
+      "message": "must be string"
+    },
+    {
+      "instancePath": "/foo/bar/baz",
+      "schemaPath": "#/anyOf/1/additionalProperties/anyOf/5/additionalProperties/anyOf/5/additionalProperties/anyOf/1/type",
+      "keyword": "type",
+      "params": {
+        "type": "number"
+      },
+      "message": "must be number"
+    },
+    {
+      "instancePath": "/foo/bar/baz",
+      "schemaPath": "#/anyOf/1/additionalProperties/anyOf/5/additionalProperties/anyOf/5/additionalProperties/anyOf/2/type",
+      "keyword": "type",
+      "params": {
+        "type": "boolean"
+      },
+      "message": "must be boolean"
+    },
+    {
+      "instancePath": "/foo/bar/baz",
+      "schemaPath": "#/anyOf/1/additionalProperties/anyOf/5/additionalProperties/anyOf/5/additionalProperties/anyOf/3/type",
+      "keyword": "type",
+      "params": {
+        "type": "null"
+      },
+      "message": "must be null"
+    },
+    {
+      "instancePath": "/foo/bar/baz",
+      "schemaPath": "#/anyOf/1/additionalProperties/anyOf/5/additionalProperties/anyOf/5/additionalProperties/anyOf/4/type",
+      "keyword": "type",
+      "params": {
+        "type": "array"
+      },
+      "message": "must be array"
+    },
+    {
+      "instancePath": "/foo/bar/baz/qux",
+      "schemaPath": "#/anyOf/1/additionalProperties/anyOf/5/additionalProperties/anyOf/5/additionalProperties/anyOf/5/additionalProperties/anyOf/0/type",
+      "keyword": "type",
+      "params": {
+        "type": "string"
+      },
+      "message": "must be string"
+    },
+    {
+      "instancePath": "/foo/bar/baz/qux",
+      "schemaPath": "#/anyOf/1/additionalProperties/anyOf/5/additionalProperties/anyOf/5/additionalProperties/anyOf/5/additionalProperties/anyOf/1/type",
+      "keyword": "type",
+      "params": {
+        "type": "number"
+      },
+      "message": "must be number"
+    },
+    {
+      "instancePath": "/foo/bar/baz/qux",
+      "schemaPath": "#/anyOf/1/additionalProperties/anyOf/5/additionalProperties/anyOf/5/additionalProperties/anyOf/5/additionalProperties/anyOf/2/type",
+      "keyword": "type",
+      "params": {
+        "type": "boolean"
+      },
+      "message": "must be boolean"
+    },
+    {
+      "instancePath": "/foo/bar/baz/qux",
+      "schemaPath": "#/anyOf/1/additionalProperties/anyOf/5/additionalProperties/anyOf/5/additionalProperties/anyOf/5/additionalProperties/anyOf/3/type",
+      "keyword": "type",
+      "params": {
+        "type": "null"
+      },
+      "message": "must be null"
+    },
+    {
+      "instancePath": "/foo/bar/baz/qux",
+      "schemaPath": "#/anyOf/1/additionalProperties/anyOf/5/additionalProperties/anyOf/5/additionalProperties/anyOf/5/additionalProperties/anyOf",
+      "keyword": "anyOf",
+      "params": {},
+      "message": "must match a schema in anyOf"
+    },
+    {
+      "instancePath": "/foo/bar/baz",
+      "schemaPath": "#/anyOf/1/additionalProperties/anyOf/5/additionalProperties/anyOf/5/additionalProperties/anyOf",
+      "keyword": "anyOf",
+      "params": {},
+      "message": "must match a schema in anyOf"
+    },
+    {
+      "instancePath": "/foo/bar",
+      "schemaPath": "#/anyOf/1/additionalProperties/anyOf/5/additionalProperties/anyOf",
+      "keyword": "anyOf",
+      "params": {},
+      "message": "must match a schema in anyOf"
+    },
+    {
+      "instancePath": "/foo",
+      "schemaPath": "#/anyOf/1/additionalProperties/anyOf",
+      "keyword": "anyOf",
+      "params": {},
+      "message": "must match a schema in anyOf"
+    },
+    {
+      "instancePath": "",
+      "schemaPath": "#/anyOf",
+      "keyword": "anyOf",
+      "params": {},
+      "message": "must match a schema in anyOf"
+    }
+  ]
+}

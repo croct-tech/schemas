@@ -1,0 +1,35 @@
+{
+  "schema": "event/model/patch/operation/remove.json",
+  "input": {
+    "type": "remove",
+    "path": [],
+    "value": [
+      1,
+      [
+        2,
+        3,
+        [
+          4,
+          [
+            5,
+            [
+              6
+            ]
+          ]
+        ]
+      ]
+    ],
+    "additionalProperty": "foo"
+  },
+  "errors": [
+    {
+      "instancePath": "",
+      "schemaPath": "#/additionalProperties",
+      "keyword": "additionalProperties",
+      "params": {
+        "additionalProperty": "additionalProperty"
+      },
+      "message": "must NOT have additional properties"
+    }
+  ]
+}

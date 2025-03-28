@@ -1,0 +1,21 @@
+{
+  "schema": "event/web-event.json",
+  "input": {
+    "context": 0,
+    "payload": 0,
+    "originalTime": "1",
+    "departureTime": "2",
+    "additionalProperty": "foo"
+  },
+  "errors": [
+    {
+      "instancePath": "",
+      "schemaPath": "#/additionalProperties",
+      "keyword": "additionalProperties",
+      "params": {
+        "additionalProperty": "additionalProperty"
+      },
+      "message": "must NOT have additional properties"
+    }
+  ]
+}

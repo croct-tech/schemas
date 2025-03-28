@@ -1,0 +1,31 @@
+{
+  "schema": "event/model/patch/collection-value.json",
+  "input": true,
+  "errors": [
+    {
+      "instancePath": "",
+      "schemaPath": "#/anyOf/0/type",
+      "keyword": "type",
+      "params": {
+        "type": "array"
+      },
+      "message": "must be array"
+    },
+    {
+      "instancePath": "",
+      "schemaPath": "#/anyOf/1/type",
+      "keyword": "type",
+      "params": {
+        "type": "object"
+      },
+      "message": "must be object"
+    },
+    {
+      "instancePath": "",
+      "schemaPath": "#/anyOf",
+      "keyword": "anyOf",
+      "params": {},
+      "message": "must match a schema in anyOf"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "schema": "event/payload/goal-completed.json",
+  "input": {
+    "type": "goalCompleted",
+    "goalId": "foo_"
+  },
+  "errors": [
+    {
+      "instancePath": "/goalId",
+      "schemaPath": "#/properties/goalId/pattern",
+      "keyword": "pattern",
+      "params": {
+        "pattern": "^[a-zA-Z0-9][a-zA-Z0-9:_-]+[a-zA-Z0-9]$"
+      },
+      "message": "must match pattern \"^[a-zA-Z0-9][a-zA-Z0-9:_-]+[a-zA-Z0-9]$\""
+    }
+  ]
+}

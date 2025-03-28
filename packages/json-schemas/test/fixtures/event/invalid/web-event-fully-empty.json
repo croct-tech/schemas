@@ -1,0 +1,15 @@
+{
+  "schema": "event/web-event.json",
+  "input": {},
+  "errors": [
+    {
+      "instancePath": "",
+      "schemaPath": "#/required",
+      "keyword": "required",
+      "params": {
+        "missingProperty": "originalTime"
+      },
+      "message": "must have required property 'originalTime'"
+    }
+  ]
+}

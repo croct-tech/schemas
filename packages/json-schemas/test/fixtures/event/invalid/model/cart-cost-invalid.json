@@ -1,0 +1,38 @@
+{
+  "schema": "event/model/cart.json",
+  "input": {
+    "currency": "brl",
+    "items": [],
+    "costs": {
+      "loooooooooooooooooooooooooooooooooooooooooooooooong": 1,
+      "negative_value": -1,
+      "": 1,
+      "key-with-invalid-character": 1,
+      "key_ending_with_invalid_character!": 1,
+      "!key_starting_with_invalid_character": 1
+    },
+    "total": 815.49,
+    "lastUpdateTime": 123456789
+  },
+  "errors": [
+    {
+      "instancePath": "/costs",
+      "schemaPath": "#/properties/costs/propertyNames/maxLength",
+      "keyword": "maxLength",
+      "params": {
+        "limit": 50
+      },
+      "message": "must NOT have more than 50 characters",
+      "propertyName": "loooooooooooooooooooooooooooooooooooooooooooooooong"
+    },
+    {
+      "instancePath": "/costs",
+      "schemaPath": "#/properties/costs/propertyNames",
+      "keyword": "propertyNames",
+      "params": {
+        "propertyName": "loooooooooooooooooooooooooooooooooooooooooooooooong"
+      },
+      "message": "property name must be valid"
+    }
+  ]
+}

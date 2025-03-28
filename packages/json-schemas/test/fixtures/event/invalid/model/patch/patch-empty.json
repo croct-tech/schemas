@@ -1,0 +1,15 @@
+{
+  "schema": "event/model/patch/patch.json",
+  "input": {},
+  "errors": [
+    {
+      "instancePath": "",
+      "schemaPath": "#/required",
+      "keyword": "required",
+      "params": {
+        "missingProperty": "operations"
+      },
+      "message": "must have required property 'operations'"
+    }
+  ]
+}

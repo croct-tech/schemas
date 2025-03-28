@@ -1,0 +1,12 @@
+{
+  "schema": "event/payload/post-viewed.json",
+  "input": {
+    "type": "postViewed",
+    "post": {
+      "postId": "post-id",
+      "title": "post-title",
+      "publishTime": 0
+    }
+  },
+  "errors": []
+}

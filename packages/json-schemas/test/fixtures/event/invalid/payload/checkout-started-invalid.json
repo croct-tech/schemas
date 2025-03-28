@@ -1,0 +1,20 @@
+{
+  "schema": "event/payload/checkout-started.json",
+  "input": {
+    "type": "checkoutStarted",
+    "cart": 0,
+    "orderId": 21,
+    "additionalProperty": "foo"
+  },
+  "errors": [
+    {
+      "instancePath": "",
+      "schemaPath": "#/additionalProperties",
+      "keyword": "additionalProperties",
+      "params": {
+        "additionalProperty": "additionalProperty"
+      },
+      "message": "must NOT have additional properties"
+    }
+  ]
+}

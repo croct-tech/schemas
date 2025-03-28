@@ -1,0 +1,9 @@
+{
+  "schema": "event/payload/page-opened.json",
+  "input": {
+    "type": "pageOpened",
+    "url": "https://www.acme.com?%00",
+    "referrer": "https://www.referrer.com?referral=%00"
+  },
+  "errors": []
+}

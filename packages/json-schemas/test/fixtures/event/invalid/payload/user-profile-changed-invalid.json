@@ -1,0 +1,19 @@
+{
+  "schema": "event/payload/user-profile-changed.json",
+  "input": {
+    "type": "userProfileChanged",
+    "patch": 0,
+    "additionalProperty": "foo"
+  },
+  "errors": [
+    {
+      "instancePath": "",
+      "schemaPath": "#/additionalProperties",
+      "keyword": "additionalProperties",
+      "params": {
+        "additionalProperty": "additionalProperty"
+      },
+      "message": "must NOT have additional properties"
+    }
+  ]
+}

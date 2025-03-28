@@ -1,0 +1,34 @@
+{
+  "schema": "event/model/cart.json",
+  "input": {
+    "currency": 1,
+    "items": [
+      1
+    ],
+    "taxes": {
+      "state": "53.51",
+      "local": "23.98"
+    },
+    "costs": {
+      "manufacturing": "275.81",
+      "cos": "85.37"
+    },
+    "subtotal": "848.00",
+    "shippingPrice": "59.99",
+    "discount": "169.99",
+    "total": "815.49",
+    "coupon": 20,
+    "lastUpdateTime": "123456789"
+  },
+  "errors": [
+    {
+      "instancePath": "/currency",
+      "schemaPath": "#/properties/currency/type",
+      "keyword": "type",
+      "params": {
+        "type": "string"
+      },
+      "message": "must be string"
+    }
+  ]
+}

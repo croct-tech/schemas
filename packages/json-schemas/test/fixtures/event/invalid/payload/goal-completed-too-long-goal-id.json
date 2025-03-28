@@ -1,0 +1,18 @@
+{
+  "schema": "event/payload/goal-completed.json",
+  "input": {
+    "type": "goalCompleted",
+    "goalId": "loremipsumdolorsitametconsecteturadipiscingelitseddoeiusmodtemporincididuntutlaboreetdeddoeiusmodtemp"
+  },
+  "errors": [
+    {
+      "instancePath": "/goalId",
+      "schemaPath": "#/properties/goalId/maxLength",
+      "keyword": "maxLength",
+      "params": {
+        "limit": 100
+      },
+      "message": "must NOT have more than 100 characters"
+    }
+  ]
+}

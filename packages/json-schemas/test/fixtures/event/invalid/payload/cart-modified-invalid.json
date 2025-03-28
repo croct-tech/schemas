@@ -1,0 +1,19 @@
+{
+  "schema": "event/payload/cart-modified.json",
+  "input": {
+    "type": "cartModified",
+    "cart": 0,
+    "additionalProperty": "foo"
+  },
+  "errors": [
+    {
+      "instancePath": "",
+      "schemaPath": "#/additionalProperties",
+      "keyword": "additionalProperties",
+      "params": {
+        "additionalProperty": "additionalProperty"
+      },
+      "message": "must NOT have additional properties"
+    }
+  ]
+}

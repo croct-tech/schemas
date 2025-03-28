@@ -1,0 +1,19 @@
+{
+  "schema": "event/payload/order-placed.json",
+  "input": {
+    "type": "orderPlaced",
+    "order": 0,
+    "additionalProperty": "foo"
+  },
+  "errors": [
+    {
+      "instancePath": "",
+      "schemaPath": "#/additionalProperties",
+      "keyword": "additionalProperties",
+      "params": {
+        "additionalProperty": "additionalProperty"
+      },
+      "message": "must NOT have additional properties"
+    }
+  ]
+}

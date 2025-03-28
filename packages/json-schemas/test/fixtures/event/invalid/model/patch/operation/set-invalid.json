@@ -1,0 +1,35 @@
+{
+  "schema": "event/model/patch/operation/set.json",
+  "input": {
+    "type": "set",
+    "path": [],
+    "value": [
+      1,
+      [
+        2,
+        3,
+        [
+          4,
+          [
+            5,
+            [
+              6
+            ]
+          ]
+        ]
+      ]
+    ],
+    "additionalProperty": false
+  },
+  "errors": [
+    {
+      "instancePath": "",
+      "schemaPath": "#/additionalProperties",
+      "keyword": "additionalProperties",
+      "params": {
+        "additionalProperty": "additionalProperty"
+      },
+      "message": "must NOT have additional properties"
+    }
+  ]
+}

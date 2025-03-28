@@ -1,0 +1,19 @@
+{
+  "schema": "event/payload/post-viewed.json",
+  "input": {
+    "type": "postViewed",
+    "post": 0,
+    "additionalProperty": "foo"
+  },
+  "errors": [
+    {
+      "instancePath": "",
+      "schemaPath": "#/additionalProperties",
+      "keyword": "additionalProperties",
+      "params": {
+        "additionalProperty": "additionalProperty"
+      },
+      "message": "must NOT have additional properties"
+    }
+  ]
+}
