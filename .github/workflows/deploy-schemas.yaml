@@ -24,10 +24,7 @@ jobs:
         run: npm -g install tsx
 
       - name: Bundle schemas
-        run: |-
-          mkdir -p build/json-schemas
-          jsonschema bundle packages/json-schemas/schemas/event/web-event.json --resolve packages/json-schemas/schemas/event/ --without-id > build/json-schemas/web-event.json
-          tsx packages/json-schemas/scripts/simplify-bundler-defs.ts build/json-schemas/web-event.json
+        run: tsx packages/json-schemas/scripts/bundle-schema.ts packages/json-schemas/schemas/event/web-event.json build/json-schemas/web-event.json
 
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v2
