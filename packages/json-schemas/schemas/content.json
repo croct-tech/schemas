@@ -1,0 +1,395 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Content",
+  "description": "The value of a content.",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "description": "The data type of the value."
+    }
+  },
+  "oneOf": [
+    {
+      "type": "object",
+      "title": "Value definition",
+      "description": "Defines the data type and value.",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "boolean",
+          "title": "Data type",
+          "description": "The data type of the resolved value."
+        },
+        "value": {
+          "type": "object",
+          "title": "Value",
+          "description": "Defines how to resolve the value.",
+          "properties": {
+            "type": {
+              "type": "string",
+              "title": "Value type",
+              "description": "Defines whether the value is static or dynamically resolved at runtime."
+            }
+          },
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "const": "static"
+                },
+                "value": {
+                  "type": "boolean",
+                  "title": "Static value",
+                  "description": "The resolved value."
+                }
+              },
+              "required": [
+                "type",
+                "value"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "const": "dynamic"
+                },
+                "nullable": {
+                  "type": "boolean",
+                  "title": "Nullable?",
+                  "description": "Whether the expression result is nullable."
+                },
+                "expression": {
+                  "type": "string",
+                  "title": "Expression",
+                  "description": "A CQL expression that resolves to the value."
+                },
+                "default": {
+                  "type": "boolean",
+                  "title": "Default",
+                  "description": "A static value used in case the expression evaluation fails, results in null, or yields a value of unexpected type."
+                }
+              },
+              "if": {
+                "properties": {
+                  "nullable": {
+                    "type": "boolean",
+                    "const": true
+                  }
+                },
+                "required": [
+                  "nullable"
+                ]
+              },
+              "then": {
+                "required": [
+                  "type",
+                  "nullable",
+                  "expression"
+                ]
+              },
+              "else": {
+                "required": [
+                  "type",
+                  "expression",
+                  "default"
+                ]
+              },
+              "required": [
+                "type",
+                "expression"
+              ],
+              "additionalProperties": false
+            }
+          ],
+          "required": [
+            "type"
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "title": "Value definition",
+      "description": "Defines the data type and value.",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "text",
+          "title": "Data type",
+          "description": "The data type of the resolved value."
+        },
+        "value": {
+          "type": "object",
+          "title": "Value",
+          "description": "Defines how to resolve the value.",
+          "properties": {
+            "type": {
+              "type": "string",
+              "title": "Value type",
+              "description": "Defines whether the value is static or dynamically resolved at runtime."
+            }
+          },
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "const": "static"
+                },
+                "value": {
+                  "type": "string",
+                  "title": "Static value",
+                  "description": "The resolved value."
+                }
+              },
+              "required": [
+                "type",
+                "value"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "const": "dynamic"
+                },
+                "nullable": {
+                  "type": "boolean",
+                  "title": "Nullable?",
+                  "description": "Whether the expression result is nullable."
+                },
+                "expression": {
+                  "type": "string",
+                  "title": "Expression",
+                  "description": "A CQL expression that resolves to the value."
+                },
+                "default": {
+                  "type": "string",
+                  "title": "Default",
+                  "description": "A static value used in case the expression evaluation fails, results in null, or yields a value of unexpected type."
+                }
+              },
+              "if": {
+                "properties": {
+                  "nullable": {
+                    "type": "boolean",
+                    "const": true
+                  }
+                },
+                "required": [
+                  "nullable"
+                ]
+              },
+              "then": {
+                "required": [
+                  "type",
+                  "nullable",
+                  "expression"
+                ]
+              },
+              "else": {
+                "required": [
+                  "type",
+                  "expression",
+                  "default"
+                ]
+              },
+              "required": [
+                "type",
+                "expression"
+              ],
+              "additionalProperties": false
+            }
+          ],
+          "required": [
+            "type"
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "title": "Value definition",
+      "description": "Defines the data type and value.",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "number",
+          "title": "Data type",
+          "description": "The data type of the resolved value."
+        },
+        "value": {
+          "type": "object",
+          "title": "Value",
+          "description": "Defines how to resolve the value.",
+          "properties": {
+            "type": {
+              "type": "string",
+              "title": "Value type",
+              "description": "Defines whether the value is static or dynamically resolved at runtime."
+            }
+          },
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "const": "static"
+                },
+                "value": {
+                  "type": "number",
+                  "title": "Static value",
+                  "description": "The resolved value.",
+                  "minimum": -9007199254740991,
+                  "maximum": 9007199254740991
+                }
+              },
+              "required": [
+                "type",
+                "value"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "const": "dynamic"
+                },
+                "nullable": {
+                  "type": "boolean",
+                  "title": "Nullable?",
+                  "description": "Whether the expression result is nullable."
+                },
+                "expression": {
+                  "type": "string",
+                  "title": "Expression",
+                  "description": "A CQL expression that resolves to the value."
+                },
+                "default": {
+                  "type": "number",
+                  "title": "Default",
+                  "description": "A static value used in case the expression evaluation fails, results in null, or yields a value of unexpected type.",
+                  "minimum": -9007199254740991,
+                  "maximum": 9007199254740991
+                }
+              },
+              "if": {
+                "properties": {
+                  "nullable": {
+                    "type": "boolean",
+                    "const": true
+                  }
+                },
+                "required": [
+                  "type",
+                  "nullable"
+                ]
+              },
+              "then": {
+                "required": [
+                  "type",
+                  "nullable",
+                  "expression"
+                ]
+              },
+              "else": {
+                "required": [
+                  "type",
+                  "expression",
+                  "default"
+                ]
+              },
+              "required": [
+                "type",
+                "expression"
+              ],
+              "additionalProperties": false
+            }
+          ],
+          "required": [
+            "type"
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "title": "Structure",
+      "description": "A set of attributes as key-value pairs.",
+      "properties": {
+        "type": {
+          "const": "structure"
+        },
+        "name": {
+          "type": "string",
+          "title": "Structure name",
+          "description": "The name of the structure in a union."
+        },
+        "attributes": {
+          "type": "object",
+          "title": "Attributes",
+          "description": "The structure-specific attributes.",
+          "additionalProperties": {
+            "$ref": "#"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "attributes"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "title": "List",
+      "description": "A set of attributes",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "list"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "items"
+      ],
+      "additionalProperties": false
+    }
+  ]
+}

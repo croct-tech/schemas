@@ -23,7 +23,7 @@
       "description": "The timestamp when the beacon was sent by the client, in milliseconds since epoch."
     },
     "context": {
-      "$ref": "web-context.json",
+      "$ref": "./web-context.json",
       "description": "The context of the client when the event was tracked."
     },
     "payload": {
