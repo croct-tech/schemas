@@ -23,8 +23,12 @@ jobs:
       - name: Install dependencies
         run: npm -g install tsx
 
-      - name: Bundle schemas
-        run: tsx packages/json-schemas/scripts/bundle-schema.ts packages/json-schemas/schemas/event/web-event.json build/json-schemas/web-event.json
+      - name: Build JSON schemas
+        run: -|
+          mkdir -p build/json-schemas
+          tsx packages/json-schemas/scripts/bundle-schema.ts packages/json-schemas/schemas/event/web-event.json build/json-schemas/web-event.json
+          cp packages/json-schemas/schemas/content.json build/json-schemas/content.json
+          cp packages/json-schemas/schemas/content-schema.json build/json-schemas/content-schema.json
 
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v2
