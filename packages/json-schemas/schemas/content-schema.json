@@ -11,39 +11,9 @@
     "type": {
       "type": "string",
       "title": "Type",
-      "description": "The type of the value.",
-      "enum": [
-        "structure",
-        "union"
-      ]
+      "description": "The type of the value."
     }
   },
-  "allOf": [
-    {
-      "if": {
-        "properties": {
-          "type": {
-            "const": "structure"
-          }
-        }
-      },
-      "then": {
-        "$ref": "#/$defs/structure"
-      }
-    },
-    {
-      "if": {
-        "properties": {
-          "type": {
-            "const": "union"
-          }
-        }
-      },
-      "then": {
-        "$ref": "#/$defs/union"
-      }
-    }
-  ],
   "required": [
     "type"
   ],
@@ -167,21 +137,11 @@
           "maxLength": 160
         },
         "minimum": {
-          "allOf": [
-            {
-              "type": "number",
-              "title": "Minimum",
-              "description": "The minimum allowed value.",
-              "minimum": -9007199254740991,
-              "maximum": 9007199254740991
-            },
-            {
-              "type": "number",
-              "maximum": {
-                "$data": "1/maximum"
-              }
-            }
-          ]
+          "type": "number",
+          "title": "Minimum",
+          "description": "The minimum allowed value.",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
         },
         "maximum": {
           "type": "number",
@@ -320,21 +280,11 @@
               ]
             },
             "minimumLength": {
-              "allOf": [
-                {
-                  "type": "number",
-                  "title": "Minimum length",
-                  "description": "The minimum allowed length.",
-                  "minimum": 0,
-                  "maximum": 1000
-                },
-                {
-                  "type": "number",
-                  "maximum": {
-                    "$data": "1/maximumLength"
-                  }
-                }
-              ]
+              "type": "number",
+              "title": "Minimum length",
+              "description": "The minimum allowed length.",
+              "minimum": 0,
+              "maximum": 1000
             },
             "maximumLength": {
               "type": "number",
@@ -474,21 +424,11 @@
               "maxLength": 160
             },
             "minimumLength": {
-              "allOf": [
-                {
-                  "type": "number",
-                  "title": "Minimum length",
-                  "description": "The minimum allowed length.",
-                  "minimum": 0,
-                  "maximum": 1000
-                },
-                {
-                  "type": "number",
-                  "maximum": {
-                    "$data": "1/maximumLength"
-                  }
-                }
-              ]
+              "type": "number",
+              "title": "Minimum length",
+              "description": "The minimum allowed length.",
+              "minimum": 0,
+              "maximum": 1000
             },
             "format": {
               "type": "string",
@@ -588,21 +528,11 @@
               "maxLength": 160
             },
             "minimumLength": {
-              "allOf": [
-                {
-                  "type": "number",
-                  "title": "Minimum length",
-                  "description": "The minimum allowed length.",
-                  "minimum": 0,
-                  "maximum": 1000
-                },
-                {
-                  "type": "number",
-                  "maximum": {
-                    "$data": "1/maximumLength"
-                  }
-                }
-              ]
+              "type": "number",
+              "title": "Minimum length",
+              "description": "The minimum allowed length.",
+              "minimum": 0,
+              "maximum": 1000
             },
             "maximumLength": {
               "type": "number",
@@ -635,108 +565,36 @@
         "type": {
           "type": "string",
           "title": "Type",
-          "description": "The type of the value.",
-          "enum": [
-            "boolean",
-            "number",
-            "text",
-            "structure",
-            "union",
-            "reference",
-            "list"
-          ]
+          "description": "The type of the value."
         }
       },
-      "allOf": [
-        {
-          "if": {
-            "properties": {
-              "type": {
-                "const": "boolean"
-              }
-            }
-          },
-          "then": {
-            "$ref": "#/$defs/boolean"
-          }
-        },
-        {
-          "if": {
-            "properties": {
-              "type": {
-                "const": "number"
-              }
-            }
-          },
-          "then": {
-            "$ref": "#/$defs/number"
-          }
-        },
-        {
-          "if": {
-            "properties": {
-              "type": {
-                "const": "text"
-              }
-            }
-          },
-          "then": {
-            "$ref": "#/$defs/text"
-          }
-        },
-        {
-          "if": {
-            "properties": {
-              "type": {
-                "const": "structure"
-              }
-            }
-          },
-          "then": {
-            "$ref": "#/$defs/structure"
-          }
-        },
-        {
-          "if": {
-            "properties": {
-              "type": {
-                "const": "union"
-              }
-            }
-          },
-          "then": {
-            "$ref": "#/$defs/union"
-          }
-        },
-        {
-          "if": {
-            "properties": {
-              "type": {
-                "const": "reference"
-              }
-            }
-          },
-          "then": {
-            "$ref": "#/$defs/reference"
-          }
-        },
-        {
-          "if": {
-            "properties": {
-              "type": {
-                "const": "list"
-              }
-            }
-          },
-          "then": {
-            "$ref": "#/$defs/list"
-          }
-        }
-      ],
       "required": [
         "type"
       ],
-      "unevaluatedProperties": false
+      "unevaluatedProperties": false,
+      "oneOf": [
+        {
+          "$ref": "#/$defs/boolean"
+        },
+        {
+          "$ref": "#/$defs/number"
+        },
+        {
+          "$ref": "#/$defs/text"
+        },
+        {
+          "$ref": "#/$defs/structure"
+        },
+        {
+          "$ref": "#/$defs/union"
+        },
+        {
+          "$ref": "#/$defs/reference"
+        },
+        {
+          "$ref": "#/$defs/list"
+        }
+      ]
     },
     "structure": {
       "type": "object",
@@ -899,21 +757,11 @@
           "maxLength": 60
         },
         "minimumLength": {
-          "allOf": [
-            {
-              "type": "number",
-              "title": "Minimum items",
-              "description": "The minimum required number of items.",
-              "minimum": 0,
-              "maximum": 30
-            },
-            {
-              "type": "number",
-              "maximum": {
-                "$data": "1/maximumLength"
-              }
-            }
-          ]
+          "type": "number",
+          "title": "Minimum items",
+          "description": "The minimum required number of items.",
+          "minimum": 0,
+          "maximum": 30
         },
         "maximumLength": {
           "type": "number",
@@ -1038,5 +886,28 @@
       ],
       "unevaluatedProperties": false
     }
-  }
+  },
+  "oneOf": [
+    {
+      "$ref": "#/$defs/structure"
+    },
+    {
+      "$ref": "#/$defs/union"
+    },
+    {
+      "$ref": "#/$defs/text"
+    },
+    {
+      "$ref": "#/$defs/number"
+    },
+    {
+      "$ref": "#/$defs/boolean"
+    },
+    {
+      "$ref": "#/$defs/list"
+    },
+    {
+      "$ref": "#/$defs/reference"
+    }
+  ]
 }

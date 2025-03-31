@@ -1,150 +1,19 @@
 {
-  "$id": "https://schema.croct.com/json/content.json",
   "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Content",
+  "description": "The value of a content.",
   "type": "object",
   "properties": {
     "$schema": {
       "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "description": "The data type of the value."
     }
   },
-  "$ref": "#/$defs/any",
-  "$defs": {
-    "dynamic": {
-      "type": "object",
-      "properties": {
-        "nullable": {
-          "type": "boolean",
-          "title": "Nullable?",
-          "description": "Whether the expression result is nullable."
-        },
-        "expression": {
-          "type": "string",
-          "title": "Expression",
-          "description": "A CQL expression that resolves to the value."
-        }
-      },
-      "required": [
-        "expression"
-      ],
-      "allOf": [
-        {
-          "if": {
-            "properties": {
-              "nullable": {
-                "type": "boolean",
-                "const": true
-              }
-            },
-            "required": [
-              "nullable"
-            ]
-          },
-          "then": {
-            "required": [
-              "nullable",
-              "expression"
-            ]
-          },
-          "else": {
-            "required": [
-              "expression",
-              "default"
-            ]
-          }
-        }
-      ]
-    },
-    "text": {
-      "type": "object",
-      "title": "Value definition",
-      "description": "Defines the data type and value.",
-      "properties": {
-        "type": {
-          "type": "string",
-          "const": "text",
-          "title": "Data type",
-          "description": "The data type of the resolved value."
-        },
-        "value": {
-          "type": "object",
-          "title": "Value",
-          "description": "Defines how to resolve the value.",
-          "properties": {
-            "type": {
-              "type": "string",
-              "enum": [
-                "static",
-                "dynamic"
-              ],
-              "title": "Value type",
-              "description": "Defines whether the value is static or dynamically resolved at runtime."
-            }
-          },
-          "allOf": [
-            {
-              "type": "object",
-              "if": {
-                "properties": {
-                  "type": {
-                    "type": "string",
-                    "const": "static"
-                  }
-                }
-              },
-              "then": {
-                "properties": {
-                  "value": {
-                    "type": "string",
-                    "title": "Static value",
-                    "description": "The resolved value."
-                  }
-                },
-                "required": [
-                  "value"
-                ]
-              }
-            },
-            {
-              "type": "object",
-              "if": {
-                "properties": {
-                  "type": {
-                    "type": "string",
-                    "const": "dynamic"
-                  }
-                }
-              },
-              "then": {
-                "allOf": [
-                  {
-                    "$ref": "#/$defs/dynamic"
-                  },
-                  {
-                    "properties": {
-                      "default": {
-                        "type": "string",
-                        "title": "Default",
-                        "description": "A static value used in case the expression evaluation fails, results in null, or yields a value of unexpected type."
-                      }
-                    }
-                  }
-                ]
-              }
-            }
-          ],
-          "required": [
-            "type"
-          ],
-          "unevaluatedProperties": false
-        }
-      },
-      "required": [
-        "type",
-        "value"
-      ],
-      "additionalProperties": false
-    },
-    "boolean": {
+  "oneOf": [
+    {
       "type": "object",
       "title": "Value definition",
       "description": "Defines the data type and value.",
@@ -162,70 +31,88 @@
           "properties": {
             "type": {
               "type": "string",
-              "enum": [
-                "static",
-                "dynamic"
-              ],
               "title": "Value type",
               "description": "Defines whether the value is static or dynamically resolved at runtime."
             }
           },
-          "allOf": [
+          "oneOf": [
             {
               "type": "object",
-              "if": {
-                "properties": {
-                  "type": {
-                    "type": "string",
-                    "const": "static"
-                  }
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "const": "static"
+                },
+                "value": {
+                  "type": "boolean",
+                  "title": "Static value",
+                  "description": "The resolved value."
                 }
               },
-              "then": {
-                "properties": {
-                  "value": {
-                    "type": "boolean",
-                    "title": "Static value",
-                    "description": "The resolved value."
-                  }
-                },
-                "required": [
-                  "value"
-                ]
-              }
+              "required": [
+                "type",
+                "value"
+              ],
+              "additionalProperties": false
             },
             {
               "type": "object",
-              "if": {
-                "properties": {
-                  "type": {
-                    "type": "string",
-                    "const": "dynamic"
-                  }
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "const": "dynamic"
+                },
+                "nullable": {
+                  "type": "boolean",
+                  "title": "Nullable?",
+                  "description": "Whether the expression result is nullable."
+                },
+                "expression": {
+                  "type": "string",
+                  "title": "Expression",
+                  "description": "A CQL expression that resolves to the value."
+                },
+                "default": {
+                  "type": "boolean",
+                  "title": "Default",
+                  "description": "A static value used in case the expression evaluation fails, results in null, or yields a value of unexpected type."
                 }
               },
-              "then": {
-                "allOf": [
-                  {
-                    "$ref": "#/$defs/dynamic"
-                  },
-                  {
-                    "properties": {
-                      "default": {
-                        "type": "boolean",
-                        "title": "Default",
-                        "description": "A static value used in case the expression evaluation fails, results in null, or yields a value of unexpected type."
-                      }
-                    }
+              "if": {
+                "properties": {
+                  "nullable": {
+                    "type": "boolean",
+                    "const": true
                   }
+                },
+                "required": [
+                  "nullable"
                 ]
-              }
+              },
+              "then": {
+                "required": [
+                  "type",
+                  "nullable",
+                  "expression"
+                ]
+              },
+              "else": {
+                "required": [
+                  "type",
+                  "expression",
+                  "default"
+                ]
+              },
+              "required": [
+                "type",
+                "expression"
+              ],
+              "additionalProperties": false
             }
           ],
           "required": [
             "type"
-          ],
-          "unevaluatedProperties": false
+          ]
         }
       },
       "required": [
@@ -234,7 +121,115 @@
       ],
       "additionalProperties": false
     },
-    "number": {
+    {
+      "type": "object",
+      "title": "Value definition",
+      "description": "Defines the data type and value.",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "text",
+          "title": "Data type",
+          "description": "The data type of the resolved value."
+        },
+        "value": {
+          "type": "object",
+          "title": "Value",
+          "description": "Defines how to resolve the value.",
+          "properties": {
+            "type": {
+              "type": "string",
+              "title": "Value type",
+              "description": "Defines whether the value is static or dynamically resolved at runtime."
+            }
+          },
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "const": "static"
+                },
+                "value": {
+                  "type": "string",
+                  "title": "Static value",
+                  "description": "The resolved value."
+                }
+              },
+              "required": [
+                "type",
+                "value"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "const": "dynamic"
+                },
+                "nullable": {
+                  "type": "boolean",
+                  "title": "Nullable?",
+                  "description": "Whether the expression result is nullable."
+                },
+                "expression": {
+                  "type": "string",
+                  "title": "Expression",
+                  "description": "A CQL expression that resolves to the value."
+                },
+                "default": {
+                  "type": "string",
+                  "title": "Default",
+                  "description": "A static value used in case the expression evaluation fails, results in null, or yields a value of unexpected type."
+                }
+              },
+              "if": {
+                "properties": {
+                  "nullable": {
+                    "type": "boolean",
+                    "const": true
+                  }
+                },
+                "required": [
+                  "nullable"
+                ]
+              },
+              "then": {
+                "required": [
+                  "type",
+                  "nullable",
+                  "expression"
+                ]
+              },
+              "else": {
+                "required": [
+                  "type",
+                  "expression",
+                  "default"
+                ]
+              },
+              "required": [
+                "type",
+                "expression"
+              ],
+              "additionalProperties": false
+            }
+          ],
+          "required": [
+            "type"
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    {
       "type": "object",
       "title": "Value definition",
       "description": "Defines the data type and value.",
@@ -252,72 +247,92 @@
           "properties": {
             "type": {
               "type": "string",
-              "enum": [
-                "static",
-                "dynamic"
-              ],
               "title": "Value type",
               "description": "Defines whether the value is static or dynamically resolved at runtime."
             }
           },
-          "allOf": [
+          "oneOf": [
             {
               "type": "object",
-              "if": {
-                "properties": {
-                  "type": {
-                    "const": "static"
-                  }
+              "properties": {
+                "type": {
+                  "const": "static"
+                },
+                "value": {
+                  "type": "number",
+                  "title": "Static value",
+                  "description": "The resolved value.",
+                  "minimum": -9007199254740991,
+                  "maximum": 9007199254740991
                 }
               },
-              "then": {
-                "properties": {
-                  "value": {
-                    "type": "number",
-                    "title": "Static value",
-                    "description": "The resolved value.",
-                    "minimum": -9007199254740991,
-                    "maximum": 9007199254740991
-                  }
-                },
-                "required": [
-                  "value"
-                ]
-              }
+              "required": [
+                "type",
+                "value"
+              ],
+              "additionalProperties": false
             },
             {
               "type": "object",
-              "if": {
-                "properties": {
-                  "type": {
-                    "const": "dynamic"
-                  }
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "const": "dynamic"
+                },
+                "nullable": {
+                  "type": "boolean",
+                  "title": "Nullable?",
+                  "description": "Whether the expression result is nullable."
+                },
+                "expression": {
+                  "type": "string",
+                  "title": "Expression",
+                  "description": "A CQL expression that resolves to the value."
+                },
+                "default": {
+                  "type": "number",
+                  "title": "Default",
+                  "description": "A static value used in case the expression evaluation fails, results in null, or yields a value of unexpected type.",
+                  "minimum": -9007199254740991,
+                  "maximum": 9007199254740991
                 }
               },
-              "then": {
-                "allOf": [
-                  {
-                    "$ref": "#/$defs/dynamic"
-                  },
-                  {
-                    "properties": {
-                      "default": {
-                        "type": "number",
-                        "title": "Default",
-                        "description": "A static value used in case the expression evaluation fails, results in null, or yields a value of unexpected type.",
-                        "minimum": -9007199254740991,
-                        "maximum": 9007199254740991
-                      }
-                    }
+              "if": {
+                "properties": {
+                  "nullable": {
+                    "type": "boolean",
+                    "const": true
                   }
+                },
+                "required": [
+                  "type",
+                  "nullable"
                 ]
-              }
+              },
+              "then": {
+                "required": [
+                  "type",
+                  "nullable",
+                  "expression"
+                ]
+              },
+              "else": {
+                "required": [
+                  "type",
+                  "expression",
+                  "default"
+                ]
+              },
+              "required": [
+                "type",
+                "expression"
+              ],
+              "additionalProperties": false
             }
           ],
           "required": [
             "type"
-          ],
-          "unevaluatedProperties": false
+          ]
         }
       },
       "required": [
@@ -326,7 +341,7 @@
       ],
       "additionalProperties": false
     },
-    "structure": {
+    {
       "type": "object",
       "title": "Structure",
       "description": "A set of attributes as key-value pairs.",
@@ -344,7 +359,7 @@
           "title": "Attributes",
           "description": "The structure-specific attributes.",
           "additionalProperties": {
-            "$ref": "#/$defs/any"
+            "$ref": "#"
           }
         }
       },
@@ -354,7 +369,7 @@
       ],
       "additionalProperties": false
     },
-    "list": {
+    {
       "type": "object",
       "title": "List",
       "description": "A set of attributes",
@@ -366,7 +381,7 @@
         "items": {
           "type": "array",
           "items": {
-            "$ref": "#/$defs/any"
+            "$ref": "#"
           }
         }
       },
@@ -375,88 +390,6 @@
         "items"
       ],
       "additionalProperties": false
-    },
-    "any": {
-      "type": "object",
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "boolean",
-            "text",
-            "number",
-            "structure",
-            "list"
-          ]
-        }
-      },
-      "allOf": [
-        {
-          "if": {
-            "properties": {
-              "type": {
-                "type": "string",
-                "const": "boolean"
-              }
-            }
-          },
-          "then": {
-            "$ref": "#/$defs/boolean"
-          }
-        },
-        {
-          "if": {
-            "properties": {
-              "type": {
-                "type": "string",
-                "const": "text"
-              }
-            }
-          },
-          "then": {
-            "$ref": "#/$defs/text"
-          }
-        },
-        {
-          "if": {
-            "properties": {
-              "type": {
-                "type": "string",
-                "const": "number"
-              }
-            }
-          },
-          "then": {
-            "$ref": "#/$defs/number"
-          }
-        },
-        {
-          "if": {
-            "properties": {
-              "type": {
-                "type": "string",
-                "const": "structure"
-              }
-            }
-          },
-          "then": {
-            "$ref": "#/$defs/structure"
-          }
-        },
-        {
-          "if": {
-            "properties": {
-              "type": {
-                "type": "string",
-                "const": "list"
-              }
-            }
-          },
-          "then": {
-            "$ref": "#/$defs/list"
-          }
-        }
-      ]
     }
-  }
+  ]
 }

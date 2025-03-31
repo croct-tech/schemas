@@ -1,5 +1,5 @@
 import {writeFileSync, existsSync, mkdirSync} from 'fs';
-import {dirname} from 'path';
+import {dirname, join} from 'path';
 import {spawnSync} from 'child_process';
 
 const schemaPath = process.argv[2];
@@ -21,14 +21,16 @@ const args = [
     'bundle',
     schemaPath,
     '--resolve',
-    'packages/json-schemas/schemas',
+    join(import.meta.dirname, '..', 'schemas', 'event'),
     '--without-id',
 ];
 
 const data = spawnSync('jsonschema', args, {stdio: ['ignore', 'pipe', 'inherit']});
 
-if (data.error !== undefined) {
-    console.error('Error bundling schema:', data.error.message);
+if (data.error !== undefined || data.status !== 0) {
+    if (data.error !== undefined) {
+        console.error('Error bundling schema:', data.error.message);
+    }
 
     process.exit(1);
 }
@@ -44,8 +46,10 @@ const content = data.stdout
         (_, match) => `"${match.replace(/\//g, '-')}"`,
     );
 
-if (!existsSync(dirname(outputPath))) {
-    mkdirSync(dirname(outputPath), {recursive: true});
+const parentDirectory = dirname(outputPath);
+
+if (parentDirectory !== '.' && !existsSync(parentDirectory)) {
+    mkdirSync(parentDirectory, {recursive: true});
 }
 
 writeFileSync(outputPath, content, 'utf-8');
