@@ -41,6 +41,9 @@
       },
       {
         "$ref": "./action/import.json"
+      },
+      {
+        "$ref": "./action/locate-file.json"
       }
     ]
   },

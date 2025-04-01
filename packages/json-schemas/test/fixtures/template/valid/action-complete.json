@@ -69,6 +69,11 @@
     {
         "name": "import",
         "template": "croct://template-name"
+    },
+    {
+      "name": "locate-file",
+      "path": "src",
+      "result": "files"
     }
   ],
   "errors": []
