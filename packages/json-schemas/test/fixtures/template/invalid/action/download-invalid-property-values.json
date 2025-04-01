@@ -2,7 +2,7 @@
   "schema": "template/action/download.json",
   "allErrors": true,
   "input": {
-    "name": "foo",
+    "name": "",
     "source": "",
     "destination": "",
     "filter": "",

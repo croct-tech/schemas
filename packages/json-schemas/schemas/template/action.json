@@ -58,6 +58,9 @@
     },
     {
       "$ref": "./action/repeat.json"
+    },
+    {
+      "$ref": "./action/replace-file-content.json"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "schema": "template/action/locate-file.json",
   "allErrors": true,
   "input": {
-    "name": "foo",
+    "name": "",
     "path": "",
     "limit": -1,
     "depth": -1,

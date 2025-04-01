@@ -109,6 +109,21 @@
             "message": "Trying again..."
           }
         ]
+      },
+      {
+        "name": "replace-file-content",
+        "files": [
+          {
+            "path": "src/constants.ts",
+            "replacements": [
+              {
+                "pattern": "APP_NAME",
+                "value": "Croct",
+                "caseSensitive": true
+              }
+            ]
+          }
+        ]
       }
     ]
   },

@@ -2,7 +2,7 @@
   "schema": "template/action/open-link.json",
   "allErrors": true,
   "input": {
-    "name": "foo",
+    "name": "",
     "url": "",
     "extra": true
   },

@@ -2,7 +2,7 @@
   "schema": "template/action/add-slot.json",
   "allErrors": true,
   "input": {
-    "name": "foo",
+    "name": "",
     "slots": [
       "pricing-plan",
       "pricing-plan@",

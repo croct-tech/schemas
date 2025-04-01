@@ -2,7 +2,7 @@
   "schema": "template/action/add-component.json",
   "allErrors": true,
   "input": {
-    "name": "foo",
+    "name": "",
     "components": [
       "button",
       "button@",
