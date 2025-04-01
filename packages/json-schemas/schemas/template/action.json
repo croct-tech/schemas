@@ -26,6 +26,9 @@
       },
       {
         "$ref": "./action/define.json"
+      },
+      {
+        "$ref": "./action/download.json"
       }
     ]
   },

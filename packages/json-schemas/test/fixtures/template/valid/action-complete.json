@@ -42,6 +42,17 @@
           }
         }
       }
+    },
+    {
+      "name": "define",
+      "variables": {
+        "number": 1
+      }
+    },
+    {
+      "name": "download",
+      "source": "github.com/user/repo",
+      "destination": "/path/to/destination"
     }
   ],
   "errors": []

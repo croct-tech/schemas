@@ -1,0 +1,9 @@
+{
+  "schema": "template/action/download.json",
+  "input": {
+    "name": "download",
+    "source": "github.com/user/repo",
+    "destination": "/path/to/destination"
+  },
+  "errors": []
+}
