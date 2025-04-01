@@ -1,0 +1,21 @@
+{
+  "$id": "https://schema.croct.com/json/template/action/stop-server.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Stop server",
+  "description": "Stops the project's development server if it was started by the current process.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the action.",
+      "const": "stop-server"
+    }
+  },
+  "required": ["name"],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "name": "stop-server"
+    }
+  ]
+}

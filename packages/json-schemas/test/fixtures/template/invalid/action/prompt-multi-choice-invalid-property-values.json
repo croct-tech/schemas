@@ -10,12 +10,23 @@
     "options": [
       {
         "value": "",
-        "label": ""
+        "label": "",
+        "extra": true
       }
     ],
-    "result": ""
+    "result": "",
+    "extra": true
   },
-  "errors":  [
+  "errors": [
+    {
+      "instancePath": "",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "extra"
+      },
+      "schemaPath": "#/additionalProperties"
+    },
     {
       "instancePath": "/name",
       "keyword": "const",
@@ -62,6 +73,15 @@
         "limit": 1
       },
       "schemaPath": "#/properties/max/minimum"
+    },
+    {
+      "instancePath": "/options/0",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "extra"
+      },
+      "schemaPath": "#/properties/options/items/additionalProperties"
     },
     {
       "instancePath": "/options/0/label",

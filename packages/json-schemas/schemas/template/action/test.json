@@ -1,0 +1,77 @@
+{
+  "$id": "https://schema.croct.com/json/template/action/test.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Test condition",
+  "description": "Executes one or more actions depending on the result of a boolean condition.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the action.",
+      "const": "test"
+    },
+    "condition": {
+      "type": "string",
+      "description": "The condition that determines which branch of actions is executed.",
+      "examples": ["${this.condition}", "${this.isDevServerOwned}"]
+    },
+    "then": {
+      "description": "Actions executed if the condition is true.",
+      "oneOf": [
+        {
+          "type": "object",
+          "$ref": "https://schema.croct.com/json/template/action.json"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "https://schema.croct.com/json/template/action.json"
+          },
+          "minItems": 1
+        }
+      ]
+    },
+    "else": {
+      "description": "Actions executed if the condition is false.",
+      "oneOf": [
+        {
+          "type": "object",
+          "$ref": "https://schema.croct.com/json/template/action.json"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "https://schema.croct.com/json/template/action.json"
+          },
+          "minItems": 1
+        }
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "condition",
+    "then"
+  ],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "name": "test",
+      "condition": "${this.condition}",
+      "then": [
+        {
+          "name": "print",
+          "message": "Condition is true"
+        }
+      ],
+      "else": [
+        {
+          "name": "print",
+          "message": "Condition is false"
+        }
+      ]
+    }
+  ]
+}

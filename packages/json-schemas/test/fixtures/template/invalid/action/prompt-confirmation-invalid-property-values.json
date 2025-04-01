@@ -5,9 +5,19 @@
     "name": "",
     "type": "",
     "message": "",
-    "result": ""
+    "result": "",
+    "extra": true
   },
   "errors":  [
+    {
+      "instancePath": "",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "extra"
+      },
+      "schemaPath": "#/additionalProperties"
+    },
     {
       "instancePath": "/name",
       "keyword": "const",

@@ -67,6 +67,12 @@
     },
     {
       "$ref": "./action/start-server.json"
+    },
+    {
+      "$ref": "./action/stop-server.json"
+    },
+    {
+      "$ref": "./action/test.json"
     }
   ]
 }

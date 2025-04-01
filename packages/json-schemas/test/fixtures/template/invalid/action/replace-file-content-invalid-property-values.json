@@ -9,13 +9,25 @@
         "replacements": [
           {
             "pattern": "",
-            "value": ""
+            "value": "",
+            "extra": true
           }
-        ]
+        ],
+        "extra": true
       }
-    ]
+    ],
+    "extra": true
   },
   "errors": [
+    {
+      "instancePath": "",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "extra"
+      },
+      "schemaPath": "#/additionalProperties"
+    },
     {
       "instancePath": "/name",
       "keyword": "const",
@@ -24,6 +36,24 @@
         "allowedValue": "replace-file-content"
       },
       "schemaPath": "#/properties/name/const"
+    },
+    {
+      "instancePath": "/files/0",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "extra"
+      },
+      "schemaPath": "#/properties/files/items/additionalProperties"
+    },
+    {
+      "instancePath": "/files/0/replacements/0",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "extra"
+      },
+      "schemaPath": "#/properties/files/items/properties/replacements/items/additionalProperties"
     },
     {
       "instancePath": "/files/0/replacements/0/pattern",

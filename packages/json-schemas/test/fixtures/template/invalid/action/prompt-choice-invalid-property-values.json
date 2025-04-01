@@ -7,12 +7,23 @@
     "message": "",
     "options": [
       {
-        "value": ""
+        "value": "",
+        "extra": true
       }
     ],
-    "result": ""
+    "result": "",
+    "extra": true
   },
-  "errors":  [
+  "errors": [
+    {
+      "instancePath": "",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "extra"
+      },
+      "schemaPath": "#/additionalProperties"
+    },
     {
       "instancePath": "/name",
       "keyword": "const",
@@ -39,6 +50,15 @@
         "limit": 1
       },
       "schemaPath": "#/properties/message/minLength"
+    },
+    {
+      "instancePath": "/options/0",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "extra"
+      },
+      "schemaPath": "#/properties/options/items/additionalProperties"
     },
     {
       "instancePath": "/result",

@@ -136,6 +136,17 @@
       },
       {
         "name": "start-server"
+      },
+      {
+        "name": "stop-server"
+      },
+      {
+        "name": "test",
+        "condition": "${this.condition}",
+        "then": {
+          "name": "print",
+          "message": "Condition is true"
+        }
       }
     ]
   },

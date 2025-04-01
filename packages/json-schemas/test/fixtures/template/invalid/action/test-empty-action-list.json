@@ -1,0 +1,66 @@
+{
+  "schema": "template/action/test.json",
+  "allErrors": true,
+  "input": {
+    "name": "test",
+    "condition": "${this.retryCount < 3}",
+    "then": [],
+    "else": []
+  },
+  "errors": [
+    {
+      "instancePath": "/then",
+      "keyword": "type",
+      "message": "must be object",
+      "params": {
+        "type": "object"
+      },
+      "schemaPath": "#/properties/then/oneOf/0/type"
+    },
+    {
+      "instancePath": "/then",
+      "keyword": "oneOf",
+      "message": "must match exactly one schema in oneOf",
+      "params": {
+        "passingSchemas": null
+      },
+      "schemaPath": "#/oneOf"
+    },
+    {
+      "instancePath": "/then",
+      "keyword": "minItems",
+      "message": "must NOT have fewer than 1 items",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/then/oneOf/1/minItems"
+    },
+    {
+      "instancePath": "/else",
+      "keyword": "type",
+      "message": "must be object",
+      "params": {
+        "type": "object"
+      },
+      "schemaPath": "#/properties/else/oneOf/0/type"
+    },
+    {
+      "instancePath": "/else",
+      "keyword": "oneOf",
+      "message": "must match exactly one schema in oneOf",
+      "params": {
+        "passingSchemas": null
+      },
+      "schemaPath": "#/oneOf"
+    },
+    {
+      "instancePath": "/else",
+      "keyword": "minItems",
+      "message": "must NOT have fewer than 1 items",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/else/oneOf/1/minItems"
+    }
+  ]
+}
