@@ -1,0 +1,29 @@
+{
+  "$id": "https://schema.croct.com/json/template/action/prompt.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Prompt",
+  "description": "Prompts the user for input, confirmation, choices, or keypress interactions.",
+  "type": "object",
+  "oneOf": [
+    {
+      "type": "object",
+      "$ref": "./prompt-confirmation.json"
+    },
+    {
+      "type": "object",
+      "$ref": "./prompt-choice.json"
+    },
+    {
+      "type": "object",
+      "$ref": "./prompt-multi-choice.json"
+    },
+    {
+      "type": "object",
+      "$ref": "./prompt-text.json"
+    },
+    {
+      "type": "object",
+      "$ref": "./prompt-keypress.json"
+    }
+  ]
+}

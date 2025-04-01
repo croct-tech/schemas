@@ -1,0 +1,12 @@
+{
+  "schema": "template/action/prompt.json",
+  "input": {
+    "name": "prompt",
+    "type": "keypress",
+    "message": "Press enter to continue:",
+    "key": "[enter]",
+    "result": "pressedKey"
+  },
+  "errors": [
+  ]
+}

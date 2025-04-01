@@ -1,0 +1,73 @@
+{
+  "$id": "https://schema.croct.com/json/template/action/prompt-keypress.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Choice prompt",
+  "type": "object",
+  "description": "Waits for a specific keypress from the user.",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the action.",
+      "const": "prompt"
+    },
+    "type": {
+      "type": "string",
+      "description": "The type of prompt.",
+      "const": "keypress"
+    },
+    "message": {
+      "type": "string",
+      "description": "The keypress prompt message.",
+      "minLength": 1,
+      "examples": [
+        "Press enter to continue:"
+      ]
+    },
+    "key": {
+      "type": "string",
+      "description": "Specific key to wait for.",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "[enter]",
+            "[space]"
+          ]
+        },
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1
+        }
+      ],
+      "examples": [
+        "[enter]",
+        "[space]",
+        "y"
+      ]
+    },
+    "result": {
+      "type": "string",
+      "description": "Variable to store the pressed key.",
+      "minLength": 1,
+      "examples": [
+        "pressedKey"
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "type",
+    "message"
+  ],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "name": "prompt",
+      "type": "keypress",
+      "message": "Press enter to continue:",
+      "key": "[enter]",
+      "result": "pressedKey"
+    }
+  ]
+}

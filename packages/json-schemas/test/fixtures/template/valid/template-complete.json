@@ -93,6 +93,12 @@
       {
         "name": "print",
         "message": "Hello, world!"
+      },
+      {
+        "name": "prompt",
+        "type": "text",
+        "message": "Enter your name:",
+        "result": "userName"
       }
     ]
   },

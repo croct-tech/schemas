@@ -1,0 +1,16 @@
+{
+  "schema": "template/action/prompt.json",
+  "input": {
+    "name": "prompt",
+    "type": "multi-choice",
+    "message": "Select your interests:",
+    "options": [
+      {
+        "value": "sports"
+      }
+    ],
+    "result": "selectedInterests"
+  },
+  "errors": [
+  ]
+}

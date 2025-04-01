@@ -1,0 +1,13 @@
+{
+  "schema": "template/action/prompt.json",
+  "input": {
+    "name": "prompt",
+    "type": "text",
+    "message": "Enter your name:",
+    "default": "John Doe",
+    "required": true,
+    "result": "userName"
+  },
+  "errors": [
+  ]
+}

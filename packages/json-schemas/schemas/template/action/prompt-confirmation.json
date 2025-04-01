@@ -1,0 +1,58 @@
+{
+  "$id": "https://schema.croct.com/json/template/action/prompt-confirmation.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Confirmation prompt",
+  "type": "object",
+  "description": "Asks the user to confirm (yes/no).",
+  "properties": {
+    "name": {
+      "type": "string",
+      "const": "prompt",
+      "description": "The name of the action."
+    },
+    "type": {
+      "type": "string",
+      "const": "confirmation",
+      "description": "The type of prompt."
+    },
+    "message": {
+      "type": "string",
+      "description": "The confirmation prompt message.",
+      "minLength": 1,
+      "examples": [
+        "Are you sure you want to proceed?"
+      ]
+    },
+    "default": {
+      "type": "boolean",
+      "description": "Default value if user presses enter without input.",
+      "examples": [
+        true
+      ]
+    },
+    "result": {
+      "type": "string",
+      "description": "Variable to store the response.",
+      "minLength": 1,
+      "examples": [
+        "shouldProceed"
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "type",
+    "message",
+    "result"
+  ],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "name": "prompt",
+      "type": "confirmation",
+      "message": "Proceed?",
+      "default": true,
+      "result": "shouldProceed"
+    }
+  ]
+}

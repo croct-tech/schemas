@@ -1,0 +1,16 @@
+{
+  "schema": "template/action/prompt.json",
+  "input": {
+    "name": "prompt",
+    "type": "choice",
+    "message": "Select a plan:",
+    "options": [
+      {
+        "value": "basic"
+      }
+    ],
+    "result": "selectedPlan"
+  },
+  "errors": [
+  ]
+}

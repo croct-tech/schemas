@@ -1,0 +1,23 @@
+{
+  "schema": "template/action/prompt-multi-choice.json",
+  "allErrors": true,
+  "input": {
+    "name": "prompt",
+    "type": "multi-choice",
+    "message": "Choose an option:",
+    "options": [
+    ],
+    "result": "selectedOptions"
+  },
+  "errors":  [
+    {
+      "instancePath": "/options",
+      "keyword": "minItems",
+      "message": "must NOT have fewer than 1 items",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/options/minItems"
+    }
+  ]
+}
