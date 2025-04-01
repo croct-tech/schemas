@@ -2,7 +2,9 @@
   "schema": "template/action/add-dependency.json",
   "input": {
     "name": "add-dependency",
-    "dependencies": ["croct"]
+    "dependencies": [
+      "croct"
+    ]
   },
   "errors": []
 }

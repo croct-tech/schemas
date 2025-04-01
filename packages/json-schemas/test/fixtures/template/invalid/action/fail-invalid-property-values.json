@@ -1,0 +1,93 @@
+{
+  "schema": "template/action/fail.json",
+  "allErrors": true,
+  "input": {
+    "name": "foo",
+    "message": "",
+    "links": [
+      {
+        "url": "",
+        "label": "",
+        "extra": true
+      }
+    ],
+    "suggestions": [
+      ""
+    ],
+    "extra": true
+  },
+  "errors": [
+    {
+      "instancePath": "",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "extra"
+      },
+      "schemaPath": "#/additionalProperties"
+    },
+    {
+      "instancePath": "/name",
+      "keyword": "const",
+      "message": "must be equal to constant",
+      "params": {
+        "allowedValue": "fail"
+      },
+      "schemaPath": "#/properties/name/const"
+    },
+    {
+      "instancePath": "/message",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/message/minLength"
+    },
+    {
+      "instancePath": "/links/0",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "extra"
+      },
+      "schemaPath": "#/properties/links/items/additionalProperties"
+    },
+    {
+      "instancePath": "/links/0/label",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/links/items/properties/label/minLength"
+    },
+    {
+      "instancePath": "/links/0/url",
+      "keyword": "pattern",
+      "message": "must match pattern \"^https?://\"",
+      "params": {
+        "pattern": "^https?://"
+      },
+      "schemaPath": "#/properties/links/items/properties/url/pattern"
+    },
+    {
+      "instancePath": "/links/0/url",
+      "keyword": "format",
+      "message": "must match format \"uri\"",
+      "params": {
+        "format": "uri"
+      },
+      "schemaPath": "#/properties/links/items/properties/url/format"
+    },
+    {
+      "instancePath": "/suggestions/0",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/suggestions/items/minLength"
+    }
+  ]
+}

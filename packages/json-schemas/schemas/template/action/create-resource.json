@@ -559,5 +559,18 @@
       },
       "minProperties": 1
     }
-  }
+  },
+  "examples": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "audiences": {
+          "logged-in-users": {
+            "name": "Logged-in users",
+            "criteria": "user is identified"
+          }
+        }
+      }
+    }
+  ]
 }

@@ -28,6 +28,17 @@
       "minItems": 1
     }
   },
-  "required": ["name", "components"],
-  "additionalProperties": false
+  "required": [
+    "name",
+    "components"
+  ],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "name": "add-component",
+      "components": [
+        "button"
+      ]
+    }
+  ]
 }

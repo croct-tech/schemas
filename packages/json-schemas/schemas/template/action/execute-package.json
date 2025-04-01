@@ -13,7 +13,10 @@
     "package": {
       "type": "string",
       "description": "The name of the package to execute.",
-      "examples": ["create-react-app", "eslint"]
+      "examples": [
+        "create-react-app",
+        "eslint"
+      ]
     },
     "arguments": {
       "type": "array",
@@ -21,12 +24,22 @@
       "items": {
         "type": "string"
       },
-      "examples": [["--template", "typescript"]]
+      "examples": [
+        [
+          "--template",
+          "typescript"
+        ]
+      ]
     },
     "runner": {
       "type": "string",
       "description": "The runner to use when executing the package.",
-      "enum": ["npm", "pnpm", "yarn", "bun"]
+      "enum": [
+        "npm",
+        "pnpm",
+        "yarn",
+        "bun"
+      ]
     },
     "interactions": {
       "type": "array",
@@ -39,7 +52,10 @@
           "when": {
             "type": "string",
             "description": "The text or pattern to match against the output.",
-            "examples": ["Would you like to use TypeScript?", "^Overwrite.*"]
+            "examples": [
+              "Would you like to use TypeScript?",
+              "^Overwrite.*"
+            ]
           },
           "pattern": {
             "type": "boolean",
@@ -58,7 +74,15 @@
               "anyOf": [
                 {
                   "type": "string",
-                  "enum": ["[enter]", "[space]", "[down]", "[up]", "[left]", "[right]", "[backspace]"]
+                  "enum": [
+                    "[enter]",
+                    "[space]",
+                    "[down]",
+                    "[up]",
+                    "[left]",
+                    "[right]",
+                    "[backspace]"
+                  ]
                 },
                 {
                   "type": "string",
@@ -66,24 +90,45 @@
                 }
               ]
             },
-            "examples": ["Hello world", "[enter]", "[space]", "[down]", "[up]", "[left]", "[right]", "[backspace]"]
+            "examples": [
+              "Hello world",
+              "[enter]",
+              "[space]",
+              "[down]",
+              "[up]",
+              "[left]",
+              "[right]",
+              "[backspace]"
+            ]
           },
           "final": {
             "type": "boolean",
             "description": "Whether this interaction is the last one to be applied."
           }
         },
-        "required": ["when"],
+        "required": [
+          "when"
+        ],
         "additionalProperties": false,
         "anyOf": [
           {
-            "required": ["when", "then", "final"]
+            "required": [
+              "when",
+              "then",
+              "final"
+            ]
           },
           {
-            "required": ["when", "then"]
+            "required": [
+              "when",
+              "then"
+            ]
           },
           {
-            "required": ["when", "final"]
+            "required": [
+              "when",
+              "final"
+            ]
           }
         ]
       },
@@ -95,12 +140,17 @@
             "const": true
           }
         },
-        "required": ["final"]
+        "required": [
+          "final"
+        ]
       },
       "minContains": 1,
       "maxContains": 1
     }
   },
-  "required": ["name", "package"],
+  "required": [
+    "name",
+    "package"
+  ],
   "additionalProperties": false
 }

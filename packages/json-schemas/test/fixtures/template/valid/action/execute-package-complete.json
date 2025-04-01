@@ -7,12 +7,16 @@
     "interactions": [
       {
         "when": "What is your name?",
-        "then": ["John Doe"],
+        "then": [
+          "John Doe"
+        ],
         "final": false
       },
       {
         "when": "What is your age?",
-        "then": ["25"],
+        "then": [
+          "25"
+        ],
         "final": true
       }
     ]

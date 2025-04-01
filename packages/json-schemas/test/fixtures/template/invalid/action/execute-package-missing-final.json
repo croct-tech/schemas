@@ -6,11 +6,15 @@
     "interactions": [
       {
         "when": "What is your name?",
-        "then": ["John Doe"]
+        "then": [
+          "John Doe"
+        ]
       },
       {
         "when": "What is your age?",
-        "then": ["25"]
+        "then": [
+          "25"
+        ]
       }
     ]
   },

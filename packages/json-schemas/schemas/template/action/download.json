@@ -46,12 +46,29 @@
           "type": "string",
           "description": "Stores the destination path in a variable.",
           "minLength": 1,
-          "examples": ["downloadPath"]
+          "examples": [
+            "downloadPath"
+          ]
         }
       },
       "additionalProperties": false
     }
   },
-  "required": ["name", "source", "destination"],
-  "additionalProperties": false
+  "required": [
+    "name",
+    "source",
+    "destination"
+  ],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "name": "download",
+      "source": "https://example.com/assets/file.json",
+      "filter": "*.json",
+      "destination": "./assets",
+      "result": {
+        "destination": "downloadPath"
+      }
+    }
+  ]
 }

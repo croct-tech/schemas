@@ -26,5 +26,13 @@
     "name",
     "variables"
   ],
-  "additionalProperties": false
+  "additionalProperties": false,
+  "examples": [
+    {
+      "name": "define",
+      "variables": {
+        "projectName": "My Project"
+      }
+    }
+  ]
 }

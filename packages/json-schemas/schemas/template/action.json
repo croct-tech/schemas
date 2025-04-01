@@ -32,6 +32,9 @@
       },
       {
         "$ref": "./action/execute-package.json"
+      },
+      {
+        "$ref": "./action/fail.json"
       }
     ]
   },

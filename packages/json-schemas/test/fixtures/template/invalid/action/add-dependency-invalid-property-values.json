@@ -3,7 +3,9 @@
   "allErrors": true,
   "input": {
     "name": "foo",
-    "dependencies": [""],
+    "dependencies": [
+      ""
+    ],
     "extra": true
   },
   "errors": [

@@ -8,7 +8,9 @@
     "interactions": [
       {
         "when": "",
-        "then": [""]
+        "then": [
+          ""
+        ]
       }
     ]
   },

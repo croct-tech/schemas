@@ -16,6 +16,15 @@
       "minLength": 1
     }
   },
-  "required": ["name", "path"],
-  "additionalProperties": false
+  "required": [
+    "name",
+    "path"
+  ],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "name": "change-directory",
+      "path": "./src"
+    }
+  ]
 }

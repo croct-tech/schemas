@@ -2,7 +2,9 @@
   "schema": "template/action/add-slot.json",
   "input": {
     "name": "add-slot",
-    "slots": ["home-hero"]
+    "slots": [
+      "home-hero"
+    ]
   },
   "errors": []
 }

@@ -25,7 +25,10 @@
           "label": "foo"
         }
       ],
-      "suggestions": ["foo", "bar"]
+      "suggestions": [
+        "foo",
+        "bar"
+      ]
     }
   },
   "errors": [

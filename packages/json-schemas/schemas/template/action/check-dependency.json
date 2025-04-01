@@ -21,13 +21,20 @@
             "type": "string",
             "description": "The name of the dependency.",
             "minLength": 1,
-            "examples": ["croct", "react"]
+            "examples": [
+              "croct",
+              "react"
+            ]
           },
           "version": {
             "type": "string",
             "description": "The required version of the dependency. If not specified, any version is accepted.",
             "minLength": 1,
-            "examples": ["1.0.0", "^1.0.0", ">=2.0.0"]
+            "examples": [
+              "1.0.0",
+              "^1.0.0",
+              ">=2.0.0"
+            ]
           },
           "optional": {
             "type": "boolean",
@@ -35,7 +42,9 @@
             "default": false
           }
         },
-        "required": ["name"],
+        "required": [
+          "name"
+        ],
         "additionalProperties": false
       },
       "uniqueItems": true,
@@ -68,11 +77,22 @@
                 "minLength": 1
               }
             },
-            "required": ["url", "label"],
+            "required": [
+              "url",
+              "label"
+            ],
             "additionalProperties": false
           },
           "uniqueItems": true,
-          "minItems": 1
+          "minItems": 1,
+          "examples": [
+            [
+              {
+                "label": "Documentation",
+                "url": "https://docs.example.com/configuration"
+              }
+            ]
+          ]
         },
         "suggestions": {
           "type": "array",
@@ -94,16 +114,25 @@
         "type": "string",
         "description": "The variable name to store the result of the dependency check.",
         "minLength": 1,
-        "examples": ["variable", "result"]
+        "examples": [
+          "variable",
+          "result"
+        ]
       },
       "propertyNames": {
         "type": "string",
         "description": "The name of the dependency.",
         "minLength": 1,
-        "examples": ["croct", "react"]
+        "examples": [
+          "croct",
+          "react"
+        ]
       }
     }
   },
-  "required": ["name", "dependencies"],
+  "required": [
+    "name",
+    "dependencies"
+  ],
   "additionalProperties": false
 }

@@ -33,6 +33,18 @@
       "default": false
     }
   },
-  "required": ["name", "slots"],
-  "additionalProperties": false
+  "required": [
+    "name",
+    "slots"
+  ],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "name": "add-slot",
+      "slots": [
+        "home-hero"
+      ],
+      "example": true
+    }
+  ]
 }

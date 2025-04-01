@@ -3,10 +3,10 @@
   "input": {
     "name": "check-dependency",
     "dependencies": [
-        {
-            "name": "@croct/json",
-            "version": "^2.1.0"
-        }
+      {
+        "name": "@croct/json",
+        "version": "^2.1.0"
+      }
     ]
   },
   "errors": []
