@@ -1,0 +1,28 @@
+{
+  "schema": "template/action/format-code.json",
+  "allErrors": true,
+  "input": {
+    "name": "foo",
+    "files": [""]
+  },
+  "errors": [
+    {
+      "instancePath": "/name",
+      "keyword": "const",
+      "message": "must be equal to constant",
+      "params": {
+        "allowedValue": "format-code"
+      },
+      "schemaPath": "#/properties/name/const"
+    },
+    {
+      "instancePath": "/files/0",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/files/items/minLength"
+    }
+  ]
+}

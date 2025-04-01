@@ -1,0 +1,35 @@
+{
+  "$id": "https://schema.croct.com/json/template/action/format-code.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Format code",
+  "description": "Formats code using the project's configured formatter.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the action.",
+      "const": "format-code"
+    },
+    "files": {
+      "type": "array",
+      "description": "The list of file paths to format.",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "examples": [
+        ["src/index.ts", "src/components/Button.tsx"],
+        ["config.json"]
+      ]
+    }
+  },
+  "required": ["name", "files"],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "name": "format-code",
+      "files": ["src/index.ts", "src/components/Button.tsx"]
+    }
+  ]
+}

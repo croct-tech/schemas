@@ -61,6 +61,10 @@
     {
       "name": "fail",
       "message": "The project is missing a valid configuration file."
+    },
+    {
+        "name": "format-code",
+        "files": ["src/index.js"]
     }
   ],
   "errors": []

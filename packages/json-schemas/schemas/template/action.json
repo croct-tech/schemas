@@ -35,6 +35,9 @@
       },
       {
         "$ref": "./action/fail.json"
+      },
+      {
+        "$ref": "./action/format-code.json"
       }
     ]
   },

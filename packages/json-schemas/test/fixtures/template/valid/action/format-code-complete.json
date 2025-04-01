@@ -1,0 +1,9 @@
+{
+  "schema": "template/action/format-code.json",
+  "input": {
+    "name": "format-code",
+    "files": ["index.js"]
+  },
+  "errors": [
+  ]
+}
