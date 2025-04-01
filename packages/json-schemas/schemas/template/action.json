@@ -17,6 +17,15 @@
       },
       {
         "$ref": "./action/change-directory.json"
+      },
+      {
+        "$ref": "./action/check-dependency.json"
+      },
+      {
+        "$ref": "./action/create-resource.json"
+      },
+      {
+        "$ref": "./action/define.json"
       }
     ]
   },

@@ -16,7 +16,7 @@
       "properties": {
         "audiences": {
           "type": "object",
-          "description": "A map of audience slugs to audience definitions.",
+          "description": "A map of audience IDs to audience definitions.",
           "additionalProperties": {
             "type": "object",
             "properties": {
@@ -49,7 +49,7 @@
             "type": "string",
             "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$",
             "minLength": 1,
-            "description": "The slug of the audience.",
+            "description": "The ID of the audience.",
             "examples": [
               "logged-in-users",
               "premium-users"
@@ -59,7 +59,7 @@
         },
         "components": {
           "type": "object",
-          "description": "A map of component slugs to component definitions.",
+          "description": "A map of component IDs to component definitions.",
           "additionalProperties": {
             "type": "object",
             "properties": {
@@ -96,7 +96,7 @@
           "propertyNames": {
             "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$",
             "minLength": 1,
-            "description": "The slug of the component.",
+            "description": "The ID of the component.",
             "examples": [
               "button",
               "thumbnail"
@@ -106,7 +106,7 @@
         },
         "slots": {
           "type": "object",
-          "description": "A map of slot slugs to slot definitions.",
+          "description": "A map of slot IDs to slot definitions.",
           "additionalProperties": {
             "type": "object",
             "properties": {
@@ -146,7 +146,7 @@
             "type": "string",
             "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$",
             "minLength": 1,
-            "description": "The slug of the slot.",
+            "description": "The ID of the slot.",
             "examples": [
               "home-hero",
               "pricing-table"
@@ -178,7 +178,7 @@
                 "description": "The list of audiences to target.",
                 "items": {
                   "type": "string",
-                  "description": "The slug of the audience which the experience is targeted to.",
+                  "description": "The ID of the audience which the experience is targeted to.",
                   "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$",
                   "minLength": 1,
                   "examples": [
@@ -192,7 +192,7 @@
                 "description": "The list of slots to personalize.",
                 "items": {
                   "type": "string",
-                  "description": "The slug of the slot to personalize.",
+                  "description": "The ID of the slot to personalize.",
                   "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$",
                   "minLength": 1,
                   "examples": [
@@ -322,7 +322,7 @@
             "type": "string",
             "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$",
             "minLength": 1,
-            "description": "The slug of the audience.",
+            "description": "The ID of the audience.",
             "examples": [
               "logged-in-users",
               "premium-users"
@@ -485,7 +485,7 @@
                 "description": "The audiences for which the content is targeted.",
                 "items": {
                   "type": "string",
-                  "description": "The slug of the audience.",
+                  "description": "The ID of the audience.",
                   "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$",
                   "minLength": 1,
                   "examples": [
@@ -517,10 +517,10 @@
     },
     "slot-content-map": {
       "type": "object",
-      "description": "The map of slot slugs to their content.",
+      "description": "The map of slot IDs to their content.",
       "propertyNames": {
         "type": "string",
-        "description": "The slug of the slot.",
+        "description": "The ID of the slot.",
         "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$",
         "minLength": 1,
         "examples": [

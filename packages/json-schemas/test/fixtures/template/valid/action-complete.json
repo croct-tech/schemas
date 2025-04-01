@@ -3,19 +3,45 @@
   "input": [
     {
       "name": "add-component",
-      "components": ["button"]
+      "components": [
+        "button"
+      ]
     },
     {
       "name": "add-dependency",
-      "dependencies": ["croct"]
+      "dependencies": [
+        "croct"
+      ]
     },
     {
       "name": "add-slot",
-      "slots": ["home-hero"]
+      "slots": [
+        "home-hero"
+      ]
     },
     {
       "name": "change-directory",
       "path": "."
+    },
+    {
+      "name": "check-dependency",
+      "dependencies": [
+        {
+          "name": "croct",
+          "version": ">=1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "create-resource",
+      "resources": {
+        "audiences": {
+          "new-users": {
+            "name": "New users",
+            "criteria": "user is not returning"
+          }
+        }
+      }
     }
   ],
   "errors": []

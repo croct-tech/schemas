@@ -1,0 +1,21 @@
+{
+  "schema": "template/action/define.json",
+  "input": {
+    "name": "define",
+    "variables": {
+      "number": 1,
+      "string": "foo",
+      "boolean": true,
+      "array": [
+        1,
+        2,
+        3
+      ],
+      "object": {
+        "key": "value"
+      },
+      "null": null
+    }
+  },
+  "errors": []
+}
