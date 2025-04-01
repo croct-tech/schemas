@@ -99,6 +99,16 @@
         "type": "text",
         "message": "Enter your name:",
         "result": "userName"
+      },
+      {
+        "name": "repeat",
+        "condition": "${this.retryCount < 3}",
+        "actions": [
+          {
+            "name": "print",
+            "message": "Trying again..."
+          }
+        ]
       }
     ]
   },

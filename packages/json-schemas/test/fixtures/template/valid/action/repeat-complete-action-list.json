@@ -1,0 +1,15 @@
+{
+  "schema": "template/action/repeat.json",
+  "input": {
+    "name": "repeat",
+    "condition": "${this.retryCount < 3}",
+    "actions": [
+      {
+        "name": "print",
+        "message": "Trying again..."
+      }
+    ]
+  },
+  "errors": [
+  ]
+}

@@ -55,6 +55,9 @@
     },
     {
       "$ref": "./action/prompt.json"
+    },
+    {
+      "$ref": "./action/repeat.json"
     }
   ]
 }

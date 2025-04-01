@@ -1,0 +1,62 @@
+{
+  "$id": "https://schema.croct.com/json/template/action/repeat.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Repeat action",
+  "description": "Repeats one or more actions while the condition evaluates to true.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the action.",
+      "const": "repeat"
+    },
+    "condition": {
+      "type": "string",
+      "description": "The expression that is evaluated before each iteration.",
+      "examples": [
+        "${this.step < 5}",
+        "${this.continueLoop}"
+      ]
+    },
+    "actions": {
+      "oneOf": [
+        {
+          "type": "object",
+          "$ref": "https://schema.croct.com/json/template/action.json"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "https://schema.croct.com/json/template/action.json"
+          },
+          "minItems": 1
+        }
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "condition",
+    "actions"
+  ],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "name": "repeat",
+      "condition": "${this.retryCount < 3}",
+      "actions": [
+        {
+          "name": "print",
+          "message": "Trying again..."
+        },
+        {
+          "name": "define",
+          "variables": {
+            "retryCount": "${this.retryCount + 1}"
+          }
+        }
+      ]
+    }
+  ]
+}
