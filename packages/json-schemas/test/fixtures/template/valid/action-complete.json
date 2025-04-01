@@ -74,6 +74,9 @@
       "name": "locate-file",
       "path": "src",
       "result": "files"
+    },
+    {
+      "name": "initialize"
     }
   ],
   "errors": []

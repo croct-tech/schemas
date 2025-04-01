@@ -44,6 +44,9 @@
       },
       {
         "$ref": "./action/locate-file.json"
+      },
+      {
+        "$ref": "./action/initialize.json"
       }
     ]
   },
