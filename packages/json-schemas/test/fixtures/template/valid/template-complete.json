@@ -133,6 +133,9 @@
             "message": "Step 1 complete"
           }
         ]
+      },
+      {
+        "name": "start-server"
       }
     ]
   },

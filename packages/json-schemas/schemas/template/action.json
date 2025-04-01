@@ -64,6 +64,9 @@
     },
     {
       "$ref": "./action/run.json"
+    },
+    {
+      "$ref": "./action/start-server.json"
     }
   ]
 }

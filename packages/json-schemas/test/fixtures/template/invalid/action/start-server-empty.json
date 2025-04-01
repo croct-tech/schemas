@@ -1,0 +1,17 @@
+{
+  "schema": "template/action/start-server.json",
+  "allErrors": true,
+  "input": {
+  },
+  "errors": [
+    {
+      "instancePath": "",
+      "keyword": "required",
+      "message": "must have required property 'name'",
+      "params": {
+        "missingProperty": "name"
+      },
+      "schemaPath": "#/required"
+    }
+  ]
+}
