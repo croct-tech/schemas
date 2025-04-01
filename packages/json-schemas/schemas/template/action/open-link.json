@@ -1,0 +1,32 @@
+{
+  "$id": "https://schema.croct.com/json/template/action/open-link.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Open link",
+  "description": "Opens a URL in the user's default browser.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the action.",
+      "const": "open-link"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https?://.*",
+      "description": "The URL to open in the browser.",
+      "examples": [
+        "https://croct.com",
+        "https://docs.croct.com"
+      ]
+    }
+  },
+  "required": ["name", "url"],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "name": "open-link",
+      "url": "https://croct.com"
+    }
+  ]
+}

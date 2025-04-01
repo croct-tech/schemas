@@ -1,6 +1,13 @@
 {
   "schema": "template/template.json",
   "input": {
+    "title": "Full template",
+    "description": "A template with all properties filled.",
+    "metadata": {
+      "author": "John Doe",
+      "version": "1.0.0",
+      "license": "MIT"
+    },
     "actions": [
       {
         "name": "add-component",
@@ -78,6 +85,10 @@
       },
       {
         "name": "initialize"
+      },
+      {
+        "name": "open-link",
+        "url": "https://croct.com"
       }
     ]
   },

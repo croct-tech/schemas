@@ -1,0 +1,9 @@
+{
+  "schema": "template/action/open-link.json",
+  "input": {
+    "name": "open-link",
+    "url": "https://croct.com"
+  },
+  "errors": [
+  ]
+}

@@ -46,6 +46,9 @@
     },
     {
       "$ref": "./action/initialize.json"
+    },
+    {
+      "$ref": "./action/open-link.json"
     }
   ]
 }
