@@ -1,0 +1,9 @@
+{
+  "schema": "template/action/print.json",
+  "input": {
+    "name": "print",
+    "message": "Hello world!"
+  },
+  "errors": [
+  ]
+}

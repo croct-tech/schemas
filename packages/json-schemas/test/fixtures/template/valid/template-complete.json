@@ -89,6 +89,10 @@
       {
         "name": "open-link",
         "url": "https://croct.com"
+      },
+      {
+        "name": "print",
+        "message": "Hello, world!"
       }
     ]
   },

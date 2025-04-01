@@ -1,0 +1,65 @@
+{
+  "$id": "https://schema.croct.com/json/template/action/print.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Print message",
+  "description": "Prints a message to the console with optional semantic styling and title.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the action.",
+      "const": "print"
+    },
+    "semantics": {
+      "type": "string",
+      "description": "The intent behind the message for visual presentation.",
+      "enum": [
+        "neutral",
+        "info",
+        "error",
+        "warning",
+        "success"
+      ],
+      "examples": [
+        "info",
+        "success"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "description": "An optional title shown before the message.",
+      "minLength": 1,
+      "examples": [
+        "Setup complete",
+        "Oops!"
+      ]
+    },
+    "message": {
+      "type": "string",
+      "description": "The main content of the message to display.",
+      "minLength": 1,
+      "examples": [
+        "Your project has been initialized successfully.",
+        "Something went wrong. Please try again."
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "message"
+  ],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "name": "print",
+      "semantic": "success",
+      "title": "Done!",
+      "message": "Your project is ready to use."
+    },
+    {
+      "name": "print",
+      "semantic": "error",
+      "message": "Failed to load configuration."
+    }
+  ]
+}
