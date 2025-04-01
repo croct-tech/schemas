@@ -1,4 +1,5 @@
 {
+  "$id": "https://schema.croct.com/json/content.json",
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Content",
   "description": "The value of a content.",

@@ -1,0 +1,85 @@
+{
+  "schema": "template/template.json",
+  "input": {
+    "actions": [
+      {
+        "name": "add-component",
+        "components": [
+          "button"
+        ]
+      },
+      {
+        "name": "add-dependency",
+        "dependencies": [
+          "croct"
+        ]
+      },
+      {
+        "name": "add-slot",
+        "slots": [
+          "home-hero"
+        ]
+      },
+      {
+        "name": "change-directory",
+        "path": "."
+      },
+      {
+        "name": "check-dependency",
+        "dependencies": [
+          {
+            "name": "croct",
+            "version": ">=1.0.0"
+          }
+        ]
+      },
+      {
+        "name": "create-resource",
+        "resources": {
+          "audiences": {
+            "new-users": {
+              "name": "New users",
+              "criteria": "user is not returning"
+            }
+          }
+        }
+      },
+      {
+        "name": "define",
+        "variables": {
+          "number": 1
+        }
+      },
+      {
+        "name": "download",
+        "source": "github.com/user/repo",
+        "destination": "/path/to/destination"
+      },
+      {
+        "name": "execute-package",
+        "package": "create-react-app"
+      },
+      {
+        "name": "fail",
+        "message": "The project is missing a valid configuration file."
+      },
+      {
+        "name": "format-code",
+        "files": ["src/index.js"]
+      },
+      {
+        "name": "import",
+        "template": "croct://template-name"
+      },
+      {
+        "name": "locate-file",
+        "path": "src",
+        "result": "files"
+      },
+      {
+        "name": "initialize"
+      }
+    ]
+  },
+  "errors": []
+}

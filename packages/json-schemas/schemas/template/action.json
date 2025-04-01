@@ -3,52 +3,49 @@
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Action",
   "description": "An instruction that tells the template what to do, like writing to the console or creating a file.",
-  "type": "array",
-  "items": {
-    "oneOf": [
-      {
-        "$ref": "./action/add-component.json"
-      },
-      {
-        "$ref": "./action/add-dependency.json"
-      },
-      {
-        "$ref": "./action/add-slot.json"
-      },
-      {
-        "$ref": "./action/change-directory.json"
-      },
-      {
-        "$ref": "./action/check-dependency.json"
-      },
-      {
-        "$ref": "./action/create-resource.json"
-      },
-      {
-        "$ref": "./action/define.json"
-      },
-      {
-        "$ref": "./action/download.json"
-      },
-      {
-        "$ref": "./action/execute-package.json"
-      },
-      {
-        "$ref": "./action/fail.json"
-      },
-      {
-        "$ref": "./action/format-code.json"
-      },
-      {
-        "$ref": "./action/import.json"
-      },
-      {
-        "$ref": "./action/locate-file.json"
-      },
-      {
-        "$ref": "./action/initialize.json"
-      }
-    ]
-  },
-  "minItems": 1
+  "type": "object",
+  "oneOf": [
+    {
+      "$ref": "./action/add-component.json"
+    },
+    {
+      "$ref": "./action/add-dependency.json"
+    },
+    {
+      "$ref": "./action/add-slot.json"
+    },
+    {
+      "$ref": "./action/change-directory.json"
+    },
+    {
+      "$ref": "./action/check-dependency.json"
+    },
+    {
+      "$ref": "./action/create-resource.json"
+    },
+    {
+      "$ref": "./action/define.json"
+    },
+    {
+      "$ref": "./action/download.json"
+    },
+    {
+      "$ref": "./action/execute-package.json"
+    },
+    {
+      "$ref": "./action/fail.json"
+    },
+    {
+      "$ref": "./action/format-code.json"
+    },
+    {
+      "$ref": "./action/import.json"
+    },
+    {
+      "$ref": "./action/locate-file.json"
+    },
+    {
+      "$ref": "./action/initialize.json"
+    }
+  ]
 }

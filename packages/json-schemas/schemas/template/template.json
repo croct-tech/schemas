@@ -23,8 +23,14 @@
       "description": "Metadata about the template."
     },
     "actions": {
-      "$ref": "./action.json"
+      "type": "array",
+      "items": {
+        "type": "object",
+        "$ref": "./action.json"
+      },
+      "minItems": 1
     }
   },
+  "required": ["actions"],
   "additionalProperties": false
 }
