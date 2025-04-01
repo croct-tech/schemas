@@ -65,6 +65,10 @@
     {
         "name": "format-code",
         "files": ["src/index.js"]
+    },
+    {
+        "name": "import",
+        "template": "croct://template-name"
     }
   ],
   "errors": []

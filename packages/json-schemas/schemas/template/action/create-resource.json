@@ -330,8 +330,7 @@
               "logged-in-users",
               "premium-users"
             ]
-          },
-          "minProperties": 1
+          }
         },
         "components": {
           "type": "object",
@@ -369,8 +368,7 @@
               }
             },
             "additionalProperties": false
-          },
-          "minProperties": 1
+          }
         },
         "slots": {
           "type": "object",
@@ -408,8 +406,7 @@
               }
             },
             "additionalProperties": false
-          },
-          "minProperties": 1
+          }
         },
         "experiences": {
           "type": "object",
@@ -431,8 +428,7 @@
               "loggedInUsersExperienceId",
               "premiumUsersExperienceId"
             ]
-          },
-          "minProperties": 1
+          }
         },
         "experiments": {
           "type": "object",
@@ -455,12 +451,10 @@
               "pricingExperimentId",
               "loginPageExperimentId"
             ]
-          },
-          "minProperties": 1
+          }
         }
       },
-      "additionalProperties": false,
-      "minProperties": 1
+      "additionalProperties": false
     }
   },
   "required": [

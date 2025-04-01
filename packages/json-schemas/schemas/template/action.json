@@ -38,6 +38,9 @@
       },
       {
         "$ref": "./action/format-code.json"
+      },
+      {
+        "$ref": "./action/import.json"
       }
     ]
   },

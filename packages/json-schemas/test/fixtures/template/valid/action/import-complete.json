@@ -1,0 +1,22 @@
+{
+  "schema": "template/action/import.json",
+  "input": {
+    "name": "import",
+    "template": "croct://template-name",
+    "options": {
+      "string": "value",
+      "number": 123,
+      "boolean": true,
+      "array": [
+        "value1",
+        "value2"
+      ],
+      "object": {
+        "key1": "value1",
+        "key2": "value2"
+      }
+    }
+  },
+  "errors": [
+  ]
+}

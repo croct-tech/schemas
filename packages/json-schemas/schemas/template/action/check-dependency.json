@@ -84,7 +84,6 @@
             "additionalProperties": false
           },
           "uniqueItems": true,
-          "minItems": 1,
           "examples": [
             [
               {
@@ -101,8 +100,7 @@
             "type": "string",
             "minLength": 1
           },
-          "uniqueItems": true,
-          "minItems": 1
+          "uniqueItems": true
         }
       },
       "additionalProperties": false

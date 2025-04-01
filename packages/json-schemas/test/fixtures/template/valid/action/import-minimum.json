@@ -1,0 +1,9 @@
+{
+  "schema": "template/action/import.json",
+  "input": {
+    "name": "import",
+    "template": "croct://template-name"
+  },
+  "errors": [
+  ]
+}

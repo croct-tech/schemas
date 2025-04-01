@@ -1,9 +1,9 @@
 {
-  "schema": "template/action/format-code.json",
+  "schema": "template/action/import.json",
   "allErrors": true,
   "input": {
     "name": "foo",
-    "files": [""],
+    "template": "",
     "extra": true
   },
   "errors": [
@@ -21,18 +21,18 @@
       "keyword": "const",
       "message": "must be equal to constant",
       "params": {
-        "allowedValue": "format-code"
+        "allowedValue": "import"
       },
       "schemaPath": "#/properties/name/const"
     },
     {
-      "instancePath": "/files/0",
+      "instancePath": "/template",
       "keyword": "minLength",
       "message": "must NOT have fewer than 1 characters",
       "params": {
         "limit": 1
       },
-      "schemaPath": "#/properties/files/items/minLength"
+      "schemaPath": "#/properties/template/minLength"
     }
   ]
 }

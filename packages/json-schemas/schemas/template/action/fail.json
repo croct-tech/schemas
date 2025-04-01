@@ -59,7 +59,6 @@
         ],
         "additionalProperties": false
       },
-      "minItems": 1,
       "uniqueItems": true,
       "examples": [
         [
@@ -78,7 +77,6 @@
         "minLength": 1
       },
       "uniqueItems": true,
-      "minItems": 1,
       "examples": [
         [
           "Check the config file format",
