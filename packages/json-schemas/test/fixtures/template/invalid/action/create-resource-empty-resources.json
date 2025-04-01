@@ -1,0 +1,19 @@
+{
+  "schema": "template/action/create-resource.json",
+  "allErrors": true,
+  "input": {
+    "name": "create-resource",
+    "resources": {}
+  },
+  "errors": [
+    {
+      "instancePath": "/resources",
+      "keyword": "minProperties",
+      "message": "must NOT have fewer than 1 properties",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/resources/minProperties"
+    }
+  ]
+}
