@@ -29,6 +29,9 @@
       },
       {
         "$ref": "./action/download.json"
+      },
+      {
+        "$ref": "./action/execute-package.json"
       }
     ]
   },

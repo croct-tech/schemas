@@ -31,7 +31,8 @@
           },
           "optional": {
             "type": "boolean",
-            "description": "Whether the dependency is optional. Optional dependencies do not cause the action to fail even if not satisfied."
+            "description": "Whether the dependency is optional. Optional dependencies do not cause the action to fail even if not satisfied.",
+            "default": false
           }
         },
         "required": ["name"],
@@ -46,7 +47,7 @@
       "properties": {
         "message": {
           "type": "string",
-          "description": "A help message explaining how to resolve issues.",
+          "description": "A help message with guidance for resolving issues. Supports basic Markdown formatting such as italics, bold, and links.",
           "minLength": 1
         },
         "links": {
@@ -75,7 +76,7 @@
         },
         "suggestions": {
           "type": "array",
-          "description": "Suggested actions to fix missing dependencies.",
+          "description": "Suggested actions to fix missing dependencies. Supports basic Markdown formatting such as italics, bold, and links.",
           "items": {
             "type": "string",
             "minLength": 1

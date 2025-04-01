@@ -23,7 +23,8 @@
     },
     "development": {
       "type": "boolean",
-      "description": "Whether the dependencies should be added as development dependencies."
+      "description": "Whether the dependencies should be added as development dependencies.",
+      "default": false
     }
   },
   "required": ["name", "dependencies"],

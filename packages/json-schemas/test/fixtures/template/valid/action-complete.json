@@ -53,6 +53,10 @@
       "name": "download",
       "source": "github.com/user/repo",
       "destination": "/path/to/destination"
+    },
+    {
+      "name": "execute-package",
+      "package": "create-react-app"
     }
   ],
   "errors": []

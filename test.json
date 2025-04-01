@@ -1,0 +1,11 @@
+{
+  "$schema": "packages/json-schemas/schemas/template/action/execute-package.json",
+  "name": "execute-package",
+  "package": "",
+  "interactions": [
+    {
+      "when": "test",
+      "then": ["foo"]
+    }
+  ]
+}

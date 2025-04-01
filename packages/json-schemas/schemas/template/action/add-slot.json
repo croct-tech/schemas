@@ -29,7 +29,8 @@
     },
     "example": {
       "type": "boolean",
-      "description": "Whether to generate a code example for the slot."
+      "description": "Whether to generate a code example for the slot.",
+      "default": false
     }
   },
   "required": ["name", "slots"],

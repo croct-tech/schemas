@@ -1,0 +1,29 @@
+{
+  "schema": "template/action/execute-package.json",
+  "input": {
+    "name": "execute-package",
+    "package": "create-react-app",
+    "interactions": [
+      {
+        "when": "What is your name?",
+        "then": ["John Doe"]
+      },
+      {
+        "when": "What is your age?",
+        "then": ["25"]
+      }
+    ]
+  },
+  "errors": [
+    {
+      "instancePath": "/interactions",
+      "keyword": "contains",
+      "message": "must contain at least 1 and no more than 1 valid item(s)",
+      "params": {
+        "maxContains": 1,
+        "minContains": 1
+      },
+      "schemaPath": "#/properties/interactions/contains"
+    }
+  ]
+}

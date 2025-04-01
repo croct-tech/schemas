@@ -1,0 +1,106 @@
+{
+  "$id": "https://schema.croct.com/json/template/action/execute-package.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Execute package",
+  "description": "Executes a package using a runner, optionally handling interactive prompts.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the action.",
+      "const": "execute-package"
+    },
+    "package": {
+      "type": "string",
+      "description": "The name of the package to execute.",
+      "examples": ["create-react-app", "eslint"]
+    },
+    "arguments": {
+      "type": "array",
+      "description": "Command-line arguments to pass to the package.",
+      "items": {
+        "type": "string"
+      },
+      "examples": [["--template", "typescript"]]
+    },
+    "runner": {
+      "type": "string",
+      "description": "The runner to use when executing the package.",
+      "enum": ["npm", "pnpm", "yarn", "bun"]
+    },
+    "interactions": {
+      "type": "array",
+      "description": "Defines how to respond to interactive prompts based on output. Must contain at least one final interaction.",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "description": "An interaction rule triggered by matching output.",
+        "properties": {
+          "when": {
+            "type": "string",
+            "description": "The text or pattern to match against the output.",
+            "examples": ["Would you like to use TypeScript?", "^Overwrite.*"]
+          },
+          "pattern": {
+            "type": "boolean",
+            "description": "Whether to treat the matching text as a regex pattern."
+          },
+          "always": {
+            "type": "boolean",
+            "description": "Whether the rule should apply multiple times. If false or omitted, the rule is only applied the first time it matches."
+          },
+          "then": {
+            "type": "array",
+            "description": "A list of responses to send when the matching text is found.",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "anyOf": [
+                {
+                  "type": "string",
+                  "enum": ["[enter]", "[space]", "[down]", "[up]", "[left]", "[right]", "[backspace]"]
+                },
+                {
+                  "type": "string",
+                  "minLength": 1
+                }
+              ]
+            },
+            "examples": ["Hello world", "[enter]", "[space]", "[down]", "[up]", "[left]", "[right]", "[backspace]"]
+          },
+          "final": {
+            "type": "boolean",
+            "description": "Whether this interaction is the last one to be applied."
+          }
+        },
+        "required": ["when"],
+        "additionalProperties": false,
+        "anyOf": [
+          {
+            "required": ["when", "then", "final"]
+          },
+          {
+            "required": ["when", "then"]
+          },
+          {
+            "required": ["when", "final"]
+          }
+        ]
+      },
+      "contains": {
+        "type": "object",
+        "properties": {
+          "final": {
+            "type": "boolean",
+            "const": true
+          }
+        },
+        "required": ["final"]
+      },
+      "minContains": 1,
+      "maxContains": 1
+    }
+  },
+  "required": ["name", "package"],
+  "additionalProperties": false
+}

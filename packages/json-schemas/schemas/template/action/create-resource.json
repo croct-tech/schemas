@@ -171,7 +171,8 @@
               },
               "draft": {
                 "type": "boolean",
-                "description": "Whether the experience is a draft. Draft experiences can be partially configured."
+                "description": "Whether the experience is a draft. Draft experiences can be partially configured.",
+                "default": false
               },
               "audiences": {
                 "type": "array",
@@ -226,7 +227,8 @@
                   },
                   "crossDevice": {
                     "type": "boolean",
-                    "description": "Whether the experiment should be tracked across devices."
+                    "description": "Whether the experiment should be tracked across devices.",
+                    "default": false
                   },
                   "traffic": {
                     "type": "number",
@@ -256,7 +258,8 @@
                         },
                         "baseline": {
                           "type": "boolean",
-                          "description": "Whether the variant is the baseline."
+                          "description": "Whether the variant is the baseline.",
+                          "default": false
                         },
                         "allocation": {
                           "type": "number",
