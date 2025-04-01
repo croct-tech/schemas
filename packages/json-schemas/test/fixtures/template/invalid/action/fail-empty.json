@@ -7,18 +7,18 @@
     {
       "instancePath": "",
       "keyword": "required",
-      "message": "must have required property 'name'",
+      "message": "must have required property 'message'",
       "params": {
-        "missingProperty": "name"
+        "missingProperty": "message"
       },
-      "schemaPath": "#/required"
+      "schemaPath": "https://schema.croct.com/json/template/help.json/required"
     },
     {
       "instancePath": "",
       "keyword": "required",
-      "message": "must have required property 'message'",
+      "message": "must have required property 'name'",
       "params": {
-        "missingProperty": "message"
+        "missingProperty": "name"
       },
       "schemaPath": "#/required"
     }

@@ -1,0 +1,11 @@
+{
+  "schema": "template/action/try.json",
+  "input": {
+    "name": "try",
+    "action": {
+      "name": "print",
+      "message": "Try"
+    }
+  },
+  "errors": []
+}

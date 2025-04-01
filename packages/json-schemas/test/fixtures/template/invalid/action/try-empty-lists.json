@@ -1,0 +1,75 @@
+{
+  "schema": "template/action/try.json",
+  "allErrors": true,
+  "input": {
+    "name": "try",
+    "action": [],
+    "else": [],
+    "finally": []
+  },
+  "errors": [
+    {
+      "instancePath": "/action",
+      "keyword": "type",
+      "message": "must be object",
+      "params": {
+        "type": "object"
+      },
+      "schemaPath": "#/properties/action/oneOf/0/type"
+    },
+    {
+      "instancePath": "/action",
+      "keyword": "oneOf",
+      "message": "must match exactly one schema in oneOf",
+      "params": {
+        "passingSchemas": null
+      },
+      "schemaPath": "#/oneOf"
+    },
+    {
+      "instancePath": "/action",
+      "keyword": "minItems",
+      "message": "must NOT have fewer than 1 items",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/action/oneOf/1/minItems"
+    },
+    {
+      "instancePath": "/finally",
+      "keyword": "type",
+      "message": "must be object",
+      "params": {
+        "type": "object"
+      },
+      "schemaPath": "#/properties/finally/oneOf/0/type"
+    },
+    {
+      "instancePath": "/finally",
+      "keyword": "oneOf",
+      "message": "must match exactly one schema in oneOf",
+      "params": {
+        "passingSchemas": null
+      },
+      "schemaPath": "#/oneOf"
+    },
+    {
+      "instancePath": "/finally",
+      "keyword": "minItems",
+      "message": "must NOT have fewer than 1 items",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/finally/oneOf/1/minItems"
+    },
+    {
+      "instancePath": "",
+      "keyword": "unevaluatedProperties",
+      "message": "must NOT have unevaluated properties",
+      "params": {
+        "unevaluatedProperty": "else"
+      },
+      "schemaPath": "#/unevaluatedProperties"
+    }
+  ]
+}

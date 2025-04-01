@@ -9,103 +9,13 @@
       "type": "string",
       "description": "The name of the action.",
       "const": "fail"
-    },
-    "title": {
-      "type": "string",
-      "description": "A short and descriptive title for the failure message.",
-      "minLength": 1,
-      "examples": [
-        "Missing configuration",
-        "Unsupported version"
-      ]
-    },
-    "message": {
-      "type": "string",
-      "description": "The message shown to the user explaining the reason for the failure. Supports basic Markdown formatting such as italics, bold, and links.",
-      "minLength": 1,
-      "examples": [
-        "The project is missing a valid configuration file."
-      ]
-    },
-    "links": {
-      "type": "array",
-      "description": "A list of helpful links related to the failure.",
-      "items": {
-        "type": "object",
-        "properties": {
-          "label": {
-            "type": "string",
-            "description": "A label that describes the link.",
-            "minLength": 1,
-            "examples": [
-              "Documentation",
-              "Support"
-            ]
-          },
-          "url": {
-            "type": "string",
-            "description": "The URL for the help link.",
-            "format": "uri",
-            "pattern": "^https?://",
-            "examples": [
-              "https://docs.example.com/configuration",
-              "https://support.example.com"
-            ]
-          }
-        },
-        "required": [
-          "label",
-          "url"
-        ],
-        "additionalProperties": false
-      },
-      "uniqueItems": true,
-      "examples": [
-        [
-          {
-            "label": "Documentation",
-            "url": "https://docs.example.com/configuration"
-          }
-        ]
-      ]
-    },
-    "suggestions": {
-      "type": "array",
-      "description": "A list of actionable suggestions to help resolve the issue.",
-      "items": {
-        "type": "string",
-        "minLength": 1
-      },
-      "uniqueItems": true,
-      "examples": [
-        [
-          "Check the config file format",
-          "Ensure all required fields are present"
-        ]
-      ]
-    },
-    "details": {
-      "type": "array",
-      "description": "Optional technical details about the failure, typically used for debugging.",
-      "items": {
-        "type": "string",
-        "minLength": 1
-      },
-      "uniqueItems": true,
-      "minItems": 1,
-      "examples": [
-        [
-          "Missing 'project.json'",
-          "Expected key 'name' not found"
-        ]
-      ]
     }
   },
+  "$ref": "https://schema.croct.com/json/template/help.json",
   "required": [
-    "name",
-    "message"
+    "name"
   ],
-  "additionalProperties": false,
+  "unevaluatedProperties": false,
   "examples": [
     {
       "name": "fail",

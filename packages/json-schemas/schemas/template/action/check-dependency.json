@@ -53,57 +53,8 @@
     "help": {
       "type": "object",
       "description": "Help message and resources to guide resolution.",
-      "properties": {
-        "message": {
-          "type": "string",
-          "description": "A help message with guidance for resolving issues. Supports basic Markdown formatting such as italics, bold, and links.",
-          "minLength": 1
-        },
-        "links": {
-          "type": "array",
-          "description": "Helpful links for resolving dependency issues.",
-          "items": {
-            "type": "object",
-            "properties": {
-              "url": {
-                "type": "string",
-                "format": "uri",
-                "pattern": "^https?://",
-                "description": "The URL of the help resource."
-              },
-              "label": {
-                "type": "string",
-                "description": "A label for the help link.",
-                "minLength": 1
-              }
-            },
-            "required": [
-              "url",
-              "label"
-            ],
-            "additionalProperties": false
-          },
-          "uniqueItems": true,
-          "examples": [
-            [
-              {
-                "label": "Documentation",
-                "url": "https://docs.example.com/configuration"
-              }
-            ]
-          ]
-        },
-        "suggestions": {
-          "type": "array",
-          "description": "Suggested actions to fix missing dependencies. Supports basic Markdown formatting such as italics, bold, and links.",
-          "items": {
-            "type": "string",
-            "minLength": 1
-          },
-          "uniqueItems": true
-        }
-      },
-      "additionalProperties": false
+      "$ref": "https://schema.croct.com/json/template/help.json",
+      "unevaluatedProperties": false
     },
     "result": {
       "type": "object",

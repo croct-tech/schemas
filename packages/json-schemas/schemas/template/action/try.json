@@ -1,0 +1,112 @@
+{
+  "$id": "https://schema.croct.com/json/template/action/try.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Try",
+  "description": "Attempts to run an action or list of actions and optionally handles errors or cleanup.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the action.",
+      "const": "try"
+    },
+    "action": {
+      "description": "The primary actions to attempt.",
+      "oneOf": [
+        {
+          "type": "object",
+          "$ref": "https://schema.croct.com/json/template/action.json"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "https://schema.croct.com/json/template/action.json"
+          },
+          "minItems": 1
+        }
+      ]
+    },
+    "finally": {
+      "description": "Actions to run regardless of success or failure.",
+      "oneOf": [
+        {
+          "type": "object",
+          "$ref": "https://schema.croct.com/json/template/action.json"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "https://schema.croct.com/json/template/action.json"
+          },
+          "minItems": 1
+        }
+      ]
+    }
+  },
+  "anyOf": [
+    {
+      "properties": {
+        "else": {
+          "description": "Fallback actions to run if the primary action fails.",
+          "oneOf": [
+            {
+              "type": "object",
+              "$ref": "https://schema.croct.com/json/template/action.json"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "$ref": "https://schema.croct.com/json/template/action.json"
+              },
+              "minItems": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "properties": {
+        "help": {
+          "description": "Help message to display if the action fails.",
+          "type": "object",
+          "$ref": "https://schema.croct.com/json/template/help.json",
+          "unevaluatedProperties": false
+        }
+      }
+    }
+  ],
+  "required": [
+    "name",
+    "action"
+  ],
+  "unevaluatedProperties": false,
+  "examples": [
+    {
+      "name": "try",
+      "action": [
+        {
+          "name": "run",
+          "actions": [
+            {
+              "name": "print",
+              "message": "Step 1 complete"
+            }
+          ]
+        }
+      ],
+      "help": {
+        "message": "Failed to run the action.",
+        "links": [
+          {
+            "label": "Troubleshooting guide",
+            "url": "https://docs.example.com"
+          }
+        ],
+        "suggestions": ["Run `npm install`"]
+      }
+    }
+  ]
+}

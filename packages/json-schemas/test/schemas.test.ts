@@ -13,7 +13,7 @@ describe('Web events', () => {
         errors: ErrorObject[],
     };
 
-    const fixturesDirectory = join(__dirname, 'fixtures', 'template');
+    const fixturesDirectory = join(__dirname, 'fixtures');
     const schemasDirectory = join(__dirname, '..', 'schemas');
 
     const fix: boolean = false;

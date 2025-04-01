@@ -1,0 +1,25 @@
+{
+  "schema": "template/action/try.json",
+  "input": {
+    "name": "try",
+    "action": {
+      "name": "print",
+      "message": "Try"
+    },
+    "finally": {
+      "name": "print",
+      "message": "Finally"
+    },
+    "help": {
+      "message": "This is a try action",
+      "links": [
+        {
+          "label": "Docs",
+          "url": "https://docs.croct.com"
+        }
+      ],
+      "suggestions": ["Read the docs", "Contact support"]
+    }
+  },
+  "errors": []
+}
