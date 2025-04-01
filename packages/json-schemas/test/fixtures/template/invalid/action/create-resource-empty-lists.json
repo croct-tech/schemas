@@ -1,0 +1,112 @@
+{
+  "schema": "template/action/create-resource.json",
+  "allErrors": true,
+  "input": {
+    "name": "create-resource",
+    "resources": {
+      "audiences": {
+      },
+      "components": {
+      },
+      "slots": {
+      },
+      "experiences": [
+      ]
+    },
+    "result": {
+      "audiences": {
+      },
+      "components": {
+      },
+      "slots": {
+      },
+      "experiences": {
+      },
+      "experiments": {
+      }
+    }
+  },
+  "errors": [
+    {
+      "instancePath": "/resources/audiences",
+      "keyword": "minProperties",
+      "message": "must NOT have fewer than 1 properties",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/resources/properties/audiences/minProperties"
+    },
+    {
+      "instancePath": "/resources/components",
+      "keyword": "minProperties",
+      "message": "must NOT have fewer than 1 properties",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/resources/properties/components/minProperties"
+    },
+    {
+      "instancePath": "/resources/slots",
+      "keyword": "minProperties",
+      "message": "must NOT have fewer than 1 properties",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/resources/properties/slots/minProperties"
+    },
+    {
+      "instancePath": "/resources/experiences",
+      "keyword": "minItems",
+      "message": "must NOT have fewer than 1 items",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/resources/properties/experiences/minItems"
+    },
+    {
+      "instancePath": "/result/audiences",
+      "keyword": "minProperties",
+      "message": "must NOT have fewer than 1 properties",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/result/properties/audiences/minProperties"
+    },
+    {
+      "instancePath": "/result/components",
+      "keyword": "minProperties",
+      "message": "must NOT have fewer than 1 properties",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/result/properties/components/minProperties"
+    },
+    {
+      "instancePath": "/result/slots",
+      "keyword": "minProperties",
+      "message": "must NOT have fewer than 1 properties",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/result/properties/slots/minProperties"
+    },
+    {
+      "instancePath": "/result/experiences",
+      "keyword": "minProperties",
+      "message": "must NOT have fewer than 1 properties",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/result/properties/experiences/minProperties"
+    },
+    {
+      "instancePath": "/result/experiments",
+      "keyword": "minProperties",
+      "message": "must NOT have fewer than 1 properties",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/result/properties/experiments/minProperties"
+    }
+  ]
+}

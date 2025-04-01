@@ -1,0 +1,31 @@
+{
+  "$id": "https://schema.croct.com/json/template/action/add-dependency.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Add dependency",
+  "description": "Adds dependencies to the project.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the action.",
+      "const": "add-dependency"
+    },
+    "dependencies": {
+      "type": "array",
+      "description": "The dependencies to add to the project.",
+      "examples": ["croct", "croct@2"],
+      "items": {
+        "type": "string",
+        "description": "The name of the dependency to add.",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "development": {
+      "type": "boolean",
+      "description": "Whether the dependencies should be added as development dependencies."
+    }
+  },
+  "required": ["name", "dependencies"],
+  "additionalProperties": false
+}

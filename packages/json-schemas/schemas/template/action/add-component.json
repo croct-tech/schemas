@@ -1,0 +1,33 @@
+{
+  "$id": "https://schema.croct.com/json/template/action/add-component.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Add component",
+  "description": "Adds a component to the project.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Tha name of the action.",
+      "const": "add-component"
+    },
+    "components": {
+      "type": "array",
+      "description": "The components to add to the project.",
+      "examples": [
+        "button",
+        "button@2",
+        "button@1-2",
+        "button@1,3"
+      ],
+      "items": {
+        "type": "string",
+        "description": "The name of the component to add optionally followed by a version constraint.",
+        "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*(@[0-9]+((\\s*,\\s*[0-9]+)+|(\\s*-\\s*[0-9]+))?)?$",
+        "minLength": 1
+      },
+      "minItems": 1
+    }
+  },
+  "required": ["name", "components"],
+  "additionalProperties": false
+}

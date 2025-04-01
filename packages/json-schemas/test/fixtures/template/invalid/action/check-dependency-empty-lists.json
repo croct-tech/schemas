@@ -1,0 +1,42 @@
+{
+  "schema": "template/action/check-dependency.json",
+  "allErrors": true,
+  "input": {
+    "name": "check-dependency",
+    "dependencies": [],
+    "help": {
+      "message": "foo",
+      "links": [],
+      "suggestions": []
+    }
+  },
+  "errors": [
+    {
+      "instancePath": "/dependencies",
+      "keyword": "minItems",
+      "message": "must NOT have fewer than 1 items",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/dependencies/minItems"
+    },
+    {
+      "instancePath": "/help/links",
+      "keyword": "minItems",
+      "message": "must NOT have fewer than 1 items",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/help/properties/links/minItems"
+    },
+    {
+      "instancePath": "/help/suggestions",
+      "keyword": "minItems",
+      "message": "must NOT have fewer than 1 items",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/help/properties/suggestions/minItems"
+    }
+  ]
+}

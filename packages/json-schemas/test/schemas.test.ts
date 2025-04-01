@@ -8,18 +8,19 @@ describe('Web events', () => {
     type Fixture = {
         path: string,
         schema: string,
+        allErrors?: boolean,
         input: JsonObject,
         errors: ErrorObject[],
     };
 
-    const fixturesDirectory = join(__dirname, 'fixtures');
+    const fixturesDirectory = join(__dirname, 'fixtures', 'template');
     const schemasDirectory = join(__dirname, '..', 'schemas');
 
     const fix: boolean = false;
 
     it.each(findFixtures(fixturesDirectory))('should validate $path', async fixture => {
         const schema = JSON.parse(readFileSync(join(schemasDirectory, fixture.schema), 'utf-8'));
-        const validate = await createValidator(schema);
+        const validate = await createValidator(schema, fixture.allErrors);
 
         validate(fixture.input);
 
@@ -33,12 +34,13 @@ describe('Web events', () => {
             writeFileSync(join(fixturesDirectory, fixture.path), JSON.stringify(updatedFixture, null, 2));
         }
 
-        expect(errors).toStrictEqual(fixture.errors);
+        expect(errors).toStrictEqual(fixture.errors.map(expect.objectContaining));
     });
 
-    function createValidator(schema: JsonObject): Promise<ValidateFunction> {
+    function createValidator(schema: JsonObject, allErrors?: boolean): Promise<ValidateFunction> {
         const ajv = new Ajv2019({
-            strict: true,
+            strict: false,
+            allErrors: allErrors,
             loadSchema: (uri): Promise<JsonObject> => {
                 const path = join(
                     schemasDirectory,

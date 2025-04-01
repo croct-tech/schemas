@@ -1,0 +1,26 @@
+{
+  "schema": "template/action/check-dependency.json",
+  "input": {
+    "name": "check-dependency",
+    "dependencies": [
+        {
+            "name": "@croct/json",
+            "version": "^2.1.0"
+        }
+    ],
+    "help": {
+      "message": "The '@croct/json' dependency is required to run this action.",
+      "links": [
+        {
+          "label": "Croct JSON",
+          "url": "https://github.com/croct-tech/json-js"
+        }
+      ],
+      "suggestions": ["Install the dependency using 'npm install @croct/json'"]
+    },
+    "result": {
+      "@croct/json": "isCroctJsonInstalled"
+    }
+  },
+  "errors": []
+}

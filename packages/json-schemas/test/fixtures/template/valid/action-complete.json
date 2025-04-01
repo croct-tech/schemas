@@ -1,0 +1,22 @@
+{
+  "schema": "template/action.json",
+  "input": [
+    {
+      "name": "add-component",
+      "components": ["button"]
+    },
+    {
+      "name": "add-dependency",
+      "dependencies": ["croct"]
+    },
+    {
+      "name": "add-slot",
+      "slots": ["home-hero"]
+    },
+    {
+      "name": "change-directory",
+      "path": "."
+    }
+  ],
+  "errors": []
+}

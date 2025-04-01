@@ -1,0 +1,165 @@
+{
+  "schema": "template/action/check-dependency.json",
+  "allErrors": true,
+  "input": {
+    "name": "check-dependency",
+    "dependencies": [
+      {
+        "name": "",
+        "version": "",
+        "extra": true
+      }
+    ],
+    "help": {
+      "message": "",
+      "links": [
+        {
+          "url": "",
+          "label": "",
+          "extra": true
+        }
+      ],
+      "suggestions": [
+        {
+          "type": "",
+          "message": "",
+          "extra": true
+        }
+      ],
+      "extra": true
+    },
+    "result": {
+      "": ""
+    },
+    "extra": true
+  },
+  "errors": [
+    {
+      "instancePath": "",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "extra"
+      },
+      "schemaPath": "#/additionalProperties"
+    },
+    {
+      "instancePath": "/dependencies/0",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "extra"
+      },
+      "schemaPath": "#/properties/dependencies/items/additionalProperties"
+    },
+    {
+      "instancePath": "/dependencies/0/name",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/dependencies/items/properties/name/minLength"
+    },
+    {
+      "instancePath": "/dependencies/0/version",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/dependencies/items/properties/version/minLength"
+    },
+    {
+      "instancePath": "/help",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "extra"
+      },
+      "schemaPath": "#/properties/help/additionalProperties"
+    },
+    {
+      "instancePath": "/help/message",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/help/properties/message/minLength"
+    },
+    {
+      "instancePath": "/help/links/0",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "extra"
+      },
+      "schemaPath": "#/properties/help/properties/links/items/additionalProperties"
+    },
+    {
+      "instancePath": "/help/links/0/url",
+      "keyword": "pattern",
+      "message": "must match pattern \"^https?://\"",
+      "params": {
+        "pattern": "^https?://"
+      },
+      "schemaPath": "#/properties/help/properties/links/items/properties/url/pattern"
+    },
+    {
+      "instancePath": "/help/links/0/url",
+      "keyword": "format",
+      "message": "must match format \"uri\"",
+      "params": {
+        "format": "uri"
+      },
+      "schemaPath": "#/properties/help/properties/links/items/properties/url/format"
+    },
+    {
+      "instancePath": "/help/links/0/label",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/help/properties/links/items/properties/label/minLength"
+    },
+    {
+      "instancePath": "/help/suggestions/0",
+      "keyword": "type",
+      "message": "must be string",
+      "params": {
+        "type": "string"
+      },
+      "schemaPath": "#/properties/help/properties/suggestions/items/type"
+    },
+    {
+      "instancePath": "/result",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "propertyName": "",
+      "schemaPath": "#/properties/result/propertyNames/minLength"
+    },
+    {
+      "instancePath": "/result",
+      "keyword": "propertyNames",
+      "message": "property name must be valid",
+      "params": {
+        "propertyName": ""
+      },
+      "schemaPath": "#/properties/result/propertyNames"
+    },
+    {
+      "instancePath": "/result/",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/result/additionalProperties/minLength"
+    }
+  ]
+}
