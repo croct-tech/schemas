@@ -124,6 +124,15 @@
             ]
           }
         ]
+      },
+      {
+        "name": "run",
+        "actions": [
+          {
+            "name": "print",
+            "message": "Step 1 complete"
+          }
+        ]
       }
     ]
   },

@@ -61,6 +61,9 @@
     },
     {
       "$ref": "./action/replace-file-content.json"
+    },
+    {
+      "$ref": "./action/run.json"
     }
   ]
 }

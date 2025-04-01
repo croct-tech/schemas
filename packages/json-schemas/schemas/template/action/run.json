@@ -1,0 +1,48 @@
+{
+  "$id": "https://schema.croct.com/json/template/action/run.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Run actions",
+  "description": "Executes one or more actions.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the action.",
+      "const": "run"
+    },
+    "actions": {
+      "description": "The action or list of actions to execute.",
+      "oneOf": [
+        {
+          "type": "object",
+          "$ref": "https://schema.croct.com/json/template/action.json"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "https://schema.croct.com/json/template/action.json"
+          },
+          "minItems": 1
+        }
+      ]
+    }
+  },
+  "required": ["name", "actions"],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "name": "run",
+      "actions": [
+        {
+          "name": "print",
+          "message": "Step 1 complete"
+        },
+        {
+          "name": "print",
+          "message": "Step 2 complete"
+        }
+      ]
+    }
+  ]
+}
