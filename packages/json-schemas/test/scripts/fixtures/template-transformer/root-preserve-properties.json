@@ -1,0 +1,46 @@
+{
+  "input": {
+    "type": "object",
+    "properties": {
+      "test": {
+        "type": "boolean"
+      }
+    },
+    "$defs": {
+      "nested": {
+        "type": "object",
+        "properties": {
+          "test": {
+            "type": "number"
+          }
+        }
+      }
+    }
+  },
+  "expected": {
+    "type": "object",
+    "properties": {
+      "test": {
+        "type": "boolean"
+      }
+    },
+    "$defs": {
+      "nested": {
+        "type": "object",
+        "properties": {
+          "test": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "string",
+                "$ref": "#/$defs/dynamic-value"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

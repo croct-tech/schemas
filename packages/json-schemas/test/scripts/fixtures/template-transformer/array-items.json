@@ -1,0 +1,88 @@
+{
+  "input": {
+    "type": "object",
+    "$defs": {
+      "nested": {
+        "type": "object",
+        "properties": {
+          "array": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "tuple": {
+            "type": "array",
+            "items": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "number"
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "expected": {
+    "type": "object",
+    "$defs": {
+      "nested": {
+        "type": "object",
+        "properties": {
+          "array": {
+            "anyOf": [
+              {
+                "type": "array",
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "string",
+                      "$ref": "#/$defs/dynamic-value"
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "string",
+                "$ref": "#/$defs/dynamic-value"
+              }
+            ]
+          },
+          "tuple": {
+            "anyOf": [
+              {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "anyOf": [
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "string",
+                        "$ref": "#/$defs/dynamic-value"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "string",
+                "$ref": "#/$defs/dynamic-value"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

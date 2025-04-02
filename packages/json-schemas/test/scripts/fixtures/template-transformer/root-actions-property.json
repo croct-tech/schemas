@@ -1,0 +1,33 @@
+{
+  "input": {
+    "type": "object",
+    "properties": {
+      "actions": {
+        "type": "array",
+        "items": {
+          "$ref": "#/$defs/actions"
+        }
+      }
+    }
+  },
+  "expected": {
+    "type": "object",
+    "properties": {
+      "actions": {
+        "type": "array",
+        "items": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/actions"
+            },
+            {
+              "type": "string",
+              "$ref": "#/$defs/dynamic-value"
+            }
+          ]
+        }
+      }
+    },
+    "$defs": {}
+  }
+}

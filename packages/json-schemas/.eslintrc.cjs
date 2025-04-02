@@ -15,7 +15,7 @@ module.exports = {
             },
         },
         {
-            files: ['scripts/*.ts'],
+            files: ['bin/*.ts'],
             rules: {
                 'no-console': 'off',
             },

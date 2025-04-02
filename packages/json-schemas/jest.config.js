@@ -5,6 +5,6 @@ export default {
     restoreMocks: true,
     resetMocks: true,
     moduleNameMapper: {
-        '^@/(.*)$': '<rootDir>/src/$1',
+        '^@/(.*)$': '<rootDir>/$1',
     },
 };
