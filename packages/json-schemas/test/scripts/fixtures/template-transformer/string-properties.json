@@ -1,0 +1,108 @@
+{
+  "input": {
+    "type": "object",
+    "$defs": {
+      "nested": {
+        "type": "object",
+        "properties": {
+          "string": {
+            "type": "string"
+          },
+          "enum": {
+            "type": "string",
+            "enum": [
+              "one",
+              "two",
+              "three"
+            ]
+          },
+          "minLength1": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minLength": {
+            "type": "string",
+            "minLength": 2
+          },
+          "maxLength": {
+            "type": "string",
+            "maxLength": 10
+          },
+          "pattern": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          }
+        }
+      }
+    }
+  },
+  "expected": {
+    "type": "object",
+    "$defs": {
+      "nested": {
+        "type": "object",
+        "properties": {
+          "string": {
+            "type": "string"
+          },
+          "enum": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "one",
+                  "two",
+                  "three"
+                ]
+              },
+              {
+                "type": "string",
+                "$ref": "#/$defs/dynamic-string"
+              }
+            ]
+          },
+          "minLength1": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minLength": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 2
+              },
+              {
+                "type": "string",
+                "$ref": "#/$defs/dynamic-string"
+              }
+            ]
+          },
+          "maxLength": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 10
+              },
+              {
+                "type": "string",
+                "$ref": "#/$defs/dynamic-string"
+              }
+            ]
+          },
+          "pattern": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+              },
+              {
+                "type": "string",
+                "$ref": "#/$defs/dynamic-string"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

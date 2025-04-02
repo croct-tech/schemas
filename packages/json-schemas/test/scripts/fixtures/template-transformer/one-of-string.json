@@ -1,0 +1,42 @@
+{
+  "input": {
+    "type": "object",
+    "$defs": {
+      "nested": {
+        "type": "object",
+        "properties": {
+          "test": {
+            "oneOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "expected": {
+    "type": "object",
+    "$defs": {
+      "nested": {
+        "type": "object",
+        "properties": {
+          "test": {
+            "oneOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

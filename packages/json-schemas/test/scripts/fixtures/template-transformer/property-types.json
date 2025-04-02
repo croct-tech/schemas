@@ -1,0 +1,94 @@
+{
+  "input": {
+    "type": "object",
+    "$defs": {
+      "test": {
+        "properties": {
+          "string": {
+            "type": "string"
+          },
+          "integer": {
+            "type": "integer"
+          },
+          "number": {
+            "type": "number"
+          },
+          "boolean": {
+            "type": "boolean"
+          },
+          "null": {
+            "type": "null"
+          },
+          "object": {
+            "type": "object"
+          },
+          "array": {
+            "type": "array"
+          }
+        }
+      }
+    }
+  },
+  "expected": {
+    "type": "object",
+    "$defs": {
+      "test": {
+        "properties": {
+          "string": {
+            "type": "string"
+          },
+          "integer": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "string",
+                "$ref": "#/$defs/dynamic-value"
+              }
+            ]
+          },
+          "number": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "string",
+                "$ref": "#/$defs/dynamic-value"
+              }
+            ]
+          },
+          "boolean": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "string",
+                "$ref": "#/$defs/dynamic-value"
+              }
+            ]
+          },
+          "null": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "string",
+                "$ref": "#/$defs/dynamic-value"
+              }
+            ]
+          },
+          "object": {
+            "type": "object"
+          },
+          "array": {
+            "type": "array"
+          }
+        }
+      }
+    }
+  }
+}

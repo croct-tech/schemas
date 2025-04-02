@@ -1,8 +1,9 @@
-import {readdirSync, readFileSync, readFile, writeFileSync} from 'fs';
-import {join, relative, sep} from 'path';
+import {readFileSync, readFile, writeFileSync} from 'fs';
+import {join, sep} from 'path';
 import {JsonObject} from '@croct/json';
 import Ajv2019, {ErrorObject, ValidateFunction} from 'ajv/dist/2019';
 import addFormats from 'ajv-formats';
+import {findFixtures} from '@/test/findFixtures';
 
 describe('Web events', () => {
     type Fixture = {
@@ -14,11 +15,11 @@ describe('Web events', () => {
     };
 
     const fixturesDirectory = join(__dirname, 'fixtures');
-    const schemasDirectory = join(__dirname, '..', 'schemas');
+    const schemasDirectory = join(__dirname, '..', '..', 'schemas');
 
     const fix: boolean = false;
 
-    it.each(findFixtures(fixturesDirectory))('should validate $path', async fixture => {
+    it.each(findFixtures<Fixture>(fixturesDirectory))('should validate $path', async fixture => {
         const schema = JSON.parse(readFileSync(join(schemasDirectory, fixture.schema), 'utf-8'));
         const validate = await createValidator(schema, fixture.allErrors);
 
@@ -62,25 +63,6 @@ describe('Web events', () => {
         addFormats(ajv);
 
         return ajv.compileAsync(schema);
-    }
-
-    function findFixtures(directory: string, baseDirectory = directory): Fixture[] {
-        const fixtures: Fixture[] = [];
-
-        for (const entry of readdirSync(directory, {withFileTypes: true})) {
-            const fullPath = join(directory, entry.name);
-
-            if (entry.isDirectory()) {
-                fixtures.push(...findFixtures(fullPath, baseDirectory));
-            } else if (entry.isFile() && entry.name.endsWith('.json')) {
-                fixtures.push({
-                    path: relative(baseDirectory, fullPath),
-                    ...JSON.parse(readFileSync(fullPath, 'utf8')),
-                });
-            }
-        }
-
-        return fixtures;
     }
 
     function deduplicateErrors(errors: ErrorObject[]): ErrorObject[] {

@@ -1,0 +1,36 @@
+{
+  "input": {
+    "type": "object",
+    "$defs": {
+      "nested": {
+        "type": "object",
+        "properties": {
+          "string": {
+            "type": "string"
+          },
+          "const": {
+            "type": "string",
+            "const": "foo"
+          }
+        }
+      }
+    }
+  },
+  "expected": {
+    "type": "object",
+    "$defs": {
+      "nested": {
+        "type": "object",
+        "properties": {
+          "string": {
+            "type": "string"
+          },
+          "const": {
+            "type": "string",
+            "const": "foo"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,3 +1,5 @@
+#!/usr/bin/env tsx
+
 import {writeFileSync, existsSync, mkdirSync, readFileSync} from 'fs';
 import {dirname, join} from 'path';
 import {spawnSync} from 'child_process';

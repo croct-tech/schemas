@@ -1,0 +1,26 @@
+{
+  "input": {
+    "type": "object",
+    "$defs": {
+      "nested": {
+        "allOf": [
+          {
+            "$ref": "#/$defs/test"
+          }
+        ]
+      }
+    }
+  },
+  "expected": {
+    "type": "object",
+    "$defs": {
+      "nested": {
+        "allOf": [
+          {
+            "$ref": "#/$defs/test"
+          }
+        ]
+      }
+    }
+  }
+}

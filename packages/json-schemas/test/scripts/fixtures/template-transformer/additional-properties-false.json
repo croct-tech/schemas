@@ -1,0 +1,23 @@
+{
+  "input": {
+    "type": "object",
+    "$defs": {
+      "nested": {
+        "type": "object",
+        "additionalProperties": false
+      }
+    }
+  },
+  "expected": {
+    "type": "object",
+    "$defs": {
+      "nested": {
+        "type": "object",
+        "additionalProperties": false,
+        "patternProperties": {
+          "\\$\\{.+?\\}": {}
+        }
+      }
+    }
+  }
+}
