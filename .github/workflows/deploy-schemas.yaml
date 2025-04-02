@@ -31,8 +31,8 @@ jobs:
           cp packages/json-schemas/schemas/content.json build/json-schemas/content.json
           cp packages/json-schemas/schemas/content-schema.json build/json-schemas/content-schema.json
           cp packages/json-schemas/schemas/project.json build/json-schemas/project.json
-          find build/json-schemas -type f -name "*.json" -exec sed -i -e 's|https://schema\.croct\.com/json/event/|https://schema.croct.com/json/v1/event/|g' {} +
-          find build/json-schemas -type f -name "*.json" -exec sed -i -e 's|https://schema\.croct\.com/json/template/|https://schema.croct.com/json/v1/template/|g' {} +
+          find build/json-schemas -type f -name "*.json" -exec sed -i -e 's|https://schema\.croct\.com/json/event/|https://schema.croct.com/json/v1/|g' {} +
+          find build/json-schemas -type f -name "*.json" -exec sed -i -e 's|https://schema\.croct\.com/json/template/|https://schema.croct.com/json/v1/|g' {} +
           find build/json-schemas -type f -name "*.json" -exec sed -i -e '/https:\/\/schema\.croct\.com\/json\/v1\//! s|https://schema\.croct\.com/json/|https://schema.croct.com/json/v1/|g' {} +
 
       - name: Authenticate to Google Cloud
