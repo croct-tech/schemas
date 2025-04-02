@@ -1,4 +1,4 @@
-import {writeFileSync, existsSync, mkdirSync} from 'fs';
+import {writeFileSync, existsSync, mkdirSync, readFileSync} from 'fs';
 import {dirname, join} from 'path';
 import {spawnSync} from 'child_process';
 
@@ -46,10 +46,15 @@ const content = data.stdout
         (_, match) => `"${match.replace(/\//g, '-')}"`,
     );
 
+const bundledSchema = {
+    $id: JSON.parse(readFileSync(schemaPath, 'utf-8')).$id,
+    ...JSON.parse(content),
+};
+
 const parentDirectory = dirname(outputPath);
 
 if (parentDirectory !== '.' && !existsSync(parentDirectory)) {
     mkdirSync(parentDirectory, {recursive: true});
 }
 
-writeFileSync(outputPath, content, 'utf-8');
+writeFileSync(outputPath, JSON.stringify(bundledSchema, null, 2), 'utf-8');
