@@ -24,7 +24,7 @@ jobs:
         run: npm -g install tsx
 
       - name: Build JSON schemas
-        run: -|
+        run: |-
           mkdir -p build/json-schemas
           tsx packages/json-schemas/scripts/bundle-schema.ts packages/json-schemas/schemas/event/web-event.json build/json-schemas/web-event.json
           cp packages/json-schemas/schemas/content.json build/json-schemas/content.json
