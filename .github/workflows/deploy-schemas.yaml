@@ -56,8 +56,10 @@ jobs:
       - name: Deploy release to GCS
         if: ${{ github.event.release && !github.event.release.prerelease && github.ref }}
         run: |-
-          MAJOR_VERSION=$(echo "${GITHUB_REF##*/}" | cut -d. -f1)
-          gsutil -m rsync -r -d build/json-schemas "gs://${GCLOUD_BUCKET}/json/${MAJOR_VERSION}"
-          gsutil -m setmeta -h "Cache-Control: public, max-age=3600" "gs://${GCLOUD_BUCKET}/json/${MAJOR_VERSION}/**"
+          TAG_MAJOR_VERSION=$(echo "${GITHUB_REF##*/}" | cut -d. -f1)
+          MAJOR_VERSION=$(( TAG_MAJOR_VERSION < 1 ? 1 : TAG_MAJOR_VERSION ))
+          VERSION_PATH="v${MAJOR_VERSION}"
+          gsutil -m rsync -r -d build/json-schemas "gs://${GCLOUD_BUCKET}/json/${VERSION_PATH}"
+          gsutil -m setmeta -h "Cache-Control: public, max-age=3600" "gs://${GCLOUD_BUCKET}/json/${VERSION_PATH}/**"
         env:
           GCLOUD_BUCKET: ${{ secrets.STORAGE_BUCKET_SCHEMAS }}
