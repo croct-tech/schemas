@@ -1,5 +1,5 @@
 {
-  "$id": "https://schema.croct.com/json/project/configuration.json",
+  "$id": "https://schema.croct.com/json/project.json",
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Croct project configuration",
   "description": "Defines the configuration for a Croct project.",
