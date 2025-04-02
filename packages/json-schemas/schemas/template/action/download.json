@@ -22,11 +22,11 @@
     },
     "filter": {
       "type": "string",
-      "description": "A glob pattern or regex to filter the files to download.",
+      "description": "A glob pattern to filter the files to download.",
       "minLength": 1,
       "examples": [
         "*.json",
-        "images/.*\\.png"
+        "*/**/*.js"
       ]
     },
     "destination": {
