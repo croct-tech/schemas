@@ -38,6 +38,7 @@ Below is a list of available JSON schemas:
 
 | Schema         | URL                                                                                                            |
 |----------------|----------------------------------------------------------------------------------------------------------------|
+| Project        | [`https://schema.croct.com/json/v1/project.json`](https://schema.croct.com/json/v1/project.json)               |
 | Content        | [`https://schema.croct.com/json/v1/content.json`](https://schema.croct.com/json/v1/content.json)               |
 | Content schema | [`https://schema.croct.com/json/v1/content-schema.json`](https://schema.croct.com/json/v1/content-schema.json) |
 | Template       | [`https://schema.croct.com/json/v1/template.json`](https://schema.croct.com/json/v1/template.json)             |
