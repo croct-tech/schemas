@@ -1,0 +1,74 @@
+{
+  "$id": "https://schema.croct.com/json/template/action/download.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Download files",
+  "description": "Downloads files from a remote source into a local directory.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the action.",
+      "const": "download"
+    },
+    "source": {
+      "type": "string",
+      "description": "The base URL or source path to download files from.",
+      "minLength": 1,
+      "examples": [
+        "https://example.com/assets/file.json",
+        "github://user/repo/example.js",
+        "github://user/repo/path/to/files/"
+      ]
+    },
+    "filter": {
+      "type": "string",
+      "description": "A glob pattern to filter the files to download.",
+      "minLength": 1,
+      "examples": [
+        "*.json",
+        "*/**/*.js"
+      ]
+    },
+    "destination": {
+      "type": "string",
+      "description": "The local path where files are downloaded to.",
+      "minLength": 1,
+      "examples": [
+        "public/assets",
+        "tmp/data"
+      ]
+    },
+    "result": {
+      "type": "object",
+      "description": "A map of variables to store results from the action.",
+      "properties": {
+        "destination": {
+          "type": "string",
+          "description": "Stores the destination path in a variable.",
+          "minLength": 1,
+          "examples": [
+            "downloadPath"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "name",
+    "source",
+    "destination"
+  ],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "name": "download",
+      "source": "https://example.com/assets/file.json",
+      "filter": "*.json",
+      "destination": "./assets",
+      "result": {
+        "destination": "downloadPath"
+      }
+    }
+  ]
+}

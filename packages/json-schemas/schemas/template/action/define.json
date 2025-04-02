@@ -1,0 +1,38 @@
+{
+  "$id": "https://schema.croct.com/json/template/action/define.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Define variables",
+  "description": "Defines variables to be used in the template.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the action.",
+      "const": "define"
+    },
+    "variables": {
+      "type": "object",
+      "description": "A map of variable names to their values. Values can be any valid JSON type.",
+      "propertyNames": {
+        "type": "string",
+        "description": "The name of the variable",
+        "minLength": 1
+      },
+      "minProperties": 1,
+      "additionalProperties": true
+    }
+  },
+  "required": [
+    "name",
+    "variables"
+  ],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "name": "define",
+      "variables": {
+        "projectName": "My Project"
+      }
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "template/help.json",
+  "allErrors": true,
+  "input": {
+    "message": "The project is missing a valid configuration file.",
+    "links": [
+      {
+        "label": "How to configure your project",
+        "url": "https://docs.example.com/configuration"
+      },
+      {
+        "label": "How to configure your project",
+        "url": "https://docs.example.com/configuration"
+      }
+    ],
+    "suggestions": [
+      "Create a configuration file named project.json",
+      "Create a configuration file named project.json"
+    ],
+    "details": [
+      "File not found: `project.json`",
+      "File not found: `project.json`"
+    ]
+  },
+  "errors": [
+    {
+      "instancePath": "/links",
+      "keyword": "uniqueItems",
+      "message": "must NOT have duplicate items (items ## 0 and 1 are identical)",
+      "params": {
+        "i": 1,
+        "j": 0
+      },
+      "schemaPath": "#/properties/links/uniqueItems"
+    },
+    {
+      "instancePath": "/suggestions",
+      "keyword": "uniqueItems",
+      "message": "must NOT have duplicate items (items ## 1 and 0 are identical)",
+      "params": {
+        "i": 0,
+        "j": 1
+      },
+      "schemaPath": "#/properties/suggestions/uniqueItems"
+    },
+    {
+      "instancePath": "/details",
+      "keyword": "uniqueItems",
+      "message": "must NOT have duplicate items (items ## 1 and 0 are identical)",
+      "params": {
+        "i": 0,
+        "j": 1
+      },
+      "schemaPath": "#/properties/details/uniqueItems"
+    }
+  ]
+}

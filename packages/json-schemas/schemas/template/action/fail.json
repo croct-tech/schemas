@@ -1,0 +1,40 @@
+{
+  "$id": "https://schema.croct.com/json/template/action/fail.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Fail",
+  "description": "Fails the execution with a custom message and optional suggestions or links.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the action.",
+      "const": "fail"
+    }
+  },
+  "$ref": "https://schema.croct.com/json/template/help.json",
+  "required": [
+    "name"
+  ],
+  "unevaluatedProperties": false,
+  "examples": [
+    {
+      "name": "fail",
+      "title": "Missing configuration",
+      "message": "The project is missing a valid configuration file.",
+      "links": [
+        {
+          "label": "How to configure your project",
+          "url": "https://docs.example.com/configuration"
+        }
+      ],
+      "suggestions": [
+        "Create a configuration file named project.json",
+        "Refer to the project setup guide"
+      ],
+      "details": [
+        "File not found: `project.json`",
+        "Required field `name` is missing"
+      ]
+    }
+  ]
+}

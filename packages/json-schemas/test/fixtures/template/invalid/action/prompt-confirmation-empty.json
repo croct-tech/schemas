@@ -1,0 +1,44 @@
+{
+  "schema": "template/action/prompt-confirmation.json",
+  "allErrors": true,
+  "input": {
+  },
+  "errors":  [
+    {
+      "instancePath": "",
+      "keyword": "required",
+      "message": "must have required property 'name'",
+      "params": {
+        "missingProperty": "name"
+      },
+      "schemaPath": "#/required"
+    },
+    {
+      "instancePath": "",
+      "keyword": "required",
+      "message": "must have required property 'type'",
+      "params": {
+        "missingProperty": "type"
+      },
+      "schemaPath": "#/required"
+    },
+    {
+      "instancePath": "",
+      "keyword": "required",
+      "message": "must have required property 'message'",
+      "params": {
+        "missingProperty": "message"
+      },
+      "schemaPath": "#/required"
+    },
+    {
+      "instancePath": "",
+      "keyword": "required",
+      "message": "must have required property 'result'",
+      "params": {
+        "missingProperty": "result"
+      },
+      "schemaPath": "#/required"
+    }
+  ]
+}

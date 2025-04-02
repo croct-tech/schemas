@@ -1,0 +1,28 @@
+{
+  "schema": "template/action/check-dependency.json",
+  "input": {
+    "name": "check-dependency",
+    "dependencies": [
+      {
+        "name": "foo",
+        "version": "bar"
+      },
+      {
+        "name": "foo",
+        "version": "bar"
+      }
+    ]
+  },
+  "errors": [
+    {
+      "instancePath": "/dependencies",
+      "keyword": "uniqueItems",
+      "message": "must NOT have duplicate items (items ## 0 and 1 are identical)",
+      "params": {
+        "i": 1,
+        "j": 0
+      },
+      "schemaPath": "#/properties/dependencies/uniqueItems"
+    }
+  ]
+}

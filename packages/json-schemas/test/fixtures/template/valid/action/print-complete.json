@@ -1,0 +1,10 @@
+{
+  "schema": "template/action/print.json",
+  "input": {
+    "name": "print",
+    "semantics": "success",
+    "message": "Hello world!"
+  },
+  "errors": [
+  ]
+}

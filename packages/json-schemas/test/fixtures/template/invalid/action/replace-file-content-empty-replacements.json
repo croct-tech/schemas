@@ -1,0 +1,24 @@
+{
+  "schema": "template/action/replace-file-content.json",
+  "input": {
+    "name": "replace-file-content",
+    "files": [
+      {
+        "path": "src/constants.ts",
+        "replacements": [
+        ]
+      }
+    ]
+  },
+  "errors": [
+    {
+      "instancePath": "/files/0/replacements",
+      "keyword": "minItems",
+      "message": "must NOT have fewer than 1 items",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/files/items/properties/replacements/minItems"
+    }
+  ]
+}

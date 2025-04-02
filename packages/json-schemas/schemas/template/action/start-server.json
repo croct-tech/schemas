@@ -1,0 +1,49 @@
+{
+  "$id": "https://schema.croct.com/json/template/action/start-server.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Start server",
+  "description": "Starts the project's development server or detects if it's already running.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the action.",
+      "const": "start-server"
+    },
+    "result": {
+      "type": "object",
+      "description": "Stores details about the development server.",
+      "properties": {
+        "url": {
+          "type": "string",
+          "description": "The variable that receives the URL of the local server.",
+          "minLength": 1,
+          "examples": [
+            "serverUrl"
+          ]
+        },
+        "owned": {
+          "type": "string",
+          "description": "Whether the this action started the server or if it was already running.",
+          "examples": [
+            "isOwned"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "name"
+  ],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "name": "start-server",
+      "result": {
+        "url": "devServerUrl",
+        "owned": "isDevServerOwned"
+      }
+    }
+  ]
+}

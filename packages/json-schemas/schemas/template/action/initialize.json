@@ -1,0 +1,21 @@
+{
+  "$id": "https://schema.croct.com/json/template/action/initialize.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Initialize project",
+  "description": "Initializes a Croct project in the current directory.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the action.",
+      "const": "initialize"
+    }
+  },
+  "required": ["name"],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "name": "initialize"
+    }
+  ]
+}

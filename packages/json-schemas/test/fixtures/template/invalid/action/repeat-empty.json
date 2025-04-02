@@ -1,0 +1,35 @@
+{
+  "schema": "template/action/repeat.json",
+  "allErrors": true,
+  "input": {
+  },
+  "errors": [
+    {
+      "instancePath": "",
+      "keyword": "required",
+      "message": "must have required property 'name'",
+      "params": {
+        "missingProperty": "name"
+      },
+      "schemaPath": "#/required"
+    },
+    {
+      "instancePath": "",
+      "keyword": "required",
+      "message": "must have required property 'condition'",
+      "params": {
+        "missingProperty": "condition"
+      },
+      "schemaPath": "#/required"
+    },
+    {
+      "instancePath": "",
+      "keyword": "required",
+      "message": "must have required property 'actions'",
+      "params": {
+        "missingProperty": "actions"
+      },
+      "schemaPath": "#/required"
+    }
+  ]
+}

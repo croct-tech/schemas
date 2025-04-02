@@ -1,0 +1,16 @@
+{
+  "schema": "template/action/create-resource.json",
+  "input": {
+    "name": "create-resource",
+    "resources": {
+      "audiences": {
+        "logged-in-users": {
+          "name": "Logged-in users",
+          "criteria": "user is identified"
+        }
+      }
+    }
+  },
+  "errors": [
+  ]
+}

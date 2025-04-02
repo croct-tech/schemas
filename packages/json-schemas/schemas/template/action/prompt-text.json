@@ -1,0 +1,62 @@
+{
+  "$id": "https://schema.croct.com/json/template/action/prompt-text.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Choice prompt",
+  "type": "object",
+  "description": "Prompts the user for free-form text input.",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the action.",
+      "const": "prompt"
+    },
+    "type": {
+      "type": "string",
+      "description": "The type of prompt.",
+      "const": "text"
+    },
+    "message": {
+      "type": "string",
+      "description": "The text input prompt message.",
+      "minLength": 1,
+      "examples": [
+        "Enter your name:"
+      ]
+    },
+    "default": {
+      "type": "string",
+      "description": "Default input if user presses enter.",
+      "examples": [
+        "Unknown"
+      ]
+    },
+    "required": {
+      "type": "boolean",
+      "description": "If true, input cannot be empty."
+    },
+    "result": {
+      "type": "string",
+      "description": "Variable to store user input.",
+      "minLength": 1,
+      "examples": [
+        "userName"
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "type",
+    "message",
+    "result"
+  ],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "name": "prompt",
+      "type": "text",
+      "message": "Enter your name:",
+      "required": true,
+      "result": "userName"
+    }
+  ]
+}

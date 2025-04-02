@@ -1,0 +1,17 @@
+{
+  "schema": "template/help.json",
+  "allErrors": true,
+  "input": {
+  },
+  "errors": [
+    {
+      "instancePath": "",
+      "keyword": "required",
+      "message": "must have required property 'message'",
+      "params": {
+        "missingProperty": "message"
+      },
+      "schemaPath": "#/required"
+    }
+  ]
+}

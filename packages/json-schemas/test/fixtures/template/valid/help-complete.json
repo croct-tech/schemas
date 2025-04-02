@@ -1,0 +1,23 @@
+{
+  "schema": "template/help.json",
+  "input": {
+    "title": "Missing configuration",
+    "message": "The project is missing a valid configuration file.",
+    "links": [
+      {
+        "label": "How to configure your project",
+        "url": "https://docs.example.com/configuration"
+      }
+    ],
+    "suggestions": [
+      "Create a configuration file named project.json",
+      "Refer to the project setup guide"
+    ],
+    "details": [
+      "File not found: `project.json`",
+      "Required field `name` is missing"
+    ]
+  },
+  "errors": [
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "schema": "template/action/prompt.json",
+  "input": {
+    "name": "prompt",
+    "type": "confirmation",
+    "message": "Proceed?",
+    "default": true,
+    "result": "shouldProceed"
+  },
+  "errors": [
+  ]
+}

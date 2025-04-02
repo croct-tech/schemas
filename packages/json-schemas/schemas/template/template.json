@@ -1,0 +1,36 @@
+{
+  "$id": "https://schema.croct.com/json/template/template.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Template",
+  "description": "A template for creating projects, components, and other resources.",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "description": "The title of the template.",
+      "minLength": 0
+    },
+    "description": {
+      "type": "string",
+      "description": "A short description of the template.",
+      "minLength": 0
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Metadata about the template."
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "$ref": "./action.json"
+      },
+      "minItems": 1
+    }
+  },
+  "required": ["actions"],
+  "additionalProperties": false
+}

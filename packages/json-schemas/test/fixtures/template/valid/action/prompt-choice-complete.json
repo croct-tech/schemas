@@ -1,0 +1,22 @@
+{
+  "schema": "template/action/prompt.json",
+  "input": {
+    "name": "prompt",
+    "type": "choice",
+    "message": "Select a plan:",
+    "options": [
+      {
+        "value": "basic",
+        "disabled": true
+      },
+      {
+        "value": "pro",
+        "label": "Pro Plan"
+      }
+    ],
+    "default": "pro",
+    "result": "selectedPlan"
+  },
+  "errors": [
+  ]
+}

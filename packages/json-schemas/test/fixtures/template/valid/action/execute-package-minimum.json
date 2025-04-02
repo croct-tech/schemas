@@ -1,0 +1,9 @@
+{
+  "schema": "template/action/execute-package.json",
+  "input": {
+    "name": "execute-package",
+    "package": "create-react-app"
+  },
+  "errors": [
+  ]
+}

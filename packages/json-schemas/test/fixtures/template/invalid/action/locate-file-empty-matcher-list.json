@@ -1,0 +1,123 @@
+{
+  "schema": "template/action/locate-file.json",
+  "allErrors": true,
+  "input": {
+    "name": "locate-file",
+    "path": "src",
+    "matcher": {
+      "type": "or",
+      "matchers": [
+        {
+          "type": "and",
+          "matchers": []
+        },
+        {
+          "type": "or",
+          "matchers": []
+        }
+      ]
+    },
+    "result": "files"
+  },
+  "errors": [
+    {
+      "instancePath": "/matcher",
+      "keyword": "required",
+      "message": "must have required property 'pattern'",
+      "params": {
+        "missingProperty": "pattern"
+      },
+      "schemaPath": "#/oneOf/0/required"
+    },
+    {
+      "instancePath": "/matcher",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "type"
+      },
+      "schemaPath": "#/oneOf/0/additionalProperties"
+    },
+    {
+      "instancePath": "/matcher/matchers/0",
+      "keyword": "required",
+      "message": "must have required property 'pattern'",
+      "params": {
+        "missingProperty": "pattern"
+      },
+      "schemaPath": "#/oneOf/0/required"
+    },
+    {
+      "instancePath": "/matcher/matchers/0",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "type"
+      },
+      "schemaPath": "#/oneOf/0/additionalProperties"
+    },
+    {
+      "instancePath": "/matcher/matchers/0/matchers",
+      "keyword": "minItems",
+      "message": "must NOT have fewer than 1 items",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/oneOf/1/properties/matchers/minItems"
+    },
+    {
+      "instancePath": "/matcher/matchers/0",
+      "keyword": "oneOf",
+      "message": "must match exactly one schema in oneOf",
+      "params": {
+        "passingSchemas": null
+      },
+      "schemaPath": "#/oneOf"
+    },
+    {
+      "instancePath": "/matcher/matchers/1",
+      "keyword": "required",
+      "message": "must have required property 'pattern'",
+      "params": {
+        "missingProperty": "pattern"
+      },
+      "schemaPath": "#/oneOf/0/required"
+    },
+    {
+      "instancePath": "/matcher/matchers/1",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "type"
+      },
+      "schemaPath": "#/oneOf/0/additionalProperties"
+    },
+    {
+      "instancePath": "/matcher/matchers/1/matchers",
+      "keyword": "minItems",
+      "message": "must NOT have fewer than 1 items",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/oneOf/1/properties/matchers/minItems"
+    },
+    {
+      "instancePath": "/matcher/matchers/1",
+      "keyword": "oneOf",
+      "message": "must match exactly one schema in oneOf",
+      "params": {
+        "passingSchemas": null
+      },
+      "schemaPath": "#/oneOf"
+    },
+    {
+      "instancePath": "/matcher",
+      "keyword": "oneOf",
+      "message": "must match exactly one schema in oneOf",
+      "params": {
+        "passingSchemas": null
+      },
+      "schemaPath": "#/oneOf"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "schema": "template/action/fail.json",
+  "allErrors": true,
+  "input": {
+    "name": ""
+  },
+  "errors": [
+    {
+      "instancePath": "",
+      "keyword": "required",
+      "message": "must have required property 'message'",
+      "params": {
+        "missingProperty": "message"
+      },
+      "schemaPath": "https://schema.croct.com/json/template/help.json/required"
+    },
+    {
+      "instancePath": "/name",
+      "keyword": "const",
+      "message": "must be equal to constant",
+      "params": {
+        "allowedValue": "fail"
+      },
+      "schemaPath": "#/properties/name/const"
+    }
+  ]
+}

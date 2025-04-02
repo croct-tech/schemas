@@ -1,0 +1,8 @@
+{
+  "schema": "template/action/initialize.json",
+  "input": {
+    "name": "initialize"
+  },
+  "errors": [
+  ]
+}

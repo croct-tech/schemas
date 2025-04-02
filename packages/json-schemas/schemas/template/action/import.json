@@ -1,0 +1,43 @@
+{
+  "$id": "https://schema.croct.com/json/template/action/import.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Import template",
+  "description": "Imports and executes another template.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the action.",
+      "const": "import"
+    },
+    "template": {
+      "type": "string",
+      "description": "The URI of the template to import. It can be a relative path to a local file or an absolute URL to a remote template.",
+      "minLength": 1,
+      "examples": ["croct://path/to/template", "https://example.com/template.json"]
+    },
+    "options": {
+      "type": "object",
+      "description": "Options to pass to the imported template.",
+      "additionalProperties": true,
+      "examples": [
+        {
+          "projectName": "my-app",
+          "enableAnalytics": true,
+          "features": ["auth", "payments"]
+        }
+      ]
+    }
+  },
+  "required": ["name", "template"],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "name": "import",
+      "template": "croct://project",
+      "options": {
+        "projectName": "my-app"
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "schema": "template/action/start-server.json",
+  "input": {
+    "name": "start-server",
+    "result": {
+      "url": "serverUrl",
+      "owned": "isOwned"
+    }
+  },
+  "errors": [
+  ]
+}

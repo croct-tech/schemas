@@ -1,0 +1,96 @@
+{
+  "schema": "template/action/prompt-multi-choice.json",
+  "allErrors": true,
+  "input": {
+    "name": "",
+    "type": "",
+    "message": "",
+    "min": -1,
+    "max": -1,
+    "options": [
+      {
+        "value": "",
+        "label": "",
+        "extra": true
+      }
+    ],
+    "result": "",
+    "extra": true
+  },
+  "errors": [
+    {
+      "instancePath": "",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "extra"
+      },
+      "schemaPath": "#/additionalProperties"
+    },
+    {
+      "instancePath": "/name",
+      "keyword": "const",
+      "message": "must be equal to constant",
+      "params": {
+        "allowedValue": "prompt"
+      },
+      "schemaPath": "#/properties/name/const"
+    },
+    {
+      "instancePath": "/type",
+      "keyword": "const",
+      "message": "must be equal to constant",
+      "params": {
+        "allowedValue": "multi-choice"
+      },
+      "schemaPath": "#/properties/type/const"
+    },
+    {
+      "instancePath": "/message",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/message/minLength"
+    },
+    {
+      "instancePath": "/min",
+      "keyword": "minimum",
+      "message": "must be >= 0",
+      "params": {
+        "comparison": ">=",
+        "limit": 0
+      },
+      "schemaPath": "#/properties/min/minimum"
+    },
+    {
+      "instancePath": "/max",
+      "keyword": "minimum",
+      "message": "must be >= 1",
+      "params": {
+        "comparison": ">=",
+        "limit": 1
+      },
+      "schemaPath": "#/properties/max/minimum"
+    },
+    {
+      "instancePath": "/options/0",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "extra"
+      },
+      "schemaPath": "#/properties/options/items/additionalProperties"
+    },
+    {
+      "instancePath": "/options/0/label",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/options/items/properties/label/minLength"
+    }
+  ]
+}

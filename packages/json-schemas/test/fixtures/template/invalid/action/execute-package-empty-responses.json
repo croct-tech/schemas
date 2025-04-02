@@ -1,0 +1,24 @@
+{
+  "schema": "template/action/execute-package.json",
+  "input": {
+    "name": "execute-package",
+    "package": "create-react-app",
+    "interactions": [
+      {
+        "when": "What is your name?",
+        "then": []
+      }
+    ]
+  },
+  "errors": [
+    {
+      "instancePath": "/interactions/0/then",
+      "keyword": "minItems",
+      "message": "must NOT have fewer than 1 items",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/interactions/items/properties/then/minItems"
+    }
+  ]
+}

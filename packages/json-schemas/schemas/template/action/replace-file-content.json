@@ -1,0 +1,106 @@
+{
+  "$id": "https://schema.croct.com/json/template/action/replace-file-content.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Replace file content",
+  "description": "Replaces content in one or more files using regular expression patterns.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the action.",
+      "const": "replace-file-content"
+    },
+    "files": {
+      "type": "array",
+      "description": "The list of files and the replacements to apply in each.",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The path to the file to be modified.",
+            "examples": [
+              "src/index.ts",
+              "README.md"
+            ]
+          },
+          "replacements": {
+            "type": "array",
+            "description": "The list of replacements to apply within the file.",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "pattern": {
+                  "type": "string",
+                  "minLength": 1,
+                  "description": "A valid regular expression pattern used to find matches to replace.",
+                  "examples": [
+                    "APP_NAME",
+                    "\\\\{VERSION\\\\}"
+                  ]
+                },
+                "caseSensitive": {
+                  "type": "boolean",
+                  "description": "Whether the pattern matching should be case-sensitive."
+                },
+                "value": {
+                  "description": "The value to replace the matched pattern with.",
+                  "oneOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "examples": [
+                    "Croct",
+                    42
+                  ]
+                }
+              },
+              "required": [
+                "pattern",
+                "value"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "path",
+          "replacements"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "name",
+    "files"
+  ],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "name": "replace-file-content",
+      "files": [
+        {
+          "path": "src/constants.ts",
+          "replacements": [
+            {
+              "pattern": "APP_NAME",
+              "value": "Croct"
+            },
+            {
+              "pattern": "\\\\{VERSION\\\\}",
+              "value": "1.0.0",
+              "caseSensitive": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

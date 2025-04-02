@@ -1,0 +1,8 @@
+{
+  "schema": "template/action/change-directory.json",
+  "input": {
+    "name": "change-directory",
+    "path": "."
+  },
+  "errors": []
+}

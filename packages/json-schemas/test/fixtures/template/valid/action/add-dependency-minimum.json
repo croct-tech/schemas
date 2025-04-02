@@ -1,0 +1,10 @@
+{
+  "schema": "template/action/add-dependency.json",
+  "input": {
+    "name": "add-dependency",
+    "dependencies": [
+      "croct"
+    ]
+  },
+  "errors": []
+}

@@ -1,0 +1,18 @@
+{
+  "schema": "template/action/add-component.json",
+  "input": {
+    "name": "add-component",
+    "components": []
+  },
+  "errors": [
+    {
+      "instancePath": "/components",
+      "keyword": "minItems",
+      "message": "must NOT have fewer than 1 items",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/components/minItems"
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "$id": "https://schema.croct.com/json/template/action/locate-file.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Locate file",
+  "description": "Searches for files under a directory path based on a specified pattern.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the action.",
+      "const": "locate-file"
+    },
+    "path": {
+      "type": "string",
+      "description": "The base path to start searching from.",
+      "minLength": 1,
+      "examples": [
+        "./src",
+        "packages/utils"
+      ]
+    },
+    "matcher": {
+      "type": "object",
+      "description": "The criteria to match files against.",
+      "$ref": "#/$defs/matcher"
+    },
+    "limit": {
+      "type": "number",
+      "description": "Limits the number of files to return.",
+      "examples": [
+        1,
+        5
+      ],
+      "minimum": 1
+    },
+    "depth": {
+      "type": "number",
+      "description": "The maximum depth to search from the base path, where 0 is the base path itself.",
+      "examples": [
+        0,
+        2
+      ],
+      "minimum": 0
+    },
+    "result": {
+      "type": "string",
+      "description": "The variable name to store the result of the search as an array of file paths.",
+      "examples": [
+        "matches",
+        "foundFiles"
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "path",
+    "result"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "matcher": {
+      "description": "The criteria to match files against.",
+      "oneOf": [
+        {
+          "type": "object",
+          "description": "A matcher based on a single pattern.",
+          "properties": {
+            "pattern": {
+              "type": "string",
+              "minLength": 1,
+              "description": "The pattern to match against file content.",
+              "examples": [
+                "function main",
+                "class .*Service"
+              ]
+            },
+            "caseSensitive": {
+              "type": "boolean",
+              "description": "Whether the pattern matching should be case-sensitive."
+            }
+          },
+          "required": [
+            "pattern"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "description": "A composite matcher combining multiple matchers using logical operators.",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "and",
+                "or"
+              ],
+              "description": "Defines how to combine the child matchers."
+            },
+            "matchers": {
+              "type": "array",
+              "description": "A list of matchers to combine.",
+              "items": {
+                "$ref": "#/$defs/matcher"
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "type",
+            "matchers"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    }
+  },
+  "examples": [
+    {
+      "name": "locate-file",
+      "path": "src",
+      "matcher": {
+        "pattern": "export default"
+      },
+      "limit": 1,
+      "depth": 3,
+      "result": "mainFile"
+    },
+    {
+      "name": "locate-file",
+      "path": "packages",
+      "matcher": {
+        "type": "and",
+        "matchers": [
+          {
+            "pattern": "Service"
+          },
+          {
+            "pattern": "export",
+            "caseSensitive": true
+          }
+        ]
+      },
+      "result": "serviceFiles"
+    }
+  ]
+}

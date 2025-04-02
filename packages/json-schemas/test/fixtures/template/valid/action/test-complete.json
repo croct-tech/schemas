@@ -1,0 +1,17 @@
+{
+  "schema": "template/action/test.json",
+  "input": {
+    "name": "test",
+    "condition":"${this.condition}",
+    "then": {
+      "name": "print",
+      "message": "Condition is true"
+    },
+    "else": {
+      "name": "print",
+      "message": "Condition is false"
+    }
+  },
+  "errors": [
+  ]
+}

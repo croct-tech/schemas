@@ -1,0 +1,87 @@
+{
+  "$id": "https://schema.croct.com/json/template/action/check-dependency.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Check dependency",
+  "description": "Checks if specific dependencies are installed and optionally stores the result in variables.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the action.",
+      "const": "check-dependency"
+    },
+    "dependencies": {
+      "type": "array",
+      "description": "The list of dependencies to check.",
+      "items": {
+        "type": "object",
+        "description": "A dependency to check.",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the dependency.",
+            "minLength": 1,
+            "examples": [
+              "croct",
+              "react"
+            ]
+          },
+          "version": {
+            "type": "string",
+            "description": "The required version of the dependency. If not specified, any version is accepted.",
+            "minLength": 1,
+            "examples": [
+              "1.0.0",
+              "^1.0.0",
+              ">=2.0.0"
+            ]
+          },
+          "optional": {
+            "type": "boolean",
+            "description": "Whether the dependency is optional. Optional dependencies do not cause the action to fail even if not satisfied.",
+            "default": false
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "additionalProperties": false
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "help": {
+      "type": "object",
+      "description": "Help message and resources to guide resolution.",
+      "$ref": "https://schema.croct.com/json/template/help.json",
+      "unevaluatedProperties": false
+    },
+    "result": {
+      "type": "object",
+      "description": "Maps each dependency to a variable that stores whether it's satisfied. Listed dependencies do not fail the action.",
+      "additionalProperties": {
+        "type": "string",
+        "description": "The variable name to store the result of the dependency check.",
+        "minLength": 1,
+        "examples": [
+          "variable",
+          "result"
+        ]
+      },
+      "propertyNames": {
+        "type": "string",
+        "description": "The name of the dependency.",
+        "minLength": 1,
+        "examples": [
+          "croct",
+          "react"
+        ]
+      }
+    }
+  },
+  "required": [
+    "name",
+    "dependencies"
+  ],
+  "additionalProperties": false
+}

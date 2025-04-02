@@ -1,0 +1,10 @@
+{
+  "schema": "template/action/locate-file.json",
+  "input": {
+    "name": "locate-file",
+    "path": "src",
+    "result": "files"
+  },
+  "errors": [
+  ]
+}

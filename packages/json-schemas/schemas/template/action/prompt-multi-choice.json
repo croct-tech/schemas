@@ -1,0 +1,105 @@
+{
+  "$id": "https://schema.croct.com/json/template/action/prompt-multi-choice.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Multi-choice prompt",
+  "type": "object",
+  "description": "Asks the user to select multiple options from a list.",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the action.",
+      "const": "prompt"
+    },
+    "type": {
+      "type": "string",
+      "description": "The type of prompt.",
+      "const": "multi-choice"
+    },
+    "message": {
+      "type": "string",
+      "description": "The multiple choice prompt message.",
+      "minLength": 1,
+      "examples": [
+        "Select your interests:"
+      ]
+    },
+    "min": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Minimum options required to select."
+    },
+    "max": {
+      "type": "number",
+      "minimum": 1,
+      "description": "Maximum selectable options."
+    },
+    "options": {
+      "type": "array",
+      "description": "List of selectable options.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "description": "Value stored if selected."
+          },
+          "label": {
+            "type": "string",
+            "description": "Displayed option label.",
+            "minLength": 1
+          },
+          "selected": {
+            "type": "boolean",
+            "description": "If true, option is initially selected.",
+            "default": false
+          },
+          "disabled": {
+            "type": "boolean",
+            "description": "If true, option is not selectable."
+          }
+        },
+        "required": [
+          "value"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "result": {
+      "type": "string",
+      "description": "Variable to store selected options."
+    }
+  },
+  "required": [
+    "name",
+    "type",
+    "message",
+    "options",
+    "result"
+  ],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "name": "prompt",
+      "type": "multi-choice",
+      "message": "Select your interests:",
+      "min": 1,
+      "max": 3,
+      "options": [
+        {
+          "value": "sports"
+        },
+        {
+          "value": "music",
+          "label": "Music"
+        },
+        {
+          "value": "art",
+          "label": "Art",
+          "selected": true
+        }
+      ],
+      "result": "selectedInterests"
+    }
+  ]
+}

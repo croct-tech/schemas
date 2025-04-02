@@ -1,0 +1,154 @@
+{
+  "schema": "template/template.json",
+  "input": {
+    "title": "Full template",
+    "description": "A template with all properties filled.",
+    "metadata": {
+      "author": "John Doe",
+      "version": "1.0.0",
+      "license": "MIT"
+    },
+    "actions": [
+      {
+        "name": "add-component",
+        "components": [
+          "button"
+        ]
+      },
+      {
+        "name": "add-dependency",
+        "dependencies": [
+          "croct"
+        ]
+      },
+      {
+        "name": "add-slot",
+        "slots": [
+          "home-hero"
+        ]
+      },
+      {
+        "name": "change-directory",
+        "path": "."
+      },
+      {
+        "name": "check-dependency",
+        "dependencies": [
+          {
+            "name": "croct",
+            "version": ">=1.0.0"
+          }
+        ]
+      },
+      {
+        "name": "create-resource",
+        "resources": {
+          "audiences": {
+            "new-users": {
+              "name": "New users",
+              "criteria": "user is not returning"
+            }
+          }
+        }
+      },
+      {
+        "name": "define",
+        "variables": {
+          "number": 1
+        }
+      },
+      {
+        "name": "download",
+        "source": "github.com/user/repo",
+        "destination": "/path/to/destination"
+      },
+      {
+        "name": "execute-package",
+        "package": "create-react-app"
+      },
+      {
+        "name": "fail",
+        "message": "The project is missing a valid configuration file."
+      },
+      {
+        "name": "format-code",
+        "files": ["src/index.js"]
+      },
+      {
+        "name": "import",
+        "template": "croct://template-name"
+      },
+      {
+        "name": "locate-file",
+        "path": "src",
+        "result": "files"
+      },
+      {
+        "name": "initialize"
+      },
+      {
+        "name": "open-link",
+        "url": "https://croct.com"
+      },
+      {
+        "name": "print",
+        "message": "Hello, world!"
+      },
+      {
+        "name": "prompt",
+        "type": "text",
+        "message": "Enter your name:",
+        "result": "userName"
+      },
+      {
+        "name": "repeat",
+        "condition": "${this.retryCount < 3}",
+        "actions": [
+          {
+            "name": "print",
+            "message": "Trying again..."
+          }
+        ]
+      },
+      {
+        "name": "replace-file-content",
+        "files": [
+          {
+            "path": "src/constants.ts",
+            "replacements": [
+              {
+                "pattern": "APP_NAME",
+                "value": "Croct",
+                "caseSensitive": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "run",
+        "actions": [
+          {
+            "name": "print",
+            "message": "Step 1 complete"
+          }
+        ]
+      },
+      {
+        "name": "start-server"
+      },
+      {
+        "name": "stop-server"
+      },
+      {
+        "name": "test",
+        "condition": "${this.condition}",
+        "then": {
+          "name": "print",
+          "message": "Condition is true"
+        }
+      }
+    ]
+  },
+  "errors": []
+}

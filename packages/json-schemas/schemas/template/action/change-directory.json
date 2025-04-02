@@ -1,0 +1,30 @@
+{
+  "$id": "https://schema.croct.com/json/template/action/change-directory.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Change directory",
+  "description": "Changes the working directory.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the action.",
+      "const": "change-directory"
+    },
+    "path": {
+      "type": "string",
+      "description": "The path to the new working directory.",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "name",
+    "path"
+  ],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "name": "change-directory",
+      "path": "./src"
+    }
+  ]
+}

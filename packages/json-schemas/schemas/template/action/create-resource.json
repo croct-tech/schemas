@@ -1,0 +1,570 @@
+{
+  "$id": "https://schema.croct.com/json/template/action/create-resource.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Create resource",
+  "description": "Creates resources such as audiences, components, slots, and experiences.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the action.",
+      "const": "create-resource"
+    },
+    "resources": {
+      "type": "object",
+      "description": "The content resources to create.",
+      "properties": {
+        "audiences": {
+          "type": "object",
+          "description": "A map of audience IDs to audience definitions.",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "description": "The name of the audience.",
+                "examples": [
+                  "Logged in users",
+                  "Premium users"
+                ]
+              },
+              "criteria": {
+                "type": "string",
+                "minLength": 1,
+                "description": "The criteria used to match the audience in CQL. Read more at https://docs.croct.com/reference/cql/introduction.",
+                "examples": [
+                  "user is identified",
+                  "user's plan is premium"
+                ]
+              }
+            },
+            "required": [
+              "name",
+              "criteria"
+            ],
+            "additionalProperties": false
+          },
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$",
+            "minLength": 1,
+            "description": "The ID of the audience.",
+            "examples": [
+              "logged-in-users",
+              "premium-users"
+            ]
+          },
+          "minProperties": 1
+        },
+        "components": {
+          "type": "object",
+          "description": "A map of component IDs to component definitions.",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "description": "The name of the component.",
+                "examples": [
+                  "Button",
+                  "Thumbnail"
+                ]
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1,
+                "description": "The description of the component.",
+                "examples": [
+                  "A button component.",
+                  "An image component."
+                ]
+              },
+              "schema": {
+                "type": "object",
+                "description": "The component schema.",
+                "$ref": "https://schema.croct.com/json/content-schema.json"
+              }
+            },
+            "required": [
+              "name",
+              "schema"
+            ],
+            "additionalProperties": false
+          },
+          "propertyNames": {
+            "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$",
+            "minLength": 1,
+            "description": "The ID of the component.",
+            "examples": [
+              "button",
+              "thumbnail"
+            ]
+          },
+          "minProperties": 1
+        },
+        "slots": {
+          "type": "object",
+          "description": "A map of slot IDs to slot definitions.",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "The name of the slot.",
+                "minLength": 1,
+                "examples": [
+                  "Home hero",
+                  "Pricing table"
+                ]
+              },
+              "component": {
+                "type": "string",
+                "description": "The name of the component to use in the slot.",
+                "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$",
+                "minLength": 1,
+                "examples": [
+                  "button",
+                  "thumbnail"
+                ]
+              },
+              "content": {
+                "type": "object",
+                "description": "The content for the slot.",
+                "$ref": "#/$defs/localized-content"
+              }
+            },
+            "required": [
+              "name",
+              "component",
+              "content"
+            ],
+            "additionalProperties": false
+          },
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$",
+            "minLength": 1,
+            "description": "The ID of the slot.",
+            "examples": [
+              "home-hero",
+              "pricing-table"
+            ]
+          },
+          "minProperties": 1
+        },
+        "experiences": {
+          "type": "array",
+          "description": "The list of experiences to create.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "The name of the experience.",
+                "minLength": 1,
+                "examples": [
+                  "Experience for logged-in users",
+                  "Experience for premium users"
+                ]
+              },
+              "draft": {
+                "type": "boolean",
+                "description": "Whether the experience is a draft. Draft experiences can be partially configured.",
+                "default": false
+              },
+              "audiences": {
+                "type": "array",
+                "description": "The list of audiences to target.",
+                "items": {
+                  "type": "string",
+                  "description": "The ID of the audience which the experience is targeted to.",
+                  "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$",
+                  "minLength": 1,
+                  "examples": [
+                    "logged-in-users",
+                    "premium-users"
+                  ]
+                }
+              },
+              "slots": {
+                "type": "array",
+                "description": "The list of slots to personalize.",
+                "items": {
+                  "type": "string",
+                  "description": "The ID of the slot to personalize.",
+                  "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$",
+                  "minLength": 1,
+                  "examples": [
+                    "home-hero",
+                    "pricing-table"
+                  ]
+                }
+              },
+              "experiment": {
+                "type": "object",
+                "description": "The configuration of the experiment.",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "The name of the experiment.",
+                    "minLength": 1,
+                    "examples": [
+                      "Login page experiment",
+                      "Pricing experiment"
+                    ]
+                  },
+                  "goalId": {
+                    "type": "string",
+                    "description": "The ID of the goal to measure the experiment.",
+                    "pattern": "^[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*$",
+                    "minLength": 1,
+                    "examples": [
+                      "login",
+                      "purchase"
+                    ]
+                  },
+                  "crossDevice": {
+                    "type": "boolean",
+                    "description": "Whether the experiment should be tracked across devices.",
+                    "default": false
+                  },
+                  "traffic": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1,
+                    "description": "The percentage of traffic to allocate to the experiment, where 1 means 100%."
+                  },
+                  "variants": {
+                    "type": "array",
+                    "description": "The list of variants to experiment with.",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "type": "string",
+                          "description": "The name of the variant.",
+                          "minLength": 1,
+                          "examples": [
+                            "Variant A",
+                            "Variant B"
+                          ]
+                        },
+                        "content": {
+                          "type": "object",
+                          "description": "The content for the variant.",
+                          "$ref": "#/$defs/personalized-content"
+                        },
+                        "baseline": {
+                          "type": "boolean",
+                          "description": "Whether the variant is the baseline.",
+                          "default": false
+                        },
+                        "allocation": {
+                          "type": "number",
+                          "minimum": 0,
+                          "maximum": 1,
+                          "description": "The percentage of traffic to allocate to the variant, where 1 means 100%."
+                        }
+                      },
+                      "required": [
+                        "name",
+                        "content",
+                        "allocation"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "minItems": 2
+                  }
+                },
+                "required": [
+                  "name",
+                  "traffic",
+                  "variants"
+                ],
+                "additionalProperties": false
+              },
+              "content": {
+                "type": "object",
+                "description": "The content for the experience.",
+                "$ref": "#/$defs/personalized-content"
+              }
+            },
+            "required": [
+              "name",
+              "audiences",
+              "slots",
+              "content"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        }
+      },
+      "minProperties": 1,
+      "additionalProperties": false
+    },
+    "result": {
+      "type": "object",
+      "description": "A map of variables to store the resulting resource identifiers.",
+      "properties": {
+        "audiences": {
+          "type": "object",
+          "description": "A map of audience names to variable names.",
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 1,
+            "description": "The variable name to store the audience ID.",
+            "examples": [
+              "loggedInUsersAudience",
+              "premiumUsersAudience"
+            ]
+          },
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$",
+            "minLength": 1,
+            "description": "The ID of the audience.",
+            "examples": [
+              "logged-in-users",
+              "premium-users"
+            ]
+          }
+        },
+        "components": {
+          "type": "object",
+          "description": "A map of component names to variables storing their IDs and versions.",
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$",
+            "minLength": 1,
+            "description": "The ID of the component specified in the input.",
+            "examples": [
+              "button",
+              "thumbnail"
+            ]
+          },
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "The resolved component ID, may differ from input if already exists.",
+                "minLength": 1,
+                "examples": [
+                  "buttonId",
+                  "thumbnailId"
+                ]
+              },
+              "version": {
+                "type": "string",
+                "description": "The component version, may not be 1 if already exists.",
+                "minLength": 1,
+                "examples": [
+                  "buttonVersion",
+                  "thumbnailVersion"
+                ]
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "slots": {
+          "type": "object",
+          "description": "A map of slot names to variables storing their IDs and versions.",
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$",
+            "minLength": 1,
+            "description": "The ID of the slot specified in the input.",
+            "examples": [
+              "home-hero",
+              "pricing-table"
+            ]
+          },
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "The resolved slot ID, may differ from input if already exists.",
+                "minLength": 1,
+                "examples": [
+                  "homeHeroId",
+                  "pricingTableId"
+                ]
+              },
+              "version": {
+                "type": "string",
+                "description": "The slot version, may not be 1 if already exists.",
+                "minLength": 1,
+                "examples": [
+                  "homeHeroVersion",
+                  "pricingTableVersion"
+                ]
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "experiences": {
+          "type": "object",
+          "description": "A map of experience indexes to variable names.",
+          "propertyNames": {
+            "description": "The index of the experience in the list.",
+            "pattern": "^[0-9]+$",
+            "minLength": 1,
+            "examples": [
+              0,
+              1
+            ]
+          },
+          "additionalProperties": {
+            "type": "string",
+            "description": "The variable name to store the experience ID.",
+            "minLength": 1,
+            "examples": [
+              "loggedInUsersExperienceId",
+              "premiumUsersExperienceId"
+            ]
+          }
+        },
+        "experiments": {
+          "type": "object",
+          "description": "A map of experiment indexes to variable names.",
+          "propertyNames": {
+            "type": "string",
+            "description": "The index of the experiment in the list.",
+            "pattern": "^[0-9]+$",
+            "minLength": 1,
+            "examples": [
+              0,
+              1
+            ]
+          },
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 1,
+            "description": "The variable name to store the experiment ID.",
+            "examples": [
+              "pricingExperimentId",
+              "loginPageExperimentId"
+            ]
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "name",
+    "resources"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "personalized-content": {
+      "type": "object",
+      "properties": {
+        "default": {
+          "type": "object",
+          "description": "The default content when no segmented content is provided.",
+          "$ref": "#/$defs/slot-content-map"
+        },
+        "segmented": {
+          "type": "array",
+          "description": "The list of segmented content for the variant.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "audiences": {
+                "type": "array",
+                "description": "The audiences for which the content is targeted.",
+                "items": {
+                  "type": "string",
+                  "description": "The ID of the audience.",
+                  "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$",
+                  "minLength": 1,
+                  "examples": [
+                    "logged-in-users",
+                    "premium-users"
+                  ]
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              },
+              "content": {
+                "type": "object",
+                "description": "The content for the audience group.",
+                "$ref": "#/$defs/slot-content-map"
+              }
+            },
+            "required": [
+              "audiences",
+              "content"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "default"
+      ]
+    },
+    "slot-content-map": {
+      "type": "object",
+      "description": "The map of slot IDs to their content.",
+      "propertyNames": {
+        "type": "string",
+        "description": "The ID of the slot.",
+        "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$",
+        "minLength": 1,
+        "examples": [
+          "home-hero",
+          "pricing-table"
+        ]
+      },
+      "additionalProperties": {
+        "type": "object",
+        "description": "The locale-specific content.",
+        "$ref": "#/$defs/localized-content"
+      },
+      "minProperties": 1
+    },
+    "localized-content": {
+      "type": "object",
+      "description": "The map of locale to content.",
+      "additionalProperties": {
+        "type": "object",
+        "description": "The locale-specific content.",
+        "$ref": "https://schema.croct.com/json/content.json"
+      },
+      "propertyNames": {
+        "type": "string",
+        "description": "The locale of the content.",
+        "pattern": "^[a-zA-Z]{2,3}([-_][a-zA-Z]{2,3})?$",
+        "minLength": 1,
+        "examples": [
+          "en",
+          "en-us",
+          "es-es"
+        ]
+      },
+      "minProperties": 1
+    }
+  },
+  "examples": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "audiences": {
+          "logged-in-users": {
+            "name": "Logged-in users",
+            "criteria": "user is identified"
+          }
+        }
+      }
+    }
+  ]
+}

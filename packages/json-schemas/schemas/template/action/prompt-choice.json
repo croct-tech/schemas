@@ -1,0 +1,95 @@
+{
+  "$id": "https://schema.croct.com/json/template/action/prompt-choice.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Choice prompt",
+  "type": "object",
+  "description": "Asks the user to select one option from a list.",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the action.",
+      "const": "prompt"
+    },
+    "type": {
+      "type": "string",
+      "description": "The type of prompt.",
+      "const": "choice"
+    },
+    "message": {
+      "type": "string",
+      "description": "The choice prompt message.",
+      "minLength": 1,
+      "examples": [
+        "Select a plan:"
+      ]
+    },
+    "options": {
+      "type": "array",
+      "description": "List of selectable options.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "description": "Value stored if selected."
+          },
+          "label": {
+            "type": "string",
+            "description": "Displayed option label.",
+            "minLength": 1
+          },
+          "disabled": {
+            "type": "boolean",
+            "description": "If true, the option is not selectable."
+          }
+        },
+        "required": [
+          "value"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "default": {
+      "type": "string",
+      "description": "Default selected value.",
+      "examples": [
+        "pro"
+      ]
+    },
+    "result": {
+      "type": "string",
+      "description": "Variable to store the chosen option value.",
+      "minLength": 1,
+      "examples": [
+        "selectedPlan"
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "type",
+    "message",
+    "options",
+    "result"
+  ],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "name": "prompt",
+      "type": "choice",
+      "message": "Select a plan:",
+      "options": [
+        {
+          "value": "basic"
+        },
+        {
+          "value": "pro",
+          "label": "Pro Plan"
+        }
+      ],
+      "default": "pro",
+      "result": "selectedPlan"
+    }
+  ]
+}

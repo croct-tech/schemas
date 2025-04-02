@@ -1,0 +1,361 @@
+{
+  "schema": "template/action/create-resource.json",
+  "input": {
+    "name": "create-resource",
+    "resources": {
+      "audiences": {
+        "logged-in-users": {
+          "name": "Logged-in users",
+          "criteria": "user is identified"
+        },
+        "logged-out-users": {
+          "name": "Logged-out users",
+          "criteria": "user is not identified"
+        }
+      },
+      "components": {
+        "hero": {
+          "name": "Hero",
+          "description": "The hero component.",
+          "schema": {
+            "type": "structure",
+            "attributes": {
+              "title": {
+                "type": {
+                  "type": "text"
+                }
+              }
+            }
+          }
+        },
+        "top-bar": {
+          "name": "Top bar",
+          "description": "The top bar component.",
+          "schema": {
+            "type": "structure",
+            "attributes": {
+              "message": {
+                "type": {
+                  "type": "text"
+                }
+              }
+            }
+          }
+        }
+      },
+      "slots": {
+        "home-hero": {
+          "name": "Home hero",
+          "component": "hero",
+          "content": {
+            "en": {
+              "type": "structure",
+              "attributes": {
+                "title": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Welcome to our site!"
+                  }
+                }
+              }
+            },
+            "es": {
+              "type": "structure",
+              "attributes": {
+                "title": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "!Bienvenido a nuestro sitio!"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "home-top-bar": {
+          "name": "Home top bar",
+          "component": "top-bar",
+          "content": {
+            "en": {
+              "type": "structure",
+              "attributes": {
+                "message": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Hello, world!"
+                  }
+                }
+              }
+            },
+            "es": {
+              "type": "structure",
+              "attributes": {
+                "message": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "!Hola, mundo!"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "experiences": [
+        {
+          "name": "Experience for new users",
+          "draft": true,
+          "audiences": [
+            "logged-in-users",
+            "logged-out-users"
+          ],
+          "slots": [
+            "home-hero",
+            "home-top-bar"
+          ],
+          "experiment": {
+            "name": "Experiment for new users",
+            "goalId": "signup",
+            "traffic": 0.5,
+            "crossDevice": true,
+            "variants": [
+              {
+                "name": "Variant A",
+                "allocation": 0.5,
+                "baseline": true,
+                "content": {
+                  "default": {
+                    "home-hero": {
+                      "en": {
+                        "type": "structure",
+                        "attributes": {
+                          "title": {
+                            "type": "text",
+                            "value": {
+                              "type": "static",
+                              "value": "Welcome to our site!"
+                            }
+                          }
+                        }
+                      },
+                      "es": {
+                        "type": "structure",
+                        "attributes": {
+                          "title": {
+                            "type": "text",
+                            "value": {
+                              "type": "static",
+                              "value": "¡Bienvenido a nuestro sitio!"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "segmented": [
+                    {
+                      "audiences": [
+                        "logged-in-users"
+                      ],
+                      "content": {
+                        "home-hero": {
+                          "en": {
+                            "type": "structure",
+                            "attributes": {
+                              "title": {
+                                "type": "text",
+                                "value": {
+                                  "type": "static",
+                                  "value": "Welcome back!"
+                                }
+                              }
+                            }
+                          },
+                          "es": {
+                            "type": "structure",
+                            "attributes": {
+                              "title": {
+                                "type": "text",
+                                "value": {
+                                  "type": "static",
+                                  "value": "¡Bienvenido de nuevo!"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "Variant B",
+                "allocation": 0.5,
+                "content": {
+                  "default": {
+                    "home-hero": {
+                      "en": {
+                        "type": "structure",
+                        "attributes": {
+                          "title": {
+                            "type": "text",
+                            "value": {
+                              "type": "static",
+                              "value": "Discover our features!"
+                            }
+                          }
+                        }
+                      },
+                      "es": {
+                        "type": "structure",
+                        "attributes": {
+                          "title": {
+                            "type": "text",
+                            "value": {
+                              "type": "static",
+                              "value": "¡Descubre nuestras características!"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "segmented": [
+                    {
+                      "audiences": [
+                        "logged-out-users"
+                      ],
+                      "content": {
+                        "home-hero": {
+                          "en": {
+                            "type": "structure",
+                            "attributes": {
+                              "title": {
+                                "type": "text",
+                                "value": {
+                                  "type": "static",
+                                  "value": "Join us today!"
+                                }
+                              }
+                            }
+                          },
+                          "es": {
+                            "type": "structure",
+                            "attributes": {
+                              "title": {
+                                "type": "text",
+                                "value": {
+                                  "type": "static",
+                                  "value": "!Únete a nosotros hoy!"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "content": {
+            "default": {
+              "home-hero": {
+                "en": {
+                  "type": "structure",
+                  "attributes": {
+                    "title": {
+                      "type": "text",
+                      "value": {
+                        "type": "static",
+                        "value": "Welcome to our site!"
+                      }
+                    }
+                  }
+                },
+                "es": {
+                  "type": "structure",
+                  "attributes": {
+                    "title": {
+                      "type": "text",
+                      "value": {
+                        "type": "static",
+                        "value": "!Bienvenido a nuestro sitio!"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "segmented": [
+              {
+                "audiences": [
+                  "logged-in-users"
+                ],
+                "content": {
+                  "home-hero": {
+                    "en": {
+                      "type": "structure",
+                      "attributes": {
+                        "title": {
+                          "type": "text",
+                          "value": {
+                            "type": "static",
+                            "value": "Welcome back!"
+                          }
+                        }
+                      }
+                    },
+                    "es": {
+                      "type": "structure",
+                      "attributes": {
+                        "title": {
+                          "type": "text",
+                          "value": {
+                            "type": "static",
+                            "value": "!Bienvenido de nuevo!"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "result": {
+      "audiences": {
+        "logged-in-users": "loggedInUsersId"
+      },
+      "components": {
+        "hero": {
+          "id": "heroId",
+          "version": "heroVersion"
+        }
+      },
+      "slots": {
+        "home-hero": {
+          "id": "homeHeroId",
+          "version": "homeHeroVersion"
+        }
+      },
+      "experiences": {
+        "0": "experienceId"
+      },
+      "experiments": {
+        "0": "experimentId"
+      }
+    }
+  },
+  "errors": [
+  ]
+}

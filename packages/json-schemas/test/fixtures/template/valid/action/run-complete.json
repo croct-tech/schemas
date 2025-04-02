@@ -1,0 +1,12 @@
+{
+  "schema": "template/action/run.json",
+  "input": {
+    "name": "run",
+    "actions": {
+      "name": "print",
+      "message": "Step 1"
+    }
+  },
+  "errors": [
+  ]
+}

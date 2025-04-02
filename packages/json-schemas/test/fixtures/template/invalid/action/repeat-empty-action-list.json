@@ -1,0 +1,38 @@
+{
+  "schema": "template/action/repeat.json",
+  "allErrors": true,
+  "input": {
+    "name": "repeat",
+    "condition": "${this.retryCount < 3}",
+    "actions": []
+  },
+  "errors": [
+    {
+      "instancePath": "/actions",
+      "keyword": "type",
+      "message": "must be object",
+      "params": {
+        "type": "object"
+      },
+      "schemaPath": "#/properties/actions/oneOf/0/type"
+    },
+    {
+      "instancePath": "/actions",
+      "keyword": "oneOf",
+      "message": "must match exactly one schema in oneOf",
+      "params": {
+        "passingSchemas": null
+      },
+      "schemaPath": "#/oneOf"
+    },
+    {
+      "instancePath": "/actions",
+      "keyword": "minItems",
+      "message": "must NOT have fewer than 1 items",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/actions/oneOf/1/minItems"
+    }
+  ]
+}

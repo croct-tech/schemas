@@ -1,0 +1,20 @@
+{
+  "schema": "template/action/define.json",
+  "allErrors": true,
+  "input": {
+    "name": "define",
+    "variables": {
+    }
+  },
+  "errors": [
+    {
+      "instancePath": "/variables",
+      "keyword": "minProperties",
+      "message": "must NOT have fewer than 1 properties",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/variables/minProperties"
+    }
+  ]
+}

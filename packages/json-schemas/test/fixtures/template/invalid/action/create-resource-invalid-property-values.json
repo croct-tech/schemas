@@ -1,0 +1,1289 @@
+{
+  "schema": "template/action/create-resource.json",
+  "allErrors": true,
+  "input": {
+    "name": "test",
+    "resources": {
+      "extra": true,
+      "audiences": {
+        "123": {
+          "name": "",
+          "criteria": "",
+          "extra": true
+        }
+      },
+      "components": {
+        "123": {
+          "name": "",
+          "description": "",
+          "schema": {},
+          "extra": true
+        }
+      },
+      "slots": {
+        "123": {
+          "name": "",
+          "description": "",
+          "component": "",
+          "content": {
+            "": {}
+          },
+          "extra": true
+        }
+      },
+      "experiences": [
+        {
+          "name": "",
+          "audiences": [
+            ""
+          ],
+          "slots": [
+            ""
+          ],
+          "experiment": {
+            "name": "",
+            "goalId": "",
+            "traffic": -1,
+            "variants": [
+              {
+                "name": "",
+                "allocation": -1,
+                "content": {
+                  "default": {
+                    "": {
+                      "": {}
+                    }
+                  },
+                  "segmented": [
+                    {
+                      "audiences": [
+                        ""
+                      ],
+                      "content": {
+                        "": {
+                          "": {}
+                        }
+                      },
+                      "extra": true
+                    }
+                  ],
+                  "extra": true
+                },
+                "extra": true
+              }
+            ],
+            "extra": true
+          },
+          "content": {
+            "default": {
+              "": {
+                "": {}
+              }
+            },
+            "segmented": [
+              {
+                "audiences": [
+                  ""
+                ],
+                "content": {
+                  "": {
+                    "": {}
+                  }
+                },
+                "extra": true
+              }
+            ],
+            "extra": true
+          },
+          "extra": true
+        }
+      ]
+    },
+    "result": {
+      "audiences": {
+        "": ""
+      },
+      "components": {
+        "": {
+          "id": "",
+          "name": "",
+          "extra": true
+        }
+      },
+      "slots": {
+        "": {
+          "id": "",
+          "name": "",
+          "extra": true
+        }
+      },
+      "experiences": {
+        "": ""
+      },
+      "experiments": {
+        "": ""
+      },
+      "extra": true
+    }
+  },
+  "errors": [
+    {
+      "instancePath": "/name",
+      "keyword": "const",
+      "message": "must be equal to constant",
+      "params": {
+        "allowedValue": "create-resource"
+      },
+      "schemaPath": "#/properties/name/const"
+    },
+    {
+      "instancePath": "/resources",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "extra"
+      },
+      "schemaPath": "#/properties/resources/additionalProperties"
+    },
+    {
+      "instancePath": "/resources/audiences",
+      "keyword": "pattern",
+      "message": "must match pattern \"^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$\"",
+      "params": {
+        "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$"
+      },
+      "propertyName": "123",
+      "schemaPath": "#/properties/resources/properties/audiences/propertyNames/pattern"
+    },
+    {
+      "instancePath": "/resources/audiences",
+      "keyword": "propertyNames",
+      "message": "property name must be valid",
+      "params": {
+        "propertyName": "123"
+      },
+      "schemaPath": "#/properties/resources/properties/audiences/propertyNames"
+    },
+    {
+      "instancePath": "/resources/audiences/123",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "extra"
+      },
+      "schemaPath": "#/properties/resources/properties/audiences/additionalProperties/additionalProperties"
+    },
+    {
+      "instancePath": "/resources/audiences/123/name",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/resources/properties/audiences/additionalProperties/properties/name/minLength"
+    },
+    {
+      "instancePath": "/resources/audiences/123/criteria",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/resources/properties/audiences/additionalProperties/properties/criteria/minLength"
+    },
+    {
+      "instancePath": "/resources/components",
+      "keyword": "pattern",
+      "message": "must match pattern \"^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$\"",
+      "params": {
+        "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$"
+      },
+      "propertyName": "123",
+      "schemaPath": "#/properties/resources/properties/components/propertyNames/pattern"
+    },
+    {
+      "instancePath": "/resources/components",
+      "keyword": "propertyNames",
+      "message": "property name must be valid",
+      "params": {
+        "propertyName": "123"
+      },
+      "schemaPath": "#/properties/resources/properties/components/propertyNames"
+    },
+    {
+      "instancePath": "/resources/components/123",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "extra"
+      },
+      "schemaPath": "#/properties/resources/properties/components/additionalProperties/additionalProperties"
+    },
+    {
+      "instancePath": "/resources/components/123/name",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/resources/properties/components/additionalProperties/properties/name/minLength"
+    },
+    {
+      "instancePath": "/resources/components/123/description",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/resources/properties/components/additionalProperties/properties/description/minLength"
+    },
+    {
+      "instancePath": "/resources/components/123/schema",
+      "keyword": "required",
+      "message": "must have required property 'type'",
+      "params": {
+        "missingProperty": "type"
+      },
+      "schemaPath": "#/required"
+    },
+    {
+      "instancePath": "/resources/components/123/schema",
+      "keyword": "required",
+      "message": "must have required property 'attributes'",
+      "params": {
+        "missingProperty": "attributes"
+      },
+      "schemaPath": "#/required"
+    },
+    {
+      "instancePath": "/resources/components/123/schema",
+      "keyword": "required",
+      "message": "must have required property 'types'",
+      "params": {
+        "missingProperty": "types"
+      },
+      "schemaPath": "#/required"
+    },
+    {
+      "instancePath": "/resources/components/123/schema",
+      "keyword": "required",
+      "message": "must have required property 'format'",
+      "params": {
+        "missingProperty": "format"
+      },
+      "schemaPath": "#/$defs/text/oneOf/1/required"
+    },
+    {
+      "instancePath": "/resources/components/123/schema",
+      "keyword": "required",
+      "message": "must have required property 'pattern'",
+      "params": {
+        "missingProperty": "pattern"
+      },
+      "schemaPath": "#/$defs/text/oneOf/2/required"
+    },
+    {
+      "instancePath": "/resources/components/123/schema",
+      "keyword": "required",
+      "message": "must have required property 'choices'",
+      "params": {
+        "missingProperty": "choices"
+      },
+      "schemaPath": "#/$defs/text/oneOf/3/required"
+    },
+    {
+      "instancePath": "/resources/components/123/schema",
+      "keyword": "required",
+      "message": "must have required property 'minimumLength'",
+      "params": {
+        "missingProperty": "minimumLength"
+      },
+      "schemaPath": "#/$defs/text/oneOf/4/required"
+    },
+    {
+      "instancePath": "/resources/components/123/schema",
+      "keyword": "required",
+      "message": "must have required property 'maximumLength'",
+      "params": {
+        "missingProperty": "maximumLength"
+      },
+      "schemaPath": "#/$defs/text/oneOf/5/required"
+    },
+    {
+      "instancePath": "/resources/components/123/schema",
+      "keyword": "oneOf",
+      "message": "must match exactly one schema in oneOf",
+      "params": {
+        "passingSchemas": null
+      },
+      "schemaPath": "#/$defs/text/oneOf"
+    },
+    {
+      "instancePath": "/resources/components/123/schema",
+      "keyword": "required",
+      "message": "must have required property 'items'",
+      "params": {
+        "missingProperty": "items"
+      },
+      "schemaPath": "#/required"
+    },
+    {
+      "instancePath": "/resources/components/123/schema",
+      "keyword": "required",
+      "message": "must have required property 'id'",
+      "params": {
+        "missingProperty": "id"
+      },
+      "schemaPath": "#/$defs/reference/required"
+    },
+    {
+      "instancePath": "/resources/slots",
+      "keyword": "pattern",
+      "message": "must match pattern \"^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$\"",
+      "params": {
+        "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$"
+      },
+      "propertyName": "123",
+      "schemaPath": "#/properties/resources/properties/slots/propertyNames/pattern"
+    },
+    {
+      "instancePath": "/resources/slots",
+      "keyword": "propertyNames",
+      "message": "property name must be valid",
+      "params": {
+        "propertyName": "123"
+      },
+      "schemaPath": "#/properties/resources/properties/slots/propertyNames"
+    },
+    {
+      "instancePath": "/resources/slots/123",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "description"
+      },
+      "schemaPath": "#/properties/resources/properties/slots/additionalProperties/additionalProperties"
+    },
+    {
+      "instancePath": "/resources/slots/123/name",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/resources/properties/slots/additionalProperties/properties/name/minLength"
+    },
+    {
+      "instancePath": "/resources/slots/123/component",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/resources/properties/slots/additionalProperties/properties/component/minLength"
+    },
+    {
+      "instancePath": "/resources/slots/123/component",
+      "keyword": "pattern",
+      "message": "must match pattern \"^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$\"",
+      "params": {
+        "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$"
+      },
+      "schemaPath": "#/properties/resources/properties/slots/additionalProperties/properties/component/pattern"
+    },
+    {
+      "instancePath": "/resources/slots/123/content",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "propertyName": "",
+      "schemaPath": "#/propertyNames/minLength"
+    },
+    {
+      "instancePath": "/resources/slots/123/content",
+      "keyword": "pattern",
+      "message": "must match pattern \"^[a-zA-Z]{2,3}([-_][a-zA-Z]{2,3})?$\"",
+      "params": {
+        "pattern": "^[a-zA-Z]{2,3}([-_][a-zA-Z]{2,3})?$"
+      },
+      "propertyName": "",
+      "schemaPath": "#/propertyNames/pattern"
+    },
+    {
+      "instancePath": "/resources/slots/123/content",
+      "keyword": "propertyNames",
+      "message": "property name must be valid",
+      "params": {
+        "propertyName": ""
+      },
+      "schemaPath": "#/propertyNames"
+    },
+    {
+      "instancePath": "/resources/slots/123/content/",
+      "keyword": "required",
+      "message": "must have required property 'type'",
+      "params": {
+        "missingProperty": "type"
+      },
+      "schemaPath": "#/oneOf/0/required"
+    },
+    {
+      "instancePath": "/resources/slots/123/content/",
+      "keyword": "required",
+      "message": "must have required property 'value'",
+      "params": {
+        "missingProperty": "value"
+      },
+      "schemaPath": "#/oneOf/0/required"
+    },
+    {
+      "instancePath": "/resources/slots/123/content/",
+      "keyword": "required",
+      "message": "must have required property 'attributes'",
+      "params": {
+        "missingProperty": "attributes"
+      },
+      "schemaPath": "#/oneOf/3/required"
+    },
+    {
+      "instancePath": "/resources/slots/123/content/",
+      "keyword": "required",
+      "message": "must have required property 'items'",
+      "params": {
+        "missingProperty": "items"
+      },
+      "schemaPath": "#/oneOf/4/required"
+    },
+    {
+      "instancePath": "/resources/slots/123/content/",
+      "keyword": "oneOf",
+      "message": "must match exactly one schema in oneOf",
+      "params": {
+        "passingSchemas": null
+      },
+      "schemaPath": "#/oneOf"
+    },
+    {
+      "instancePath": "/resources/experiences/0",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "extra"
+      },
+      "schemaPath": "#/properties/resources/properties/experiences/items/additionalProperties"
+    },
+    {
+      "instancePath": "/resources/experiences/0/name",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/resources/properties/experiences/items/properties/name/minLength"
+    },
+    {
+      "instancePath": "/resources/experiences/0/audiences/0",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/resources/properties/experiences/items/properties/audiences/items/minLength"
+    },
+    {
+      "instancePath": "/resources/experiences/0/audiences/0",
+      "keyword": "pattern",
+      "message": "must match pattern \"^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$\"",
+      "params": {
+        "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$"
+      },
+      "schemaPath": "#/properties/resources/properties/experiences/items/properties/audiences/items/pattern"
+    },
+    {
+      "instancePath": "/resources/experiences/0/slots/0",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/resources/properties/experiences/items/properties/slots/items/minLength"
+    },
+    {
+      "instancePath": "/resources/experiences/0/slots/0",
+      "keyword": "pattern",
+      "message": "must match pattern \"^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$\"",
+      "params": {
+        "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$"
+      },
+      "schemaPath": "#/properties/resources/properties/experiences/items/properties/slots/items/pattern"
+    },
+    {
+      "instancePath": "/resources/experiences/0/experiment",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "extra"
+      },
+      "schemaPath": "#/properties/resources/properties/experiences/items/properties/experiment/additionalProperties"
+    },
+    {
+      "instancePath": "/resources/experiences/0/experiment/name",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/resources/properties/experiences/items/properties/experiment/properties/name/minLength"
+    },
+    {
+      "instancePath": "/resources/experiences/0/experiment/goalId",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/resources/properties/experiences/items/properties/experiment/properties/goalId/minLength"
+    },
+    {
+      "instancePath": "/resources/experiences/0/experiment/goalId",
+      "keyword": "pattern",
+      "message": "must match pattern \"^[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*$\"",
+      "params": {
+        "pattern": "^[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*$"
+      },
+      "schemaPath": "#/properties/resources/properties/experiences/items/properties/experiment/properties/goalId/pattern"
+    },
+    {
+      "instancePath": "/resources/experiences/0/experiment/traffic",
+      "keyword": "minimum",
+      "message": "must be >= 0",
+      "params": {
+        "comparison": ">=",
+        "limit": 0
+      },
+      "schemaPath": "#/properties/resources/properties/experiences/items/properties/experiment/properties/traffic/minimum"
+    },
+    {
+      "instancePath": "/resources/experiences/0/experiment/variants",
+      "keyword": "minItems",
+      "message": "must NOT have fewer than 2 items",
+      "params": {
+        "limit": 2
+      },
+      "schemaPath": "#/properties/resources/properties/experiences/items/properties/experiment/properties/variants/minItems"
+    },
+    {
+      "instancePath": "/resources/experiences/0/experiment/variants/0",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "extra"
+      },
+      "schemaPath": "#/properties/resources/properties/experiences/items/properties/experiment/properties/variants/items/additionalProperties"
+    },
+    {
+      "instancePath": "/resources/experiences/0/experiment/variants/0/name",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/resources/properties/experiences/items/properties/experiment/properties/variants/items/properties/name/minLength"
+    },
+    {
+      "instancePath": "/resources/experiences/0/experiment/variants/0/content/default",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "propertyName": "",
+      "schemaPath": "#/propertyNames/minLength"
+    },
+    {
+      "instancePath": "/resources/experiences/0/experiment/variants/0/content/default",
+      "keyword": "pattern",
+      "message": "must match pattern \"^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$\"",
+      "params": {
+        "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$"
+      },
+      "propertyName": "",
+      "schemaPath": "#/propertyNames/pattern"
+    },
+    {
+      "instancePath": "/resources/experiences/0/experiment/variants/0/content/default",
+      "keyword": "propertyNames",
+      "message": "property name must be valid",
+      "params": {
+        "propertyName": ""
+      },
+      "schemaPath": "#/propertyNames"
+    },
+    {
+      "instancePath": "/resources/experiences/0/experiment/variants/0/content/default/",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "propertyName": "",
+      "schemaPath": "#/propertyNames/minLength"
+    },
+    {
+      "instancePath": "/resources/experiences/0/experiment/variants/0/content/default/",
+      "keyword": "pattern",
+      "message": "must match pattern \"^[a-zA-Z]{2,3}([-_][a-zA-Z]{2,3})?$\"",
+      "params": {
+        "pattern": "^[a-zA-Z]{2,3}([-_][a-zA-Z]{2,3})?$"
+      },
+      "propertyName": "",
+      "schemaPath": "#/propertyNames/pattern"
+    },
+    {
+      "instancePath": "/resources/experiences/0/experiment/variants/0/content/default/",
+      "keyword": "propertyNames",
+      "message": "property name must be valid",
+      "params": {
+        "propertyName": ""
+      },
+      "schemaPath": "#/propertyNames"
+    },
+    {
+      "instancePath": "/resources/experiences/0/experiment/variants/0/content/default//",
+      "keyword": "required",
+      "message": "must have required property 'type'",
+      "params": {
+        "missingProperty": "type"
+      },
+      "schemaPath": "#/oneOf/0/required"
+    },
+    {
+      "instancePath": "/resources/experiences/0/experiment/variants/0/content/default//",
+      "keyword": "required",
+      "message": "must have required property 'value'",
+      "params": {
+        "missingProperty": "value"
+      },
+      "schemaPath": "#/oneOf/0/required"
+    },
+    {
+      "instancePath": "/resources/experiences/0/experiment/variants/0/content/default//",
+      "keyword": "required",
+      "message": "must have required property 'attributes'",
+      "params": {
+        "missingProperty": "attributes"
+      },
+      "schemaPath": "#/oneOf/3/required"
+    },
+    {
+      "instancePath": "/resources/experiences/0/experiment/variants/0/content/default//",
+      "keyword": "required",
+      "message": "must have required property 'items'",
+      "params": {
+        "missingProperty": "items"
+      },
+      "schemaPath": "#/oneOf/4/required"
+    },
+    {
+      "instancePath": "/resources/experiences/0/experiment/variants/0/content/default//",
+      "keyword": "oneOf",
+      "message": "must match exactly one schema in oneOf",
+      "params": {
+        "passingSchemas": null
+      },
+      "schemaPath": "#/oneOf"
+    },
+    {
+      "instancePath": "/resources/experiences/0/experiment/variants/0/content/segmented/0",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "extra"
+      },
+      "schemaPath": "#/properties/segmented/items/additionalProperties"
+    },
+    {
+      "instancePath": "/resources/experiences/0/experiment/variants/0/content/segmented/0/audiences/0",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/segmented/items/properties/audiences/items/minLength"
+    },
+    {
+      "instancePath": "/resources/experiences/0/experiment/variants/0/content/segmented/0/audiences/0",
+      "keyword": "pattern",
+      "message": "must match pattern \"^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$\"",
+      "params": {
+        "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$"
+      },
+      "schemaPath": "#/properties/segmented/items/properties/audiences/items/pattern"
+    },
+    {
+      "instancePath": "/resources/experiences/0/experiment/variants/0/content/segmented/0/content",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "propertyName": "",
+      "schemaPath": "#/propertyNames/minLength"
+    },
+    {
+      "instancePath": "/resources/experiences/0/experiment/variants/0/content/segmented/0/content",
+      "keyword": "pattern",
+      "message": "must match pattern \"^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$\"",
+      "params": {
+        "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$"
+      },
+      "propertyName": "",
+      "schemaPath": "#/propertyNames/pattern"
+    },
+    {
+      "instancePath": "/resources/experiences/0/experiment/variants/0/content/segmented/0/content",
+      "keyword": "propertyNames",
+      "message": "property name must be valid",
+      "params": {
+        "propertyName": ""
+      },
+      "schemaPath": "#/propertyNames"
+    },
+    {
+      "instancePath": "/resources/experiences/0/experiment/variants/0/content/segmented/0/content/",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "propertyName": "",
+      "schemaPath": "#/propertyNames/minLength"
+    },
+    {
+      "instancePath": "/resources/experiences/0/experiment/variants/0/content/segmented/0/content/",
+      "keyword": "pattern",
+      "message": "must match pattern \"^[a-zA-Z]{2,3}([-_][a-zA-Z]{2,3})?$\"",
+      "params": {
+        "pattern": "^[a-zA-Z]{2,3}([-_][a-zA-Z]{2,3})?$"
+      },
+      "propertyName": "",
+      "schemaPath": "#/propertyNames/pattern"
+    },
+    {
+      "instancePath": "/resources/experiences/0/experiment/variants/0/content/segmented/0/content/",
+      "keyword": "propertyNames",
+      "message": "property name must be valid",
+      "params": {
+        "propertyName": ""
+      },
+      "schemaPath": "#/propertyNames"
+    },
+    {
+      "instancePath": "/resources/experiences/0/experiment/variants/0/content/segmented/0/content//",
+      "keyword": "required",
+      "message": "must have required property 'type'",
+      "params": {
+        "missingProperty": "type"
+      },
+      "schemaPath": "#/oneOf/0/required"
+    },
+    {
+      "instancePath": "/resources/experiences/0/experiment/variants/0/content/segmented/0/content//",
+      "keyword": "required",
+      "message": "must have required property 'value'",
+      "params": {
+        "missingProperty": "value"
+      },
+      "schemaPath": "#/oneOf/0/required"
+    },
+    {
+      "instancePath": "/resources/experiences/0/experiment/variants/0/content/segmented/0/content//",
+      "keyword": "required",
+      "message": "must have required property 'attributes'",
+      "params": {
+        "missingProperty": "attributes"
+      },
+      "schemaPath": "#/oneOf/3/required"
+    },
+    {
+      "instancePath": "/resources/experiences/0/experiment/variants/0/content/segmented/0/content//",
+      "keyword": "required",
+      "message": "must have required property 'items'",
+      "params": {
+        "missingProperty": "items"
+      },
+      "schemaPath": "#/oneOf/4/required"
+    },
+    {
+      "instancePath": "/resources/experiences/0/experiment/variants/0/content/segmented/0/content//",
+      "keyword": "oneOf",
+      "message": "must match exactly one schema in oneOf",
+      "params": {
+        "passingSchemas": null
+      },
+      "schemaPath": "#/oneOf"
+    },
+    {
+      "instancePath": "/resources/experiences/0/experiment/variants/0/allocation",
+      "keyword": "minimum",
+      "message": "must be >= 0",
+      "params": {
+        "comparison": ">=",
+        "limit": 0
+      },
+      "schemaPath": "#/properties/resources/properties/experiences/items/properties/experiment/properties/variants/items/properties/allocation/minimum"
+    },
+    {
+      "instancePath": "/resources/experiences/0/content/default",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "propertyName": "",
+      "schemaPath": "#/propertyNames/minLength"
+    },
+    {
+      "instancePath": "/resources/experiences/0/content/default",
+      "keyword": "pattern",
+      "message": "must match pattern \"^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$\"",
+      "params": {
+        "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$"
+      },
+      "propertyName": "",
+      "schemaPath": "#/propertyNames/pattern"
+    },
+    {
+      "instancePath": "/resources/experiences/0/content/default",
+      "keyword": "propertyNames",
+      "message": "property name must be valid",
+      "params": {
+        "propertyName": ""
+      },
+      "schemaPath": "#/propertyNames"
+    },
+    {
+      "instancePath": "/resources/experiences/0/content/default/",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "propertyName": "",
+      "schemaPath": "#/propertyNames/minLength"
+    },
+    {
+      "instancePath": "/resources/experiences/0/content/default/",
+      "keyword": "pattern",
+      "message": "must match pattern \"^[a-zA-Z]{2,3}([-_][a-zA-Z]{2,3})?$\"",
+      "params": {
+        "pattern": "^[a-zA-Z]{2,3}([-_][a-zA-Z]{2,3})?$"
+      },
+      "propertyName": "",
+      "schemaPath": "#/propertyNames/pattern"
+    },
+    {
+      "instancePath": "/resources/experiences/0/content/default/",
+      "keyword": "propertyNames",
+      "message": "property name must be valid",
+      "params": {
+        "propertyName": ""
+      },
+      "schemaPath": "#/propertyNames"
+    },
+    {
+      "instancePath": "/resources/experiences/0/content/default//",
+      "keyword": "required",
+      "message": "must have required property 'type'",
+      "params": {
+        "missingProperty": "type"
+      },
+      "schemaPath": "#/oneOf/0/required"
+    },
+    {
+      "instancePath": "/resources/experiences/0/content/default//",
+      "keyword": "required",
+      "message": "must have required property 'value'",
+      "params": {
+        "missingProperty": "value"
+      },
+      "schemaPath": "#/oneOf/0/required"
+    },
+    {
+      "instancePath": "/resources/experiences/0/content/default//",
+      "keyword": "required",
+      "message": "must have required property 'attributes'",
+      "params": {
+        "missingProperty": "attributes"
+      },
+      "schemaPath": "#/oneOf/3/required"
+    },
+    {
+      "instancePath": "/resources/experiences/0/content/default//",
+      "keyword": "required",
+      "message": "must have required property 'items'",
+      "params": {
+        "missingProperty": "items"
+      },
+      "schemaPath": "#/oneOf/4/required"
+    },
+    {
+      "instancePath": "/resources/experiences/0/content/default//",
+      "keyword": "oneOf",
+      "message": "must match exactly one schema in oneOf",
+      "params": {
+        "passingSchemas": null
+      },
+      "schemaPath": "#/oneOf"
+    },
+    {
+      "instancePath": "/resources/experiences/0/content/segmented/0",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "extra"
+      },
+      "schemaPath": "#/properties/segmented/items/additionalProperties"
+    },
+    {
+      "instancePath": "/resources/experiences/0/content/segmented/0/audiences/0",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/segmented/items/properties/audiences/items/minLength"
+    },
+    {
+      "instancePath": "/resources/experiences/0/content/segmented/0/audiences/0",
+      "keyword": "pattern",
+      "message": "must match pattern \"^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$\"",
+      "params": {
+        "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$"
+      },
+      "schemaPath": "#/properties/segmented/items/properties/audiences/items/pattern"
+    },
+    {
+      "instancePath": "/resources/experiences/0/content/segmented/0/content",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "propertyName": "",
+      "schemaPath": "#/propertyNames/minLength"
+    },
+    {
+      "instancePath": "/resources/experiences/0/content/segmented/0/content",
+      "keyword": "pattern",
+      "message": "must match pattern \"^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$\"",
+      "params": {
+        "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$"
+      },
+      "propertyName": "",
+      "schemaPath": "#/propertyNames/pattern"
+    },
+    {
+      "instancePath": "/resources/experiences/0/content/segmented/0/content",
+      "keyword": "propertyNames",
+      "message": "property name must be valid",
+      "params": {
+        "propertyName": ""
+      },
+      "schemaPath": "#/propertyNames"
+    },
+    {
+      "instancePath": "/resources/experiences/0/content/segmented/0/content/",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "propertyName": "",
+      "schemaPath": "#/propertyNames/minLength"
+    },
+    {
+      "instancePath": "/resources/experiences/0/content/segmented/0/content/",
+      "keyword": "pattern",
+      "message": "must match pattern \"^[a-zA-Z]{2,3}([-_][a-zA-Z]{2,3})?$\"",
+      "params": {
+        "pattern": "^[a-zA-Z]{2,3}([-_][a-zA-Z]{2,3})?$"
+      },
+      "propertyName": "",
+      "schemaPath": "#/propertyNames/pattern"
+    },
+    {
+      "instancePath": "/resources/experiences/0/content/segmented/0/content/",
+      "keyword": "propertyNames",
+      "message": "property name must be valid",
+      "params": {
+        "propertyName": ""
+      },
+      "schemaPath": "#/propertyNames"
+    },
+    {
+      "instancePath": "/resources/experiences/0/content/segmented/0/content//",
+      "keyword": "required",
+      "message": "must have required property 'type'",
+      "params": {
+        "missingProperty": "type"
+      },
+      "schemaPath": "#/oneOf/0/required"
+    },
+    {
+      "instancePath": "/resources/experiences/0/content/segmented/0/content//",
+      "keyword": "required",
+      "message": "must have required property 'value'",
+      "params": {
+        "missingProperty": "value"
+      },
+      "schemaPath": "#/oneOf/0/required"
+    },
+    {
+      "instancePath": "/resources/experiences/0/content/segmented/0/content//",
+      "keyword": "required",
+      "message": "must have required property 'attributes'",
+      "params": {
+        "missingProperty": "attributes"
+      },
+      "schemaPath": "#/oneOf/3/required"
+    },
+    {
+      "instancePath": "/resources/experiences/0/content/segmented/0/content//",
+      "keyword": "required",
+      "message": "must have required property 'items'",
+      "params": {
+        "missingProperty": "items"
+      },
+      "schemaPath": "#/oneOf/4/required"
+    },
+    {
+      "instancePath": "/resources/experiences/0/content/segmented/0/content//",
+      "keyword": "oneOf",
+      "message": "must match exactly one schema in oneOf",
+      "params": {
+        "passingSchemas": null
+      },
+      "schemaPath": "#/oneOf"
+    },
+    {
+      "instancePath": "/result",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "extra"
+      },
+      "schemaPath": "#/properties/result/additionalProperties"
+    },
+    {
+      "instancePath": "/result/audiences",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "propertyName": "",
+      "schemaPath": "#/properties/result/properties/audiences/propertyNames/minLength"
+    },
+    {
+      "instancePath": "/result/audiences",
+      "keyword": "pattern",
+      "message": "must match pattern \"^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$\"",
+      "params": {
+        "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$"
+      },
+      "propertyName": "",
+      "schemaPath": "#/properties/result/properties/audiences/propertyNames/pattern"
+    },
+    {
+      "instancePath": "/result/audiences",
+      "keyword": "propertyNames",
+      "message": "property name must be valid",
+      "params": {
+        "propertyName": ""
+      },
+      "schemaPath": "#/properties/result/properties/audiences/propertyNames"
+    },
+    {
+      "instancePath": "/result/audiences/",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/result/properties/audiences/additionalProperties/minLength"
+    },
+    {
+      "instancePath": "/result/components",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "propertyName": "",
+      "schemaPath": "#/properties/result/properties/components/propertyNames/minLength"
+    },
+    {
+      "instancePath": "/result/components",
+      "keyword": "pattern",
+      "message": "must match pattern \"^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$\"",
+      "params": {
+        "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$"
+      },
+      "propertyName": "",
+      "schemaPath": "#/properties/result/properties/components/propertyNames/pattern"
+    },
+    {
+      "instancePath": "/result/components",
+      "keyword": "propertyNames",
+      "message": "property name must be valid",
+      "params": {
+        "propertyName": ""
+      },
+      "schemaPath": "#/properties/result/properties/components/propertyNames"
+    },
+    {
+      "instancePath": "/result/components/",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "name"
+      },
+      "schemaPath": "#/properties/result/properties/components/additionalProperties/additionalProperties"
+    },
+    {
+      "instancePath": "/result/components//id",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/result/properties/components/additionalProperties/properties/id/minLength"
+    },
+    {
+      "instancePath": "/result/slots",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "propertyName": "",
+      "schemaPath": "#/properties/result/properties/slots/propertyNames/minLength"
+    },
+    {
+      "instancePath": "/result/slots",
+      "keyword": "pattern",
+      "message": "must match pattern \"^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$\"",
+      "params": {
+        "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$"
+      },
+      "propertyName": "",
+      "schemaPath": "#/properties/result/properties/slots/propertyNames/pattern"
+    },
+    {
+      "instancePath": "/result/slots",
+      "keyword": "propertyNames",
+      "message": "property name must be valid",
+      "params": {
+        "propertyName": ""
+      },
+      "schemaPath": "#/properties/result/properties/slots/propertyNames"
+    },
+    {
+      "instancePath": "/result/slots/",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "name"
+      },
+      "schemaPath": "#/properties/result/properties/slots/additionalProperties/additionalProperties"
+    },
+    {
+      "instancePath": "/result/slots//id",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/result/properties/slots/additionalProperties/properties/id/minLength"
+    },
+    {
+      "instancePath": "/result/experiences",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "propertyName": "",
+      "schemaPath": "#/properties/result/properties/experiences/propertyNames/minLength"
+    },
+    {
+      "instancePath": "/result/experiences",
+      "keyword": "pattern",
+      "message": "must match pattern \"^[0-9]+$\"",
+      "params": {
+        "pattern": "^[0-9]+$"
+      },
+      "propertyName": "",
+      "schemaPath": "#/properties/result/properties/experiences/propertyNames/pattern"
+    },
+    {
+      "instancePath": "/result/experiences",
+      "keyword": "propertyNames",
+      "message": "property name must be valid",
+      "params": {
+        "propertyName": ""
+      },
+      "schemaPath": "#/properties/result/properties/experiences/propertyNames"
+    },
+    {
+      "instancePath": "/result/experiences/",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/result/properties/experiences/additionalProperties/minLength"
+    },
+    {
+      "instancePath": "/result/experiments",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "propertyName": "",
+      "schemaPath": "#/properties/result/properties/experiments/propertyNames/minLength"
+    },
+    {
+      "instancePath": "/result/experiments",
+      "keyword": "pattern",
+      "message": "must match pattern \"^[0-9]+$\"",
+      "params": {
+        "pattern": "^[0-9]+$"
+      },
+      "propertyName": "",
+      "schemaPath": "#/properties/result/properties/experiments/propertyNames/pattern"
+    },
+    {
+      "instancePath": "/result/experiments",
+      "keyword": "propertyNames",
+      "message": "property name must be valid",
+      "params": {
+        "propertyName": ""
+      },
+      "schemaPath": "#/properties/result/properties/experiments/propertyNames"
+    },
+    {
+      "instancePath": "/result/experiments/",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/result/properties/experiments/additionalProperties/minLength"
+    }
+  ]
+}

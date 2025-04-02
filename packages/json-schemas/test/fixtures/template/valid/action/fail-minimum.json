@@ -1,0 +1,9 @@
+{
+  "schema": "template/action/fail.json",
+  "input": {
+    "name": "fail",
+    "message": "The project is missing a valid configuration file."
+  },
+  "errors": [
+  ]
+}

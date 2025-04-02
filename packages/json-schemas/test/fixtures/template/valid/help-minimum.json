@@ -1,0 +1,8 @@
+{
+  "schema": "template/help.json",
+  "input": {
+    "message": "The project is missing a valid configuration file."
+  },
+  "errors": [
+  ]
+}

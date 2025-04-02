@@ -1,0 +1,26 @@
+{
+  "schema": "template/action/execute-package.json",
+  "input": {
+    "name": "execute-package",
+    "package": "create-react-app",
+    "runner": "npm",
+    "interactions": [
+      {
+        "when": "What is your name?",
+        "then": [
+          "John Doe"
+        ],
+        "final": false
+      },
+      {
+        "when": "What is your age?",
+        "then": [
+          "25"
+        ],
+        "final": true
+      }
+    ]
+  },
+  "errors": [
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "schema": "template/action/execute-package.json",
+  "input": {
+    "name": "execute-package",
+    "package": "create-react-app",
+    "interactions": [
+      {
+        "when": "What is your name?"
+      }
+    ]
+  },
+  "errors": [
+    {
+      "instancePath": "/interactions/0",
+      "keyword": "required",
+      "message": "must have required property 'then'",
+      "params": {
+        "missingProperty": "then"
+      },
+      "schemaPath": "#/properties/interactions/items/anyOf/0/required"
+    },
+    {
+      "instancePath": "/interactions/0",
+      "keyword": "required",
+      "message": "must have required property 'final'",
+      "params": {
+        "missingProperty": "final"
+      },
+      "schemaPath": "#/properties/interactions/items/anyOf/2/required"
+    },
+    {
+      "instancePath": "/interactions/0",
+      "keyword": "anyOf",
+      "message": "must match a schema in anyOf",
+      "params": {},
+      "schemaPath": "#/properties/interactions/items/anyOf"
+    }
+  ]
+}
