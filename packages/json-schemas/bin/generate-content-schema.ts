@@ -1,7 +1,7 @@
 #!/usr/bin/env tsx
 
 import {writeFileSync} from 'fs';
-import {generateSchema} from "../scripts/content-schema-generator";
+import {generateSchema} from '../scripts/content-schema-generator';
 
 const schemaPath = process.argv[2];
 

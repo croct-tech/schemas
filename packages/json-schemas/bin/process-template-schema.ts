@@ -1,7 +1,7 @@
 #!/usr/bin/env tsx
 
-import {readFileSync, writeFileSync} from "fs";
-import {transformSchema} from "../scripts/template-schema-transformer";
+import {readFileSync, writeFileSync} from 'fs';
+import {transformSchema} from '../scripts/template-schema-transformer';
 
 const schemaPath = process.argv[2];
 const outputPath = process.argv[3];

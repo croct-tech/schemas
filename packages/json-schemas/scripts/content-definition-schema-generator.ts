@@ -73,7 +73,6 @@ export function generateSchema(): JSONSchema.Object {
 
     const generatedSchema = generator.generateSchema();
 
-    // Improve auto-completion in IDEs
     return simplifyUnions({
         $id: 'https://schema.croct.com/json/content-schema.json',
         $schema: 'https://json-schema.org/draft/2019-09/schema',
