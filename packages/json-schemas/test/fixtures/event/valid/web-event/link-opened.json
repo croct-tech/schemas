@@ -1,0 +1,16 @@
+{
+  "schema": "event/web-event.json",
+  "input": {
+    "context": {
+      "tabId": "27b7f785-137e-4bbd-a52d-065baf5885cc",
+      "url": "https://www.acme.com"
+    },
+    "payload": {
+      "type": "linkOpened",
+      "link": "android-app://339f9e8a-0871-47cc-ac00-8f81ac31be05"
+    },
+    "originalTime": 1,
+    "departureTime": 2
+  },
+  "errors": []
+}

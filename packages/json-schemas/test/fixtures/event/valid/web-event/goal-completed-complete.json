@@ -1,0 +1,18 @@
+{
+  "schema": "event/web-event.json",
+  "input": {
+    "context": {
+      "tabId": "27b7f785-137e-4bbd-a52d-065baf5885cc",
+      "url": "https://www.acme.com"
+    },
+    "payload": {
+      "type": "goalCompleted",
+      "goalId": "foo--BAR::baz__123",
+      "value": 1,
+      "currency": "BRL"
+    },
+    "originalTime": 1,
+    "departureTime": 2
+  },
+  "errors": []
+}

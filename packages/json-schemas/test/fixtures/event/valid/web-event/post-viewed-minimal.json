@@ -1,0 +1,20 @@
+{
+  "schema": "event/web-event.json",
+  "input": {
+    "context": {
+      "tabId": "27b7f785-137e-4bbd-a52d-065baf5885cc",
+      "url": "https://www.acme.com"
+    },
+    "payload": {
+      "type": "postViewed",
+      "post": {
+        "postId": "post-id",
+        "title": "post-title",
+        "publishTime": 0
+      }
+    },
+    "originalTime": 1,
+    "departureTime": 2
+  },
+  "errors": []
+}

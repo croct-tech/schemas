@@ -12,7 +12,8 @@
   "type": "object",
   "properties": {
     "$schema": {
-      "type": "string"
+      "type": "string",
+      "description": "The JSON schema reference for this event."
     },
     "originalTime": {
       "type": "integer",

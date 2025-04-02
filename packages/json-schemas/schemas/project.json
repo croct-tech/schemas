@@ -1,0 +1,169 @@
+{
+  "$id": "https://schema.croct.com/json/project/configuration.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Croct project configuration",
+  "description": "Defines the configuration for a Croct project.",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "The JSON schema reference for this configuration file."
+    },
+    "organization": {
+      "type": "string",
+      "description": "The organization identifier.",
+      "pattern": "^[a-z]+(-?[a-z0-9]+)*$",
+      "examples": [
+        "croct",
+        "streaming-company"
+      ]
+    },
+    "workspace": {
+      "type": "string",
+      "description": "The workspace identifier.",
+      "pattern": "^[a-z]+(-?[a-z0-9]+)*$",
+      "examples": [
+        "stream-flix",
+        "stream-sound"
+      ]
+    },
+    "applications": {
+      "type": "object",
+      "description": "Application identifiers for each environment.",
+      "properties": {
+        "development": {
+          "type": "string",
+          "description": "The application identifier for the development environment.",
+          "pattern": "^[a-z]+(-?[a-z0-9]+)*$",
+          "examples": [
+            "website-dev",
+            "app-dev"
+          ]
+        },
+        "production": {
+          "type": "string",
+          "description": "The application identifier for the production environment.",
+          "pattern": "^[a-z]+(-?[a-z0-9]+)*$",
+          "examples": [
+            "website-prod",
+            "app-prod"
+          ]
+        }
+      },
+      "required": [
+        "development"
+      ],
+      "additionalProperties": false
+    },
+    "locales": {
+      "type": "array",
+      "description": "The list of supported locales.",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z]{2,3}([-_][a-z]{2,3})?$",
+        "examples": [
+          "en",
+          "en-us",
+          "pt_br"
+        ]
+      },
+      "uniqueItems": true,
+      "minItems": 1,
+      "examples": [
+        [
+          "en-us"
+        ],
+        [
+          "en",
+          "pt_br"
+        ]
+      ]
+    },
+    "defaultLocale": {
+      "type": "string",
+      "description": "The default locale for the project.",
+      "pattern": "^[a-z]{2,3}([-_][a-z]{2,3})?$",
+      "examples": [
+        "en",
+        "en-us",
+        "pt_br"
+      ]
+    },
+    "slots": {
+      "type": "object",
+      "description": "A map of slot identifiers to their version constraints.",
+      "propertyNames": {
+        "type": "string",
+        "description": "A slot identifier.",
+        "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$",
+        "examples": [
+          "home-hero",
+          "top-bar"
+        ]
+      },
+      "additionalProperties": {
+        "type": "string",
+        "description": "A version constraint.",
+        "examples": [
+          "1",
+          "1 - 3",
+          "2, 4"
+        ]
+      }
+    },
+    "components": {
+      "type": "object",
+      "description": "A map of component identifiers to their version constraints.",
+      "propertyNames": {
+        "type": "string",
+        "description": "A component identifier.",
+        "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$",
+        "examples": [
+          "header",
+          "footer"
+        ]
+      },
+      "additionalProperties": {
+        "type": "string",
+        "description": "A version constraint.",
+        "examples": [
+          "1",
+          "1 - 3",
+          "2, 4"
+        ]
+      }
+    },
+    "paths": {
+      "type": "object",
+      "description": "Preferences for the project paths.",
+      "properties": {
+        "components": {
+          "type": "string",
+          "description": "Path to the components directory."
+        },
+        "examples": {
+          "type": "string",
+          "description": "Path to the examples directory."
+        },
+        "content": {
+          "type": "string",
+          "description": "Path to the static content directory."
+        }
+      },
+      "required": [
+        "components",
+        "examples"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "organization",
+    "workspace",
+    "applications",
+    "locales",
+    "defaultLocale",
+    "paths"
+  ],
+  "additionalProperties": false
+}

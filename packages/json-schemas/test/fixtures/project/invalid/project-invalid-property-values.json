@@ -1,0 +1,149 @@
+{
+  "schema": "project.json",
+  "allErrors": true,
+  "input": {
+    "organization": "",
+    "workspace": "",
+    "applications": {
+      "development": "",
+      "production": "",
+      "extra": true
+    },
+    "locales": [""],
+    "defaultLocale": "",
+    "slots": {
+      "": ""
+    },
+    "components": {
+      "": ""
+    },
+    "paths": {
+      "components": "",
+      "examples": "",
+      "content": "",
+      "extra": true
+    },
+    "extra": true
+  },
+  "errors": [
+    {
+      "instancePath": "",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "extra"
+      },
+      "schemaPath": "#/additionalProperties"
+    },
+    {
+      "instancePath": "/organization",
+      "keyword": "pattern",
+      "message": "must match pattern \"^[a-z]+(-?[a-z0-9]+)*$\"",
+      "params": {
+        "pattern": "^[a-z]+(-?[a-z0-9]+)*$"
+      },
+      "schemaPath": "#/properties/organization/pattern"
+    },
+    {
+      "instancePath": "/workspace",
+      "keyword": "pattern",
+      "message": "must match pattern \"^[a-z]+(-?[a-z0-9]+)*$\"",
+      "params": {
+        "pattern": "^[a-z]+(-?[a-z0-9]+)*$"
+      },
+      "schemaPath": "#/properties/workspace/pattern"
+    },
+    {
+      "instancePath": "/applications",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "extra"
+      },
+      "schemaPath": "#/properties/applications/additionalProperties"
+    },
+    {
+      "instancePath": "/applications/development",
+      "keyword": "pattern",
+      "message": "must match pattern \"^[a-z]+(-?[a-z0-9]+)*$\"",
+      "params": {
+        "pattern": "^[a-z]+(-?[a-z0-9]+)*$"
+      },
+      "schemaPath": "#/properties/applications/properties/development/pattern"
+    },
+    {
+      "instancePath": "/applications/production",
+      "keyword": "pattern",
+      "message": "must match pattern \"^[a-z]+(-?[a-z0-9]+)*$\"",
+      "params": {
+        "pattern": "^[a-z]+(-?[a-z0-9]+)*$"
+      },
+      "schemaPath": "#/properties/applications/properties/production/pattern"
+    },
+    {
+      "instancePath": "/locales/0",
+      "keyword": "pattern",
+      "message": "must match pattern \"^[a-z]{2,3}([-_][a-z]{2,3})?$\"",
+      "params": {
+        "pattern": "^[a-z]{2,3}([-_][a-z]{2,3})?$"
+      },
+      "schemaPath": "#/properties/locales/items/pattern"
+    },
+    {
+      "instancePath": "/defaultLocale",
+      "keyword": "pattern",
+      "message": "must match pattern \"^[a-z]{2,3}([-_][a-z]{2,3})?$\"",
+      "params": {
+        "pattern": "^[a-z]{2,3}([-_][a-z]{2,3})?$"
+      },
+      "schemaPath": "#/properties/defaultLocale/pattern"
+    },
+    {
+      "instancePath": "/slots",
+      "keyword": "pattern",
+      "message": "must match pattern \"^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$\"",
+      "params": {
+        "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$"
+      },
+      "propertyName": "",
+      "schemaPath": "#/properties/slots/propertyNames/pattern"
+    },
+    {
+      "instancePath": "/slots",
+      "keyword": "propertyNames",
+      "message": "property name must be valid",
+      "params": {
+        "propertyName": ""
+      },
+      "schemaPath": "#/properties/slots/propertyNames"
+    },
+    {
+      "instancePath": "/components",
+      "keyword": "pattern",
+      "message": "must match pattern \"^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$\"",
+      "params": {
+        "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$"
+      },
+      "propertyName": "",
+      "schemaPath": "#/properties/components/propertyNames/pattern"
+    },
+    {
+      "instancePath": "/components",
+      "keyword": "propertyNames",
+      "message": "property name must be valid",
+      "params": {
+        "propertyName": ""
+      },
+      "schemaPath": "#/properties/components/propertyNames"
+    },
+    {
+      "instancePath": "/paths",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "extra"
+      },
+      "schemaPath": "#/properties/paths/additionalProperties"
+    }
+  ]
+}

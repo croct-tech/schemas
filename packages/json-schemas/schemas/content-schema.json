@@ -6,7 +6,8 @@
   "description": "The definition of a value.",
   "properties": {
     "$schema": {
-      "type": "string"
+      "type": "string",
+      "description": "The JSON schema reference for this content schema."
     },
     "type": {
       "type": "string",

@@ -1,0 +1,28 @@
+{
+  "schema": "project.json",
+  "input": {
+    "$schema": "https://schema.croct.com/json/project.json",
+    "organization": "streaming-company",
+    "workspace": "stream-flix",
+    "applications": {
+      "development": "website-dev",
+      "production": "website-prod"
+    },
+    "locales": ["en"],
+    "defaultLocale": "en",
+    "slots": {
+      "pricing-page": "1, 2",
+      "magic-ui-user-reviews": "1"
+    },
+    "components": {
+      "button": "1",
+      "banner": "2"
+    },
+    "paths": {
+      "components": "components",
+      "examples": "app",
+      "content": "."
+    }
+  },
+  "errors": []
+}

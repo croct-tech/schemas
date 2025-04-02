@@ -1,0 +1,42 @@
+{
+  "schema": "event/web-event.json",
+  "input": {
+    "context": {
+      "tabId": "27b7f785-137e-4bbd-a52d-065baf5885cc",
+      "url": "https://www.acme.com"
+    },
+    "payload": {
+      "type": "cartViewed",
+      "cart": {
+        "currency": "brl",
+        "items": [
+          {
+            "index": 0,
+            "quantity": 1,
+            "total": 699.00,
+            "product": {
+              "productId": "12345",
+              "name": "Smartphone 9",
+              "displayPrice": 699.00
+            }
+          },
+          {
+            "index": 1,
+            "quantity": 1,
+            "total": 39.00,
+            "product": {
+              "productId": "98765",
+              "name": "Silicone Case",
+              "displayPrice": 39.00
+            }
+          }
+        ],
+        "total": 815.49,
+        "lastUpdateTime": 123456789
+      }
+    },
+    "originalTime": 1,
+    "departureTime": 2
+  },
+  "errors": []
+}

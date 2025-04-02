@@ -1,0 +1,20 @@
+{
+  "schema": "event/web-event.json",
+  "input": {
+    "context": {
+      "tabId": "27b7f785-137e-4bbd-a52d-065baf5885cc",
+      "url": "https://www.acme.com"
+    },
+    "payload": {
+      "type": "productViewed",
+      "product": {
+        "productId": "12345",
+        "name": "Smartphone 9",
+        "displayPrice": 599.00
+      }
+    },
+    "originalTime": 1,
+    "departureTime": 2
+  },
+  "errors": []
+}

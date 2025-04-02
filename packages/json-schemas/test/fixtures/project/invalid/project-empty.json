@@ -1,0 +1,62 @@
+{
+  "schema": "project.json",
+  "allErrors": true,
+  "input": {
+  },
+  "errors": [
+    {
+      "instancePath": "",
+      "keyword": "required",
+      "message": "must have required property 'organization'",
+      "params": {
+        "missingProperty": "organization"
+      },
+      "schemaPath": "#/required"
+    },
+    {
+      "instancePath": "",
+      "keyword": "required",
+      "message": "must have required property 'workspace'",
+      "params": {
+        "missingProperty": "workspace"
+      },
+      "schemaPath": "#/required"
+    },
+    {
+      "instancePath": "",
+      "keyword": "required",
+      "message": "must have required property 'applications'",
+      "params": {
+        "missingProperty": "applications"
+      },
+      "schemaPath": "#/required"
+    },
+    {
+      "instancePath": "",
+      "keyword": "required",
+      "message": "must have required property 'locales'",
+      "params": {
+        "missingProperty": "locales"
+      },
+      "schemaPath": "#/required"
+    },
+    {
+      "instancePath": "",
+      "keyword": "required",
+      "message": "must have required property 'defaultLocale'",
+      "params": {
+        "missingProperty": "defaultLocale"
+      },
+      "schemaPath": "#/required"
+    },
+    {
+      "instancePath": "",
+      "keyword": "required",
+      "message": "must have required property 'paths'",
+      "params": {
+        "missingProperty": "paths"
+      },
+      "schemaPath": "#/required"
+    }
+  ]
+}

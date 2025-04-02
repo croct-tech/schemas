@@ -1,0 +1,17 @@
+{
+  "schema": "project.json",
+  "input": {
+    "organization": "streaming-company",
+    "workspace": "stream-flix",
+    "locales": ["en"],
+    "defaultLocale": "en",
+    "applications": {
+      "development": "website-dev"
+    },
+    "paths": {
+      "components": "components",
+      "examples": "app"
+    }
+  },
+  "errors": []
+}

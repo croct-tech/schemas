@@ -16,6 +16,7 @@ const schema: JSONSchema.Object = {
     properties: {
         $schema: {
             type: 'string',
+            description: 'The JSON schema reference for this content schema.',
         },
         ...lenientSchema.properties,
     },

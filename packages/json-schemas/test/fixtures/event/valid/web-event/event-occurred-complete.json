@@ -1,0 +1,23 @@
+{
+  "schema": "event/web-event.json",
+  "input": {
+    "context": {
+      "tabId": "27b7f785-137e-4bbd-a52d-065baf5885cc",
+      "url": "https://www.acme.com"
+    },
+    "payload": {
+      "type": "eventOccurred",
+      "name": "event-name",
+      "details": {
+        "string": "foo",
+        "integer": 1,
+        "number": 1.2,
+        "boolean": true,
+        "null": null
+      }
+    },
+    "originalTime": 1,
+    "departureTime": 2
+  },
+  "errors": []
+}

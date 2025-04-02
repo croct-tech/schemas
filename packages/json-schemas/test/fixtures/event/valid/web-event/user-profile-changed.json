@@ -1,0 +1,24 @@
+{
+  "schema": "event/web-event.json",
+  "input": {
+    "context": {
+      "tabId": "27b7f785-137e-4bbd-a52d-065baf5885cc",
+      "url": "https://www.acme.com"
+    },
+    "payload": {
+      "type": "userProfileChanged",
+      "patch": {
+        "operations": [
+          {
+            "type": "add",
+            "path": "[1]",
+            "value": 1
+          }
+        ]
+      }
+    },
+    "originalTime": 1,
+    "departureTime": 2
+  },
+  "errors": []
+}

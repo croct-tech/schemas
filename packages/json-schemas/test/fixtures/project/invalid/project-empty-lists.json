@@ -1,0 +1,35 @@
+{
+  "schema": "project.json",
+  "allErrors": true,
+  "input": {
+    "$schema": "https://schema.croct.com/json/project.json",
+    "organization": "streaming-company",
+    "workspace": "stream-flix",
+    "applications": {
+      "development": "website-dev",
+      "production": "website-prod"
+    },
+    "locales": [],
+    "defaultLocale": "en",
+    "slots": {
+    },
+    "components": {
+    },
+    "paths": {
+      "components": "components",
+      "examples": "app",
+      "content": "."
+    }
+  },
+  "errors": [
+    {
+      "instancePath": "/locales",
+      "keyword": "minItems",
+      "message": "must NOT have fewer than 1 items",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/locales/minItems"
+    }
+  ]
+}
