@@ -38,8 +38,8 @@ if (data.error !== undefined || data.status !== 0) {
 const content = data.stdout
     .toString('utf-8')
     .replace(
-        /"#\/\$defs\/https%3A~1~1schema\.croct\.com~1json~1(.+?)\.json"/g,
-        (_, match) => `"#/$defs/${match.replace(/~1/g, '-')}"`,
+        /#\/\$defs\/https%3A~1~1schema\.croct\.com~1json~1(.+?)\.json/g,
+        (_, match) => `#/$defs/${match.replace(/~1/g, '-')}`,
     )
     .replace(
         /"https:\/\/schema.croct.com\/json\/(.+?)\.json"/g,
