@@ -21,7 +21,7 @@ const args = [
     'bundle',
     schemaPath,
     '--resolve',
-    join(import.meta.dirname, '..', 'schemas', 'event'),
+    join(import.meta.dirname, '..', 'schemas'),
     '--without-id',
 ];
 
