@@ -19,7 +19,9 @@
       },
       "additionalProperties": {
         "type": "object",
-        "required": ["type"],
+        "required": [
+          "type"
+        ],
         "properties": {
           "type": {
             "type": "string",
@@ -34,16 +36,25 @@
                 "description": "The type of the option.",
                 "const": "reference"
               },
-              "default": {
-                "type": "string",
-                "description": "The default value for the reference.",
-                "examples": ["projectName"]
-              },
               "description": {
                 "type": "string",
                 "description": "The description of the option.",
                 "minLength": 1,
-                "examples": ["The variable to store the result of the action."]
+                "examples": [
+                  "The variable to store the result of the action."
+                ]
+              },
+              "required": {
+                "type": "boolean",
+                "description": "Whether the option is required.",
+                "default": false
+              },
+              "default": {
+                "type": "string",
+                "description": "The default value for the reference.",
+                "examples": [
+                  "projectName"
+                ]
               }
             },
             "additionalProperties": false
@@ -54,6 +65,19 @@
                 "type": "string",
                 "description": "The type of the option.",
                 "const": "string"
+              },
+              "description": {
+                "type": "string",
+                "description": "The description of the option.",
+                "minLength": 1,
+                "examples": [
+                  "The name of the project."
+                ]
+              },
+              "required": {
+                "type": "boolean",
+                "description": "Whether the option is required.",
+                "default": false
               },
               "choices": {
                 "type": "array",
@@ -66,12 +90,6 @@
               "default": {
                 "type": "string",
                 "description": "The default value for the option."
-              },
-              "description": {
-                "type": "string",
-                "description": "The description of the option.",
-                "minLength": 1,
-                "examples": ["The name of the project."]
               }
             },
             "additionalProperties": false
@@ -83,15 +101,22 @@
                 "description": "The type of the option.",
                 "const": "number"
               },
-              "default": {
-                "type": "number",
-                "description": "The default value for the option."
-              },
               "description": {
                 "type": "string",
                 "description": "The description of the option.",
                 "minLength": 1,
-                "examples": ["The default timeout."]
+                "examples": [
+                  "The default timeout."
+                ]
+              },
+              "required": {
+                "type": "boolean",
+                "description": "Whether the option is required.",
+                "default": false
+              },
+              "default": {
+                "type": "number",
+                "description": "The default value for the option."
               }
             },
             "additionalProperties": false
@@ -103,15 +128,22 @@
                 "const": "boolean",
                 "description": "The type of the option."
               },
-              "default": {
-                "type": "boolean",
-                "description": "The default value for the option."
-              },
               "description": {
                 "type": "string",
                 "description": "The description of the option.",
                 "minLength": 1,
-                "examples": ["Whether to enable the feature."]
+                "examples": [
+                  "Whether to enable the feature."
+                ]
+              },
+              "required": {
+                "type": "boolean",
+                "description": "Whether the option is required.",
+                "default": false
+              },
+              "default": {
+                "type": "boolean",
+                "description": "The default value for the option."
               }
             },
             "additionalProperties": false
@@ -123,16 +155,23 @@
                 "const": "array",
                 "description": "The type of the option."
               },
-              "default": {
-                "type": "array",
-                "description": "The default value for the option.",
-                "items": {}
-              },
               "description": {
                 "type": "string",
                 "description": "The description of the option.",
                 "minLength": 1,
-                "examples": ["The list of items."]
+                "examples": [
+                  "The list of items."
+                ]
+              },
+              "required": {
+                "type": "boolean",
+                "description": "Whether the option is required.",
+                "default": false
+              },
+              "default": {
+                "type": "array",
+                "description": "The default value for the option.",
+                "items": {}
               }
             },
             "additionalProperties": false
@@ -144,16 +183,23 @@
                 "const": "object",
                 "description": "The type of the option."
               },
-              "default": {
-                "type": "object",
-                "description": "The default value for the option.",
-                "additionalProperties": true
-              },
               "description": {
                 "type": "string",
                 "description": "The description of the option.",
                 "minLength": 1,
-                "examples": ["The configuration object serialized as JSON."]
+                "examples": [
+                  "The configuration object serialized as JSON."
+                ]
+              },
+              "required": {
+                "type": "boolean",
+                "description": "Whether the option is required.",
+                "default": false
+              },
+              "default": {
+                "type": "object",
+                "description": "The default value for the option.",
+                "additionalProperties": true
               }
             },
             "additionalProperties": false

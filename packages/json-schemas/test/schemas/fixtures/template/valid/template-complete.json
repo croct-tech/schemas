@@ -13,6 +13,7 @@
       "string": {
         "type": "string",
         "description": "description of the option",
+        "required": true,
         "choices": [
           "a",
           "b",
@@ -23,21 +24,25 @@
       "reference": {
         "type": "reference",
         "description": "description of the option",
+        "required": true,
         "default": "ref"
       },
       "number": {
         "type": "number",
         "description": "description of the option",
+        "required": true,
         "default": 42
       },
       "boolean": {
         "type": "boolean",
         "description": "description of the option",
+        "required": true,
         "default": true
       },
       "array": {
         "type": "array",
         "description": "description of the option",
+        "required": true,
         "default": [
           "string",
           42,
@@ -50,6 +55,7 @@
       "object": {
         "type": "object",
         "description": "description of the option",
+        "required": true,
         "default": {
           "string": "default value",
           "number": 42,
