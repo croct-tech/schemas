@@ -18,7 +18,7 @@ describe('Template schema transformer', () => {
         'dynamic-string': {
             type: 'string',
             description: 'A dynamic string that is evaluated at runtime.',
-            pattern: '\\$\\{.+?\\}',
+            pattern: '\\$\\{[\\s\\S]+?\\}',
             examples: [
                 '${this.value}',
                 '${options.value}',
@@ -28,7 +28,7 @@ describe('Template schema transformer', () => {
         'dynamic-value': {
             type: 'string',
             description: 'A dynamic value that is evaluated at runtime.',
-            pattern: '^\\$\\{.+\\}$',
+            pattern: '^\\$\\{[\\s\\S]+\\}$',
             examples: [
                 '${this.value}',
                 '${options.value}',

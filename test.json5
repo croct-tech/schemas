@@ -1,0 +1,14 @@
+{
+  "$schema": "./build/json-schemas/template.json",
+  "actions": [
+    {
+      "name": "execute-package",
+      "package": "aa",
+      "arguments": "${\
+        aa\
+      }"
+    }
+  ],
+  "title": "",
+  "description": ""
+}
