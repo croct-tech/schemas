@@ -11,6 +11,12 @@
     "options": {
       "type": "object",
       "description": "The options for the template.",
+      "propertyNames": {
+        "type": "string",
+        "description": "The name of the option.",
+        "pattern": "^[a-zA-Z0-9_]+$",
+        "minLength": 1
+      },
       "additionalProperties": {
         "type": "object",
         "required": ["type"],
@@ -31,7 +37,13 @@
               "default": {
                 "type": "string",
                 "description": "The default value for the reference.",
-                "examples": ["variable", "projectName"]
+                "examples": ["projectName"]
+              },
+              "description": {
+                "type": "string",
+                "description": "The description of the option.",
+                "minLength": 1,
+                "examples": ["The variable to store the result of the action."]
               }
             },
             "additionalProperties": false
@@ -54,6 +66,12 @@
               "default": {
                 "type": "string",
                 "description": "The default value for the option."
+              },
+              "description": {
+                "type": "string",
+                "description": "The description of the option.",
+                "minLength": 1,
+                "examples": ["The name of the project."]
               }
             },
             "additionalProperties": false
@@ -68,6 +86,12 @@
               "default": {
                 "type": "number",
                 "description": "The default value for the option."
+              },
+              "description": {
+                "type": "string",
+                "description": "The description of the option.",
+                "minLength": 1,
+                "examples": ["The default timeout."]
               }
             },
             "additionalProperties": false
@@ -82,6 +106,12 @@
               "default": {
                 "type": "boolean",
                 "description": "The default value for the option."
+              },
+              "description": {
+                "type": "string",
+                "description": "The description of the option.",
+                "minLength": 1,
+                "examples": ["Whether to enable the feature."]
               }
             },
             "additionalProperties": false
@@ -97,6 +127,12 @@
                 "type": "array",
                 "description": "The default value for the option.",
                 "items": {}
+              },
+              "description": {
+                "type": "string",
+                "description": "The description of the option.",
+                "minLength": 1,
+                "examples": ["The list of items."]
               }
             },
             "additionalProperties": false
@@ -112,6 +148,12 @@
                 "type": "object",
                 "description": "The default value for the option.",
                 "additionalProperties": true
+              },
+              "description": {
+                "type": "string",
+                "description": "The description of the option.",
+                "minLength": 1,
+                "examples": ["The configuration object serialized as JSON."]
               }
             },
             "additionalProperties": false

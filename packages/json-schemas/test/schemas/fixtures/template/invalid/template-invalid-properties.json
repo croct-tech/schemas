@@ -9,30 +9,37 @@
         "type": "string",
         "choices": [],
         "default": null,
+        "description": "",
         "extra": true
       },
       "reference": {
         "type": "reference",
         "default": null,
+        "description": "",
         "extra": true
       },
       "number": {
         "type": "number",
         "default": null,
+        "description": "",
         "extra": true
       },
       "boolean": {
         "type": "boolean",
         "default": null,
+        "description": "",
         "extra": true
       },
       "array": {
         "type": "array",
-        "default": null
+        "default": null,
+        "description": "",
+        "extra": true
       },
       "object": {
         "type": "object",
         "default": null,
+        "description": "",
         "extra": true
       }
     },
@@ -75,6 +82,15 @@
         "type": "string"
       },
       "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/default/type"
+    },
+    {
+      "instancePath": "/options/string/description",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/description/minLength"
     },
     {
       "instancePath": "/options/string/default",
@@ -138,6 +154,15 @@
         "type": "string"
       },
       "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/default/type"
+    },
+    {
+      "instancePath": "/options/reference/description",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/description/minLength"
     },
     {
       "instancePath": "/options/reference/type",
@@ -221,6 +246,15 @@
       "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/default/type"
     },
     {
+      "instancePath": "/options/number/description",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/description/minLength"
+    },
+    {
       "instancePath": "/options/number/default",
       "keyword": "type",
       "message": "must be number",
@@ -293,6 +327,15 @@
       "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/default/type"
     },
     {
+      "instancePath": "/options/boolean/description",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/description/minLength"
+    },
+    {
       "instancePath": "/options/boolean/default",
       "keyword": "type",
       "message": "must be number",
@@ -338,6 +381,15 @@
       "schemaPath": "#/properties/options/additionalProperties/oneOf"
     },
     {
+      "instancePath": "/options/array",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "extra"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/0/additionalProperties"
+    },
+    {
       "instancePath": "/options/array/type",
       "keyword": "const",
       "message": "must be equal to constant",
@@ -354,6 +406,15 @@
         "type": "string"
       },
       "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/default/type"
+    },
+    {
+      "instancePath": "/options/array/description",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/description/minLength"
     },
     {
       "instancePath": "/options/array/default",
@@ -426,6 +487,15 @@
         "type": "string"
       },
       "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/default/type"
+    },
+    {
+      "instancePath": "/options/object/description",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/description/minLength"
     },
     {
       "instancePath": "/options/object/default",
