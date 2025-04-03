@@ -8,6 +8,117 @@
     "$schema": {
       "type": "string"
     },
+    "options": {
+      "type": "object",
+      "description": "The options for the template.",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["type"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The type of the option."
+          }
+        },
+        "oneOf": [
+          {
+            "properties": {
+              "type": {
+                "type": "string",
+                "description": "The type of the option.",
+                "const": "reference"
+              },
+              "default": {
+                "type": "string",
+                "description": "The default value for the reference.",
+                "examples": ["variable", "projectName"]
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "properties": {
+              "type": {
+                "type": "string",
+                "description": "The type of the option.",
+                "const": "string"
+              },
+              "choices": {
+                "type": "array",
+                "description": "The allowed values for the option.",
+                "items": {
+                  "type": "string",
+                  "description": "The value of the option."
+                }
+              },
+              "default": {
+                "type": "string",
+                "description": "The default value for the option."
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "properties": {
+              "type": {
+                "type": "string",
+                "description": "The type of the option.",
+                "const": "number"
+              },
+              "default": {
+                "type": "number",
+                "description": "The default value for the option."
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "properties": {
+              "type": {
+                "type": "string",
+                "const": "boolean",
+                "description": "The type of the option."
+              },
+              "default": {
+                "type": "boolean",
+                "description": "The default value for the option."
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "properties": {
+              "type": {
+                "type": "string",
+                "const": "array",
+                "description": "The type of the option."
+              },
+              "default": {
+                "type": "array",
+                "description": "The default value for the option.",
+                "items": {}
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "properties": {
+              "type": {
+                "type": "string",
+                "const": "object",
+                "description": "The type of the option."
+              },
+              "default": {
+                "type": "object",
+                "description": "The default value for the option.",
+                "additionalProperties": true
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      }
+    },
     "title": {
       "type": "string",
       "description": "The title of the template.",
@@ -31,6 +142,8 @@
       "minItems": 1
     }
   },
-  "required": ["actions"],
+  "required": [
+    "actions"
+  ],
   "additionalProperties": false
 }
