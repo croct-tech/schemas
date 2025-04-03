@@ -29,6 +29,11 @@
         "*/**/*.js"
       ]
     },
+    "overwrite": {
+      "type": "boolean",
+      "description": "Whether to overwrite existing files or directories if the destination already exists.",
+      "default": false
+    },
     "destination": {
       "type": "string",
       "description": "The local path where files are downloaded to.",
