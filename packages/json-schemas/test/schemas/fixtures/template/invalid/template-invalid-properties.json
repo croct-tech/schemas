@@ -75,15 +75,6 @@
       "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/type/const"
     },
     {
-      "instancePath": "/options/string/default",
-      "keyword": "type",
-      "message": "must be string",
-      "params": {
-        "type": "string"
-      },
-      "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/default/type"
-    },
-    {
       "instancePath": "/options/string/description",
       "keyword": "minLength",
       "message": "must NOT have fewer than 1 characters",
@@ -91,6 +82,15 @@
         "limit": 1
       },
       "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/description/minLength"
+    },
+    {
+      "instancePath": "/options/string/default",
+      "keyword": "type",
+      "message": "must be string",
+      "params": {
+        "type": "string"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/default/type"
     },
     {
       "instancePath": "/options/string/default",
@@ -147,15 +147,6 @@
       "schemaPath": "#/properties/options/additionalProperties/oneOf/0/additionalProperties"
     },
     {
-      "instancePath": "/options/reference/default",
-      "keyword": "type",
-      "message": "must be string",
-      "params": {
-        "type": "string"
-      },
-      "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/default/type"
-    },
-    {
       "instancePath": "/options/reference/description",
       "keyword": "minLength",
       "message": "must NOT have fewer than 1 characters",
@@ -163,6 +154,15 @@
         "limit": 1
       },
       "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/description/minLength"
+    },
+    {
+      "instancePath": "/options/reference/default",
+      "keyword": "type",
+      "message": "must be string",
+      "params": {
+        "type": "string"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/default/type"
     },
     {
       "instancePath": "/options/reference/type",
@@ -237,15 +237,6 @@
       "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/type/const"
     },
     {
-      "instancePath": "/options/number/default",
-      "keyword": "type",
-      "message": "must be string",
-      "params": {
-        "type": "string"
-      },
-      "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/default/type"
-    },
-    {
       "instancePath": "/options/number/description",
       "keyword": "minLength",
       "message": "must NOT have fewer than 1 characters",
@@ -253,6 +244,15 @@
         "limit": 1
       },
       "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/description/minLength"
+    },
+    {
+      "instancePath": "/options/number/default",
+      "keyword": "type",
+      "message": "must be string",
+      "params": {
+        "type": "string"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/default/type"
     },
     {
       "instancePath": "/options/number/default",
@@ -318,15 +318,6 @@
       "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/type/const"
     },
     {
-      "instancePath": "/options/boolean/default",
-      "keyword": "type",
-      "message": "must be string",
-      "params": {
-        "type": "string"
-      },
-      "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/default/type"
-    },
-    {
       "instancePath": "/options/boolean/description",
       "keyword": "minLength",
       "message": "must NOT have fewer than 1 characters",
@@ -334,6 +325,15 @@
         "limit": 1
       },
       "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/description/minLength"
+    },
+    {
+      "instancePath": "/options/boolean/default",
+      "keyword": "type",
+      "message": "must be string",
+      "params": {
+        "type": "string"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/default/type"
     },
     {
       "instancePath": "/options/boolean/default",
@@ -399,15 +399,6 @@
       "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/type/const"
     },
     {
-      "instancePath": "/options/array/default",
-      "keyword": "type",
-      "message": "must be string",
-      "params": {
-        "type": "string"
-      },
-      "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/default/type"
-    },
-    {
       "instancePath": "/options/array/description",
       "keyword": "minLength",
       "message": "must NOT have fewer than 1 characters",
@@ -415,6 +406,15 @@
         "limit": 1
       },
       "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/description/minLength"
+    },
+    {
+      "instancePath": "/options/array/default",
+      "keyword": "type",
+      "message": "must be string",
+      "params": {
+        "type": "string"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/default/type"
     },
     {
       "instancePath": "/options/array/default",
@@ -480,15 +480,6 @@
       "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/type/const"
     },
     {
-      "instancePath": "/options/object/default",
-      "keyword": "type",
-      "message": "must be string",
-      "params": {
-        "type": "string"
-      },
-      "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/default/type"
-    },
-    {
       "instancePath": "/options/object/description",
       "keyword": "minLength",
       "message": "must NOT have fewer than 1 characters",
@@ -496,6 +487,15 @@
         "limit": 1
       },
       "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/description/minLength"
+    },
+    {
+      "instancePath": "/options/object/default",
+      "keyword": "type",
+      "message": "must be string",
+      "params": {
+        "type": "string"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/default/type"
     },
     {
       "instancePath": "/options/object/default",
