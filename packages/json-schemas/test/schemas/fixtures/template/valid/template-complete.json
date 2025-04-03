@@ -9,6 +9,38 @@
       "version": "1.0.0",
       "license": "MIT"
     },
+    "options": {
+        "string": {
+            "type": "string",
+            "choices": ["a", "b", "c"],
+            "default": "default value"
+        },
+        "reference": {
+          "type": "reference",
+          "default": "ref"
+        },
+        "number": {
+            "type": "number",
+            "default": 42
+        },
+        "boolean": {
+            "type": "boolean",
+            "default": true
+        },
+        "array": {
+            "type": "array",
+            "default": ["string", 42, true, null, {}, []]
+        },
+        "object": {
+            "type": "object",
+            "default": {
+                "string": "default value",
+                "number": 42,
+                "boolean": true,
+                "array": ["string", 42, true, null, {}, []]
+            }
+        }
+    },
     "actions": [
       {
         "name": "add-component",

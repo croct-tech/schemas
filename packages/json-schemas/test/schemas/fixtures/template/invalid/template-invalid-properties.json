@@ -1,0 +1,503 @@
+{
+  "schema": "template/template.json",
+  "allErrors": true,
+  "input": {
+    "title": "",
+    "description": "",
+    "options": {
+      "string": {
+        "type": "string",
+        "choices": [],
+        "default": null,
+        "extra": true
+      },
+      "reference": {
+        "type": "reference",
+        "default": null,
+        "extra": true
+      },
+      "number": {
+        "type": "number",
+        "default": null,
+        "extra": true
+      },
+      "boolean": {
+        "type": "boolean",
+        "default": null,
+        "extra": true
+      },
+      "array": {
+        "type": "array",
+        "default": null
+      },
+      "object": {
+        "type": "object",
+        "default": null,
+        "extra": true
+      }
+    },
+    "actions": null,
+    "extra": true
+  },
+  "errors": [
+    {
+      "instancePath": "",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "extra"
+      },
+      "schemaPath": "#/additionalProperties"
+    },
+    {
+      "instancePath": "/options/string",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "choices"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/0/additionalProperties"
+    },
+    {
+      "instancePath": "/options/string/type",
+      "keyword": "const",
+      "message": "must be equal to constant",
+      "params": {
+        "allowedValue": "reference"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/type/const"
+    },
+    {
+      "instancePath": "/options/string/default",
+      "keyword": "type",
+      "message": "must be string",
+      "params": {
+        "type": "string"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/default/type"
+    },
+    {
+      "instancePath": "/options/string/default",
+      "keyword": "type",
+      "message": "must be number",
+      "params": {
+        "type": "number"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/2/properties/default/type"
+    },
+    {
+      "instancePath": "/options/string/default",
+      "keyword": "type",
+      "message": "must be boolean",
+      "params": {
+        "type": "boolean"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/3/properties/default/type"
+    },
+    {
+      "instancePath": "/options/string/default",
+      "keyword": "type",
+      "message": "must be array",
+      "params": {
+        "type": "array"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/4/properties/default/type"
+    },
+    {
+      "instancePath": "/options/string/default",
+      "keyword": "type",
+      "message": "must be object",
+      "params": {
+        "type": "object"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/5/properties/default/type"
+    },
+    {
+      "instancePath": "/options/string",
+      "keyword": "oneOf",
+      "message": "must match exactly one schema in oneOf",
+      "params": {
+        "passingSchemas": null
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf"
+    },
+    {
+      "instancePath": "/options/reference",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "extra"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/0/additionalProperties"
+    },
+    {
+      "instancePath": "/options/reference/default",
+      "keyword": "type",
+      "message": "must be string",
+      "params": {
+        "type": "string"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/default/type"
+    },
+    {
+      "instancePath": "/options/reference/type",
+      "keyword": "const",
+      "message": "must be equal to constant",
+      "params": {
+        "allowedValue": "string"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/1/properties/type/const"
+    },
+    {
+      "instancePath": "/options/reference/default",
+      "keyword": "type",
+      "message": "must be number",
+      "params": {
+        "type": "number"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/2/properties/default/type"
+    },
+    {
+      "instancePath": "/options/reference/default",
+      "keyword": "type",
+      "message": "must be boolean",
+      "params": {
+        "type": "boolean"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/3/properties/default/type"
+    },
+    {
+      "instancePath": "/options/reference/default",
+      "keyword": "type",
+      "message": "must be array",
+      "params": {
+        "type": "array"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/4/properties/default/type"
+    },
+    {
+      "instancePath": "/options/reference/default",
+      "keyword": "type",
+      "message": "must be object",
+      "params": {
+        "type": "object"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/5/properties/default/type"
+    },
+    {
+      "instancePath": "/options/reference",
+      "keyword": "oneOf",
+      "message": "must match exactly one schema in oneOf",
+      "params": {
+        "passingSchemas": null
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf"
+    },
+    {
+      "instancePath": "/options/number",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "extra"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/0/additionalProperties"
+    },
+    {
+      "instancePath": "/options/number/type",
+      "keyword": "const",
+      "message": "must be equal to constant",
+      "params": {
+        "allowedValue": "reference"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/type/const"
+    },
+    {
+      "instancePath": "/options/number/default",
+      "keyword": "type",
+      "message": "must be string",
+      "params": {
+        "type": "string"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/default/type"
+    },
+    {
+      "instancePath": "/options/number/default",
+      "keyword": "type",
+      "message": "must be number",
+      "params": {
+        "type": "number"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/2/properties/default/type"
+    },
+    {
+      "instancePath": "/options/number/default",
+      "keyword": "type",
+      "message": "must be boolean",
+      "params": {
+        "type": "boolean"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/3/properties/default/type"
+    },
+    {
+      "instancePath": "/options/number/default",
+      "keyword": "type",
+      "message": "must be array",
+      "params": {
+        "type": "array"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/4/properties/default/type"
+    },
+    {
+      "instancePath": "/options/number/default",
+      "keyword": "type",
+      "message": "must be object",
+      "params": {
+        "type": "object"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/5/properties/default/type"
+    },
+    {
+      "instancePath": "/options/number",
+      "keyword": "oneOf",
+      "message": "must match exactly one schema in oneOf",
+      "params": {
+        "passingSchemas": null
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf"
+    },
+    {
+      "instancePath": "/options/boolean",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "extra"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/0/additionalProperties"
+    },
+    {
+      "instancePath": "/options/boolean/type",
+      "keyword": "const",
+      "message": "must be equal to constant",
+      "params": {
+        "allowedValue": "reference"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/type/const"
+    },
+    {
+      "instancePath": "/options/boolean/default",
+      "keyword": "type",
+      "message": "must be string",
+      "params": {
+        "type": "string"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/default/type"
+    },
+    {
+      "instancePath": "/options/boolean/default",
+      "keyword": "type",
+      "message": "must be number",
+      "params": {
+        "type": "number"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/2/properties/default/type"
+    },
+    {
+      "instancePath": "/options/boolean/default",
+      "keyword": "type",
+      "message": "must be boolean",
+      "params": {
+        "type": "boolean"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/3/properties/default/type"
+    },
+    {
+      "instancePath": "/options/boolean/default",
+      "keyword": "type",
+      "message": "must be array",
+      "params": {
+        "type": "array"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/4/properties/default/type"
+    },
+    {
+      "instancePath": "/options/boolean/default",
+      "keyword": "type",
+      "message": "must be object",
+      "params": {
+        "type": "object"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/5/properties/default/type"
+    },
+    {
+      "instancePath": "/options/boolean",
+      "keyword": "oneOf",
+      "message": "must match exactly one schema in oneOf",
+      "params": {
+        "passingSchemas": null
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf"
+    },
+    {
+      "instancePath": "/options/array/type",
+      "keyword": "const",
+      "message": "must be equal to constant",
+      "params": {
+        "allowedValue": "reference"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/type/const"
+    },
+    {
+      "instancePath": "/options/array/default",
+      "keyword": "type",
+      "message": "must be string",
+      "params": {
+        "type": "string"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/default/type"
+    },
+    {
+      "instancePath": "/options/array/default",
+      "keyword": "type",
+      "message": "must be number",
+      "params": {
+        "type": "number"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/2/properties/default/type"
+    },
+    {
+      "instancePath": "/options/array/default",
+      "keyword": "type",
+      "message": "must be boolean",
+      "params": {
+        "type": "boolean"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/3/properties/default/type"
+    },
+    {
+      "instancePath": "/options/array/default",
+      "keyword": "type",
+      "message": "must be array",
+      "params": {
+        "type": "array"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/4/properties/default/type"
+    },
+    {
+      "instancePath": "/options/array/default",
+      "keyword": "type",
+      "message": "must be object",
+      "params": {
+        "type": "object"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/5/properties/default/type"
+    },
+    {
+      "instancePath": "/options/array",
+      "keyword": "oneOf",
+      "message": "must match exactly one schema in oneOf",
+      "params": {
+        "passingSchemas": null
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf"
+    },
+    {
+      "instancePath": "/options/object",
+      "keyword": "additionalProperties",
+      "message": "must NOT have additional properties",
+      "params": {
+        "additionalProperty": "extra"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/0/additionalProperties"
+    },
+    {
+      "instancePath": "/options/object/type",
+      "keyword": "const",
+      "message": "must be equal to constant",
+      "params": {
+        "allowedValue": "reference"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/type/const"
+    },
+    {
+      "instancePath": "/options/object/default",
+      "keyword": "type",
+      "message": "must be string",
+      "params": {
+        "type": "string"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/0/properties/default/type"
+    },
+    {
+      "instancePath": "/options/object/default",
+      "keyword": "type",
+      "message": "must be number",
+      "params": {
+        "type": "number"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/2/properties/default/type"
+    },
+    {
+      "instancePath": "/options/object/default",
+      "keyword": "type",
+      "message": "must be boolean",
+      "params": {
+        "type": "boolean"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/3/properties/default/type"
+    },
+    {
+      "instancePath": "/options/object/default",
+      "keyword": "type",
+      "message": "must be array",
+      "params": {
+        "type": "array"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/4/properties/default/type"
+    },
+    {
+      "instancePath": "/options/object/default",
+      "keyword": "type",
+      "message": "must be object",
+      "params": {
+        "type": "object"
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf/5/properties/default/type"
+    },
+    {
+      "instancePath": "/options/object",
+      "keyword": "oneOf",
+      "message": "must match exactly one schema in oneOf",
+      "params": {
+        "passingSchemas": null
+      },
+      "schemaPath": "#/properties/options/additionalProperties/oneOf"
+    },
+    {
+      "instancePath": "/title",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/title/minLength"
+    },
+    {
+      "instancePath": "/description",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/description/minLength"
+    },
+    {
+      "instancePath": "/actions",
+      "keyword": "type",
+      "message": "must be array",
+      "params": {
+        "type": "array"
+      },
+      "schemaPath": "#/properties/actions/type"
+    }
+  ]
+}
