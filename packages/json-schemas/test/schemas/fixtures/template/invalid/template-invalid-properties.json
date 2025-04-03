@@ -473,6 +473,24 @@
       "schemaPath": "#/properties/options/additionalProperties/oneOf"
     },
     {
+      "instancePath": "/title",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/title/minLength"
+    },
+    {
+      "instancePath": "/description",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/description/minLength"
+    },
+    {
       "instancePath": "/actions",
       "keyword": "type",
       "message": "must be array",
