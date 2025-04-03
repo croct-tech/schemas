@@ -15,7 +15,7 @@
         "type": "object",
         "additionalProperties": false,
         "patternProperties": {
-          "\\$\\{.+?\\}": {}
+          "\\$\\{[\\s\\S]+?\\}": {}
         }
       }
     }

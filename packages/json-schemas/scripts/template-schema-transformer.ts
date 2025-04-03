@@ -1,6 +1,9 @@
 /* eslint-disable no-template-curly-in-string -- False positive */
 import {JSONSchema} from 'json-schema-typed/draft-2019-09';
 
+const dynamicStringPattern = '\\$\\{[\\s\\S]+?\\}';
+const dynamicValuePattern = '^\\$\\{[\\s\\S]+\\}$';
+
 export function transformSchema(schema: JSONSchema.Interface): JSONSchema {
     const result = structuredClone(schema);
 
@@ -15,13 +18,13 @@ export function transformSchema(schema: JSONSchema.Interface): JSONSchema {
         'dynamic-string': {
             type: 'string',
             description: 'A dynamic string that is evaluated at runtime.',
-            pattern: '\\$\\{.+?\\}',
+            pattern: dynamicStringPattern,
             examples: ['${this.value}', '${options.value}', '${this.value} ${options.value}'],
         },
         'dynamic-value': {
             type: 'string',
             description: 'A dynamic value that is evaluated at runtime.',
-            pattern: '^\\$\\{.+\\}$',
+            pattern: dynamicValuePattern,
             examples: ['${this.value}', '${options.value}', '${this.value + options.value}'],
         },
     };
@@ -66,7 +69,7 @@ function transformRecursively(schema: JSONSchema, nestedOnly: boolean = false): 
     if (result.additionalProperties === false) {
         result.patternProperties = {
             ...(result.patternProperties ?? {}),
-            '\\$\\{.+?\\}': {},
+            [dynamicStringPattern]: {},
         };
     }
 
