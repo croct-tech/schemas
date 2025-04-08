@@ -137,6 +137,14 @@
       "type": "object",
       "description": "Preferences for the project paths.",
       "properties": {
+        "source": {
+          "type": "string",
+          "description": "Path to the source directory."
+        },
+        "utilities": {
+          "type": "string",
+          "description": "Path to the utilities directory."
+        },
         "components": {
           "type": "string",
           "description": "Path to the components directory."
@@ -150,10 +158,6 @@
           "description": "Path to the static content directory."
         }
       },
-      "required": [
-        "components",
-        "examples"
-      ],
       "additionalProperties": false
     }
   },
@@ -162,8 +166,7 @@
     "workspace",
     "applications",
     "locales",
-    "defaultLocale",
-    "paths"
+    "defaultLocale"
   ],
   "additionalProperties": false
 }

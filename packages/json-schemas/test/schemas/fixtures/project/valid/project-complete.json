@@ -19,6 +19,8 @@
       "banner": "2"
     },
     "paths": {
+      "source": ".",
+      "utilities": "utils",
       "components": "components",
       "examples": "app",
       "content": "."

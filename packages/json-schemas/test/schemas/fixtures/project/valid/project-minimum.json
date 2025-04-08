@@ -7,10 +7,6 @@
     "defaultLocale": "en",
     "applications": {
       "development": "website-dev"
-    },
-    "paths": {
-      "components": "components",
-      "examples": "app"
     }
   },
   "errors": []
