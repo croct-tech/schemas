@@ -48,15 +48,6 @@
         "missingProperty": "defaultLocale"
       },
       "schemaPath": "#/required"
-    },
-    {
-      "instancePath": "",
-      "keyword": "required",
-      "message": "must have required property 'paths'",
-      "params": {
-        "missingProperty": "paths"
-      },
-      "schemaPath": "#/required"
     }
   ]
 }
