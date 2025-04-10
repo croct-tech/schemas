@@ -5,6 +5,9 @@
     "name": "",
     "source": "",
     "destination": "",
+    "mapping": {
+      "foo": 1
+    },
     "filter": "",
     "extra": true
   },
@@ -44,6 +47,15 @@
         "limit": 1
       },
       "schemaPath": "#/properties/filter/minLength"
+    },
+    {
+      "instancePath": "/mapping/foo",
+      "keyword": "type",
+      "message": "must be string",
+      "params": {
+        "type": "string"
+      },
+      "schemaPath": "#/properties/mapping/additionalProperties/type"
     },
     {
       "instancePath": "/destination",

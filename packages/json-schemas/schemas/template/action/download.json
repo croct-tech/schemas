@@ -34,6 +34,20 @@
       "description": "Whether to overwrite existing files or directories if the destination already exists.",
       "default": false
     },
+    "mapping": {
+      "type": "object",
+      "description": "A mapping of original paths to target paths.",
+      "propertyNames": {
+        "description": "The original path.",
+        "type": "string",
+        "minLength": 1
+      },
+      "additionalProperties": {
+        "description": "The target path.",
+        "type": "string",
+        "minLength": 1
+      }
+    },
     "destination": {
       "type": "string",
       "description": "The local path where files are downloaded to.",
