@@ -94,6 +94,7 @@
             "additionalProperties": false
           },
           "propertyNames": {
+            "type": "string",
             "pattern": "^[a-z-A-Z]+(-?[a-z-A-Z0-9]+)*$",
             "minLength": 1,
             "description": "The ID of the component.",
@@ -412,12 +413,13 @@
           "type": "object",
           "description": "A map of experience indexes to variable names.",
           "propertyNames": {
+            "type": "string",
             "description": "The index of the experience in the list.",
             "pattern": "^[0-9]+$",
             "minLength": 1,
             "examples": [
-              0,
-              1
+              "0",
+              "1"
             ]
           },
           "additionalProperties": {
