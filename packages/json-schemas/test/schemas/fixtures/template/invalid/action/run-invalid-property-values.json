@@ -35,6 +35,13 @@
     },
     {
       "instancePath": "/actions",
+      "keyword": "not",
+      "message": "must NOT be valid",
+      "params": {},
+      "schemaPath": "#/allOf/0/not"
+    },
+    {
+      "instancePath": "/actions",
       "keyword": "minItems",
       "message": "must NOT have fewer than 1 items",
       "params": {

@@ -47,6 +47,13 @@
     },
     {
       "instancePath": "/then",
+      "keyword": "not",
+      "message": "must NOT be valid",
+      "params": {},
+      "schemaPath": "#/allOf/0/not"
+    },
+    {
+      "instancePath": "/then",
       "keyword": "minItems",
       "message": "must NOT have fewer than 1 items",
       "params": {
@@ -71,6 +78,13 @@
         "passingSchemas": null
       },
       "schemaPath": "#/oneOf"
+    },
+    {
+      "instancePath": "/else",
+      "keyword": "not",
+      "message": "must NOT be valid",
+      "params": {},
+      "schemaPath": "#/allOf/0/not"
     },
     {
       "instancePath": "/else",

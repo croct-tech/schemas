@@ -28,6 +28,13 @@
     },
     {
       "instancePath": "/action",
+      "keyword": "not",
+      "message": "must NOT be valid",
+      "params": {},
+      "schemaPath": "#/allOf/0/not"
+    },
+    {
+      "instancePath": "/action",
       "keyword": "minItems",
       "message": "must NOT have fewer than 1 items",
       "params": {
@@ -55,6 +62,13 @@
     },
     {
       "instancePath": "/finally",
+      "keyword": "not",
+      "message": "must NOT be valid",
+      "params": {},
+      "schemaPath": "#/allOf/0/not"
+    },
+    {
+      "instancePath": "/finally",
       "keyword": "minItems",
       "message": "must NOT have fewer than 1 items",
       "params": {
@@ -63,13 +77,38 @@
       "schemaPath": "#/properties/finally/oneOf/1/minItems"
     },
     {
-      "instancePath": "",
-      "keyword": "unevaluatedProperties",
-      "message": "must NOT have unevaluated properties",
+      "instancePath": "/else",
+      "keyword": "type",
+      "message": "must be object",
       "params": {
-        "unevaluatedProperty": "else"
+        "type": "object"
       },
-      "schemaPath": "#/unevaluatedProperties"
+      "schemaPath": "#/properties/else/oneOf/0/type"
+    },
+    {
+      "instancePath": "/else",
+      "keyword": "oneOf",
+      "message": "must match exactly one schema in oneOf",
+      "params": {
+        "passingSchemas": null
+      },
+      "schemaPath": "#/oneOf"
+    },
+    {
+      "instancePath": "/else",
+      "keyword": "not",
+      "message": "must NOT be valid",
+      "params": {},
+      "schemaPath": "#/allOf/0/not"
+    },
+    {
+      "instancePath": "/else",
+      "keyword": "minItems",
+      "message": "must NOT have fewer than 1 items",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/else/oneOf/1/minItems"
     }
   ]
 }
