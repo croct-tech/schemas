@@ -5,6 +5,9 @@
   "description": "Executes a package using a runner, optionally handling interactive prompts.",
   "type": "object",
   "properties": {
+    "$schema": {
+      "type": "string"
+    },
     "name": {
       "type": "string",
       "description": "The name of the action.",

@@ -5,6 +5,9 @@
   "description": "Prints a message to the console with optional semantic styling and title.",
   "type": "object",
   "properties": {
+    "$schema": {
+      "type": "string"
+    },
     "name": {
       "type": "string",
       "description": "The name of the action.",

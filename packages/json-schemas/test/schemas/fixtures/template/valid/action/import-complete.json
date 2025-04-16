@@ -1,6 +1,7 @@
 {
   "schema": "template/action/import.json",
   "input": {
+    "$schema": "https://schema.croct.com/json/template/action.json",
     "name": "import",
     "template": "croct://template-name",
     "options": {

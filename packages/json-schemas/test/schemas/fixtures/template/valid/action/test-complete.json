@@ -1,6 +1,7 @@
 {
   "schema": "template/action/test.json",
   "input": {
+    "$schema": "https://schema.croct.com/json/template/action.json",
     "name": "test",
     "condition":"${this.condition}",
     "then": {

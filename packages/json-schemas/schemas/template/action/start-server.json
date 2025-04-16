@@ -5,6 +5,9 @@
   "description": "Starts the project's development server or detects if it's already running.",
   "type": "object",
   "properties": {
+    "$schema": {
+      "type": "string"
+    },
     "name": {
       "type": "string",
       "description": "The name of the action.",

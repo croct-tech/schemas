@@ -212,6 +212,17 @@
           "name": "print",
           "message": "Condition is true"
         }
+      },
+      {
+        "name": "try",
+        "action": {
+          "name": "print",
+          "message": "Trying..."
+        },
+        "finally": {
+          "name": "print",
+          "message": "Done"
+        }
       }
     ]
   },

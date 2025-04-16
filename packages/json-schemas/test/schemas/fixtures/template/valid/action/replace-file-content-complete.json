@@ -1,6 +1,7 @@
 {
   "schema": "template/action/replace-file-content.json",
   "input": {
+    "$schema": "https://schema.croct.com/json/template/action.json",
     "name": "replace-file-content",
     "files": [
       {

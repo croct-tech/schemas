@@ -1,6 +1,7 @@
 {
   "schema": "template/action/execute-package.json",
   "input": {
+    "$schema": "https://schema.croct.com/json/template/action.json",
     "name": "execute-package",
     "package": "create-react-app",
     "runner": "npm",

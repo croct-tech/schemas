@@ -1,9 +1,9 @@
 {
-  "schema": "template/action/change-directory.json",
+  "schema": "template/action.json",
   "input": {
     "$schema": "https://schema.croct.com/json/template/action.json",
-    "name": "change-directory",
-    "path": "."
+    "name": "print",
+    "message": "Hello, world!"
   },
   "errors": []
 }
