@@ -1,0 +1,29 @@
+{
+  "$id": "https://schema.croct.com/json/template/catalog-template.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Catalog template",
+  "description": "A template listed in the catalog.",
+  "type": "object",
+  "allOf": [
+    {
+      "type": "object",
+      "$ref": "https://schema.croct.com/json/template/template.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "metadata": {
+          "description": "Metadata about the template.",
+          "type": "object",
+          "$ref": "https://schema.croct.com/json/template/catalog-template-metadata.json"
+        }
+      }
+    }
+  ],
+  "required": [
+    "actions",
+    "title",
+    "description",
+    "metadata"
+  ]
+}

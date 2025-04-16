@@ -1,5 +1,5 @@
 {
-  "schema": "template/template-catalog-metadata.json",
+  "schema": "template/catalog-template-metadata.json",
   "input": {
     "id": "shadcn-croct",
     "verified": true,

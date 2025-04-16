@@ -1,0 +1,96 @@
+{
+  "schema": "template/catalog-template.json",
+  "input": {
+    "$schema": "https://schema.croct.com/json/template/template.json",
+    "title": "Full template",
+    "description": "A template with all properties filled.",
+    "metadata": {
+      "id": "shadcn-croct",
+      "verified": true,
+      "categories": ["ui", "component"],
+      "author": {
+        "name": "Croct",
+        "avatarUrl": "https://cdn.croct.com/avatar.png",
+        "websiteUrl": "https://croct.com"
+      },
+      "sourceUrl": "https://github.com/croct-tech/templates/shadcn-croct",
+      "demoUrl": "https://demo.croct.com",
+      "deployUrl": "https://deploy.croct.com",
+      "coverImageUrl": "https://cdn.croct.com/image.png",
+      "coverVideoUrl": "https://cdn.croct.com/video.mp4",
+      "installationUrl": "shadcn://ui/component",
+      "documentation": "A documentation in markdown format."
+    },
+    "options": {
+      "string": {
+        "type": "string",
+        "description": "description of the option",
+        "required": true,
+        "choices": [
+          "a",
+          "b",
+          "c"
+        ],
+        "default": "a"
+      },
+      "reference": {
+        "type": "reference",
+        "description": "description of the option",
+        "required": true,
+        "default": "ref"
+      },
+      "number": {
+        "type": "number",
+        "description": "description of the option",
+        "required": true,
+        "default": 42
+      },
+      "boolean": {
+        "type": "boolean",
+        "description": "description of the option",
+        "required": true,
+        "default": true
+      },
+      "array": {
+        "type": "array",
+        "description": "description of the option",
+        "required": true,
+        "default": [
+          "string",
+          42,
+          true,
+          null,
+          {},
+          []
+        ]
+      },
+      "object": {
+        "type": "object",
+        "description": "description of the option",
+        "required": true,
+        "default": {
+          "string": "default value",
+          "number": 42,
+          "boolean": true,
+          "array": [
+            "string",
+            42,
+            true,
+            null,
+            {},
+            []
+          ]
+        }
+      }
+    },
+    "actions": [
+      {
+        "name": "add-component",
+        "components": [
+          "button"
+        ]
+      }
+    ]
+  },
+  "errors": []
+}
