@@ -5,6 +5,9 @@
   "description": "Formats code using the project's configured formatter.",
   "type": "object",
   "properties": {
+    "$schema": {
+      "type": "string"
+    },
     "name": {
       "type": "string",
       "description": "The name of the action.",

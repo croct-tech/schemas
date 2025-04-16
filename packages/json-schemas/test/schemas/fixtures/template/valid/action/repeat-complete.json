@@ -1,6 +1,7 @@
 {
   "schema": "template/action/repeat.json",
   "input": {
+    "$schema": "https://schema.croct.com/json/template/action.json",
     "name": "repeat",
     "condition": "${this.retryCount < 3}",
     "actions": {

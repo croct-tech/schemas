@@ -1,6 +1,7 @@
 {
   "schema": "template/action/open-link.json",
   "input": {
+    "$schema": "https://schema.croct.com/json/template/action.json",
     "name": "open-link",
     "url": "https://croct.com"
   },

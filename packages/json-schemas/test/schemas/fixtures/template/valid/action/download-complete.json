@@ -1,6 +1,7 @@
 {
   "schema": "template/action/download.json",
   "input": {
+    "$schema": "https://schema.croct.com/json/template/action.json",
     "name": "download",
     "source": "github.com/user/repo",
     "destination": "/path/to/destination",
