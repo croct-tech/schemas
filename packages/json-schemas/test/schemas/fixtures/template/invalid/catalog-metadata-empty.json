@@ -1,5 +1,5 @@
 {
-  "schema": "template/catalog-metadata.json",
+  "schema": "template/template-catalog-metadata.json",
   "allErrors": true,
   "input": {
 
