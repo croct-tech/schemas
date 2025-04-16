@@ -1,0 +1,27 @@
+{
+  "schema": "template/action/try.json",
+  "allErrors": true,
+  "input": {
+    "name": "try",
+    "action": {
+      "name": "print",
+      "message": "then"
+    },
+    "else": {
+      "name": "print",
+      "message": "else"
+    },
+    "help": {
+      "message": "Help"
+    }
+  },
+  "errors": [
+    {
+      "instancePath": "",
+      "keyword": "not",
+      "message": "must NOT be valid",
+      "params": {},
+      "schemaPath": "#/allOf/0/not"
+    }
+  ]
+}

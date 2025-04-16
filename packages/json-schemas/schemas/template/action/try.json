@@ -46,38 +46,35 @@
           "minItems": 1
         }
       ]
+    },
+    "help": {
+      "description": "Help message to display if the action fails.",
+      "type": "object",
+      "$ref": "https://schema.croct.com/json/template/help.json",
+      "unevaluatedProperties": false
+    },
+    "else": {
+      "description": "Fallback actions to run if the primary action fails.",
+      "oneOf": [
+        {
+          "type": "object",
+          "$ref": "https://schema.croct.com/json/template/action.json"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "https://schema.croct.com/json/template/action.json"
+          },
+          "minItems": 1
+        }
+      ]
     }
   },
-  "anyOf": [
+  "allOf": [
     {
-      "properties": {
-        "else": {
-          "description": "Fallback actions to run if the primary action fails.",
-          "oneOf": [
-            {
-              "type": "object",
-              "$ref": "https://schema.croct.com/json/template/action.json"
-            },
-            {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "$ref": "https://schema.croct.com/json/template/action.json"
-              },
-              "minItems": 1
-            }
-          ]
-        }
-      }
-    },
-    {
-      "properties": {
-        "help": {
-          "description": "Help message to display if the action fails.",
-          "type": "object",
-          "$ref": "https://schema.croct.com/json/template/help.json",
-          "unevaluatedProperties": false
-        }
+      "not": {
+        "required": ["help", "else"]
       }
     }
   ],
@@ -108,7 +105,9 @@
             "url": "https://docs.example.com"
           }
         ],
-        "suggestions": ["Run `npm install`"]
+        "suggestions": [
+          "Run `npm install`"
+        ]
       }
     }
   ]
