@@ -5,6 +5,9 @@
   "description": "Replaces content in one or more files using regular expression patterns.",
   "type": "object",
   "properties": {
+    "$schema": {
+      "type": "string"
+    },
     "name": {
       "type": "string",
       "description": "The name of the action.",

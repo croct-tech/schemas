@@ -1,6 +1,7 @@
 {
   "schema": "template/action/define.json",
   "input": {
+    "$schema": "https://schema.croct.com/json/template/action.json",
     "name": "define",
     "variables": {
       "number": 1,

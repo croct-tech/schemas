@@ -1,0 +1,72 @@
+{
+  "schema": "template/catalog-metadata.json",
+  "allErrors": true,
+  "input": {
+
+  },
+  "errors": [
+    {
+      "instancePath": "",
+      "keyword": "required",
+      "message": "must have required property 'id'",
+      "params": {
+        "missingProperty": "id"
+      },
+      "schemaPath": "#/required"
+    },
+    {
+      "instancePath": "",
+      "keyword": "required",
+      "message": "must have required property 'author'",
+      "params": {
+        "missingProperty": "author"
+      },
+      "schemaPath": "#/required"
+    },
+    {
+      "instancePath": "",
+      "keyword": "required",
+      "message": "must have required property 'sourceUrl'",
+      "params": {
+        "missingProperty": "sourceUrl"
+      },
+      "schemaPath": "#/required"
+    },
+    {
+      "instancePath": "",
+      "keyword": "required",
+      "message": "must have required property 'coverImageUrl'",
+      "params": {
+        "missingProperty": "coverImageUrl"
+      },
+      "schemaPath": "#/required"
+    },
+    {
+      "instancePath": "",
+      "keyword": "required",
+      "message": "must have required property 'installationUrl'",
+      "params": {
+        "missingProperty": "installationUrl"
+      },
+      "schemaPath": "#/required"
+    },
+    {
+      "instancePath": "",
+      "keyword": "required",
+      "message": "must have required property 'categories'",
+      "params": {
+        "missingProperty": "categories"
+      },
+      "schemaPath": "#/required"
+    },
+    {
+      "instancePath": "",
+      "keyword": "required",
+      "message": "must have required property 'documentation'",
+      "params": {
+        "missingProperty": "documentation"
+      },
+      "schemaPath": "#/required"
+    }
+  ]
+}

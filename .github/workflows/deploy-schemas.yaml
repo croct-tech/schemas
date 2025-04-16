@@ -28,10 +28,13 @@ jobs:
           mkdir -p build/json-schemas
           packages/json-schemas/bin/bundle-schema.ts packages/json-schemas/schemas/event/web-event.json build/json-schemas/web-event.json
           packages/json-schemas/bin/bundle-schema.ts packages/json-schemas/schemas/template/template.json build/json-schemas/template.json
+          packages/json-schemas/bin/bundle-schema.ts packages/json-schemas/schemas/template/action.json build/json-schemas/action.json
           packages/json-schemas/bin/process-template-schema.ts build/json-schemas/template.json build/json-schemas/template.json
+          packages/json-schemas/bin/process-template-schema.ts build/json-schemas/action.json build/json-schemas/action.json
           cp packages/json-schemas/schemas/content.json build/json-schemas/content.json
           cp packages/json-schemas/schemas/content-schema.json build/json-schemas/content-schema.json
           cp packages/json-schemas/schemas/project.json build/json-schemas/project.json
+          cp packages/json-schemas/schemas/template/catalog-metadata.json build/json-schemas/template/catalog-metadata.json
           find build/json-schemas -type f -name "*.json" -exec sed -i -e 's|https://schema\.croct\.com/json/event/|https://schema.croct.com/json/v1/|g' {} +
           find build/json-schemas -type f -name "*.json" -exec sed -i -e 's|https://schema\.croct\.com/json/template/|https://schema.croct.com/json/v1/|g' {} +
           find build/json-schemas -type f -name "*.json" -exec sed -i -e '/https:\/\/schema\.croct\.com\/json\/v1\//! s|https://schema\.croct\.com/json/|https://schema.croct.com/json/v1/|g' {} +

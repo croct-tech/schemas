@@ -5,6 +5,9 @@
   "description": "Searches for files under a directory path based on a specified pattern.",
   "type": "object",
   "properties": {
+    "$schema": {
+      "type": "string"
+    },
     "name": {
       "type": "string",
       "description": "The name of the action.",

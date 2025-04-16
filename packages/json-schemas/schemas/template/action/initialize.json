@@ -5,6 +5,9 @@
   "description": "Initializes a Croct project in the current directory.",
   "type": "object",
   "properties": {
+    "$schema": {
+      "type": "string"
+    },
     "name": {
       "type": "string",
       "description": "The name of the action.",
