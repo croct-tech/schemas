@@ -6,8 +6,7 @@
   "type": "object",
   "properties": {
     "$schema": {
-      "type": "string",
-      "description": "The JSON schema reference for this content."
+      "type": "string"
     },
     "type": {
       "type": "string",

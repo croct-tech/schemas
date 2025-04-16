@@ -4,6 +4,11 @@
   "title": "Action",
   "description": "An instruction that tells the template what to do, like writing to the console or creating a file.",
   "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    }
+  },
   "oneOf": [
     {
       "$ref": "./action/add-component.json"
