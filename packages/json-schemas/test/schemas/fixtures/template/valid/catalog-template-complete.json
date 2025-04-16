@@ -92,24 +92,5 @@
       }
     ]
   },
-  "errors": [
-    {
-      "instancePath": "",
-      "keyword": "additionalProperties",
-      "message": "must NOT have additional properties",
-      "params": {
-        "additionalProperty": "extra"
-      },
-      "schemaPath": "#/additionalProperties"
-    },
-    {
-      "instancePath": "/metadata",
-      "keyword": "additionalProperties",
-      "message": "must NOT have additional properties",
-      "params": {
-        "additionalProperty": "extra"
-      },
-      "schemaPath": "https://schema.croct.com/json/template/catalog-template-metadata.json/additionalProperties"
-    }
-  ]
+  "errors": []
 }
