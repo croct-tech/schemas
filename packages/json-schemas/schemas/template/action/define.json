@@ -5,6 +5,9 @@
   "description": "Defines variables to be used in the template.",
   "type": "object",
   "properties": {
+    "$schema": {
+      "type": "string"
+    },
     "name": {
       "type": "string",
       "description": "The name of the action.",

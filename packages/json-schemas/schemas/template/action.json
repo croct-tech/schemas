@@ -73,6 +73,9 @@
     },
     {
       "$ref": "./action/test.json"
+    },
+    {
+      "$ref": "./action/try.json"
     }
   ]
 }

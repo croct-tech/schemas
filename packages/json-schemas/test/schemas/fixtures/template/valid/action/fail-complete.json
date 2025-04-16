@@ -1,6 +1,7 @@
 {
   "schema": "template/action/fail.json",
   "input": {
+    "$schema": "https://schema.croct.com/json/template/action.json",
     "name": "fail",
     "title": "Missing configuration",
     "message": "The project is missing a valid configuration file.",

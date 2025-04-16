@@ -5,6 +5,9 @@
   "description": "Adds dependencies to the project.",
   "type": "object",
   "properties": {
+    "$schema": {
+      "type": "string"
+    },
     "name": {
       "type": "string",
       "description": "The name of the action.",

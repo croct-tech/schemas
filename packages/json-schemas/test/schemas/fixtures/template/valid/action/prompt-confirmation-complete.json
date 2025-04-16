@@ -1,6 +1,7 @@
 {
   "schema": "template/action/prompt.json",
   "input": {
+    "$schema": "https://schema.croct.com/json/template/action.json",
     "name": "prompt",
     "type": "confirmation",
     "message": "Proceed?",

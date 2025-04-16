@@ -5,6 +5,9 @@
   "type": "object",
   "description": "Asks the user to confirm (yes/no).",
   "properties": {
+    "$schema": {
+      "type": "string"
+    },
     "name": {
       "type": "string",
       "const": "prompt",

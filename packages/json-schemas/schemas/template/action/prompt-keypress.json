@@ -5,6 +5,9 @@
   "type": "object",
   "description": "Waits for a specific keypress from the user.",
   "properties": {
+    "$schema": {
+      "type": "string"
+    },
     "name": {
       "type": "string",
       "description": "The name of the action.",

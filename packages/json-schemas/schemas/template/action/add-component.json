@@ -5,6 +5,9 @@
   "description": "Adds a component to the project.",
   "type": "object",
   "properties": {
+    "$schema": {
+      "type": "string"
+    },
     "name": {
       "type": "string",
       "description": "Tha name of the action.",
