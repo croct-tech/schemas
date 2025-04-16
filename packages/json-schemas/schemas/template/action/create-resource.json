@@ -265,7 +265,6 @@
                         "allocation": {
                           "type": "integer",
                           "minimum": 0,
-                          "maximum": 1000,
                           "description": "The percentage of traffic to allocate to the variant, where 1000 means 100%."
                         }
                       },
