@@ -4,20 +4,20 @@
   "title": "Catalog template",
   "description": "A template listed in the catalog.",
   "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "metadata": {
+      "description": "Metadata about the template.",
+      "type": "object",
+      "$ref": "https://schema.croct.com/json/template/catalog-template-metadata.json"
+    }
+  },
   "allOf": [
     {
       "type": "object",
       "$ref": "https://schema.croct.com/json/template/template.json"
-    },
-    {
-      "type": "object",
-      "properties": {
-        "metadata": {
-          "description": "Metadata about the template.",
-          "type": "object",
-          "$ref": "https://schema.croct.com/json/template/catalog-template-metadata.json"
-        }
-      }
     }
   ],
   "required": [
