@@ -1,0 +1,84 @@
+{
+  "schema": "template/catalog-template.json",
+  "allErrors": true,
+  "input": {
+    "$schema": "https://schema.croct.com/json/template/template.json",
+    "title": "Full template",
+    "description": "A template with all properties filled.",
+    "metadata": {
+    },
+    "actions": [
+      {
+        "name": "add-component",
+        "components": [
+          "button"
+        ]
+      }
+    ]
+  },
+  "errors": [
+    {
+      "instancePath": "/metadata",
+      "keyword": "required",
+      "message": "must have required property 'id'",
+      "params": {
+        "missingProperty": "id"
+      },
+      "schemaPath": "https://schema.croct.com/json/template/catalog-template-metadata.json/required"
+    },
+    {
+      "instancePath": "/metadata",
+      "keyword": "required",
+      "message": "must have required property 'author'",
+      "params": {
+        "missingProperty": "author"
+      },
+      "schemaPath": "https://schema.croct.com/json/template/catalog-template-metadata.json/required"
+    },
+    {
+      "instancePath": "/metadata",
+      "keyword": "required",
+      "message": "must have required property 'sourceUrl'",
+      "params": {
+        "missingProperty": "sourceUrl"
+      },
+      "schemaPath": "https://schema.croct.com/json/template/catalog-template-metadata.json/required"
+    },
+    {
+      "instancePath": "/metadata",
+      "keyword": "required",
+      "message": "must have required property 'coverImageUrl'",
+      "params": {
+        "missingProperty": "coverImageUrl"
+      },
+      "schemaPath": "https://schema.croct.com/json/template/catalog-template-metadata.json/required"
+    },
+    {
+      "instancePath": "/metadata",
+      "keyword": "required",
+      "message": "must have required property 'installationUrl'",
+      "params": {
+        "missingProperty": "installationUrl"
+      },
+      "schemaPath": "https://schema.croct.com/json/template/catalog-template-metadata.json/required"
+    },
+    {
+      "instancePath": "/metadata",
+      "keyword": "required",
+      "message": "must have required property 'categories'",
+      "params": {
+        "missingProperty": "categories"
+      },
+      "schemaPath": "https://schema.croct.com/json/template/catalog-template-metadata.json/required"
+    },
+    {
+      "instancePath": "/metadata",
+      "keyword": "required",
+      "message": "must have required property 'documentation'",
+      "params": {
+        "missingProperty": "documentation"
+      },
+      "schemaPath": "https://schema.croct.com/json/template/catalog-template-metadata.json/required"
+    }
+  ]
+}

@@ -25,6 +25,5 @@
     "title",
     "description",
     "metadata"
-  ],
-  "additionalProperties": false
+  ]
 }
