@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Next.js + Croct starter",
+  "description": "A Next.js project with Croct integration.",
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "next${this.versionNumber}-starter-page": {
+            "name": "Next.js ${this.versionNumber} starter page",
+            "description": "The structure for Next.js ${this.versionNumber} starter pages.",
+            "schema": "${import('./configuration/' + this.versionNumber + '/next-starter-page-schema.json')}"
+          }
+        },
+      }
+    },
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "template/catalog-metadata.json",
+  "input": {
+    "id": "shadcn-croct",
+    "verified": true,
+    "categories": ["ui", "component"],
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "https://cdn.croct.com/avatar.png",
+      "websiteUrl": "https://croct.com"
+    },
+    "sourceUrl": "https://github.com/croct-tech/templates/shadcn-croct",
+    "demoUrl": "https://demo.croct.com",
+    "deployUrl": "https://deploy.croct.com",
+    "coverImageUrl": "https://cdn.croct.com/image.png",
+    "coverVideoUrl": "https://cdn.croct.com/video.mp4",
+    "installationUrl": "shadcn://ui/component",
+    "documentation": "A documentation in markdown format."
+  },
+  "errors": [
+  ]
+}
