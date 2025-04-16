@@ -268,8 +268,7 @@
                         "allocation": {
                           "type": "number",
                           "minimum": 0,
-                          "maximum": 1,
-                          "description": "The percentage of traffic to allocate to the variant, where 1 means 100%."
+                          "description": "Relative traffic ratio between variants. For example, 2 and 1 gives one variant twice the traffic of the other."
                         }
                       },
                       "required": [

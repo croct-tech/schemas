@@ -126,7 +126,7 @@
             "variants": [
               {
                 "name": "Variant A",
-                "allocation": 0.5,
+                "allocation": 500,
                 "baseline": true,
                 "content": {
                   "default": {
@@ -196,7 +196,7 @@
               },
               {
                 "name": "Variant B",
-                "allocation": 0.5,
+                "allocation": 500,
                 "content": {
                   "default": {
                     "home-hero": {
