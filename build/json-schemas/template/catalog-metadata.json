@@ -1,13 +1,10 @@
 {
-  "$id": "https://schema.croct.com/json/template/template-catalog-metadata.json",
+  "$id": "https://schema.croct.com/json/template/catalog-metadata.json",
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Template metadata",
   "description": "Metadata of templates listed in the catalog.",
   "type": "object",
   "properties": {
-    "$schema": {
-      "type": "string"
-    },
     "id": {
       "type": "string",
       "description": "The ID of the template in the catalog.",

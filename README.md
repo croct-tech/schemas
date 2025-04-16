@@ -36,14 +36,14 @@ To use a JSON schema in your JSON configuration, include the `$schema` keyword r
 
 Below is a list of available JSON schemas:
 
-| Schema                    | URL                                                                                                                                  |
-|---------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Project                   | [`https://schema.croct.com/json/v1/project.json`](https://schema.croct.com/json/v1/project.json)                                     |
-| Content                   | [`https://schema.croct.com/json/v1/content.json`](https://schema.croct.com/json/v1/content.json)                                     |
-| Content schema            | [`https://schema.croct.com/json/v1/content-schema.json`](https://schema.croct.com/json/v1/content-schema.json)                       |
-| Template                  | [`https://schema.croct.com/json/v1/template.json`](https://schema.croct.com/json/v1/template.json)                                   |
-| Template catalog metadata | [`https://schema.croct.com/json/v1/template-catalog-metadata.json`](https://schema.croct.com/json/v1/template-catalog-metadata.json) |
-| Web event                 | [`https://schema.croct.com/json/v1/web-event.json`](https://schema.croct.com/json/v1/web-event.json)                                 |
+| Schema           | URL                                                                                                                |
+|------------------|--------------------------------------------------------------------------------------------------------------------|
+| Project          | [`https://schema.croct.com/json/v1/project.json`](https://schema.croct.com/json/v1/project.json)                   |
+| Content          | [`https://schema.croct.com/json/v1/content.json`](https://schema.croct.com/json/v1/content.json)                   |
+| Content schema   | [`https://schema.croct.com/json/v1/content-schema.json`](https://schema.croct.com/json/v1/content-schema.json)     |
+| Template         | [`https://schema.croct.com/json/v1/template.json`](https://schema.croct.com/json/v1/template.json)                 |
+| Catalog template | [`https://schema.croct.com/json/v1/catalog-template.json`](https://schema.croct.com/json/v1/catalog-template.json) |
+| Web event        | [`https://schema.croct.com/json/v1/web-event.json`](https://schema.croct.com/json/v1/web-event.json)               |
 
 ## Documentation
 

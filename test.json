@@ -1,0 +1,14 @@
+{
+  "$schema": "build/json-schemas/catalog-template3.json",
+  "actions": [
+    {
+      "name": "print",
+      "message": "Hello"
+    }
+  ],
+  "title": "a",
+  "description": "aa",
+  "metadata": {
+    ""
+  }
+}
