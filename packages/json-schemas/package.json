@@ -30,6 +30,7 @@
     "update-schemas": "bin/generate-content-definition-schema.ts schemas/content-schema.json && bin/generate-content-schema.ts schemas/content.json"
   },
   "devDependencies": {
+    "@fastify/merge-json-schemas": "^0.2.1",
     "@croct/content-model": "^0.21.0",
     "@croct/eslint-plugin": "^0.7.1",
     "@croct/json": "^2.1.0",
