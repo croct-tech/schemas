@@ -20,7 +20,20 @@ jobs:
       - uses: sourcemeta/jsonschema@v7.1.2
       - uses: actions/setup-node@v4
 
-      - name: Install dependencies
+      - name: Cache dependencies
+        id: cache-dependencies
+        uses: actions/cache@v4
+        with:
+          path: packages/json-schemas/node_modules
+          key: json_node_modules-${{ hashFiles('**/package-lock.json') }}
+
+      - name: Install project dependencies
+        if: steps.cache-dependencies.outputs.cache-hit != 'true'
+        run: |-
+          cd packages/json-schemas
+          npm ci
+
+      - name: Install build dependencies
         run: npm -g install tsx
 
       - name: Build JSON schemas
