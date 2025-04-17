@@ -24,7 +24,7 @@
       "params": {
         "missingProperty": "id"
       },
-      "schemaPath": "https://schema.croct.com/json/template/catalog-template-metadata.json/required"
+      "schemaPath": "#/properties/metadata/required"
     },
     {
       "instancePath": "/metadata",
@@ -33,7 +33,7 @@
       "params": {
         "missingProperty": "author"
       },
-      "schemaPath": "https://schema.croct.com/json/template/catalog-template-metadata.json/required"
+      "schemaPath": "#/properties/metadata/required"
     },
     {
       "instancePath": "/metadata",
@@ -42,7 +42,7 @@
       "params": {
         "missingProperty": "sourceUrl"
       },
-      "schemaPath": "https://schema.croct.com/json/template/catalog-template-metadata.json/required"
+      "schemaPath": "#/properties/metadata/required"
     },
     {
       "instancePath": "/metadata",
@@ -51,7 +51,7 @@
       "params": {
         "missingProperty": "coverImageUrl"
       },
-      "schemaPath": "https://schema.croct.com/json/template/catalog-template-metadata.json/required"
+      "schemaPath": "#/properties/metadata/required"
     },
     {
       "instancePath": "/metadata",
@@ -60,7 +60,7 @@
       "params": {
         "missingProperty": "installationUrl"
       },
-      "schemaPath": "https://schema.croct.com/json/template/catalog-template-metadata.json/required"
+      "schemaPath": "#/properties/metadata/required"
     },
     {
       "instancePath": "/metadata",
@@ -69,7 +69,7 @@
       "params": {
         "missingProperty": "categories"
       },
-      "schemaPath": "https://schema.croct.com/json/template/catalog-template-metadata.json/required"
+      "schemaPath": "#/properties/metadata/required"
     },
     {
       "instancePath": "/metadata",
@@ -78,7 +78,7 @@
       "params": {
         "missingProperty": "documentation"
       },
-      "schemaPath": "https://schema.croct.com/json/template/catalog-template-metadata.json/required"
+      "schemaPath": "#/properties/metadata/required"
     }
   ]
 }

@@ -1,256 +1,260 @@
 {
-  "schema": "template/catalog-template-metadata.json",
+  "schema": "template/catalog-template.json",
   "allErrors": true,
   "input": {
-    "id": "",
-    "categories": [""],
-    "author": {
-      "name": "",
-      "avatarUrl": "",
-      "websiteUrl": ""
-    },
-    "sourceUrl": "",
-    "demoUrl": "",
-    "deployUrl": "",
-    "coverImageUrl": "",
-    "coverVideoUrl": "",
-    "installationUrl": "",
-    "documentation": ""
+    "title": "Title",
+    "description": "Description",
+    "metadata": {
+      "id": "",
+      "categories": [""],
+      "author": {
+        "name": "",
+        "avatarUrl": "",
+        "websiteUrl": ""
+      },
+      "sourceUrl": "",
+      "demoUrl": "",
+      "deployUrl": "",
+      "coverImageUrl": "",
+      "coverVideoUrl": "",
+      "installationUrl": "",
+      "documentation": ""
+    }
   },
   "errors": [
     {
-      "instancePath": "/id",
+      "instancePath": "/metadata/id",
       "keyword": "minLength",
       "message": "must NOT have fewer than 1 characters",
       "params": {
         "limit": 1
       },
-      "schemaPath": "#/properties/id/minLength"
+      "schemaPath": "#/properties/metadata/properties/id/minLength"
     },
     {
-      "instancePath": "/id",
+      "instancePath": "/metadata/id",
       "keyword": "pattern",
       "message": "must match pattern \"^[a-z0-9-]+/[a-z0-9-]+/[a-z0-9-]+$\"",
       "params": {
         "pattern": "^[a-z0-9-]+/[a-z0-9-]+/[a-z0-9-]+$"
       },
-      "schemaPath": "#/properties/id/pattern"
+      "schemaPath": "#/properties/metadata/properties/id/pattern"
     },
     {
-      "instancePath": "/documentation",
+      "instancePath": "/metadata/documentation",
       "keyword": "minLength",
       "message": "must NOT have fewer than 1 characters",
       "params": {
         "limit": 1
       },
-      "schemaPath": "#/properties/documentation/minLength"
+      "schemaPath": "#/properties/metadata/properties/documentation/minLength"
     },
     {
-      "instancePath": "/sourceUrl",
+      "instancePath": "/metadata/sourceUrl",
       "keyword": "minLength",
       "message": "must NOT have fewer than 1 characters",
       "params": {
         "limit": 1
       },
-      "schemaPath": "#/properties/sourceUrl/minLength"
+      "schemaPath": "#/properties/metadata/properties/sourceUrl/minLength"
     },
     {
-      "instancePath": "/sourceUrl",
+      "instancePath": "/metadata/sourceUrl",
       "keyword": "pattern",
       "message": "must match pattern \"^https://\"",
       "params": {
         "pattern": "^https://"
       },
-      "schemaPath": "#/properties/sourceUrl/pattern"
+      "schemaPath": "#/properties/metadata/properties/sourceUrl/pattern"
     },
     {
-      "instancePath": "/sourceUrl",
+      "instancePath": "/metadata/sourceUrl",
       "keyword": "format",
       "message": "must match format \"uri\"",
       "params": {
         "format": "uri"
       },
-      "schemaPath": "#/properties/sourceUrl/format"
+      "schemaPath": "#/properties/metadata/properties/sourceUrl/format"
     },
     {
-      "instancePath": "/demoUrl",
+      "instancePath": "/metadata/demoUrl",
       "keyword": "pattern",
       "message": "must match pattern \"^https://\"",
       "params": {
         "pattern": "^https://"
       },
-      "schemaPath": "#/properties/demoUrl/pattern"
+      "schemaPath": "#/properties/metadata/properties/demoUrl/pattern"
     },
     {
-      "instancePath": "/demoUrl",
+      "instancePath": "/metadata/demoUrl",
       "keyword": "format",
       "message": "must match format \"uri\"",
       "params": {
         "format": "uri"
       },
-      "schemaPath": "#/properties/demoUrl/format"
+      "schemaPath": "#/properties/metadata/properties/demoUrl/format"
     },
     {
-      "instancePath": "/deployUrl",
+      "instancePath": "/metadata/deployUrl",
       "keyword": "pattern",
       "message": "must match pattern \"^https://\"",
       "params": {
         "pattern": "^https://"
       },
-      "schemaPath": "#/properties/deployUrl/pattern"
+      "schemaPath": "#/properties/metadata/properties/deployUrl/pattern"
     },
     {
-      "instancePath": "/deployUrl",
+      "instancePath": "/metadata/deployUrl",
       "keyword": "format",
       "message": "must match format \"uri\"",
       "params": {
         "format": "uri"
       },
-      "schemaPath": "#/properties/deployUrl/format"
+      "schemaPath": "#/properties/metadata/properties/deployUrl/format"
     },
     {
-      "instancePath": "/coverImageUrl",
+      "instancePath": "/metadata/coverImageUrl",
       "keyword": "minLength",
       "message": "must NOT have fewer than 1 characters",
       "params": {
         "limit": 1
       },
-      "schemaPath": "#/properties/coverImageUrl/minLength"
+      "schemaPath": "#/properties/metadata/properties/coverImageUrl/minLength"
     },
     {
-      "instancePath": "/coverImageUrl",
+      "instancePath": "/metadata/coverImageUrl",
       "keyword": "pattern",
       "message": "must match pattern \"^https://\"",
       "params": {
         "pattern": "^https://"
       },
-      "schemaPath": "#/properties/coverImageUrl/pattern"
+      "schemaPath": "#/properties/metadata/properties/coverImageUrl/pattern"
     },
     {
-      "instancePath": "/coverImageUrl",
+      "instancePath": "/metadata/coverImageUrl",
       "keyword": "format",
       "message": "must match format \"uri\"",
       "params": {
         "format": "uri"
       },
-      "schemaPath": "#/properties/coverImageUrl/format"
+      "schemaPath": "#/properties/metadata/properties/coverImageUrl/format"
     },
     {
-      "instancePath": "/coverVideoUrl",
+      "instancePath": "/metadata/coverVideoUrl",
       "keyword": "pattern",
       "message": "must match pattern \"^https://\"",
       "params": {
         "pattern": "^https://"
       },
-      "schemaPath": "#/properties/coverVideoUrl/pattern"
+      "schemaPath": "#/properties/metadata/properties/coverVideoUrl/pattern"
     },
     {
-      "instancePath": "/coverVideoUrl",
+      "instancePath": "/metadata/coverVideoUrl",
       "keyword": "format",
       "message": "must match format \"uri\"",
       "params": {
         "format": "uri"
       },
-      "schemaPath": "#/properties/coverVideoUrl/format"
+      "schemaPath": "#/properties/metadata/properties/coverVideoUrl/format"
     },
     {
-      "instancePath": "/installationUrl",
+      "instancePath": "/metadata/installationUrl",
       "keyword": "minLength",
       "message": "must NOT have fewer than 1 characters",
       "params": {
         "limit": 1
       },
-      "schemaPath": "#/properties/installationUrl/minLength"
+      "schemaPath": "#/properties/metadata/properties/installationUrl/minLength"
     },
     {
-      "instancePath": "/installationUrl",
+      "instancePath": "/metadata/installationUrl",
       "keyword": "format",
       "message": "must match format \"uri\"",
       "params": {
         "format": "uri"
       },
-      "schemaPath": "#/properties/installationUrl/format"
+      "schemaPath": "#/properties/metadata/properties/installationUrl/format"
     },
     {
-      "instancePath": "/categories/0",
+      "instancePath": "/metadata/categories/0",
       "keyword": "minLength",
       "message": "must NOT have fewer than 1 characters",
       "params": {
         "limit": 1
       },
-      "schemaPath": "#/properties/categories/items/minLength"
+      "schemaPath": "#/properties/metadata/properties/categories/items/minLength"
     },
     {
-      "instancePath": "/categories/0",
+      "instancePath": "/metadata/categories/0",
       "keyword": "pattern",
       "message": "must match pattern \"^[a-z0-9-]+/[a-z0-9-]+$\"",
       "params": {
         "pattern": "^[a-z0-9-]+/[a-z0-9-]+$"
       },
-      "schemaPath": "#/properties/categories/items/pattern"
+      "schemaPath": "#/properties/metadata/properties/categories/items/pattern"
     },
     {
-      "instancePath": "/author/name",
+      "instancePath": "/metadata/author/name",
       "keyword": "minLength",
       "message": "must NOT have fewer than 1 characters",
       "params": {
         "limit": 1
       },
-      "schemaPath": "#/properties/author/properties/name/minLength"
+      "schemaPath": "#/properties/metadata/properties/author/properties/name/minLength"
     },
     {
-      "instancePath": "/author/avatarUrl",
+      "instancePath": "/metadata/author/avatarUrl",
       "keyword": "minLength",
       "message": "must NOT have fewer than 1 characters",
       "params": {
         "limit": 1
       },
-      "schemaPath": "#/properties/author/properties/avatarUrl/minLength"
+      "schemaPath": "#/properties/metadata/properties/author/properties/avatarUrl/minLength"
     },
     {
-      "instancePath": "/author/avatarUrl",
+      "instancePath": "/metadata/author/avatarUrl",
       "keyword": "pattern",
       "message": "must match pattern \"^https://\"",
       "params": {
         "pattern": "^https://"
       },
-      "schemaPath": "#/properties/author/properties/avatarUrl/pattern"
+      "schemaPath": "#/properties/metadata/properties/author/properties/avatarUrl/pattern"
     },
     {
-      "instancePath": "/author/avatarUrl",
+      "instancePath": "/metadata/author/avatarUrl",
       "keyword": "format",
       "message": "must match format \"uri\"",
       "params": {
         "format": "uri"
       },
-      "schemaPath": "#/properties/author/properties/avatarUrl/format"
+      "schemaPath": "#/properties/metadata/properties/author/properties/avatarUrl/format"
     },
     {
-      "instancePath": "/author/websiteUrl",
+      "instancePath": "/metadata/author/websiteUrl",
       "keyword": "minLength",
       "message": "must NOT have fewer than 1 characters",
       "params": {
         "limit": 1
       },
-      "schemaPath": "#/properties/author/properties/websiteUrl/minLength"
+      "schemaPath": "#/properties/metadata/properties/author/properties/websiteUrl/minLength"
     },
     {
-      "instancePath": "/author/websiteUrl",
+      "instancePath": "/metadata/author/websiteUrl",
       "keyword": "pattern",
       "message": "must match pattern \"^https://\"",
       "params": {
         "pattern": "^https://"
       },
-      "schemaPath": "#/properties/author/properties/websiteUrl/pattern"
+      "schemaPath": "#/properties/metadata/properties/author/properties/websiteUrl/pattern"
     },
     {
-      "instancePath": "/author/websiteUrl",
+      "instancePath": "/metadata/author/websiteUrl",
       "keyword": "format",
       "message": "must match format \"uri\"",
       "params": {
         "format": "uri"
       },
-      "schemaPath": "#/properties/author/properties/websiteUrl/format"
+      "schemaPath": "#/properties/metadata/properties/author/properties/websiteUrl/format"
     }
   ]
 }
