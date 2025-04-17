@@ -68,7 +68,7 @@
         "type": "string",
         "description": "The ID of the category.",
         "minLength": 1,
-        "pattern": "^[a-z0-9-]+$"
+        "pattern": "^[a-z0-9-]+/[a-z0-9-]+$"
       },
       "minItems": 1
     },
@@ -79,7 +79,7 @@
         "type": "string",
         "description": "The ID of the related template.",
         "minLength": 1,
-        "pattern": "^[a-z0-9-]+$"
+        "pattern": "^[a-z0-9-]+/[a-z0-9-]+/[a-z0-9-]+$"
       }
     },
     "author": {

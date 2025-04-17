@@ -3,7 +3,8 @@
   "input": {
     "id": "framework/starter/shadcn-croct",
     "verified": true,
-    "categories": ["ui", "component"],
+    "categories": ["ui/component"],
+    "relatedTemplates": ["framework/starter/nextjs-croct"],
     "author": {
       "name": "Croct",
       "avatarUrl": "https://cdn.croct.com/avatar.png",
