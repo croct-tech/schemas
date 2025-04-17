@@ -39,10 +39,10 @@ jobs:
       - name: Build JSON schemas
         run: |-
           mkdir -p build/json-schemas
-          packages/json-schemas/bin/merge-schemas.ts packages/json-schemas/schemas/template/catalog-template.json packages/json-schemas/schemas/template/template.json packages/json-schemas/schemas/template/catalog-template.json
+          packages/json-schemas/bin/merge-schemas.ts packages/json-schemas/schemas/template/catalog-template.json packages/json-schemas/schemas/template/template.json build/json-schemas/catalog-template.json
           packages/json-schemas/bin/bundle-schema.ts packages/json-schemas/schemas/event/web-event.json build/json-schemas/web-event.json
           packages/json-schemas/bin/bundle-schema.ts packages/json-schemas/schemas/template/template.json build/json-schemas/template.json
-          packages/json-schemas/bin/bundle-schema.ts packages/json-schemas/schemas/template/catalog-template.json build/json-schemas/catalog-template.json
+          packages/json-schemas/bin/bundle-schema.ts build/json-schemas/catalog-template.json build/json-schemas/catalog-template.json
           packages/json-schemas/bin/bundle-schema.ts packages/json-schemas/schemas/template/action.json build/json-schemas/action.json
           packages/json-schemas/bin/process-template-schema.ts build/json-schemas/template.json build/json-schemas/template.json
           packages/json-schemas/bin/process-template-schema.ts build/json-schemas/catalog-template.json build/json-schemas/catalog-template.json
