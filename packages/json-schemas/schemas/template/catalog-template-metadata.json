@@ -9,7 +9,7 @@
       "type": "string",
       "description": "The ID of the template in the catalog.",
       "minLength": 1,
-      "pattern": "^[a-z0-9-]+$"
+      "pattern": "^[a-z0-9-]+\/[a-z0-9-]+\/[a-z0-9-]+$"
     },
     "verified": {
       "type": "boolean",

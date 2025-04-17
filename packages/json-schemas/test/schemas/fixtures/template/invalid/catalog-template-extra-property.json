@@ -51,6 +51,15 @@
         "additionalProperty": "extra"
       },
       "schemaPath": "https://schema.croct.com/json/template/catalog-template-metadata.json/additionalProperties"
+    },
+    {
+      "instancePath": "/metadata/id",
+      "keyword": "pattern",
+      "message": "must match pattern \"^[a-z0-9-]+/[a-z0-9-]+/[a-z0-9-]+$\"",
+      "params": {
+        "pattern": "^[a-z0-9-]+/[a-z0-9-]+/[a-z0-9-]+$"
+      },
+      "schemaPath": "https://schema.croct.com/json/template/catalog-template-metadata.json/properties/id/pattern"
     }
   ]
 }

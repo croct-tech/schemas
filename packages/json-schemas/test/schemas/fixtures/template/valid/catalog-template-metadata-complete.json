@@ -1,7 +1,7 @@
 {
   "schema": "template/catalog-template-metadata.json",
   "input": {
-    "id": "shadcn-croct",
+    "id": "framework/starter/shadcn-croct",
     "verified": true,
     "categories": ["ui", "component"],
     "author": {

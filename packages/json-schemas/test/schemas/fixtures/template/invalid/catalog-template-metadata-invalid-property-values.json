@@ -30,9 +30,9 @@
     {
       "instancePath": "/id",
       "keyword": "pattern",
-      "message": "must match pattern \"^[a-z0-9-]+$\"",
+      "message": "must match pattern \"^[a-z0-9-]+/[a-z0-9-]+/[a-z0-9-]+$\"",
       "params": {
-        "pattern": "^[a-z0-9-]+$"
+        "pattern": "^[a-z0-9-]+/[a-z0-9-]+/[a-z0-9-]+$"
       },
       "schemaPath": "#/properties/id/pattern"
     },
