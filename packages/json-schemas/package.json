@@ -49,8 +49,5 @@
   "files": [
     "**/*.js",
     "**/*.ts"
-  ],
-  "dependencies": {
-    "@fastify/merge-json-schemas": "^0.2.1"
-  }
+  ]
 }
