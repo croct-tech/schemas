@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schema.croct.com/json/next/template.json",
+  "title": "",
+  "description": "",
+  "metadata": {
+  },
+  "actions": [
+    {
+      "name": "try",
+      "action": {
+        "name": "print",
+        "message": "foo"
+      },
+      "help": {
+        "message": "aa"
+      }
+    }
+  ]
+}
