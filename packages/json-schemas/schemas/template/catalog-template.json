@@ -19,9 +19,11 @@
           "type": "boolean",
           "description": "Whether the template is verified by Croct."
         },
-        "documentation": {
+        "documentationUrl": {
           "type": "string",
-          "description": "The template documentation in markdown format.",
+          "description": "The URL of the documentation.",
+          "format": "uri",
+          "pattern": "^https://",
           "minLength": 1
         },
         "sourceUrl": {
@@ -125,7 +127,7 @@
         "coverImageUrl",
         "installationUrl",
         "categories",
-        "documentation"
+        "documentationUrl"
       ],
       "additionalProperties": false
     }

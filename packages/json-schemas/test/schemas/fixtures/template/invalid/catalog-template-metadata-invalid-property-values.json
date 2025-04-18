@@ -18,7 +18,7 @@
       "coverImageUrl": "",
       "coverVideoUrl": "",
       "installationUrl": "",
-      "documentation": ""
+      "documentationUrl": ""
     }
   },
   "errors": [
@@ -41,13 +41,31 @@
       "schemaPath": "#/properties/metadata/properties/id/pattern"
     },
     {
-      "instancePath": "/metadata/documentation",
+      "instancePath": "/metadata/documentationUrl",
       "keyword": "minLength",
       "message": "must NOT have fewer than 1 characters",
       "params": {
         "limit": 1
       },
-      "schemaPath": "#/properties/metadata/properties/documentation/minLength"
+      "schemaPath": "#/properties/metadata/properties/documentationUrl/minLength"
+    },
+    {
+      "instancePath": "/metadata/documentationUrl",
+      "keyword": "pattern",
+      "message": "must match pattern \"^https://\"",
+      "params": {
+        "pattern": "^https://"
+      },
+      "schemaPath": "#/properties/metadata/properties/documentationUrl/pattern"
+    },
+    {
+      "instancePath": "/metadata/documentationUrl",
+      "keyword": "format",
+      "message": "must match format \"uri\"",
+      "params": {
+        "format": "uri"
+      },
+      "schemaPath": "#/properties/metadata/properties/documentationUrl/format"
     },
     {
       "instancePath": "/metadata/sourceUrl",

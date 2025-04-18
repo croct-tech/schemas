@@ -20,7 +20,7 @@
       "coverImageUrl": "https://cdn.croct.com/image.png",
       "coverVideoUrl": "https://cdn.croct.com/video.mp4",
       "installationUrl": "shadcn://ui/component",
-      "documentation": "A documentation in markdown format.",
+      "documentationUrl": "A documentation in markdown format.",
       "extra": true
     },
     "actions": [
@@ -51,6 +51,24 @@
         "pattern": "^[a-z0-9-]+/[a-z0-9-]+/[a-z0-9-]+$"
       },
       "schemaPath": "#/properties/metadata/properties/id/pattern"
+    },
+    {
+      "instancePath": "/metadata/documentationUrl",
+      "keyword": "pattern",
+      "message": "must match pattern \"^https://\"",
+      "params": {
+        "pattern": "^https://"
+      },
+      "schemaPath": "#/properties/metadata/properties/documentationUrl/pattern"
+    },
+    {
+      "instancePath": "/metadata/documentationUrl",
+      "keyword": "format",
+      "message": "must match format \"uri\"",
+      "params": {
+        "format": "uri"
+      },
+      "schemaPath": "#/properties/metadata/properties/documentationUrl/format"
     },
     {
       "instancePath": "/metadata/categories/0",
