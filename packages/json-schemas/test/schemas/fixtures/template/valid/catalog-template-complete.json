@@ -20,7 +20,7 @@
       "coverImageUrl": "https://cdn.croct.com/image.png",
       "coverVideoUrl": "https://cdn.croct.com/video.mp4",
       "installationUrl": "shadcn://ui/component",
-      "documentation": "A documentation in markdown format."
+      "documentationUrl": "https://docs.croct.com"
     },
     "options": {
       "string": {

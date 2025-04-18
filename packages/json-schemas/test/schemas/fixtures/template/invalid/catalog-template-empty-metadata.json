@@ -74,9 +74,9 @@
     {
       "instancePath": "/metadata",
       "keyword": "required",
-      "message": "must have required property 'documentation'",
+      "message": "must have required property 'documentationUrl'",
       "params": {
-        "missingProperty": "documentation"
+        "missingProperty": "documentationUrl"
       },
       "schemaPath": "#/properties/metadata/required"
     }
