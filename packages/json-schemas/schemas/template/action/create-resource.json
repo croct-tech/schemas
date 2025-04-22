@@ -301,8 +301,7 @@
               "content"
             ],
             "additionalProperties": false
-          },
-          "minItems": 1
+          }
         }
       },
       "minProperties": 1,
@@ -494,7 +493,6 @@
                     "premium-users"
                   ]
                 },
-                "minItems": 1,
                 "uniqueItems": true
               },
               "content": {
@@ -508,8 +506,7 @@
               "content"
             ],
             "additionalProperties": false
-          },
-          "minItems": 1
+          }
         }
       },
       "required": [
