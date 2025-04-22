@@ -25,5 +25,5 @@ export function cleanNestedSchemaProps(schema: JSONSchema.Interface, root = true
 }
 
 function isSchema(schema: JSONSchema): schema is JSONSchema.Interface {
-    return typeof schema === 'object' && schema !== null;
+    return typeof schema === 'object' && schema !== null && !Array.isArray(schema);
 }
