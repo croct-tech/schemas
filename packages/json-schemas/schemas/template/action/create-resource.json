@@ -57,8 +57,7 @@
               "logged-in-users",
               "premium-users"
             ]
-          },
-          "minProperties": 1
+          }
         },
         "components": {
           "type": "object",
@@ -105,8 +104,7 @@
               "button",
               "thumbnail"
             ]
-          },
-          "minProperties": 1
+          }
         },
         "slots": {
           "type": "object",
@@ -155,8 +153,7 @@
               "home-hero",
               "pricing-table"
             ]
-          },
-          "minProperties": 1
+          }
         },
         "experiences": {
           "type": "array",
@@ -304,8 +301,8 @@
           }
         }
       },
-      "minProperties": 1,
-      "additionalProperties": false
+      "additionalProperties": false,
+      "minProperties": 1
     },
     "result": {
       "type": "object",
@@ -508,10 +505,7 @@
             "additionalProperties": false
           }
         }
-      },
-      "required": [
-        "default"
-      ]
+      }
     },
     "slot-content-map": {
       "type": "object",
@@ -530,8 +524,7 @@
         "type": "object",
         "description": "The locale-specific content.",
         "$ref": "#/$defs/localized-content"
-      },
-      "minProperties": 1
+      }
     },
     "localized-content": {
       "type": "object",
