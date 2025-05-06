@@ -68,7 +68,6 @@ jobs:
         if: ${{ github.event.release.prerelease || !github.ref || github.ref == 'refs/heads/master' }}
         run: |-
           gsutil -m rsync -r -d build/json-schemas "gs://${GCLOUD_BUCKET}/json/next"
-          gsutil -m setmeta -h "Cache-Control: public, max-age=3600" "gs://${GCLOUD_BUCKET}/json/next/**"
         env:
           GCLOUD_BUCKET: ${{ secrets.STORAGE_BUCKET_SCHEMAS }}
 
@@ -79,6 +78,5 @@ jobs:
           MAJOR_VERSION=$(( TAG_MAJOR_VERSION < 1 ? 1 : TAG_MAJOR_VERSION ))
           VERSION_PATH="v${MAJOR_VERSION}"
           gsutil -m rsync -r -d build/json-schemas "gs://${GCLOUD_BUCKET}/json/${VERSION_PATH}"
-          gsutil -m setmeta -h "Cache-Control: public, max-age=3600" "gs://${GCLOUD_BUCKET}/json/${VERSION_PATH}/**"
         env:
           GCLOUD_BUCKET: ${{ secrets.STORAGE_BUCKET_SCHEMAS }}
