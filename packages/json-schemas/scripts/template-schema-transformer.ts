@@ -169,8 +169,23 @@ function shouldTransformSchema(schema: JSONSchema): schema is JSONSchema.Interfa
     ];
 
     for (const keyword of keywords) {
-        if (schema[keyword] !== undefined && typeof schema[keyword] !== 'boolean') {
-            return true;
+        if (schema[keyword] === undefined) {
+            continue;
+        }
+
+        switch (keyword) {
+            case 'oneOf':
+            case 'anyOf':
+            case 'allOf':
+            case 'then':
+            case 'else':
+                return typeof schema[keyword] !== 'boolean';
+
+            case 'additionalProperties':
+                return schema.additionalProperties !== false;
+
+            default:
+                return true;
         }
     }
 
