@@ -1,0 +1,41 @@
+{
+  "input": {
+    "type": "object",
+    "$defs": {
+      "nested": {
+        "type": "object",
+        "properties": {
+          "options": {
+            "type": "object",
+            "description": "Options to pass to the imported template.",
+            "additionalProperties": true
+          }
+        }
+      }
+    }
+  },
+  "expected": {
+    "type": "object",
+    "$defs": {
+      "nested": {
+        "type": "object",
+        "properties": {
+          "options": {
+            "anyOf": [
+              {
+                "type": "object",
+                "description": "Options to pass to the imported template.",
+                "additionalProperties": true
+              },
+              {
+                "type": "string",
+                "description": "Options to pass to the imported template.",
+                "$ref": "#/$defs/dynamic-value"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
