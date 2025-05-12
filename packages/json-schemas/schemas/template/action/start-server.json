@@ -13,6 +13,48 @@
       "description": "The name of the action.",
       "const": "start-server"
     },
+    "server": {
+      "type": "object",
+      "description": "The server to start manually.",
+      "properties": {
+        "script": {
+          "type": "string",
+          "description": "The name of the script to run to start the server.",
+          "minLength": 1,
+          "pattern": "^\\S+$",
+          "examples": [
+            "dev"
+          ]
+        },
+        "url": {
+          "type": "string",
+          "description": "The URL of the server to start.",
+          "format": "uri",
+          "pattern": "^https?://.*",
+          "examples": [
+            "http://localhost:3000"
+          ]
+        },
+        "arguments": {
+          "type": "array",
+          "description": "The arguments to pass to the server script.",
+          "items": {
+            "type": "string"
+          },
+          "examples": [
+            [
+              "--port",
+              "3000"
+            ]
+          ]
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "script",
+        "url"
+      ]
+    },
     "result": {
       "type": "object",
       "description": "Stores details about the development server.",
@@ -25,11 +67,12 @@
             "serverUrl"
           ]
         },
-        "owned": {
+        "id": {
           "type": "string",
-          "description": "Whether the this action started the server or if it was already running.",
+          "description": "The unique identifier of the server or null if the instance was not started by the current process.",
+          "minLength": 1,
           "examples": [
-            "isOwned"
+            "serverId"
           ]
         }
       },
@@ -43,9 +86,17 @@
   "examples": [
     {
       "name": "start-server",
+      "server": {
+        "script": "dev",
+        "url": "http://localhost:3000",
+        "arguments": [
+          "--port",
+          "3000"
+        ]
+      },
       "result": {
-        "url": "devServerUrl",
-        "owned": "isDevServerOwned"
+        "url": "serverUrl",
+        "id": "serverId"
       }
     }
   ]

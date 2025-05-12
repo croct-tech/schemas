@@ -203,7 +203,8 @@
         "name": "start-server"
       },
       {
-        "name": "stop-server"
+        "name": "stop-server",
+        "id": "3ce62058-9fc5-4cf6-8b5f-97219fcb9131"
       },
       {
         "name": "test",

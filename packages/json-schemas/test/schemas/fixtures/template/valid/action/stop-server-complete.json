@@ -1,0 +1,10 @@
+{
+  "schema": "template/action/stop-server.json",
+  "input": {
+    "$schema": "https://schema.croct.com/json/template/action.json",
+    "name": "stop-server",
+    "id": "3ce62058-9fc5-4cf6-8b5f-97219fcb9131"
+  },
+  "errors": [
+  ]
+}

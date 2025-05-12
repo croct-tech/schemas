@@ -3,9 +3,17 @@
   "input": {
     "$schema": "https://schema.croct.com/json/template/action.json",
     "name": "start-server",
+    "server": {
+      "script": "dev",
+      "url": "https://localhost:3000",
+      "arguments": [
+        "--port",
+        "3000"
+      ]
+    },
     "result": {
       "url": "serverUrl",
-      "owned": "isOwned"
+      "id": "3ce62058-9fc5-4cf6-8b5f-97219fcb9131"
     }
   },
   "errors": [
