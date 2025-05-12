@@ -5,29 +5,25 @@ const dynamicStringPattern = '\\$\\{[\\s\\S]+?\\}';
 const dynamicValuePattern = '^\\$\\{[\\s\\S]+\\}$';
 
 export function transformSchema(schema: JSONSchema.Interface): JSONSchema {
-    const result = structuredClone(schema);
+    const result = transformRecursively(structuredClone(schema), true);
 
-    if (result.properties?.actions !== undefined) {
-        result.properties.actions = transformRecursively(result.properties.actions, true);
+    if (typeof result === 'object') {
+        result.$defs = {
+            ...result.$defs,
+            'dynamic-string': {
+                type: 'string',
+                description: 'A dynamic string that is evaluated at runtime.',
+                pattern: dynamicStringPattern,
+                examples: ['${this.value}', '${options.value}', '${this.value} ${options.value}'],
+            },
+            'dynamic-value': {
+                type: 'string',
+                description: 'A dynamic value that is evaluated at runtime.',
+                pattern: dynamicValuePattern,
+                examples: ['${this.value}', '${options.value}', '${this.value + options.value}'],
+            },
+        };
     }
-
-    result.$defs = {
-        ...Object.fromEntries(
-            Object.entries(result.$defs ?? {}).map(([key, value]) => [key, transformRecursively(value, true)]),
-        ),
-        'dynamic-string': {
-            type: 'string',
-            description: 'A dynamic string that is evaluated at runtime.',
-            pattern: dynamicStringPattern,
-            examples: ['${this.value}', '${options.value}', '${this.value} ${options.value}'],
-        },
-        'dynamic-value': {
-            type: 'string',
-            description: 'A dynamic value that is evaluated at runtime.',
-            pattern: dynamicValuePattern,
-            examples: ['${this.value}', '${options.value}', '${this.value + options.value}'],
-        },
-    };
 
     return result;
 }

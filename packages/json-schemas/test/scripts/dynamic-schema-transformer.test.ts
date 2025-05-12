@@ -2,10 +2,10 @@
 import {JSONSchema} from 'json-schema-typed/draft-2019-09';
 import {writeFileSync} from 'fs';
 import {join} from 'path';
-import {transformSchema} from '@/scripts/template-schema-transformer';
+import {transformSchema} from '@/scripts/dynamic-schema-transformer';
 import {findFixtures} from '@/test/findFixtures';
 
-describe('Template schema transformer', () => {
+describe('Dynamic schema transformer', () => {
     type Fixture = {
         path: string,
         input: JSONSchema.Interface,
