@@ -21,7 +21,15 @@
     "type": "object",
     "properties": {
       "test": {
-        "type": "boolean"
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "string",
+            "$ref": "#/$defs/dynamic-value"
+          }
+        ]
       }
     },
     "$defs": {
