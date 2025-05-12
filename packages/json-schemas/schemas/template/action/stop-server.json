@@ -12,13 +12,25 @@
       "type": "string",
       "description": "The name of the action.",
       "const": "stop-server"
+    },
+    "id": {
+      "type": "string",
+      "description": "The ID of the server to stop",
+      "minLength": 1,
+      "examples": [
+        "3ce62058-9fc5-4cf6-8b5f-97219fcb9131"
+      ]
     }
   },
-  "required": ["name"],
+  "required": [
+    "name",
+    "id"
+  ],
   "additionalProperties": false,
   "examples": [
     {
-      "name": "stop-server"
+      "name": "stop-server",
+      "id": "3ce62058-9fc5-4cf6-8b5f-97219fcb9131"
     }
   ]
 }

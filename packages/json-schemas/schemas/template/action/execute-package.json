@@ -45,8 +45,8 @@
       ]
     },
     "interactions": {
-      "type": "array",
-      "description": "Defines how to respond to interactive prompts based on output. Must contain at least one final interaction.",
+      "type": ["array", "boolean"],
+      "description": "Controls how to handle interactive prompts. If true, input/output is shown in the terminal. If false, prompts are ignored. If an array, it must include at least one rule marked as final.",
       "minItems": 1,
       "items": {
         "type": "object",

@@ -12,6 +12,15 @@
         "missingProperty": "name"
       },
       "schemaPath": "#/required"
+    },
+    {
+      "instancePath": "",
+      "keyword": "required",
+      "message": "must have required property 'id'",
+      "params": {
+        "missingProperty": "id"
+      },
+      "schemaPath": "#/required"
     }
   ]
 }
