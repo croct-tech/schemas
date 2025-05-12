@@ -72,7 +72,7 @@ jobs:
       - name: Deploy pre-release to GCS
         if: ${{ github.event.release.prerelease || !github.ref || github.ref == 'refs/heads/master' }}
         run: |-
-          gsutil -m rsync -r -d build/json-schemas "gs://${GCLOUD_BUCKET}/json/next"
+          gsutil -m rsync -r -d packages/json-schemas/build/json-schemas "gs://${GCLOUD_BUCKET}/json/next"
         env:
           GCLOUD_BUCKET: ${{ secrets.STORAGE_BUCKET_SCHEMAS }}
 
@@ -82,6 +82,6 @@ jobs:
           TAG_MAJOR_VERSION=$(echo "${GITHUB_REF##*/}" | cut -d. -f1)
           MAJOR_VERSION=$(( TAG_MAJOR_VERSION < 1 ? 1 : TAG_MAJOR_VERSION ))
           VERSION_PATH="v${MAJOR_VERSION}"
-          gsutil -m rsync -r -d build/json-schemas "gs://${GCLOUD_BUCKET}/json/${VERSION_PATH}"
+          gsutil -m rsync -r -d packages/json-schemas/build/json-schemas "gs://${GCLOUD_BUCKET}/json/${VERSION_PATH}"
         env:
           GCLOUD_BUCKET: ${{ secrets.STORAGE_BUCKET_SCHEMAS }}
