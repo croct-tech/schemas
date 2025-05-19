@@ -98,8 +98,7 @@
       },
       "required": [
         "type"
-      ],
-      "unevaluatedProperties": false
+      ]
     },
     "number": {
       "type": "object",
@@ -158,8 +157,7 @@
       },
       "required": [
         "type"
-      ],
-      "unevaluatedProperties": false
+      ]
     },
     "text": {
       "type": "object",
@@ -555,8 +553,7 @@
           ],
           "unevaluatedProperties": false
         }
-      ],
-      "unevaluatedProperties": false
+      ]
     },
     "definition": {
       "type": "object",
@@ -572,7 +569,6 @@
       "required": [
         "type"
       ],
-      "unevaluatedProperties": false,
       "oneOf": [
         {
           "$ref": "#/$defs/boolean"
@@ -701,8 +697,7 @@
       "required": [
         "type",
         "attributes"
-      ],
-      "unevaluatedProperties": false
+      ]
     },
     "list": {
       "type": "object",
@@ -775,8 +770,7 @@
       "required": [
         "type",
         "items"
-      ],
-      "unevaluatedProperties": false
+      ]
     },
     "union": {
       "type": "object",
@@ -832,8 +826,7 @@
       "required": [
         "type",
         "types"
-      ],
-      "unevaluatedProperties": false
+      ]
     },
     "reference": {
       "type": "object",
@@ -884,8 +877,7 @@
       "required": [
         "type",
         "id"
-      ],
-      "unevaluatedProperties": false
+      ]
     }
   },
   "oneOf": [
