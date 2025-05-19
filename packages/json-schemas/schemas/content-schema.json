@@ -99,7 +99,7 @@
       "required": [
         "type"
       ],
-      "additionalProperties": false
+      "unevaluatedProperties": false
     },
     "number": {
       "type": "object",
@@ -159,7 +159,7 @@
       "required": [
         "type"
       ],
-      "additionalProperties": false
+      "unevaluatedProperties": false
     },
     "text": {
       "type": "object",
@@ -178,7 +178,7 @@
           "required": [
             "type"
           ],
-          "additionalProperties": false
+          "unevaluatedProperties": false
         },
         {
           "properties": {
@@ -227,7 +227,7 @@
             "type",
             "format"
           ],
-          "additionalProperties": false
+          "unevaluatedProperties": false
         },
         {
           "properties": {
@@ -298,7 +298,7 @@
             "type",
             "pattern"
           ],
-          "additionalProperties": false
+          "unevaluatedProperties": false
         },
         {
           "properties": {
@@ -389,7 +389,7 @@
             "type",
             "choices"
           ],
-          "additionalProperties": false
+          "unevaluatedProperties": false
         },
         {
           "properties": {
@@ -441,7 +441,7 @@
             "type",
             "minimumLength"
           ],
-          "additionalProperties": false
+          "unevaluatedProperties": false
         },
         {
           "properties": {
@@ -493,7 +493,7 @@
             "type",
             "maximumLength"
           ],
-          "additionalProperties": false
+          "unevaluatedProperties": false
         },
         {
           "properties": {
@@ -553,9 +553,10 @@
             "minimumLength",
             "maximumLength"
           ],
-          "additionalProperties": false
+          "unevaluatedProperties": false
         }
-      ]
+      ],
+      "unevaluatedProperties": false
     },
     "definition": {
       "type": "object",
@@ -701,7 +702,7 @@
         "type",
         "attributes"
       ],
-      "additionalProperties": false
+      "unevaluatedProperties": false
     },
     "list": {
       "type": "object",
@@ -775,7 +776,7 @@
         "type",
         "items"
       ],
-      "additionalProperties": false
+      "unevaluatedProperties": false
     },
     "union": {
       "type": "object",
@@ -832,7 +833,7 @@
         "type",
         "types"
       ],
-      "additionalProperties": false
+      "unevaluatedProperties": false
     },
     "reference": {
       "type": "object",

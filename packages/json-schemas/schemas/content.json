@@ -54,7 +54,7 @@
                 "type",
                 "value"
               ],
-              "additionalProperties": false
+              "unevaluatedProperties": false
             },
             {
               "type": "object",
@@ -120,7 +120,7 @@
         "type",
         "value"
       ],
-      "additionalProperties": false
+      "unevaluatedProperties": false
     },
     {
       "type": "object",
@@ -228,7 +228,7 @@
         "type",
         "value"
       ],
-      "additionalProperties": false
+      "unevaluatedProperties": false
     },
     {
       "type": "object",
@@ -340,7 +340,7 @@
         "type",
         "value"
       ],
-      "additionalProperties": false
+      "unevaluatedProperties": false
     },
     {
       "type": "object",
@@ -368,7 +368,7 @@
         "type",
         "attributes"
       ],
-      "additionalProperties": false
+      "unevaluatedProperties": false
     },
     {
       "type": "object",
@@ -390,7 +390,8 @@
         "type",
         "items"
       ],
-      "additionalProperties": false
+      "unevaluatedProperties": false
     }
-  ]
+  ],
+  "unevaluatedProperties": false
 }
