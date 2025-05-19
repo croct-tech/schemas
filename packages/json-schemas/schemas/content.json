@@ -119,8 +119,7 @@
       "required": [
         "type",
         "value"
-      ],
-      "unevaluatedProperties": false
+      ]
     },
     {
       "type": "object",
@@ -227,8 +226,7 @@
       "required": [
         "type",
         "value"
-      ],
-      "unevaluatedProperties": false
+      ]
     },
     {
       "type": "object",
@@ -339,8 +337,7 @@
       "required": [
         "type",
         "value"
-      ],
-      "unevaluatedProperties": false
+      ]
     },
     {
       "type": "object",
@@ -367,8 +364,7 @@
       "required": [
         "type",
         "attributes"
-      ],
-      "unevaluatedProperties": false
+      ]
     },
     {
       "type": "object",
@@ -389,8 +385,7 @@
       "required": [
         "type",
         "items"
-      ],
-      "unevaluatedProperties": false
+      ]
     }
   ],
   "unevaluatedProperties": false
