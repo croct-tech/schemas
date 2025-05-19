@@ -56,15 +56,6 @@
     {
       "instancePath": "/metadata",
       "keyword": "required",
-      "message": "must have required property 'installationUrl'",
-      "params": {
-        "missingProperty": "installationUrl"
-      },
-      "schemaPath": "#/properties/metadata/required"
-    },
-    {
-      "instancePath": "/metadata",
-      "keyword": "required",
       "message": "must have required property 'categories'",
       "params": {
         "missingProperty": "categories"
