@@ -9,7 +9,7 @@
       "id": "shadcn-croct",
       "verified": true,
       "categories": ["ui", "component"],
-      "author": {
+      "ecosystem": {
         "name": "Croct",
         "avatarUrl": "https://cdn.croct.com/avatar.png",
         "websiteUrl": "https://croct.com"

@@ -5,7 +5,7 @@
     "title": "Full template",
     "description": "A template with all properties filled.",
     "metadata": {
-      "author": "John Doe",
+      "ecosystem": "John Doe",
       "version": "1.0.0",
       "license": "MIT"
     },

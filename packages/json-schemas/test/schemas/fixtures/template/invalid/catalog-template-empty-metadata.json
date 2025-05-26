@@ -29,9 +29,9 @@
     {
       "instancePath": "/metadata",
       "keyword": "required",
-      "message": "must have required property 'author'",
+      "message": "must have required property 'ecosystem'",
       "params": {
-        "missingProperty": "author"
+        "missingProperty": "ecosystem"
       },
       "schemaPath": "#/properties/metadata/required"
     },
