@@ -88,25 +88,25 @@
             "pattern": "^[a-z0-9-]+/[a-z0-9-]+/[a-z0-9-]+$"
           }
         },
-        "author": {
+        "ecosystem": {
           "type": "object",
-          "description": "The author of the template.",
+          "description": "The ecosystem of the template.",
           "properties": {
             "name": {
               "type": "string",
-              "description": "The name of the author.",
+              "description": "The name of the ecosystem.",
               "minLength": 1
             },
             "avatarUrl": {
               "type": "string",
-              "description": "The URL of the author's avatar.",
+              "description": "The URL of the logo of the ecosystem.",
               "format": "uri",
               "pattern": "^https://",
               "minLength": 1
             },
             "websiteUrl": {
               "type": "string",
-              "description": "The URL of the author's website.",
+              "description": "The URL of the website of the ecosystem.",
               "format": "uri",
               "pattern": "^https://",
               "minLength": 1
@@ -122,7 +122,7 @@
       },
       "required": [
         "id",
-        "author",
+        "ecosystem",
         "sourceUrl",
         "coverImageUrl",
         "categories",

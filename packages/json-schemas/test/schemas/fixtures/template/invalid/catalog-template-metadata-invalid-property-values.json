@@ -7,7 +7,7 @@
     "metadata": {
       "id": "",
       "categories": [""],
-      "author": {
+      "ecosystem": {
         "name": "",
         "avatarUrl": "",
         "websiteUrl": ""
@@ -212,67 +212,67 @@
       "schemaPath": "#/properties/metadata/properties/categories/items/pattern"
     },
     {
-      "instancePath": "/metadata/author/name",
+      "instancePath": "/metadata/ecosystem/name",
       "keyword": "minLength",
       "message": "must NOT have fewer than 1 characters",
       "params": {
         "limit": 1
       },
-      "schemaPath": "#/properties/metadata/properties/author/properties/name/minLength"
+      "schemaPath": "#/properties/metadata/properties/ecosystem/properties/name/minLength"
     },
     {
-      "instancePath": "/metadata/author/avatarUrl",
+      "instancePath": "/metadata/ecosystem/avatarUrl",
       "keyword": "minLength",
       "message": "must NOT have fewer than 1 characters",
       "params": {
         "limit": 1
       },
-      "schemaPath": "#/properties/metadata/properties/author/properties/avatarUrl/minLength"
+      "schemaPath": "#/properties/metadata/properties/ecosystem/properties/avatarUrl/minLength"
     },
     {
-      "instancePath": "/metadata/author/avatarUrl",
+      "instancePath": "/metadata/ecosystem/avatarUrl",
       "keyword": "pattern",
       "message": "must match pattern \"^https://\"",
       "params": {
         "pattern": "^https://"
       },
-      "schemaPath": "#/properties/metadata/properties/author/properties/avatarUrl/pattern"
+      "schemaPath": "#/properties/metadata/properties/ecosystem/properties/avatarUrl/pattern"
     },
     {
-      "instancePath": "/metadata/author/avatarUrl",
+      "instancePath": "/metadata/ecosystem/avatarUrl",
       "keyword": "format",
       "message": "must match format \"uri\"",
       "params": {
         "format": "uri"
       },
-      "schemaPath": "#/properties/metadata/properties/author/properties/avatarUrl/format"
+      "schemaPath": "#/properties/metadata/properties/ecosystem/properties/avatarUrl/format"
     },
     {
-      "instancePath": "/metadata/author/websiteUrl",
+      "instancePath": "/metadata/ecosystem/websiteUrl",
       "keyword": "minLength",
       "message": "must NOT have fewer than 1 characters",
       "params": {
         "limit": 1
       },
-      "schemaPath": "#/properties/metadata/properties/author/properties/websiteUrl/minLength"
+      "schemaPath": "#/properties/metadata/properties/ecosystem/properties/websiteUrl/minLength"
     },
     {
-      "instancePath": "/metadata/author/websiteUrl",
+      "instancePath": "/metadata/ecosystem/websiteUrl",
       "keyword": "pattern",
       "message": "must match pattern \"^https://\"",
       "params": {
         "pattern": "^https://"
       },
-      "schemaPath": "#/properties/metadata/properties/author/properties/websiteUrl/pattern"
+      "schemaPath": "#/properties/metadata/properties/ecosystem/properties/websiteUrl/pattern"
     },
     {
-      "instancePath": "/metadata/author/websiteUrl",
+      "instancePath": "/metadata/ecosystem/websiteUrl",
       "keyword": "format",
       "message": "must match format \"uri\"",
       "params": {
         "format": "uri"
       },
-      "schemaPath": "#/properties/metadata/properties/author/properties/websiteUrl/format"
+      "schemaPath": "#/properties/metadata/properties/ecosystem/properties/websiteUrl/format"
     }
   ]
 }
