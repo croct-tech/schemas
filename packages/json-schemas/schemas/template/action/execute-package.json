@@ -149,11 +149,42 @@
       },
       "minContains": 1,
       "maxContains": 1
+    },
+    "output": {
+      "type": "string",
+      "description": "The name of the variable to store the command output.",
+      "minLength": 1,
+      "examples": [
+        "commandOutput"
+      ]
     }
   },
   "required": [
     "name",
     "package"
   ],
-  "additionalProperties": false
+  "additionalProperties": false,
+  "examples": [
+    {
+      "$schema": "https://schema.croct.com/json/template/action.json",
+      "name": "execute-package",
+      "package": "create-react-app",
+      "runner": "npm",
+      "interactions": [
+        {
+          "when": "Enter the project name:",
+          "then": [
+            "my-app"
+          ],
+          "final": false
+        },
+        {
+          "when": "Do you want to use TypeScript?",
+          "then": ["yes", "[enter]"],
+          "final": true
+        }
+      ],
+      "output": "commandOutput"
+    }
+  ]
 }
