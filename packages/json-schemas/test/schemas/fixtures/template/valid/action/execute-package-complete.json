@@ -20,7 +20,8 @@
         ],
         "final": true
       }
-    ]
+    ],
+    "output": "commandOutput"
   },
   "errors": [
   ]
