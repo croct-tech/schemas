@@ -144,12 +144,12 @@
         "template": "croct://template-name"
       },
       {
-        "name": "locate-file",
+        "name": "locate-path",
         "path": "src",
         "result": "files"
       },
       {
-        "name": "initialize"
+        "name": "integrate-croct"
       },
       {
         "name": "open-link",

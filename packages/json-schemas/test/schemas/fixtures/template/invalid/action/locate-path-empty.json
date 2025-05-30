@@ -1,5 +1,5 @@
 {
-  "schema": "template/action/locate-file.json",
+  "schema": "template/action/locate-path.json",
   "allErrors": true,
   "input": {
   },

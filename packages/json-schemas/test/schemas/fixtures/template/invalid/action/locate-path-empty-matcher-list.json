@@ -1,8 +1,8 @@
 {
-  "schema": "template/action/locate-file.json",
+  "schema": "template/action/locate-path.json",
   "allErrors": true,
   "input": {
-    "name": "locate-file",
+    "name": "locate-path",
     "path": "src",
     "matcher": {
       "type": "or",

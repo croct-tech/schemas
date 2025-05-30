@@ -1,0 +1,52 @@
+{
+  "$id": "https://schema.croct.com/json/template/action/read-file.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Read file",
+  "description": "Reads a local file and stores its contents in a variable.",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "description": "The name of the action.",
+      "const": "read-file"
+    },
+    "path": {
+      "type": "string",
+      "description": "The path of the file to read.",
+      "minLength": 1,
+      "examples": [
+        "src/components/Button.js",
+        "README.md"
+      ]
+    },
+    "optional": {
+      "type": "boolean",
+      "description": "If true, sets the variable to null when the file does not exist instead of failing."
+    },
+    "result": {
+      "type": "string",
+      "description": "The name of the variable to store the file contents in.",
+      "minLength": 1,
+        "examples": [
+          "buttonComponent",
+          "readmeContents"
+        ]
+    }
+  },
+  "required": [
+    "name",
+    "path",
+    "result"
+  ],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "name": "read-file",
+      "path": "README.md",
+      "result": "readmeContents"
+    }
+  ]
+}

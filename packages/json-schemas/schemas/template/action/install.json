@@ -1,8 +1,8 @@
 {
-  "$id": "https://schema.croct.com/json/template/action/initialize.json",
+  "$id": "https://schema.croct.com/json/template/action/install.json",
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "title": "Initialize project",
-  "description": "Initializes a Croct project in the current directory.",
+  "title": "Install",
+  "description": "Run the package installation process, which is typically used to install dependencies.",
   "type": "object",
   "properties": {
     "$schema": {
@@ -11,14 +11,14 @@
     "name": {
       "type": "string",
       "description": "The name of the action.",
-      "const": "initialize"
+      "const": "install"
     }
   },
   "required": ["name"],
   "additionalProperties": false,
   "examples": [
     {
-      "name": "initialize"
+      "name": "install"
     }
   ]
 }
