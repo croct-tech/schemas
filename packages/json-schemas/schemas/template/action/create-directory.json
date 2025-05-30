@@ -1,0 +1,37 @@
+{
+  "$id": "https://schema.croct.com/json/template/action/create-directory.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Create directory",
+  "description": "Creates a directory in the local file system, including any missing parent directories.",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "description": "Tha name of the action.",
+      "const": "create-directory"
+    },
+    "path": {
+      "type": "string",
+      "description": "The path of the directory to create.",
+      "minLength": 1,
+      "examples": [
+        "src/components",
+        "dist/assets"
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "path"
+  ],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "name": "create-directory",
+      "path": "src/components"
+    }
+  ]
+}

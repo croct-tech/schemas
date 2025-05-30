@@ -1,5 +1,5 @@
 {
-  "$id": "https://schema.croct.com/json/template/action/locate-file.json",
+  "$id": "https://schema.croct.com/json/template/action/locate-path.json",
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Locate file",
   "description": "Searches for files under a directory path based on a specified pattern.",
@@ -11,7 +11,7 @@
     "name": {
       "type": "string",
       "description": "The name of the action.",
-      "const": "locate-file"
+      "const": "locate-path"
     },
     "path": {
       "type": "string",
@@ -119,7 +119,7 @@
   },
   "examples": [
     {
-      "name": "locate-file",
+      "name": "locate-path",
       "path": "src",
       "matcher": {
         "pattern": "export default"
@@ -129,7 +129,7 @@
       "result": "mainFile"
     },
     {
-      "name": "locate-file",
+      "name": "locate-path",
       "path": "packages",
       "matcher": {
         "type": "and",

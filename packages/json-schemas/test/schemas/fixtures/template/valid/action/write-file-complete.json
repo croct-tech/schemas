@@ -1,0 +1,11 @@
+{
+  "schema": "template/action/write-file.json",
+  "input": {
+    "$schema": "https://schema.croct.com/json/template/action.json",
+    "name": "write-file",
+    "path": "README.md",
+    "content": "Hello, world!",
+    "overwrite": true
+  },
+  "errors": []
+}

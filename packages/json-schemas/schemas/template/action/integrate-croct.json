@@ -1,0 +1,24 @@
+{
+  "$id": "https://schema.croct.com/json/template/action/integrate-croct.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Initialize project",
+  "description": "Initializes a Croct project in the current directory.",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "description": "The name of the action.",
+      "const": "integrate-croct"
+    }
+  },
+  "required": ["name"],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "name": "integrate-croct"
+    }
+  ]
+}

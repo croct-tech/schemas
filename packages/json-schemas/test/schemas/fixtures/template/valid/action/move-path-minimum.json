@@ -1,0 +1,10 @@
+{
+  "schema": "template/action/move-path.json",
+  "input": {
+    "$schema": "https://schema.croct.com/json/template/action.json",
+    "name": "move-path",
+    "path": "src/components",
+    "destination": "dist/src/components"
+  },
+  "errors": []
+}

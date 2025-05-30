@@ -1,0 +1,9 @@
+{
+  "schema": "template/action/integrate-croct.json",
+  "input": {
+    "$schema": "https://schema.croct.com/json/template/action.json",
+    "name": "integrate-croct"
+  },
+  "errors": [
+  ]
+}

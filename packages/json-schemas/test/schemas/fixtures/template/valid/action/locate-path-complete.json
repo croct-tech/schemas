@@ -1,8 +1,8 @@
 {
-  "schema": "template/action/locate-file.json",
+  "schema": "template/action/locate-path.json",
   "input": {
     "$schema": "https://schema.croct.com/json/template/action.json",
-    "name": "locate-file",
+    "name": "locate-path",
     "path": "src",
     "limit": 5,
     "depth": 3,

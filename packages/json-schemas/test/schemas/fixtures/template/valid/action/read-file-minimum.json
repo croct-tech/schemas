@@ -1,0 +1,10 @@
+{
+  "schema": "template/action/read-file.json",
+  "input": {
+    "$schema": "https://schema.croct.com/json/template/action.json",
+    "name": "read-file",
+    "path": "README.md",
+    "result": "readmeContents"
+  },
+  "errors": []
+}

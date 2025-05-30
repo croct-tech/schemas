@@ -29,6 +29,9 @@
       "$ref": "./action/create-resource.json"
     },
     {
+      "$ref": "./action/create-directory.json"
+    },
+    {
       "$ref": "./action/define.json"
     },
     {
@@ -47,10 +50,16 @@
       "$ref": "./action/import.json"
     },
     {
-      "$ref": "./action/locate-file.json"
+      "$ref": "./action/locate-path.json"
     },
     {
-      "$ref": "./action/initialize.json"
+      "$ref": "./action/install.json"
+    },
+    {
+      "$ref": "./action/integrate-croct.json"
+    },
+    {
+      "$ref": "./action/move-path.json"
     },
     {
       "$ref": "./action/open-link.json"
@@ -60,6 +69,9 @@
     },
     {
       "$ref": "./action/prompt.json"
+    },
+    {
+      "$ref": "./action/read-file.json"
     },
     {
       "$ref": "./action/repeat.json"
@@ -75,6 +87,9 @@
     },
     {
       "$ref": "./action/stop-server.json"
+    },
+    {
+      "$ref": "./action/write-file.json"
     },
     {
       "$ref": "./action/test.json"

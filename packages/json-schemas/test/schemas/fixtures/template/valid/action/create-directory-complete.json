@@ -1,0 +1,9 @@
+{
+  "schema": "template/action/create-directory.json",
+  "input": {
+    "$schema": "https://schema.croct.com/json/template/action.json",
+    "name": "create-directory",
+    "path": "src/components"
+  },
+  "errors": []
+}

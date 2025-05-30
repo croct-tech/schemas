@@ -1,5 +1,5 @@
 {
-  "schema": "template/action/initialize.json",
+  "schema": "template/action/create-directory.json",
   "allErrors": true,
   "input": {
   },
@@ -10,6 +10,15 @@
       "message": "must have required property 'name'",
       "params": {
         "missingProperty": "name"
+      },
+      "schemaPath": "#/required"
+    },
+    {
+      "instancePath": "",
+      "keyword": "required",
+      "message": "must have required property 'path'",
+      "params": {
+        "missingProperty": "path"
       },
       "schemaPath": "#/required"
     }
