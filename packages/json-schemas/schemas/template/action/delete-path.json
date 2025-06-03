@@ -36,7 +36,7 @@
   "examples": [
     {
       "$schema": "https://schema.croct.com/json/template/action/delete-path.json",
-      "name": "delete-tmp",
+      "name": "delete-path",
       "path": "tmp",
       "recursive": true
     }
