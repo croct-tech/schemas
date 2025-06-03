@@ -1,0 +1,44 @@
+{
+  "$id": "https://schema.croct.com/json/template/action/delete-path.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Delete path",
+  "description": "Deletes a file or directory at the specified path.",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "description": "The name of the action.",
+      "const": "delete-path"
+    },
+    "path": {
+      "type": "string",
+      "description": "The path of the file or directory to delete.",
+      "minLength": 1,
+      "examples": [
+        "tmp",
+        "tmp/file.txt"
+      ]
+    },
+    "recursive": {
+      "type": "boolean",
+      "description": "If true, deletes directories and their contents recursively.",
+      "default": false
+    }
+  },
+  "required": [
+    "name",
+    "path"
+  ],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "$schema": "https://schema.croct.com/json/template/action/delete-path.json",
+      "name": "delete-path",
+      "path": "tmp",
+      "recursive": true
+    }
+  ]
+}
