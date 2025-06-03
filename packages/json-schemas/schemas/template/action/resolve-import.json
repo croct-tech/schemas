@@ -31,7 +31,7 @@
   "examples": [
     {
       "$schema": "https://schema.croct.com/json/template/action/resolve-import.json",
-      "name": "resolve-imports",
+      "name": "resolve-import",
       "path": "src/**/*.js"
     }
   ]
