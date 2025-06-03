@@ -10,7 +10,7 @@
     },
     "name": {
       "type": "string",
-      "description": "Tha name of the action.",
+      "description": "The name of the action.",
       "const": "resolve-import"
     },
     "path": {
