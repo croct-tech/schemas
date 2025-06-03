@@ -35,6 +35,9 @@
       "$ref": "./action/define.json"
     },
     {
+      "$ref": "./action/delete-path.json"
+    },
+    {
       "$ref": "./action/download.json"
     },
     {
@@ -75,6 +78,9 @@
     },
     {
       "$ref": "./action/repeat.json"
+    },
+    {
+      "$ref": "./action/resolve-import.json"
     },
     {
       "$ref": "./action/replace-file-content.json"

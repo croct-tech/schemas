@@ -1,0 +1,10 @@
+{
+  "schema": "template/action/delete-path.json",
+  "input": {
+    "$schema": "https://schema.croct.com/json/template/action.json",
+    "name": "delete-path",
+    "path": "tmp",
+    "recursive": true
+  },
+  "errors": []
+}

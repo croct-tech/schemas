@@ -1,0 +1,38 @@
+{
+  "$id": "https://schema.croct.com/json/template/action/resolve-import.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Resolve import",
+  "description": "Resolves and rewrites import paths in code files based on their actual file locations.",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "description": "Tha name of the action.",
+      "const": "resolve-import"
+    },
+    "path": {
+      "type": "string",
+      "description": "A glob pattern that matches the files to resolve imports in.",
+      "minLength": 1,
+      "examples": [
+        "src/**/*.js",
+        "src/index.js"
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "path"
+  ],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "$schema": "https://schema.croct.com/json/template/action/resolve-import.json",
+      "name": "resolve-imports",
+      "path": "src/**/*.js"
+    }
+  ]
+}

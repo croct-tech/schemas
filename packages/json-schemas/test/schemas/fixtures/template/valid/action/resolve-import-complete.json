@@ -1,0 +1,9 @@
+{
+  "schema": "template/action/resolve-import.json",
+  "input": {
+    "$schema": "https://schema.croct.com/json/template/action.json",
+    "name": "resolve-import",
+    "path": "src/index.js"
+  },
+  "errors": []
+}
