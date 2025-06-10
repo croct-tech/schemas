@@ -127,7 +127,7 @@
       },
       {
         "name": "execute-package",
-        "package": "create-react-app"
+        "command": "create-react-app"
       },
       {
         "name": "fail",

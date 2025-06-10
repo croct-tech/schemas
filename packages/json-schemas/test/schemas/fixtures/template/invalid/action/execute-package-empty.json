@@ -16,9 +16,9 @@
     {
       "instancePath": "",
       "keyword": "required",
-      "message": "must have required property 'package'",
+      "message": "must have required property 'command'",
       "params": {
-        "missingProperty": "package"
+        "missingProperty": "command"
       },
       "schemaPath": "#/required"
     }
