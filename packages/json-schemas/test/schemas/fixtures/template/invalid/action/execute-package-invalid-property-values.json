@@ -3,7 +3,7 @@
   "allErrors": true,
   "input": {
     "name": "",
-    "package": "",
+    "command": "",
     "runner": "",
     "interactions": [
       {

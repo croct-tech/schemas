@@ -13,13 +13,19 @@
       "description": "The name of the action.",
       "const": "execute-package"
     },
-    "package": {
+    "command": {
       "type": "string",
-      "description": "The name of the package to execute.",
+      "description": "The command to execute, typically a package name or script.",
       "examples": [
         "create-react-app",
-        "eslint"
+        "eslint",
+        "lint"
       ]
+    },
+    "script": {
+      "type": "boolean",
+      "description": "Whether the command is a script defined in the project's manifest (like package.json). If true, the command is treated as a script name.",
+      "default": false
     },
     "arguments": {
       "type": "array",
@@ -45,7 +51,10 @@
       ]
     },
     "interactions": {
-      "type": ["array", "boolean"],
+      "type": [
+        "array",
+        "boolean"
+      ],
       "description": "Controls how to handle interactive prompts. If true, input/output is shown in the terminal. If false, prompts are ignored. If an array, it must include at least one rule marked as final.",
       "minItems": 1,
       "items": {
@@ -161,15 +170,16 @@
   },
   "required": [
     "name",
-    "package"
+    "command"
   ],
   "additionalProperties": false,
   "examples": [
     {
       "$schema": "https://schema.croct.com/json/template/action.json",
       "name": "execute-package",
-      "package": "create-react-app",
       "runner": "npm",
+      "command": "create-react-app",
+      "script": false,
       "interactions": [
         {
           "when": "Enter the project name:",
@@ -180,7 +190,10 @@
         },
         {
           "when": "Do you want to use TypeScript?",
-          "then": ["yes", "[enter]"],
+          "then": [
+            "yes",
+            "[enter]"
+          ],
           "final": true
         }
       ],
