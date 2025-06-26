@@ -1,0 +1,86 @@
+{
+  "schema": "template/action/create-api-key.json",
+  "allErrors": true,
+  "input": {
+    "name": "create-api-key",
+    "keyName": "",
+    "environment": "prod",
+    "permissions": [
+      "a",
+      "b",
+      "c"
+    ],
+    "result": ""
+  },
+  "errors": [
+    {
+      "instancePath": "/environment",
+      "keyword": "enum",
+      "message": "must be equal to one of the allowed values",
+      "params": {
+        "allowedValues": [
+          "production",
+          "development"
+        ]
+      },
+      "schemaPath": "#/properties/environment/enum"
+    },
+    {
+      "instancePath": "/permissions/0",
+      "keyword": "enum",
+      "message": "must be equal to one of the allowed values",
+      "params": {
+        "allowedValues": [
+          "RESOURCE_READ_ACCESS",
+          "TOKEN_ISSUE",
+          "DATA_EXPORT",
+          "resource_read_access",
+          "token_issue",
+          "data_export"
+        ]
+      },
+      "schemaPath": "#/properties/permissions/items/enum"
+    },
+    {
+      "instancePath": "/permissions/1",
+      "keyword": "enum",
+      "message": "must be equal to one of the allowed values",
+      "params": {
+        "allowedValues": [
+          "RESOURCE_READ_ACCESS",
+          "TOKEN_ISSUE",
+          "DATA_EXPORT",
+          "resource_read_access",
+          "token_issue",
+          "data_export"
+        ]
+      },
+      "schemaPath": "#/properties/permissions/items/enum"
+    },
+    {
+      "instancePath": "/permissions/2",
+      "keyword": "enum",
+      "message": "must be equal to one of the allowed values",
+      "params": {
+        "allowedValues": [
+          "RESOURCE_READ_ACCESS",
+          "TOKEN_ISSUE",
+          "DATA_EXPORT",
+          "resource_read_access",
+          "token_issue",
+          "data_export"
+        ]
+      },
+      "schemaPath": "#/properties/permissions/items/enum"
+    },
+    {
+      "instancePath": "/result",
+      "keyword": "minLength",
+      "message": "must NOT have fewer than 1 characters",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/result/minLength"
+    }
+  ]
+}

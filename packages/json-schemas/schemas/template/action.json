@@ -32,6 +32,9 @@
       "$ref": "./action/create-directory.json"
     },
     {
+      "$ref": "./action/create-api-key.json"
+    },
+    {
       "$ref": "./action/define.json"
     },
     {

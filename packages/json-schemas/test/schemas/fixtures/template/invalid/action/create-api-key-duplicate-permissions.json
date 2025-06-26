@@ -1,0 +1,23 @@
+{
+  "schema": "template/action/create-api-key.json",
+  "allErrors": true,
+  "input": {
+    "name": "create-api-key",
+    "keyName": "Test",
+    "environment": "production",
+    "permissions": ["RESOURCE_READ_ACCESS", "RESOURCE_READ_ACCESS"],
+    "result": "apiKey"
+  },
+  "errors": [
+    {
+      "instancePath": "/permissions",
+      "keyword": "uniqueItems",
+      "message": "must NOT have duplicate items (items ## 1 and 0 are identical)",
+      "params": {
+        "i": 0,
+        "j": 1
+      },
+      "schemaPath": "#/properties/permissions/uniqueItems"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "$id": "https://schema.croct.com/json/template/action/create-api-key.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Create API key",
+  "description": "Creates an API key for an application.",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "description": "The name of the action.",
+      "const": "create-api-key"
+    },
+    "keyName": {
+      "type": "string",
+      "description": "The name of the API key.",
+      "examples": [
+        "my-api-key",
+        "my-api-key-123"
+      ]
+    },
+    "environment": {
+      "type": "string",
+      "description": "The application environment for which the API key is created.",
+      "examples": [
+        "production",
+        "development"
+      ],
+      "enum": [
+        "production",
+        "development"
+      ]
+    },
+    "permissions": {
+      "type": "array",
+      "description": "The API key permissions.",
+      "examples": [
+        [
+          "RESOURCE_READ_ACCESS",
+          "TOKEN_ISSUE",
+          "DATA_EXPORT"
+        ],
+        [
+          "resource_read_access"
+        ]
+      ],
+      "items": {
+        "type": "string",
+        "description": "The name of the permission.",
+        "enum": [
+          "RESOURCE_READ_ACCESS",
+          "TOKEN_ISSUE",
+          "DATA_EXPORT",
+          "resource_read_access",
+          "token_issue",
+          "data_export"
+        ]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "result": {
+      "type": "string",
+      "description": "The variable name to store the API key.",
+      "minLength": 1,
+      "examples": [
+        "secret",
+        "apiKey"
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "keyName",
+    "environment",
+    "permissions",
+    "result"
+  ],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "name": "create-api-key",
+      "keyName": "my-api-key",
+      "environment": "production",
+      "permissions": [
+        "RESOURCE_READ_ACCESS",
+        "TOKEN_ISSUE",
+        "DATA_EXPORT"
+      ],
+      "result": "apiKeys"
+    }
+  ]
+}
