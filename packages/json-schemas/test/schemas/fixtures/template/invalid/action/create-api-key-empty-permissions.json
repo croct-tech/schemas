@@ -1,0 +1,22 @@
+{
+  "schema": "template/action/create-api-key.json",
+  "allErrors": true,
+  "input": {
+    "name": "create-api-key",
+    "keyName": "Test",
+    "environment": "production",
+    "permissions": [],
+    "result": "apiKey"
+  },
+  "errors": [
+    {
+      "instancePath": "/permissions",
+      "keyword": "minItems",
+      "message": "must NOT have fewer than 1 items",
+      "params": {
+        "limit": 1
+      },
+      "schemaPath": "#/properties/permissions/minItems"
+    }
+  ]
+}

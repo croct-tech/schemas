@@ -1,0 +1,19 @@
+{
+  "schema": "template/action/create-api-key.json",
+  "input": {
+    "$schema": "https://schema.croct.com/json/template/action.json",
+    "name": "create-api-key",
+    "keyName": "my-api-key",
+    "environment": "production",
+    "permissions": [
+      "RESOURCE_READ_ACCESS",
+      "TOKEN_ISSUE",
+      "DATA_EXPORT",
+      "resource_read_access",
+      "token_issue",
+      "data_export"
+    ],
+    "result": "apiKey"
+  },
+  "errors": []
+}

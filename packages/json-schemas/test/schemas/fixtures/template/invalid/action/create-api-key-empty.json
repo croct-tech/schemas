@@ -1,0 +1,53 @@
+{
+  "schema": "template/action/create-api-key.json",
+  "allErrors": true,
+  "input": {
+  },
+  "errors": [
+    {
+      "instancePath": "",
+      "keyword": "required",
+      "message": "must have required property 'name'",
+      "params": {
+        "missingProperty": "name"
+      },
+      "schemaPath": "#/required"
+    },
+    {
+      "instancePath": "",
+      "keyword": "required",
+      "message": "must have required property 'keyName'",
+      "params": {
+        "missingProperty": "keyName"
+      },
+      "schemaPath": "#/required"
+    },
+    {
+      "instancePath": "",
+      "keyword": "required",
+      "message": "must have required property 'environment'",
+      "params": {
+        "missingProperty": "environment"
+      },
+      "schemaPath": "#/required"
+    },
+    {
+      "instancePath": "",
+      "keyword": "required",
+      "message": "must have required property 'permissions'",
+      "params": {
+        "missingProperty": "permissions"
+      },
+      "schemaPath": "#/required"
+    },
+    {
+      "instancePath": "",
+      "keyword": "required",
+      "message": "must have required property 'result'",
+      "params": {
+        "missingProperty": "result"
+      },
+      "schemaPath": "#/required"
+    }
+  ]
+}
