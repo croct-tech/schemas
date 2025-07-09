@@ -40,12 +40,9 @@
           "pattern": "^https://",
           "minLength": 0
         },
-        "deployUrl": {
-          "type": "string",
-          "description": "The URL to deploy the template.",
-          "format": "uri",
-          "pattern": "^https://",
-          "minLength": 0
+        "deployable": {
+          "type": "boolean",
+          "description": "Whether the template can be deployed."
         },
         "coverImageUrl": {
           "type": "string",

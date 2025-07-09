@@ -16,7 +16,7 @@
       },
       "sourceUrl": "https://github.com/croct-tech/templates/shadcn-croct",
       "demoUrl": "https://demo.croct.com",
-      "deployUrl": "https://deploy.croct.com",
+      "deployable": true,
       "coverImageUrl": "https://cdn.croct.com/image.png",
       "coverVideoUrl": "https://cdn.croct.com/video.mp4",
       "installationUrl": "shadcn://ui/component",

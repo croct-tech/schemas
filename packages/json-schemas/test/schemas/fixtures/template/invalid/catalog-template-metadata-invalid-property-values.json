@@ -14,7 +14,7 @@
       },
       "sourceUrl": "",
       "demoUrl": "",
-      "deployUrl": "",
+      "deployable": "",
       "coverImageUrl": "",
       "coverVideoUrl": "",
       "installationUrl": "",
@@ -113,22 +113,13 @@
       "schemaPath": "#/properties/metadata/properties/demoUrl/format"
     },
     {
-      "instancePath": "/metadata/deployUrl",
-      "keyword": "pattern",
-      "message": "must match pattern \"^https://\"",
+      "instancePath": "/metadata/deployable",
+      "keyword": "type",
+      "message": "must be boolean",
       "params": {
-        "pattern": "^https://"
+        "type": "boolean"
       },
-      "schemaPath": "#/properties/metadata/properties/deployUrl/pattern"
-    },
-    {
-      "instancePath": "/metadata/deployUrl",
-      "keyword": "format",
-      "message": "must match format \"uri\"",
-      "params": {
-        "format": "uri"
-      },
-      "schemaPath": "#/properties/metadata/properties/deployUrl/format"
+      "schemaPath": "#/properties/metadata/properties/deployable/type"
     },
     {
       "instancePath": "/metadata/coverImageUrl",
