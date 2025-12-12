@@ -120,10 +120,4 @@ jobs:
         run: npm ci
 
       - name: Run tests
-        uses: paambaati/codeclimate-action@v5
-        env:
-          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
-        with:
-          coverageCommand: npm test
-          coverageLocations:
-            ./coverage/lcov.info:lcov
+        run: npm test
